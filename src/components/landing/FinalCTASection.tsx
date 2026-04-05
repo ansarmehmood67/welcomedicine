@@ -6,10 +6,10 @@ const FinalCTASection = () => (
     <div className="container max-w-4xl mx-auto px-4 text-center">
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-primary-foreground mb-4">
-          Pronto a trasformare la tua comunicazione professionale?
+          Unisciti all'ecosistema già scelto dai migliori ospedali d'Italia
         </h2>
         <p className="text-primary-foreground/70 mb-8 max-w-xl mx-auto text-base sm:text-lg">
-          Unisciti a migliaia di professionisti della salute che hanno già scelto Welcome Medicine. Inizia la tua prova gratuita oggi.
+          Migliaia di professionisti della salute usano già la tecnologia WellMed. Inizia la tua prova gratuita e riprendi il controllo della tua comunicazione.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a href="#" className="inline-flex items-center gap-2 h-13 px-8 rounded-xl cta-gradient text-primary-foreground font-semibold hover:opacity-90 transition-opacity">

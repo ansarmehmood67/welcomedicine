@@ -14,14 +14,14 @@ const HeroSection = () => (
       {/* Left */}
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
         <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-pill-bg text-pill-fg mb-5 tracking-wide uppercase">
-          Piattaforma per professionisti della salute
+          Ecosistema WellMed — Tecnologia ospedaliera per il professionista
         </span>
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-foreground mb-5">
-          Comunica con pazienti e colleghi in modo{" "}
-          <span className="text-primary">professionale e sicuro</span>
+          Basta email infiniti e WhatsApp dei pazienti.{" "}
+          <span className="text-primary">Riprendi il controllo.</span>
         </h1>
         <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-8 max-w-lg">
-          Welcome Medicine è la piattaforma che separa la comunicazione professionale da quella privata, protegge il tuo lavoro e valorizza il tuo tempo.
+          La stessa tecnologia scelta dai migliori ospedali d'Italia, ora disponibile per te. Welcome Medicine separa la comunicazione professionale da quella privata, protegge il tuo lavoro e valorizza il tuo tempo.
         </p>
 
         <div className="flex flex-wrap gap-3 mb-8">
