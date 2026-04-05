@@ -2,17 +2,19 @@ import { motion } from "framer-motion";
 import { XCircle, CheckCircle } from "lucide-react";
 
 const problems = [
-  "Messaggi dei pazienti su WhatsApp a ogni ora",
-  "Nessuna tracciabilità medico-legale",
-  "Impossibile valorizzare il proprio tempo",
-  "Comunicazioni private e professionali mescolate",
+  "100+ email al giorno senza filtro né priorità",
+  "Pazienti che scrivono su WhatsApp a qualsiasi ora",
+  "Scambio referti via chiavetta USB o email non protetta",
+  "Pazienti persi per mancanza di follow-up organizzato",
+  "Nessuna tracciabilità medico-legale delle comunicazioni",
 ];
 
 const solutions = [
-  "Canali professionali dedicati, con orari personalizzabili",
-  "Ogni comunicazione è documentata e conforme",
-  "Monetizza consulti, videochiamate e pareri",
-  "Separazione netta tra vita privata e professionale",
+  "50% del tempo in meno nella gestione delle email",
+  "Canali professionali dedicati con orari personalizzabili",
+  "Scambio documentale sicuro, conforme GDPR, senza USB",
+  "Fidelizzazione automatica: i tuoi pazienti restano tuoi",
+  "Ogni comunicazione tracciata e archiviata a norma di legge",
 ];
 
 const ProblemSection = () => (
@@ -20,11 +22,10 @@ const ProblemSection = () => (
     <div className="container max-w-6xl mx-auto px-4">
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
         <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-3">Il problema che risolviamo</h2>
-        <p className="text-muted-foreground max-w-2xl mx-auto">La comunicazione professionale in sanità è frammentata, non protetta e spesso non retribuita.</p>
+        <p className="text-muted-foreground max-w-2xl mx-auto">Ogni giorno perdi ore preziose in comunicazioni frammentate, non protette e non retribuite.</p>
       </motion.div>
 
       <div className="grid md:grid-cols-2 gap-8">
-        {/* Problems */}
         <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="rounded-2xl bg-card border border-destructive/20 p-6 space-y-4">
           <h3 className="font-bold text-foreground flex items-center gap-2"><XCircle className="text-destructive" size={20} /> Senza Welcome Medicine</h3>
           {problems.map((p) => (
@@ -32,7 +33,6 @@ const ProblemSection = () => (
           ))}
         </motion.div>
 
-        {/* Solutions */}
         <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="rounded-2xl bg-card border border-primary/20 p-6 space-y-4 card-elevated">
           <h3 className="font-bold text-foreground flex items-center gap-2"><CheckCircle className="text-primary" size={20} /> Con Welcome Medicine</h3>
           {solutions.map((s) => (
