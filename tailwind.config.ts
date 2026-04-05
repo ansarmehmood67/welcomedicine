@@ -12,8 +12,13 @@ export default {
         "2xl": "1400px",
       },
     },
+    fontFamily: {
+      sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+    },
     extend: {
       colors: {
+        "pill-bg": "hsl(var(--pill-bg))",
+        "pill-fg": "hsl(var(--pill-fg))",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
