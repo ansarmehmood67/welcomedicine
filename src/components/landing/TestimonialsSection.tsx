@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Star, Play, X } from "lucide-react";
+import { Star, Play, X, Quote } from "lucide-react";
 
-const testimonials = [
+const videoTestimonials = [
   {
     quote: "L'adozione di Welcomedicine ha migliorato la gestione dei controlli, della documentazione clinica e della relazione medico-paziente. Finalmente ho confini chiari tra attività professionale e tempo personale.",
     name: "Dr. Claudio Cusini",
@@ -47,6 +47,33 @@ const testimonials = [
   },
 ];
 
+const textTestimonials = [
+  {
+    quote: "Con Welcome Medicine ho finalmente separato la vita privata da quella professionale. I pazienti mi contattano nei canali giusti, negli orari giusti.",
+    name: "Dr. Marco Bianchi",
+    role: "Medico di base",
+    initials: "MB",
+  },
+  {
+    quote: "Il fascicolo clinico digitale è una svolta. Ho tutto lo storico del paziente in un unico posto, accessibile in un click durante la visita.",
+    name: "Dott.ssa Elena Rossi",
+    role: "Dermatologa",
+    initials: "ER",
+  },
+  {
+    quote: "La fatturazione automatica mi ha fatto risparmiare ore ogni settimana. Bollo, Tessera Sanitaria, fattura elettronica: tutto gestito dalla piattaforma.",
+    name: "Dr. Alessandro Conti",
+    role: "Ortopedico",
+    initials: "AC",
+  },
+  {
+    quote: "I miei pazienti apprezzano tantissimo poter comunicare direttamente con me in modo sicuro, senza dover usare WhatsApp o email personali.",
+    name: "Dott.ssa Giulia Ferretti",
+    role: "Cardiologa",
+    initials: "GF",
+  },
+];
+
 const TestimonialsSection = () => {
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
 
@@ -71,17 +98,17 @@ const TestimonialsSection = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {testimonials.map(({ quote, name, role, initials, videoId }, i) => (
+          {/* Video testimonials */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {videoTestimonials.map(({ quote, name, role, initials, videoId }, i) => (
               <motion.div
                 key={name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
+                transition={{ delay: i * 0.08 }}
                 className="relative flex flex-col rounded-2xl bg-card border border-border card-elevated overflow-hidden"
               >
-                {/* Video thumbnail */}
                 <button
                   onClick={() => setActiveVideo(videoId)}
                   className="relative w-full aspect-video bg-muted group cursor-pointer"
@@ -99,15 +126,13 @@ const TestimonialsSection = () => {
                   </div>
                 </button>
 
-                <div className="p-6 flex flex-col flex-1">
-                  <div className="flex gap-1 mb-4">
+                <div className="p-5 flex flex-col flex-1">
+                  <div className="flex gap-1 mb-3">
                     {Array.from({ length: 5 }).map((_, j) => (
                       <Star key={j} size={14} className="fill-primary text-primary" />
                     ))}
                   </div>
-
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-6 flex-1">"{quote}"</p>
-
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-1 line-clamp-3">"{quote}"</p>
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full cta-gradient flex items-center justify-center text-primary-foreground text-xs font-bold">
                       {initials}
@@ -122,12 +147,38 @@ const TestimonialsSection = () => {
             ))}
           </div>
 
+          {/* Text testimonials */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {textTestimonials.map(({ quote, name, role, initials }, i) => (
+              <motion.div
+                key={name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08 }}
+                className="rounded-2xl bg-card border border-border p-5 card-elevated flex flex-col"
+              >
+                <Quote size={20} className="text-primary/30 mb-3" fill="currentColor" />
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-1">"{quote}"</p>
+                <div className="flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-full bg-accent flex items-center justify-center text-primary text-xs font-bold">
+                    {initials}
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-foreground">{name}</p>
+                    <p className="text-xs text-muted-foreground">{role}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
           {/* Link to all testimonials */}
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="text-center mt-8"
+            className="text-center mt-10"
           >
             <a
               href="https://www.youtube.com/@welmed1329"
