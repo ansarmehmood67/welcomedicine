@@ -46,7 +46,7 @@ const HeroSection = () => (
       <motion.div initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.7, delay: 0.2 }} className="hidden md:block">
         <div className="rounded-2xl bg-card border border-border card-elevated p-6">
           <div className="flex items-center gap-3 mb-5">
-            <div className="w-10 h-10 rounded-full cta-gradient flex items-center justify-center text-primary-foreground font-bold text-sm">WM</div>
+            <div className="w-10 h-10 rounded-full cta-gradient flex items-center justify-center text-primary-foreground font-bold text-sm">W</div>
             <div>
               <p className="text-sm font-semibold text-foreground">Dashboard Medico</p>
               <p className="text-xs text-muted-foreground">3 nuovi messaggi • 2 videoconsulti oggi</p>
