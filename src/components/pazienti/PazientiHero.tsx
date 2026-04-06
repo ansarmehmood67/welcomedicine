@@ -31,17 +31,25 @@ const PazientiHero = () => (
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.05] text-primary-foreground mb-6"
+          className="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.08] text-primary-foreground mb-4 drop-shadow-lg"
         >
-          Il tuo Specialista,{" "}
-          <span className="text-primary">ovunque tu sia.</span>
+          Hai un problema<br />di salute?
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.15 }}
-          className="text-primary-foreground/80 text-lg sm:text-xl leading-relaxed mb-10 max-w-xl"
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary mb-6 drop-shadow-md"
+        >
+          Il tuo Specialista, ovunque tu sia.
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="text-primary-foreground/90 text-lg sm:text-xl leading-relaxed mb-10 max-w-xl drop-shadow-sm font-medium"
         >
           Cerca, comunica e resta in contatto con gli Specialisti di Welcomedicine.
           Prenota videoconsulti e visite online da computer o smartphone.
