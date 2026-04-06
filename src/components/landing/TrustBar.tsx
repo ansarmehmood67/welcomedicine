@@ -13,29 +13,32 @@ import logoPolimedico from "@/assets/logos/partners/polimedico.png";
 import logoAstiClinic from "@/assets/logos/partners/asti-clinic.png";
 import logoVirtualHospital from "@/assets/logos/partners/virtual-hospital.png";
 import logoItsalute from "@/assets/logos/partners/itsalute.png";
+import logoRAF from "@/assets/logos/partners/raf-first-clinic.png";
+import logoSanCarloNancy from "@/assets/logos/partners/san-carlo-nancy.png";
+import logoTiberia from "@/assets/logos/partners/tiberia-hospital.png";
+import logoMariaCecilia from "@/assets/logos/partners/maria-cecilia.png";
+import logoSantaMaria from "@/assets/logos/partners/santa-maria.png";
+import logoWelcare from "@/assets/logos/partners/welcare-melanoma.png";
 
-const hospitals = [
-  { name: "IRCCS Ospedale San Raffaele", logo: logoSanRaffaele, isLarge: true },
-  { name: "Gruppo San Donato", logo: logoGSD, isLarge: true },
-  { name: "CDI - Centro Diagnostico Italiano", logo: logoCDI, isLarge: true },
-  { name: "Istituto Clinico Città Studi", logo: logoICCS, isLarge: true },
-  { name: "San Raffaele Roma", logo: logoSanRaffaeleRoma, isLarge: false },
-  { name: "Campus Bio-Medico", logo: logoCampusBioMedico, isLarge: false },
-  { name: "Casa della Salute", logo: logoCasaDellaSalute, isLarge: false },
-  { name: "GVM Care & Research", logo: logoGVM, isLarge: false },
-  { name: "Polimedico", logo: logoPolimedico, isLarge: false },
-  { name: "Asti Clinic", logo: logoAstiClinic, isLarge: false },
-  { name: "Virtual Hospital", logo: logoVirtualHospital, isLarge: false },
-  { name: "Itsalute", logo: logoItsalute, isLarge: false },
-];
-
-const textPartners = [
-  "RAF First Clinic",
-  "San Carlo di Nancy",
-  "Tiberia Hospital",
-  "Maria Cecilia Hospital",
-  "Santa Maria Hospital",
-  "Welcare Melanoma",
+const allPartners = [
+  { name: "IRCCS Ospedale San Raffaele", logo: logoSanRaffaele, large: true },
+  { name: "Gruppo San Donato", logo: logoGSD, large: true },
+  { name: "CDI Centro Diagnostico", logo: logoCDI, large: true },
+  { name: "Istituto Clinico Città Studi", logo: logoICCS, large: true },
+  { name: "GVM Care & Research", logo: logoGVM, large: false },
+  { name: "San Raffaele Roma", logo: logoSanRaffaeleRoma, large: false },
+  { name: "Campus Bio-Medico", logo: logoCampusBioMedico, large: false },
+  { name: "Casa della Salute", logo: logoCasaDellaSalute, large: false },
+  { name: "Polimedico", logo: logoPolimedico, large: false },
+  { name: "Asti Clinic", logo: logoAstiClinic, large: false },
+  { name: "Virtual Hospital", logo: logoVirtualHospital, large: false },
+  { name: "Itsalute", logo: logoItsalute, large: false },
+  { name: "RAF First Clinic", logo: logoRAF, large: false },
+  { name: "San Carlo di Nancy", logo: logoSanCarloNancy, large: false },
+  { name: "Tiberia Hospital", logo: logoTiberia, large: false },
+  { name: "Maria Cecilia Hospital", logo: logoMariaCecilia, large: false },
+  { name: "Santa Maria Hospital", logo: logoSantaMaria, large: false },
+  { name: "Welcare Melanoma", logo: logoWelcare, large: false },
 ];
 
 const stats = [
@@ -99,53 +102,34 @@ const TrustBar = () => (
         ))}
       </motion.div>
 
-      {/* Logo carousel */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.15 }}
-        className="relative overflow-hidden mb-8"
-      >
-        <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
-
-        <div className="flex animate-[scroll_30s_linear_infinite] hover:[animation-play-state:paused] w-max items-center">
-          {[...hospitals, ...hospitals, ...hospitals].map(({ name, logo, isLarge }, i) => (
-            <div
-              key={`${name}-${i}`}
-              className="flex flex-col items-center justify-center px-8 md:px-10 py-4 flex-shrink-0 hover:scale-105 transition-all duration-300"
-              title={name}
-            >
-              <img
-                src={logo}
-                alt={name}
-                loading="lazy"
-                className={`${isLarge ? "h-16 md:h-24" : "h-10 md:h-14"} w-auto object-contain`}
-              />
-              {!isLarge && (
-                <span className="text-[10px] text-muted-foreground mt-1.5 font-medium max-w-[100px] text-center leading-tight">{name}</span>
-              )}
-            </div>
-          ))}
-        </div>
-      </motion.div>
-
-      {/* Additional text partners */}
+      {/* All logos in a static grid */}
       <motion.div
         initial={{ opacity: 0, y: 15 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ delay: 0.2 }}
-        className="flex flex-wrap justify-center gap-3"
+        transition={{ delay: 0.15 }}
+        className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4"
       >
-        {textPartners.map((name) => (
-          <span
+        {allPartners.map(({ name, logo, large }, i) => (
+          <motion.div
             key={name}
-            className="px-4 py-2 rounded-full border border-border bg-card text-xs font-semibold text-muted-foreground hover:border-primary/30 hover:text-foreground transition-all"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: i * 0.03 }}
+            className="flex flex-col items-center justify-center rounded-xl border border-border bg-card p-4 hover:border-primary/30 hover:shadow-md transition-all aspect-square"
+            title={name}
           >
-            {name}
-          </span>
+            <img
+              src={logo}
+              alt={name}
+              loading="lazy"
+              className={`${large ? "h-12 md:h-16" : "h-8 md:h-10"} w-auto object-contain mb-2`}
+            />
+            <span className="text-[10px] sm:text-xs text-muted-foreground font-medium text-center leading-tight line-clamp-2">
+              {name}
+            </span>
+          </motion.div>
         ))}
       </motion.div>
 
