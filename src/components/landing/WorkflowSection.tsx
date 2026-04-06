@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
-import { ClipboardCheck, Send, GitFork, CheckCheck } from "lucide-react";
+import { PenTool, SendHorizonal, Route, BadgeCheck } from "lucide-react";
 
 const steps = [
-  { icon: ClipboardCheck, title: "Visita e refertazione", desc: "Il medico visita il paziente e referta digitalmente in piattaforma con firma elettronica." },
-  { icon: Send, title: "Consegna e follow-up", desc: "Il paziente riceve il referto firmato e può scrivere al medico per il follow-up direttamente dalla piattaforma." },
-  { icon: GitFork, title: "Smistamento intelligente", desc: "L'assistente di piattaforma smista le richieste: segreteria, chat gratuita o prestazione a pagamento." },
-  { icon: CheckCheck, title: "Chiusura tracciata", desc: "Il medico risponde, firma e chiude la prestazione. Tutto tracciato e archiviato a norma medico-legale." },
+  { icon: PenTool, title: "Visita e refertazione", desc: "Il medico visita il paziente e referta digitalmente in piattaforma con firma elettronica." },
+  { icon: SendHorizonal, title: "Consegna e follow-up", desc: "Il paziente riceve il referto firmato e può scrivere al medico per il follow-up direttamente dalla piattaforma." },
+  { icon: Route, title: "Smistamento intelligente", desc: "L'assistente di piattaforma smista le richieste: segreteria, chat gratuita o prestazione a pagamento." },
+  { icon: BadgeCheck, title: "Chiusura tracciata", desc: "Il medico risponde, firma e chiude la prestazione. Tutto tracciato e archiviato a norma medico-legale." },
 ];
 
 const WorkflowSection = () => (
@@ -19,7 +19,7 @@ const WorkflowSection = () => (
 
       <div className="relative">
         {/* Connector line */}
-        <div className="hidden md:block absolute top-1/2 left-0 right-0 h-0.5 bg-border -translate-y-1/2 z-0" />
+        <div className="hidden md:block absolute top-7 left-[12.5%] right-[12.5%] h-0.5 bg-border z-0" />
 
         <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8">
           {steps.map(({ icon: Icon, title, desc }, i) => (
@@ -32,7 +32,7 @@ const WorkflowSection = () => (
               className="relative z-10 flex flex-col items-center text-center"
             >
               <div className="w-14 h-14 rounded-2xl cta-gradient flex items-center justify-center mb-4 shadow-lg">
-                <Icon size={26} className="text-primary-foreground" />
+                <Icon size={26} className="text-primary-foreground" fill="currentColor" fillOpacity={0.3} strokeWidth={1.5} />
               </div>
               <span className="text-xs font-bold text-primary mb-1">Step {i + 1}</span>
               <h3 className="font-bold text-foreground mb-2">{title}</h3>
