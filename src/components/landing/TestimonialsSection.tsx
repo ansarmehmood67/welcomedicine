@@ -26,7 +26,7 @@ const testimonials = [
 ];
 
 const TestimonialsSection = () => (
-  <section className="py-16 md:py-24 bg-background">
+  <section id="testimonianze" className="py-16 md:py-24 bg-background scroll-mt-20">
     <div className="container max-w-6xl mx-auto px-4">
       <motion.div
         initial={{ opacity: 0, y: 20 }}

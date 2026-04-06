@@ -4,9 +4,8 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
   { label: "Funzioni", href: "#funzioni" },
-  { label: "Vantaggi", href: "#vantaggi" },
-  { label: "Come funziona", href: "#come-funziona" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Testimonianze", href: "#testimonianze" },
+  { label: "Piani e Prezzi", href: "#prezzi" },
 ];
 
 const Navbar = () => {
