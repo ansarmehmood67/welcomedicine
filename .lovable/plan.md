@@ -1,65 +1,73 @@
 
 
-## Piano: Allineamento completo della landing page con PDF e insights della call
+## Piano: Integrazione contenuti dalla trascrizione della demo
 
-### Analisi dei gap
+### Analisi della trascrizione
 
-Ho confrontato il PDF della presentazione, le note della call e la landing page attuale. Ecco cosa manca:
+Ho letto l'intera trascrizione della demo (299 righe). Confrontando con il sito attuale, emergono diverse funzionalità e concetti chiave menzionati nella call ma **non presenti** nella landing page:
 
-**6 sezioni create ma non inserite nella pagina:**
-- `ProblemSection` (il problema che risolviamo)
-- `BenefitsSection` (vantaggi per il medico)
-- `HowItWorksSection` (3 passi + demo CTA)
-- `SavingsCalculator` (calcolatore risparmio)
-- `FAQSection` (domande frequenti)
-- `FinalCTASection` (CTA finale)
+### Gap identificati
 
-**Contenuti da aggiornare per allineamento con il PDF:**
+| Funzionalità dalla call | Presente nel sito? |
+|---|---|
+| **Fascicolo Clinico digitale** — repository centralizzato per ogni paziente con cronologia prestazioni | No |
+| **DICOM Viewer integrato** — visualizzazione immagini diagnostiche (classe 2B) senza WeTransfer/USB | No |
+| **AI estrazione dati** — da documenti scannerizzati, estrae esami e dati per i referti | Parziale (solo "rapidità con AI") |
+| **App WelMed Pro** per medici + App Welcome Medicine per pazienti, con push notification | No |
+| **Care Team** — più medici su un fascicolo, trasparente per medico e paziente | No |
+| **Gestione segretaria** — account dedicato per delegare risposte e gestione | No |
+| **Tracciamento chiamate** — ogni call VoIP è un evento medico-legale tracciato | No |
+| **Scheduling on-demand vs fisso** per videoconsulti | No |
+| **Interoperabilità cross-piattaforma** — WelMed ospedaliero ↔ Welcome Medicine | No |
+| **Repository gratuito per pazienti** — si caricano documenti anche senza prestazione attiva | No |
+| **Assistente di piattaforma** — smistamento richieste (segreteria vs medico, gratuito vs a pagamento) | No |
+| **Video DPO** per trust sulla sicurezza dati | No (menzionato nella call come asset da aggiungere) |
 
-1. **BenefitsSection** — aggiungere i 2 vantaggi mancanti dal PDF:
-   - "+ Rapidità": Consultazione documentale e refertazione assistite dall'AI
-   - "+ Controllo": Proprietà di dati, referti e pazienti, indipendentemente dalle strutture
+### Modifiche previste
 
-2. **FeaturesSection** — aggiungere le funzionalità mancanti dal PDF:
-   - Import del repository pazienti esistente
-   - Assistenza tecnica telefonica per medici e pazienti
-   - Fatturazione automatica con gestione bollo e Tessera Sanitaria
+**1. FeaturesSection — Aggiungere 4 feature mancanti**
+Le 9 feature attuali diventano 12, aggiungendo:
+- **Fascicolo Clinico digitale**: cronologia completa, documenti, referti e note in un'unica scheda paziente
+- **DICOM Viewer integrato**: visualizzazione immagini diagnostiche direttamente in piattaforma, medical device classe 2B
+- **App mobile dedicata**: WelMed Pro per medici e Welcome Medicine per pazienti, con notifiche push
+- **Gestione segretaria**: delega risposte e gestione appuntamenti a un account segreteria dedicato
 
-3. **Footer** — aggiungere i dati di contatto dal PDF:
-   - Email: giulia.arpinati@welmed.it
-   - Telefono: +347 5307064
-   - Indirizzo: Corso Indipendenza, 5 - Milano
-   - Sito: welcomedicineonline.it
+Riorganizzare il layout: 6 feature a sinistra, 6 a destra con immagine mobile al centro.
 
-4. **Navbar** — aggiungere i link alle nuove sezioni visibili (Vantaggi, Come funziona)
+**2. BenefitsSection — Arricchire il beneficio AI**
+Aggiornare la descrizione di "Rapidità con l'AI" per includere l'estrazione dati da documenti scannerizzati e la compilazione assistita dei referti (come descritto nella demo).
 
-5. **Nuova sezione: "I Servizi Offerti"** — dal PDF pagina 3, una sezione dedicata ai servizi del centro erogatore (piattaforma + fatturazione + assistenza + import repository) che si distingue dalle features tecniche
+**3. ProblemSection — Aggiungere problemi dalla call**
+Aggiungere alla colonna "Senza Welcome Medicine":
+- "Immagini DICOM inviate via WeTransfer o chiavetta USB"
+- "Nessuna cronologia organizzata delle prestazioni"
 
-### Ordine sezioni nella pagina
+E nella colonna "Con Welcome Medicine":
+- "DICOM Viewer integrato: visualizzi tutto in piattaforma"
+- "Cronologia completa di ogni prestazione per paziente"
 
-```text
-Navbar
-HeroSection
-TrustBar
-ProblemSection          ← aggiunta
-FeaturesSection
-BenefitsSection         ← aggiunta + aggiornata
-HowItWorksSection       ← aggiunta
-TestimonialsSection
-SavingsCalculator       ← aggiunta
-PricingSection
-FAQSection              ← aggiunta
-FinalCTASection         ← aggiunta
-Footer                  ← aggiornato con contatti
-```
+**4. FAQSection — Aggiungere 3 FAQ dalla call**
+- "Come funziona il Care Team?" — Ogni medico e paziente vede chi ha accesso al fascicolo. Il paziente viene sempre notificato.
+- "I medici possono avere una segretaria in piattaforma?" — Sì, account dedicato per gestire messaggi e appuntamenti.
+- "La piattaforma funziona anche con le strutture ospedaliere?" — Sì, le piattaforme WelMed ospedaliere si parlano con Welcome Medicine.
 
-### Modifiche file
+**5. Nuova sezione: "Come funziona in pratica"** (workflow visuale)
+Una sezione con il flusso reale descritto nella demo, in 4 step:
+1. Il medico visita il paziente e referta digitalmente in piattaforma
+2. Il paziente riceve referto firmato e può scrivere al medico per il follow-up
+3. L'assistente di piattaforma smista: segreteria, chat gratuita o prestazione a pagamento
+4. Il medico risponde, firma, chiude la prestazione — tutto tracciato
+
+Questa sezione si posiziona subito dopo HowItWorksSection (che è sui 3 passi di onboarding) e mostra il workflow quotidiano.
+
+### File da modificare
 
 | File | Azione |
-|------|--------|
-| `src/pages/Index.tsx` | Aggiungere tutte le 6 sezioni mancanti nell'ordine corretto |
-| `src/components/landing/BenefitsSection.tsx` | Aggiungere "Rapidità con AI" e "Controllo dati" |
-| `src/components/landing/FeaturesSection.tsx` | Aggiungere Import repository, Assistenza tecnica, Fatturazione bollo/TS |
-| `src/components/landing/Footer.tsx` | Aggiungere contatti reali (email, telefono, indirizzo, sito) |
-| `src/components/landing/Navbar.tsx` | Aggiungere link a "Vantaggi" e "Come funziona" |
+|---|---|
+| `src/components/landing/FeaturesSection.tsx` | Aggiungere 4 feature (fascicolo clinico, DICOM, app mobile, segretaria). Layout 6+6 |
+| `src/components/landing/BenefitsSection.tsx` | Arricchire descrizione AI con estrazione documenti |
+| `src/components/landing/ProblemSection.tsx` | Aggiungere 2 problemi e 2 soluzioni |
+| `src/components/landing/FAQSection.tsx` | Aggiungere 3 FAQ (Care Team, segretaria, interoperabilità) |
+| `src/components/landing/WorkflowSection.tsx` | **Nuovo** — sezione workflow quotidiano in 4 step |
+| `src/pages/Index.tsx` | Inserire WorkflowSection dopo HowItWorksSection |
 
