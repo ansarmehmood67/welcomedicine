@@ -11,7 +11,7 @@ const pills = [
 ];
 
 const HeroSection = () => (
-  <section className="hero-gradient pt-28 pb-16 md:pt-40 md:pb-28 overflow-hidden">
+  <section className="hero-gradient pt-36 pb-16 md:pt-48 md:pb-28 overflow-hidden">
     <div className="container max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
       {/* Left */}
       <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
