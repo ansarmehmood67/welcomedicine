@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import logo from "@/assets/logo-welcomedicine.jpg";
 
 const navLinks = [
   { label: "Funzioni", href: "#funzioni" },
@@ -14,9 +15,8 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
       <div className="container max-w-6xl mx-auto flex items-center justify-between h-16 px-4">
-        <a href="#" className="flex items-center gap-2 font-bold text-xl tracking-tight text-foreground">
-          <span className="inline-flex items-center justify-center w-8 h-8 rounded-lg cta-gradient text-primary-foreground text-sm font-extrabold">W</span>
-          Welcome Medicine
+        <a href="#" className="flex items-center">
+          <img src={logo} alt="Welcomedicine" className="h-8" />
         </a>
 
         {/* Desktop */}
