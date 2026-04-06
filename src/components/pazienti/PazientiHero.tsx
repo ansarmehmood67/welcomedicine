@@ -1,76 +1,88 @@
 import { motion } from "framer-motion";
-import { Search } from "lucide-react";
+import { Search, ArrowRight } from "lucide-react";
 import heroImage from "@/assets/pazienti-hero.jpg";
 
 const PazientiHero = () => (
-  <section className="dark-section pt-28 pb-16 md:pt-40 md:pb-28 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-br from-[hsl(216,43%,18%)] via-[hsl(210,60%,25%)] to-[hsl(216,43%,18%)] opacity-90" />
+  <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+    {/* Full background image */}
+    <div className="absolute inset-0">
+      <img
+        src={heroImage}
+        alt="Paziente in videochiamata con medico"
+        className="w-full h-full object-cover"
+      />
+      <div className="absolute inset-0 bg-gradient-to-r from-[hsl(216,43%,12%)] via-[hsl(216,43%,15%)/0.95] to-[hsl(216,43%,18%)/0.6]" />
+    </div>
 
-    <div className="container max-w-6xl mx-auto px-4 relative z-10 grid md:grid-cols-2 gap-12 items-center">
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
-      >
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.1] text-primary-foreground mb-6">
-          Cerca, comunica e resta in contatto con gli Specialisti di{" "}
-          <span className="text-primary">Welcomedicine</span>
-        </h1>
+    <div className="container max-w-6xl mx-auto px-4 relative z-10 py-32 md:py-40">
+      <div className="max-w-2xl">
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="inline-block mb-6"
+        >
+          <span className="bg-primary/20 text-primary border border-primary/30 px-4 py-2 rounded-full text-sm font-semibold tracking-wide uppercase">
+            Per i pazienti
+          </span>
+        </motion.div>
 
-        <h2 className="text-xl sm:text-2xl font-semibold text-primary-foreground/90 mb-4">
-          Hai un problema di salute?
-        </h2>
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          className="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.05] text-primary-foreground mb-6"
+        >
+          Il tuo Specialista,{" "}
+          <span className="text-primary">ovunque tu sia.</span>
+        </motion.h1>
 
-        <p className="text-primary-foreground/70 text-base sm:text-lg leading-relaxed mb-8">
-          Cerca i nostri Specialisti e comunica subito con loro da computer o smartphone, ovunque tu sia
-        </p>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.15 }}
+          className="text-primary-foreground/80 text-lg sm:text-xl leading-relaxed mb-10 max-w-xl"
+        >
+          Cerca, comunica e resta in contatto con gli Specialisti di Welcomedicine.
+          Prenota videoconsulti e visite online da computer o smartphone.
+        </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.5 }}
-          className="flex items-center bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 rounded-xl overflow-hidden mb-6"
+          className="flex items-center bg-primary-foreground/10 backdrop-blur-md border border-primary-foreground/20 rounded-2xl overflow-hidden mb-8 shadow-2xl max-w-xl"
         >
-          <div className="flex items-center gap-2 px-4 flex-1">
-            <Search size={18} className="text-primary-foreground/50" />
+          <div className="flex items-center gap-3 px-5 flex-1">
+            <Search size={20} className="text-primary-foreground/50 shrink-0" />
             <input
               type="text"
-              placeholder="Cerca per Professionista, Specializzazione, Patologia o Sintomo"
-              className="w-full bg-transparent py-4 text-sm text-primary-foreground placeholder:text-primary-foreground/40 outline-none"
+              placeholder="Specializzazione, patologia o sintomo..."
+              className="w-full bg-transparent py-5 text-base text-primary-foreground placeholder:text-primary-foreground/40 outline-none"
             />
           </div>
-          <button className="h-full px-6 py-4 cta-gradient text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity">
+          <button className="h-full px-8 py-5 cta-gradient text-primary-foreground font-bold text-base hover:opacity-90 transition-opacity flex items-center gap-2">
             Cerca
+            <ArrowRight size={18} />
           </button>
         </motion.div>
 
-        <motion.p
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className="text-primary-foreground/60 text-sm"
+          className="flex flex-col sm:flex-row sm:items-center gap-4 text-primary-foreground/70 text-sm"
         >
-          Oppure{" "}
-          <a href="https://app.welmed.it/welcomedicine/login" className="text-primary hover:underline font-medium">Accedi</a>
-          {" "}o{" "}
-          <a href="https://app.welmed.it/welcomedicine/registration/patient" className="text-primary hover:underline font-medium">Registrati</a>
-          {" "}per prenotare la tua visita online.
-        </motion.p>
-      </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0, x: 50, scale: 0.95 }}
-        animate={{ opacity: 1, x: 0, scale: 1 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        className="hidden md:block relative"
-      >
-        <img
-          src={heroImage}
-          alt="Paziente in videochiamata con medico"
-          className="w-full h-auto rounded-2xl shadow-2xl"
-        />
-        <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-primary-foreground/10" />
-      </motion.div>
+          <span>
+            Oppure{" "}
+            <a href="https://app.welmed.it/welcomedicine/login" className="text-primary hover:underline font-semibold">Accedi</a>
+            {" "}o{" "}
+            <a href="https://app.welmed.it/welcomedicine/registration/patient" className="text-primary hover:underline font-semibold">Registrati</a>
+          </span>
+          <span className="hidden sm:inline text-primary-foreground/30">|</span>
+          <span>Gratuito • Nessuna carta richiesta</span>
+        </motion.div>
+      </div>
     </div>
   </section>
 );
