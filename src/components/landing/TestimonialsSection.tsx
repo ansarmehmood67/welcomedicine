@@ -3,24 +3,24 @@ import { Star, Play } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "Da quando uso Welcome Medicine mi sono sentita di nuovo una professionista felice. Ho ripreso il controllo del mio tempo e della mia comunicazione.",
-    name: "Dott.ssa Maria Rossi",
-    role: "Dermatologa — Milano",
-    initials: "MR",
+    quote: "L'adozione di Welcomedicine ha migliorato la gestione dei controlli, della documentazione clinica e della relazione medico-paziente. Finalmente ho confini chiari tra attività professionale e tempo personale.",
+    name: "Dr. Claudio Cusini",
+    role: "Endocrinologo",
+    initials: "CC",
     hasVideo: true,
   },
   {
-    quote: "Ricevevo oltre 100 email al giorno. Ora gestisco tutto in metà del tempo e i pazienti sono più soddisfatti perché ricevono risposte rapide e organizzate.",
-    name: "Dott. Luca Bianchi",
-    role: "Cardiologo — Ospedale San Raffaele",
-    initials: "LB",
-    hasVideo: false,
+    quote: "La piattaforma ha migliorato la continuità di cura dei pazienti cronici, ridotto la frammentazione delle informazioni cliniche e alleggerito il carico invisibile del medico.",
+    name: "Dott.ssa Daniela Agrimi",
+    role: "Endocrinologa",
+    initials: "DA",
+    hasVideo: true,
   },
   {
-    quote: "Il fatto di poter monetizzare i consulti online e condividere referti in modo sicuro ha cambiato completamente il mio modo di lavorare.",
-    name: "Dott.ssa Elena Conti",
-    role: "Ortopedica — Gruppo San Donato",
-    initials: "EC",
+    quote: "Ora posso organizzare i controlli in modo strutturato, recuperare rapidamente referti e analisi e centralizzare tutto in un'unica cartella clinica informatizzata.",
+    name: "Dr. Giovanni Rossini",
+    role: "Endocrinologo",
+    initials: "GR",
     hasVideo: true,
   },
 ];
@@ -35,7 +35,7 @@ const TestimonialsSection = () => (
         className="text-center mb-12"
       >
         <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-pill-bg text-pill-fg mb-4 uppercase tracking-wide">
-          Testimonianze
+          I medici dicono di noi
         </span>
         <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-3">
           Cosa dicono i professionisti che lo usano
