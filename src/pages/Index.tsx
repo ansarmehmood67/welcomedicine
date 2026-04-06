@@ -2,11 +2,10 @@ import Navbar from "@/components/landing/Navbar";
 import HeroSection from "@/components/landing/HeroSection";
 import TrustBar from "@/components/landing/TrustBar";
 import ProblemSection from "@/components/landing/ProblemSection";
-import FeaturesSection from "@/components/landing/FeaturesSection";
-import BenefitsSection from "@/components/landing/BenefitsSection";
-import HowItWorksSection from "@/components/landing/HowItWorksSection";
-import WorkflowSection from "@/components/landing/WorkflowSection";
 import TestimonialsSection from "@/components/landing/TestimonialsSection";
+import FeaturesSection from "@/components/landing/FeaturesSection";
+import WorkflowSection from "@/components/landing/WorkflowSection";
+import BenefitsSection from "@/components/landing/BenefitsSection";
 import SavingsCalculator from "@/components/landing/SavingsCalculator";
 import PricingSection from "@/components/landing/PricingSection";
 import FAQSection from "@/components/landing/FAQSection";
@@ -21,9 +20,8 @@ const Index = () => (
     <ProblemSection />
     <TestimonialsSection />
     <FeaturesSection />
-    <BenefitsSection />
-    <HowItWorksSection />
     <WorkflowSection />
+    <BenefitsSection />
     <SavingsCalculator />
     <PricingSection />
     <FAQSection />
