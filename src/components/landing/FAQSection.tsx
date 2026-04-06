@@ -40,6 +40,18 @@ const FAQSection = () => (
           </motion.div>
         ))}
       </Accordion>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="text-center mt-12"
+      >
+        <p className="text-muted-foreground text-base mb-4">Hai ancora dubbi?</p>
+        <a href="#cta-finale" className="inline-flex items-center gap-2 h-12 px-8 rounded-xl cta-gradient text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity">
+          Parla con il nostro team →
+        </a>
+      </motion.div>
     </div>
   </section>
 );

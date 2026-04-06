@@ -178,8 +178,11 @@ const TestimonialsSection = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="text-center mt-10"
+            className="text-center mt-10 flex flex-col items-center gap-4"
           >
+            <a href="#cta-finale" className="inline-flex items-center gap-2 h-12 px-8 rounded-xl cta-gradient text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity">
+              Prova gratis per 30 giorni →
+            </a>
             <a
               href="https://www.youtube.com/@welmed1329"
               target="_blank"
