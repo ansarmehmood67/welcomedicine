@@ -9,17 +9,17 @@ const steps = [
 ];
 
 const WorkflowSection = () => (
-  <section className="py-16 md:py-24">
+  <section className="py-16 md:py-24 dark-section">
     <div className="container max-w-5xl mx-auto px-4">
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
-        <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-pill-bg text-pill-fg mb-4 uppercase tracking-wide">Workflow</span>
-        <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-3">Come funziona in pratica</h2>
-        <p className="text-muted-foreground max-w-2xl mx-auto">Il flusso quotidiano dalla visita alla chiusura della prestazione, tutto in piattaforma.</p>
+        <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-primary-foreground/10 text-primary-foreground/80 mb-4 uppercase tracking-wide">Workflow</span>
+        <h2 className="text-2xl sm:text-3xl font-bold text-primary-foreground mb-3">Come funziona in pratica</h2>
+        <p className="text-primary-foreground/70 max-w-2xl mx-auto">Il flusso quotidiano dalla visita alla chiusura della prestazione, tutto in piattaforma.</p>
       </motion.div>
 
       <div className="relative">
         {/* Connector line */}
-        <div className="hidden md:block absolute top-7 left-[12.5%] right-[12.5%] h-0.5 bg-border z-0" />
+        <div className="hidden md:block absolute top-7 left-[12.5%] right-[12.5%] h-0.5 bg-primary-foreground/20 z-0" />
 
         <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8">
           {steps.map(({ icon: Icon, title, desc }, i) => (
@@ -35,8 +35,8 @@ const WorkflowSection = () => (
                 <Icon size={26} className="text-primary-foreground" fill="currentColor" fillOpacity={0.3} strokeWidth={1.5} />
               </div>
               <span className="text-xs font-bold text-primary mb-1">Step {i + 1}</span>
-              <h3 className="font-bold text-foreground mb-2">{title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{desc}</p>
+              <h3 className="font-bold text-primary-foreground mb-2">{title}</h3>
+              <p className="text-sm text-primary-foreground/70 leading-relaxed">{desc}</p>
             </motion.div>
           ))}
         </div>
