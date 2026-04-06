@@ -40,36 +40,52 @@ Usare la Piattaforma ti offre anche altri vantaggi perché:
 ];
 
 const PazientiFAQ = () => (
-  <section className="py-16 md:py-24 bg-background">
+  <section className="py-20 md:py-32 bg-background overflow-hidden">
     <div className="container max-w-3xl mx-auto px-4">
-      <motion.h2
-        initial={{ opacity: 0, y: 15 }}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-center text-foreground mb-4"
+        className="text-center mb-14"
       >
-        Dubbi o domande? Siamo qui per rispondere!
-      </motion.h2>
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground leading-tight mb-4">
+          Dubbi o domande?{" "}
+          <span className="text-primary">Siamo qui per rispondere!</span>
+        </h2>
+      </motion.div>
 
-      <Accordion type="single" collapsible className="mt-10">
+      <Accordion type="single" collapsible className="space-y-3">
         {faqs.map((faq, i) => (
-          <AccordionItem key={i} value={`faq-${i}`}>
-            <AccordionTrigger className="text-left font-semibold text-foreground">
-              {faq.q}
-            </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground whitespace-pre-line leading-relaxed">
-              {faq.a}
-            </AccordionContent>
-          </AccordionItem>
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: i * 0.05 }}
+          >
+            <AccordionItem value={`faq-${i}`} className="rounded-xl border border-border bg-card px-5 data-[state=open]:card-elevated">
+              <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline py-4">
+                {faq.q}
+              </AccordionTrigger>
+              <AccordionContent className="text-sm text-muted-foreground whitespace-pre-line leading-relaxed pb-4">
+                {faq.a}
+              </AccordionContent>
+            </AccordionItem>
+          </motion.div>
         ))}
       </Accordion>
 
-      <div className="flex flex-wrap gap-4 justify-center mt-10">
+      <motion.div
+        initial={{ opacity: 0, y: 15 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="flex flex-wrap gap-4 justify-center mt-10"
+      >
         <a
           href="https://www.welcomedicineonline.it/faq-pazienti"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 h-10 px-6 rounded-lg border-2 border-primary text-primary font-semibold text-sm hover:bg-primary/5 transition-colors"
+          className="inline-flex items-center gap-2 h-12 px-7 rounded-xl border-2 border-primary text-primary font-semibold text-sm hover:bg-primary/5 transition-colors"
         >
           Continua a leggere &gt;
         </a>
@@ -77,11 +93,11 @@ const PazientiFAQ = () => (
           href="https://www.welcomedicineonline.it/supporto"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 h-10 px-6 rounded-lg cta-gradient text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity"
+          className="inline-flex items-center gap-2 h-12 px-7 rounded-xl cta-gradient text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity"
         >
           Contattaci per supporto
         </a>
-      </div>
+      </motion.div>
     </div>
   </section>
 );
