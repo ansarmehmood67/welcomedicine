@@ -45,32 +45,11 @@ const HeroSection = () => (
 
       {/* Right – Dashboard mock */}
       <motion.div initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.7, delay: 0.2 }} className="hidden md:block">
-        <div className="rounded-2xl bg-card border border-border card-elevated p-6">
-          <div className="flex items-center gap-3 mb-5">
-            <div className="w-10 h-10 rounded-full cta-gradient flex items-center justify-center text-primary-foreground font-bold text-sm">W</div>
-            <div>
-              <p className="text-sm font-semibold text-foreground">Dashboard Medico</p>
-              <p className="text-xs text-muted-foreground">3 nuovi messaggi • 2 videoconsulti oggi</p>
-            </div>
-          </div>
-          <div className="space-y-3">
-            {[
-              { title: "Paziente: Maria B.", sub: "Presa visione esami • 10 min fa", color: "bg-primary/10 text-primary" },
-              { title: "Collega: Dr. Rossini", sub: "Videoconsulto alle 15:00", color: "bg-accent text-accent-foreground" },
-              { title: "Ricetta digitale", sub: "Prescrizione firmata e inviata", color: "bg-pill-bg text-pill-fg" },
-            ].map((item) => (
-              <div key={item.title} className="flex items-center gap-3 p-3 rounded-xl bg-muted/50">
-                <div className={`w-9 h-9 rounded-lg flex items-center justify-center text-xs font-bold ${item.color}`}>
-                  {item.title.charAt(0)}
-                </div>
-                <div>
-                  <p className="text-sm font-medium text-foreground">{item.title}</p>
-                  <p className="text-xs text-muted-foreground">{item.sub}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        <img
+          src={heroImage}
+          alt="Piattaforma Welcomedicine — vista desktop e mobile"
+          className="w-full h-auto rounded-2xl shadow-2xl"
+        />
       </motion.div>
     </div>
   </section>
