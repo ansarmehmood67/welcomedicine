@@ -18,12 +18,17 @@ const features = [
   { icon: Receipt, title: "Fatturazione automatica", desc: "Gestione automatica di bollo, invio alla Tessera Sanitaria e fatturazione elettronica. Zero burocrazia.", color: "text-fuchsia-500", bg: "bg-fuchsia-500/10" },
 ];
 
-const half = Math.ceil(features.length / 2);
-
-const FeatureCard = ({ icon: Icon, title, desc, color, bg, i, direction }: { icon: any; title: string; desc: string; color: string; bg: string; i: number; direction: number }) => (
-  <motion.div key={title} initial={{ opacity: 0, x: direction }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }} className="rounded-2xl bg-card border border-border p-6 card-elevated">
-    <div className={`w-11 h-11 rounded-xl ${bg} flex items-center justify-center mb-4`}>
-      <Icon size={22} className={color} fill="currentColor" fillOpacity={0.2} strokeWidth={2} />
+const FeatureCard = ({ icon: Icon, title, desc, color, bg, i }: { icon: any; title: string; desc: string; color: string; bg: string; i: number }) => (
+  <motion.div
+    key={title}
+    initial={{ opacity: 0, y: 30, scale: 0.95 }}
+    whileInView={{ opacity: 1, y: 0, scale: 1 }}
+    viewport={{ once: true }}
+    transition={{ delay: i * 0.07, duration: 0.5, ease: "easeOut" }}
+    className="rounded-2xl bg-card border border-border p-6 card-elevated"
+  >
+    <div className={`w-14 h-14 rounded-xl ${bg} flex items-center justify-center mb-4`}>
+      <Icon size={28} className={color} fill="currentColor" fillOpacity={0.2} strokeWidth={2} />
     </div>
     <h3 className="font-bold text-foreground mb-2">{title}</h3>
     <p className="text-sm text-muted-foreground leading-relaxed">{desc}</p>
@@ -39,23 +44,26 @@ const FeaturesSection = () => (
         <p className="text-muted-foreground max-w-2xl mx-auto">In ambulatorio o in mobilità, hai tutte le informazioni organizzate e a portata di mano in un unico strumento, sicuro e integrato.</p>
       </motion.div>
 
-      <div className="grid lg:grid-cols-[1fr_auto_1fr] gap-8 items-center">
-        <div className="space-y-6">
-          {features.slice(0, half).map((f, i) => <FeatureCard key={f.title} {...f} i={i} direction={-20} />)}
-        </div>
-
-        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="hidden lg:flex justify-center">
+      {/* Phone + first card */}
+      <div className="grid md:grid-cols-2 gap-8 items-center mb-10">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          className="flex justify-center"
+        >
           <img src={mobileApp} alt="App Welcomedicine — vista mobile" className="w-[260px] h-auto drop-shadow-2xl" />
         </motion.div>
-
-        <div className="space-y-6">
-          {features.slice(half).map((f, i) => <FeatureCard key={f.title} {...f} i={i} direction={20} />)}
-        </div>
+        <FeatureCard {...features[0]} i={0} />
       </div>
 
-      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="flex lg:hidden justify-center mt-10">
-        <img src={mobileApp} alt="App Welcomedicine — vista mobile" className="w-[220px] h-auto drop-shadow-2xl" />
-      </motion.div>
+      {/* Remaining cards – 3 per row */}
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {features.slice(1).map((f, i) => (
+          <FeatureCard key={f.title} {...f} i={i} />
+        ))}
+      </div>
     </div>
   </section>
 );
