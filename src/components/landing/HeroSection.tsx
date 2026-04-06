@@ -14,22 +14,22 @@ const HeroSection = () => (
       {/* Left */}
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
         <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-pill-bg text-pill-fg mb-5 tracking-wide uppercase">
-          Ecosistema WellMed — Tecnologia ospedaliera per il professionista
+          A WelMed brand — Tecnologia ospedaliera per il professionista
         </span>
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-foreground mb-5">
-          Basta email infiniti e WhatsApp dei pazienti.{" "}
-          <span className="text-primary">Riprendi il controllo.</span>
+          La medicina non finisce in ambulatorio:{" "}
+          <span className="text-primary">continua online con Welcomedicine.</span>
         </h1>
         <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-8 max-w-lg">
-          La stessa tecnologia scelta dai migliori ospedali d'Italia, ora disponibile per te. Welcome Medicine separa la comunicazione professionale da quella privata, protegge il tuo lavoro e valorizza il tuo tempo.
+          Organizza e remunera la tua attività clinica fuori dall'ambulatorio. Un centro erogatore privato che mette a disposizione dei singoli medici l'esperienza maturata da WelMed nella digitalizzazione delle più moderne strutture sanitarie.
         </p>
 
         <div className="flex flex-wrap gap-3 mb-8">
           <a href="#cta-finale" className="inline-flex items-center gap-2 h-12 px-7 rounded-xl cta-gradient text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity">
-            Prova gratis 30 giorni <ArrowRight size={16} />
+            Provalo gratuitamente <ArrowRight size={16} />
           </a>
-          <a href="#come-funziona" className="inline-flex items-center gap-2 h-12 px-7 rounded-xl border-2 border-primary text-primary font-semibold text-sm hover:bg-primary/5 transition-colors">
-            Prenota una demo
+          <a href="#funzioni" className="inline-flex items-center gap-2 h-12 px-7 rounded-xl border-2 border-primary text-primary font-semibold text-sm hover:bg-primary/5 transition-colors">
+            Scopri le funzionalità
           </a>
         </div>
 
@@ -54,9 +54,9 @@ const HeroSection = () => (
           </div>
           <div className="space-y-3">
             {[
-              { title: "Paziente: Marco R.", sub: "Referto condiviso • 10 min fa", color: "bg-primary/10 text-primary" },
-              { title: "Collega: Dott.ssa Bianchi", sub: "Videoconsulto alle 15:00", color: "bg-accent text-accent-foreground" },
-              { title: "Nuovo documento", sub: "Consenso informato firmato", color: "bg-pill-bg text-pill-fg" },
+              { title: "Paziente: Maria B.", sub: "Presa visione esami • 10 min fa", color: "bg-primary/10 text-primary" },
+              { title: "Collega: Dr. Rossini", sub: "Videoconsulto alle 15:00", color: "bg-accent text-accent-foreground" },
+              { title: "Ricetta digitale", sub: "Prescrizione firmata e inviata", color: "bg-pill-bg text-pill-fg" },
             ].map((item) => (
               <div key={item.title} className="flex items-center gap-3 p-3 rounded-xl bg-muted/50">
                 <div className={`w-9 h-9 rounded-lg flex items-center justify-center text-xs font-bold ${item.color}`}>

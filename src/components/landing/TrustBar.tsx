@@ -14,6 +14,13 @@ const hospitals = [
   { name: "Istituto Clinico Città Studi", logo: logoICCS },
 ];
 
+const stats = [
+  { value: "+100", label: "Strutture Sanitarie" },
+  { value: "+250.000", label: "Pazienti gestiti" },
+  { value: "+900.000", label: "Prestazioni eseguite" },
+  { value: "+4.500", label: "Professionisti sanitari" },
+];
+
 const TrustBar = () => (
   <section className="py-12 md:py-16 bg-background border-b border-border">
     <div className="container max-w-6xl mx-auto px-4">
@@ -31,6 +38,23 @@ const TrustBar = () => (
         </h2>
       </motion.div>
 
+      {/* Stats */}
+      <motion.div
+        initial={{ opacity: 0, y: 15 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.1 }}
+        className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10"
+      >
+        {stats.map(({ value, label }) => (
+          <div key={label} className="text-center">
+            <p className="text-2xl sm:text-3xl font-extrabold text-primary">{value}</p>
+            <p className="text-xs sm:text-sm text-muted-foreground mt-1">{label}</p>
+          </div>
+        ))}
+      </motion.div>
+
+      {/* Logos */}
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -61,7 +85,7 @@ const TrustBar = () => (
         transition={{ delay: 0.3 }}
         className="text-center text-xs text-muted-foreground mt-6 max-w-lg mx-auto"
       >
-        Welcome Medicine porta la stessa tecnologia ospedaliera collaudata direttamente al professionista.
+        Pensato dai Medici. Per i Medici. Welcome Medicine porta la stessa tecnologia ospedaliera collaudata direttamente al professionista.
       </motion.p>
     </div>
   </section>
