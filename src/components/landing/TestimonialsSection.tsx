@@ -11,6 +11,20 @@ const testimonials = [
     videoId: "2F6UM4lBwnc",
   },
   {
+    quote: "La piattaforma mi ha permesso di strutturare meglio il percorso terapeutico dei miei pazienti, migliorando la comunicazione e riducendo il carico organizzativo quotidiano.",
+    name: "Dr. Stefano Romanò",
+    role: "Psicologo Clinico",
+    initials: "SR",
+    videoId: "Btb1UiWtFPA",
+  },
+  {
+    quote: "Welcomedicine ha trasformato il modo in cui gestisco i follow-up urologici. I pazienti sono più coinvolti e io ho una visione completa e organizzata della loro storia clinica.",
+    name: "Dott. Carmelo Morana",
+    role: "Urologo",
+    initials: "CM",
+    videoId: "AqXS8FVX_t0",
+  },
+  {
     quote: "La piattaforma ha migliorato la continuità di cura dei pazienti cronici, ridotto la frammentazione delle informazioni cliniche e alleggerito il carico invisibile del medico.",
     name: "Dott.ssa Daniela Agrimi",
     role: "Endocrinologa",
@@ -18,11 +32,18 @@ const testimonials = [
     videoId: "kk6boeGyOvM",
   },
   {
-    quote: "Ora posso organizzare i controlli in modo strutturato, recuperare rapidamente referti e analisi e centralizzare tutto in un'unica cartella clinica informatizzata.",
-    name: "Dr. Giovanni Rossini",
-    role: "Endocrinologo",
-    initials: "GR",
-    videoId: "b4DHRYQPKts",
+    quote: "La telemedicina ci ha permesso di mantenere un contatto costante con i pazienti neurologici, garantendo continuità assistenziale e monitoraggio efficace anche a distanza.",
+    name: "Prof.ssa Federica Alemanno",
+    role: "Neuropsicologia — Osp. San Raffaele",
+    initials: "FA",
+    videoId: "ttQgYl1DP0E",
+  },
+  {
+    quote: "La piattaforma digitale ha rivoluzionato il nostro approccio alla neurologia, permettendoci di seguire i pazienti in modo più efficiente e con una qualità di cura superiore.",
+    name: "Prof. Massimo Filippi",
+    role: "Neurologia — Osp. San Raffaele",
+    initials: "MF",
+    videoId: "3DmvOkGcY9s",
   },
 ];
 
@@ -46,11 +67,11 @@ const TestimonialsSection = () => {
               Cosa dicono i professionisti che lo usano
             </h2>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Medici e specialisti raccontano come Welcome Medicine ha trasformato la loro pratica quotidiana.
+              Medici e specialisti di diverse discipline raccontano come Welcome Medicine ha trasformato la loro pratica quotidiana.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {testimonials.map(({ quote, name, role, initials, videoId }, i) => (
               <motion.div
                 key={name}
