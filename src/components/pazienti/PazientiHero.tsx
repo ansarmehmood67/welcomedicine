@@ -11,7 +11,7 @@ const PazientiHero = () => (
         alt="Paziente in videochiamata con medico"
         className="w-full h-full object-cover"
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-[hsl(216,43%,12%)] via-[hsl(216,43%,15%)/0.95] to-[hsl(216,43%,18%)/0.6]" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[hsl(216,43%,10%)] via-[hsl(216,43%,12%)/0.97] to-[hsl(216,43%,15%)/0.85]" />
     </div>
 
     <div className="container max-w-6xl mx-auto px-4 relative z-10 py-32 md:py-40">
