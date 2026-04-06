@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Mail, MessageCircle, Video, FileText, Stethoscope, Users } from "lucide-react";
+import mobileApp from "@/assets/Home-medico-New-2.png";
 
 const features = [
   { icon: MessageCircle, title: "Chat, chiamate e video illimitate", desc: "Con un click dalla piattaforma, senza numero visibile e con gestione flessibile. Comunica con pazienti e colleghi in modo sicuro." },
@@ -19,17 +20,62 @@ const FeaturesSection = () => (
         <p className="text-muted-foreground max-w-2xl mx-auto">In ambulatorio o in mobilità, hai tutte le informazioni organizzate e a portata di mano in un unico strumento, sicuro e integrato.</p>
       </motion.div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {features.map(({ icon: Icon, title, desc }, i) => (
-          <motion.div key={title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }} className="rounded-2xl bg-card border border-border p-6 card-elevated">
-            <div className="w-11 h-11 rounded-xl bg-accent flex items-center justify-center mb-4">
-              <Icon size={22} className="text-primary" />
-            </div>
-            <h3 className="font-bold text-foreground mb-2">{title}</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">{desc}</p>
-          </motion.div>
-        ))}
+      <div className="grid lg:grid-cols-[1fr_auto_1fr] gap-8 items-center">
+        {/* Left column — first 3 features */}
+        <div className="space-y-6">
+          {features.slice(0, 3).map(({ icon: Icon, title, desc }, i) => (
+            <motion.div key={title} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="rounded-2xl bg-card border border-border p-6 card-elevated">
+              <div className="w-11 h-11 rounded-xl bg-accent flex items-center justify-center mb-4">
+                <Icon size={22} className="text-primary" />
+              </div>
+              <h3 className="font-bold text-foreground mb-2">{title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">{desc}</p>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Center — mobile mockup */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="hidden lg:flex justify-center"
+        >
+          <img
+            src={mobileApp}
+            alt="App Welcomedicine — vista mobile"
+            className="w-[260px] h-auto drop-shadow-2xl"
+          />
+        </motion.div>
+
+        {/* Right column — last 3 features */}
+        <div className="space-y-6">
+          {features.slice(3).map(({ icon: Icon, title, desc }, i) => (
+            <motion.div key={title} initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="rounded-2xl bg-card border border-border p-6 card-elevated">
+              <div className="w-11 h-11 rounded-xl bg-accent flex items-center justify-center mb-4">
+                <Icon size={22} className="text-primary" />
+              </div>
+              <h3 className="font-bold text-foreground mb-2">{title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">{desc}</p>
+            </motion.div>
+          ))}
+        </div>
       </div>
+
+      {/* Mobile: show phone image between feature cards */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="flex lg:hidden justify-center mt-10"
+      >
+        <img
+          src={mobileApp}
+          alt="App Welcomedicine — vista mobile"
+          className="w-[220px] h-auto drop-shadow-2xl"
+        />
+      </motion.div>
     </div>
   </section>
 );
