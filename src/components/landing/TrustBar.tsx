@@ -68,19 +68,20 @@ function AnimatedCounter({ value, prefix, suffix }: { value: number; prefix: str
 }
 
 const TrustBar = () => (
-  <section className="py-14 md:py-20 dark-section">
+  <section className="py-20 md:py-32 dark-section overflow-hidden">
     <div className="container max-w-6xl mx-auto px-4">
       <motion.div
         initial={{ opacity: 0, y: 15 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-center mb-10"
+        className="text-center mb-12"
       >
         <p className="text-xs font-semibold uppercase tracking-widest text-primary-foreground/60 mb-2">
           Ecosistema WellMed
         </p>
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-primary-foreground">
-          La tecnologia già scelta dalle migliori strutture sanitarie d'Italia
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary-foreground leading-tight">
+          La tecnologia già scelta dalle{" "}
+          <span className="text-primary">migliori strutture sanitarie</span> d'Italia
         </h2>
       </motion.div>
 

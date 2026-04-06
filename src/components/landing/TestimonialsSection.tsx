@@ -79,21 +79,22 @@ const TestimonialsSection = () => {
 
   return (
     <>
-      <section id="testimonianze" className="py-16 md:py-24 bg-background scroll-mt-20">
+      <section id="testimonianze" className="py-20 md:py-32 bg-background scroll-mt-20 overflow-hidden">
         <div className="container max-w-6xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-12"
+            className="text-center mb-14"
           >
             <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-pill-bg text-pill-fg mb-4 uppercase tracking-wide">
               I medici dicono di noi
             </span>
-            <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-3">
-              Cosa dicono i professionisti che lo usano
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground mb-4 leading-tight">
+              Cosa dicono i{" "}
+              <span className="text-primary">professionisti</span>
             </h2>
-            <p className="text-muted-foreground max-w-xl mx-auto">
+            <p className="text-muted-foreground text-lg max-w-xl mx-auto">
               Medici e specialisti di diverse discipline raccontano come Welcome Medicine ha trasformato la loro pratica quotidiana.
             </p>
           </motion.div>
@@ -103,10 +104,10 @@ const TestimonialsSection = () => {
             {videoTestimonials.map(({ quote, name, role, initials, videoId }, i) => (
               <motion.div
                 key={name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.08 }}
+                transition={{ delay: i * 0.08, duration: 0.5 }}
                 className="relative flex flex-col rounded-2xl bg-card border border-border card-elevated overflow-hidden"
               >
                 <button
@@ -152,10 +153,10 @@ const TestimonialsSection = () => {
             {textTestimonials.map(({ quote, name, role, initials }, i) => (
               <motion.div
                 key={name}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 25 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.08 }}
+                transition={{ delay: i * 0.08, duration: 0.5 }}
                 className="rounded-2xl bg-card border border-border p-5 card-elevated flex flex-col"
               >
                 <Quote size={20} className="text-primary/30 mb-3" fill="currentColor" />
@@ -173,7 +174,6 @@ const TestimonialsSection = () => {
             ))}
           </div>
 
-          {/* Link to all testimonials */}
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
