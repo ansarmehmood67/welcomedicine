@@ -1,12 +1,17 @@
 import { motion } from "framer-motion";
-import { Building2 } from "lucide-react";
+
+import logoSanRaffaele from "@/assets/logos/san-raffaele.png";
+import logoGSD from "@/assets/logos/gruppo-san-donato.png";
+import logoCDI from "@/assets/logos/cdi.png";
+import logoHumanitas from "@/assets/logos/humanitas.png";
+import logoICCS from "@/assets/logos/iccs.png";
 
 const hospitals = [
-  { name: "Ospedale San Raffaele", initials: "SR" },
-  { name: "Gruppo San Donato", initials: "GSD" },
-  { name: "CDI - Centro Diagnostico Italiano", initials: "CDI" },
-  { name: "Humanitas", initials: "HU" },
-  { name: "Istituto Clinico Città Studi", initials: "ICCS" },
+  { name: "Ospedale San Raffaele", logo: logoSanRaffaele },
+  { name: "Gruppo San Donato", logo: logoGSD },
+  { name: "CDI - Centro Diagnostico Italiano", logo: logoCDI },
+  { name: "Humanitas", logo: logoHumanitas },
+  { name: "Istituto Clinico Città Studi", logo: logoICCS },
 ];
 
 const TrustBar = () => (
@@ -31,21 +36,20 @@ const TrustBar = () => (
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ delay: 0.15 }}
-        className="flex flex-wrap items-center justify-center gap-6 md:gap-10"
+        className="flex flex-wrap items-center justify-center gap-8 md:gap-12"
       >
-        {hospitals.map(({ name, initials }) => (
+        {hospitals.map(({ name, logo }) => (
           <div
             key={name}
-            className="flex items-center gap-2.5 px-5 py-3 rounded-xl bg-muted/50 border border-border"
+            className="flex items-center justify-center px-4 py-3 grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-300"
             title={name}
           >
-            <Building2 size={18} className="text-primary shrink-0" />
-            <span className="text-sm font-semibold text-foreground whitespace-nowrap">
-              {initials}
-            </span>
-            <span className="hidden sm:inline text-xs text-muted-foreground truncate max-w-[140px]">
-              {name}
-            </span>
+            <img
+              src={logo}
+              alt={name}
+              loading="lazy"
+              className="h-10 md:h-14 w-auto object-contain"
+            />
           </div>
         ))}
       </motion.div>
