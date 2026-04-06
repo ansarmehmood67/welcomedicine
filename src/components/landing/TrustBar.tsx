@@ -54,28 +54,35 @@ const TrustBar = () => (
         ))}
       </motion.div>
 
-      {/* Logos */}
+      {/* Infinite scrolling carousel */}
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ delay: 0.15 }}
-        className="flex flex-wrap items-center justify-center gap-8 md:gap-12"
+        className="relative overflow-hidden"
       >
-        {hospitals.map(({ name, logo }) => (
-          <div
-            key={name}
-            className="flex items-center justify-center px-4 py-3 grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-300"
-            title={name}
-          >
-            <img
-              src={logo}
-              alt={name}
-              loading="lazy"
-              className="h-10 md:h-14 w-auto object-contain"
-            />
-          </div>
-        ))}
+        {/* Fade edges */}
+        <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
+
+        <div className="flex animate-[scroll_20s_linear_infinite] hover:[animation-play-state:paused] w-max">
+          {/* Duplicate logos for seamless loop */}
+          {[...hospitals, ...hospitals, ...hospitals].map(({ name, logo }, i) => (
+            <div
+              key={`${name}-${i}`}
+              className="flex items-center justify-center px-8 md:px-12 py-4 flex-shrink-0 grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300"
+              title={name}
+            >
+              <img
+                src={logo}
+                alt={name}
+                loading="lazy"
+                className="h-16 md:h-20 w-auto object-contain"
+              />
+            </div>
+          ))}
+        </div>
       </motion.div>
 
       <motion.p
