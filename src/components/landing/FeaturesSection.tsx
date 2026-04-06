@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, MessageCircle, Video, FileText, Stethoscope, Users, DatabaseZap, Headphones, Receipt, FolderHeart, ScanSearch, Smartphone, UserCog } from "lucide-react";
+import { Mail, MessageCircle, Video, FileText, Stethoscope, Users, DatabaseZap, Headphones, Receipt, FolderHeart, ScanSearch, Smartphone, UserCog, ArrowRight } from "lucide-react";
 import mobileApp from "@/assets/Home-medico-New-2.png";
 
 const features = [
@@ -46,35 +46,22 @@ const FeaturesSection = () => (
         <p className="text-muted-foreground text-lg max-w-2xl mx-auto">In ambulatorio o in mobilità, hai tutte le informazioni organizzate e a portata di mano in un unico strumento, sicuro e integrato.</p>
       </motion.div>
 
-      {/* Phone + first card */}
       <div className="grid md:grid-cols-2 gap-8 items-center mb-12">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
-          className="flex justify-center"
-        >
+        <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7, ease: "easeOut" }} className="flex justify-center">
           <img src={mobileApp} alt="App Welcomedicine — vista mobile" className="w-[280px] h-auto drop-shadow-2xl" />
         </motion.div>
         <FeatureCard {...features[0]} i={0} />
       </div>
 
-      {/* Remaining cards – 3 per row */}
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {features.slice(1).map((f, i) => (
           <FeatureCard key={f.title} {...f} i={i} />
         ))}
       </div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="text-center mt-12"
-      >
+      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mt-12">
         <a href="#cta-finale" className="inline-flex items-center gap-2 h-12 px-8 rounded-xl cta-gradient text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity">
-          Inizia gratis ora →
+          Prova gratis 30 giorni <ArrowRight size={16} />
         </a>
       </motion.div>
     </div>

@@ -1,5 +1,11 @@
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Users, Building2, ShieldCheck } from "lucide-react";
+
+const stats = [
+  { icon: Users, value: "4.500+", label: "Medici attivi" },
+  { icon: Building2, value: "100+", label: "Strutture sanitarie" },
+  { icon: ShieldCheck, value: "100%", label: "Conforme GDPR" },
+];
 
 const FinalCTASection = () => (
   <section id="cta-finale" className="py-20 md:py-32 section-alt overflow-hidden">
@@ -11,12 +17,39 @@ const FinalCTASection = () => (
         transition={{ duration: 0.7 }}
       >
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground mb-5 leading-tight">
-          Unisciti all'ecosistema già scelto dai{" "}
-          <span className="text-primary">migliori ospedali d'Italia</span>
+          Inizia oggi,{" "}
+          <span className="text-primary">è gratis per 30 giorni</span>
         </h2>
-        <p className="text-muted-foreground mb-8 max-w-xl mx-auto text-base sm:text-lg">
-          Migliaia di professionisti della salute usano già la tecnologia WellMed. Inizia la tua prova gratuita e riprendi il controllo della tua comunicazione.
+        <p className="text-muted-foreground mb-4 max-w-xl mx-auto text-base sm:text-lg">
+          Unisciti ai migliori professionisti della salute che hanno già scelto Welcomedicine per la loro pratica clinica.
         </p>
+
+        {/* Urgency */}
+        <p className="text-sm font-semibold text-primary mb-8">
+          🔥 Posti limitati per l'onboarding assistito di aprile
+        </p>
+
+        {/* Stats */}
+        <div className="flex flex-wrap justify-center gap-8 mb-10">
+          {stats.map(({ icon: Icon, value, label }) => (
+            <motion.div
+              key={label}
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="flex items-center gap-3"
+            >
+              <div className="w-10 h-10 rounded-lg cta-gradient flex items-center justify-center">
+                <Icon size={18} className="text-primary-foreground" />
+              </div>
+              <div className="text-left">
+                <p className="text-lg font-extrabold text-foreground">{value}</p>
+                <p className="text-xs text-muted-foreground">{label}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <motion.a
             href="#"
@@ -30,7 +63,7 @@ const FinalCTASection = () => (
             Prenota una demo
           </a>
         </div>
-        <p className="text-muted-foreground/60 text-xs mt-6">Nessuna carta di credito richiesta • Cancella quando vuoi • Assistenza dedicata</p>
+        <p className="text-muted-foreground/60 text-xs mt-6">Nessuna carta di credito • Cancella in un click • I tuoi dati restano tuoi</p>
       </motion.div>
     </div>
   </section>

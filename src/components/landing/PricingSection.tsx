@@ -15,37 +15,15 @@ const included = [
 ];
 
 const plans = [
-  {
-    name: "Piano Mensile",
-    price: "49",
-    unit: "€/mese",
-    billing: "Pagamento e fatturazione mensile",
-    period: "Abbonamento di 6 mesi",
-    highlighted: false,
-  },
-  {
-    name: "Piano Semestrale",
-    price: "250",
-    unit: "€/6 mesi",
-    billing: "Pagamento e fatturazione semestrale",
-    period: "Abbonamento di 6 mesi",
-    savings: "Risparmi 44€",
-    highlighted: true,
-  },
+  { name: "Piano Mensile", price: "49", unit: "€/mese", billing: "Pagamento e fatturazione mensile", period: "Abbonamento di 6 mesi", highlighted: false },
+  { name: "Piano Semestrale", price: "250", unit: "€/6 mesi", billing: "Pagamento e fatturazione semestrale", period: "Abbonamento di 6 mesi", savings: "Risparmi 44€", highlighted: true },
 ];
 
 const PricingSection = () => (
   <section id="prezzi" className="py-20 md:py-32 dark-section scroll-mt-20 overflow-hidden">
     <div className="container max-w-6xl mx-auto px-4">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="text-center mb-14"
-      >
-        <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-primary-foreground/10 text-primary-foreground/80 mb-4 uppercase tracking-wide">
-          Piani e Prezzi
-        </span>
+      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
+        <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-primary-foreground/10 text-primary-foreground/80 mb-4 uppercase tracking-wide">Piani e Prezzi</span>
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary-foreground mb-4 leading-tight">
           Scegli il piano{" "}
           <span className="text-primary">più adatto a te</span>
@@ -55,21 +33,9 @@ const PricingSection = () => (
         </p>
       </motion.div>
 
-      {/* Plans */}
-      <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto mb-16">
+      <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto mb-10">
         {plans.map(({ name, price, unit, billing, period, savings, highlighted }, i) => (
-          <motion.div
-            key={name}
-            initial={{ opacity: 0, y: 30, scale: 0.95 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: i * 0.12, duration: 0.5 }}
-            className={`relative rounded-2xl p-8 flex flex-col items-center text-center ${
-              highlighted
-                ? "bg-card border-2 border-primary card-elevated"
-                : "bg-card border border-border card-elevated"
-            }`}
-          >
+          <motion.div key={name} initial={{ opacity: 0, y: 30, scale: 0.95 }} whileInView={{ opacity: 1, y: 0, scale: 1 }} viewport={{ once: true }} transition={{ delay: i * 0.12, duration: 0.5 }} className={`relative rounded-2xl p-8 flex flex-col items-center text-center ${highlighted ? "bg-card border-2 border-primary card-elevated" : "bg-card border border-border card-elevated"}`}>
             {savings && (
               <span className="absolute -top-3 inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold cta-gradient text-primary-foreground">
                 <Sparkles size={12} /> {savings}
@@ -83,30 +49,20 @@ const PricingSection = () => (
             <p className="text-xs text-muted-foreground mb-1">{period}</p>
             <p className="text-xs text-muted-foreground mb-6">{billing}</p>
             <p className="text-xs font-medium text-primary mb-6">Prova gratuita di 30 giorni inclusa</p>
-            <a
-              href="#"
-              className={`inline-flex items-center justify-center gap-2 w-full h-12 rounded-xl font-semibold text-sm transition-all ${
-                highlighted
-                  ? "cta-gradient text-primary-foreground hover:opacity-90"
-                  : "border-2 border-primary text-primary hover:bg-primary/5"
-              }`}
-            >
-              Attiva la prova gratuita <ArrowRight size={16} />
+            <a href="#cta-finale" className={`inline-flex items-center justify-center gap-2 w-full h-12 rounded-xl font-semibold text-sm transition-all ${highlighted ? "cta-gradient text-primary-foreground hover:opacity-90" : "border-2 border-primary text-primary hover:bg-primary/5"}`}>
+              Prova gratis 30 giorni <ArrowRight size={16} />
             </a>
           </motion.div>
         ))}
       </div>
 
-      {/* What's included */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="max-w-3xl mx-auto"
-      >
-        <h3 className="text-2xl font-extrabold text-primary-foreground text-center mb-8">
-          Cosa comprende l'abbonamento?
-        </h3>
+      {/* Social proof */}
+      <p className="text-center text-sm text-primary-foreground/50 mb-12">
+        📈 Già 237 medici hanno attivato la prova questo mese
+      </p>
+
+      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-3xl mx-auto">
+        <h3 className="text-2xl font-extrabold text-primary-foreground text-center mb-8">Cosa comprende l'abbonamento?</h3>
         <div className="grid sm:grid-cols-2 gap-x-8 gap-y-4">
           {included.map((item) => (
             <div key={item} className="flex items-start gap-3">
@@ -119,16 +75,9 @@ const PricingSection = () => (
         </div>
       </motion.div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="mt-12 text-center"
-      >
-        <p className="text-primary-foreground/60 text-sm mb-4">
-          Vuoi scoprire come Welcomedicine si adatta alla tua pratica clinica?
-        </p>
-        <a href="#" className="inline-flex items-center gap-2 h-11 px-7 rounded-xl border-2 border-primary-foreground/30 text-primary-foreground font-semibold text-sm hover:border-primary-foreground/60 transition-colors">
+      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mt-12 text-center">
+        <p className="text-primary-foreground/60 text-sm mb-4">Vuoi scoprire come Welcomedicine si adatta alla tua pratica clinica?</p>
+        <a href="#cta-finale" className="inline-flex items-center gap-2 h-11 px-7 rounded-xl border-2 border-primary-foreground/30 text-primary-foreground font-semibold text-sm hover:border-primary-foreground/60 transition-colors">
           Prenota una demo
         </a>
       </motion.div>

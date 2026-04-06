@@ -19,26 +19,30 @@ const HeroSection = () => (
           A WelMed brand — Tecnologia ospedaliera per il professionista
         </span>
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.1] text-foreground mb-6">
-          La medicina non finisce in ambulatorio:{" "}
-          <span className="text-primary">continua online con Welcomedicine.</span>
+          Smetti di lavorare gratis{" "}
+          <span className="text-primary">fuori dall'ambulatorio.</span>
         </h1>
         <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-8 max-w-lg">
-          Organizza e remunera la tua attività clinica fuori dall'ambulatorio. Un centro erogatore privato che mette a disposizione dei singoli medici l'esperienza maturata da WelMed nella digitalizzazione delle più moderne strutture sanitarie.
+          Organizza, comunica e monetizza la tua attività clinica con la piattaforma già usata da +4.500 professionisti.
         </p>
 
-        <div className="flex flex-wrap gap-3 mb-8">
+        <div className="flex flex-wrap gap-3 mb-6">
           <motion.a
             href="#cta-finale"
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.97 }}
             className="inline-flex items-center gap-2 h-13 px-8 rounded-xl cta-gradient text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity"
           >
-            Provalo gratuitamente <ArrowRight size={16} />
+            Prova gratis 30 giorni <ArrowRight size={16} />
           </motion.a>
           <Link to="/pazienti" className="inline-flex items-center gap-2 h-13 px-8 rounded-xl border-2 border-primary text-primary font-semibold text-sm hover:bg-primary/5 transition-colors">
             Per i pazienti
           </Link>
         </div>
+
+        <p className="text-xs text-muted-foreground/70 mb-6">
+          Nessuna carta richiesta • 4.500+ medici attivi • Setup in 2 minuti
+        </p>
 
         <div className="flex flex-wrap gap-2">
           {pills.map(({ icon: Icon, label }, i) => (
