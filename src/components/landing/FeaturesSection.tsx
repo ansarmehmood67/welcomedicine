@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, MessageCircle, Video, FileText, Stethoscope, Users } from "lucide-react";
+import { Mail, MessageCircle, Video, FileText, Stethoscope, Users, DatabaseZap, Headphones, Receipt } from "lucide-react";
 import mobileApp from "@/assets/Home-medico-New-2.png";
 
 const features = [
@@ -9,6 +9,9 @@ const features = [
   { icon: Users, title: "Collaborazione multidisciplinare", desc: "Lavora in team con i colleghi, senza limiti di formato o spazio. Condividi e scambia pazienti in un ambiente riservato." },
   { icon: FileText, title: "Scambio documentale conforme", desc: "Emetti documenti firmati digitalmente e condividili in un click. Conservazione a norma di legge garantita." },
   { icon: Stethoscope, title: "Referti e ricette digitali", desc: "Firma digitale di referti e ricette con archivio documentale sempre disponibile per tutte le tue visite." },
+  { icon: DatabaseZap, title: "Import repository pazienti", desc: "Importa il tuo database pazienti esistente in pochi click. Nessun paziente perso nella transizione." },
+  { icon: Headphones, title: "Assistenza tecnica dedicata", desc: "Supporto telefonico per te e per i tuoi pazienti. Mai soli nell'utilizzo della piattaforma." },
+  { icon: Receipt, title: "Fatturazione automatica", desc: "Gestione automatica di bollo, invio alla Tessera Sanitaria e fatturazione elettronica. Zero burocrazia." },
 ];
 
 const FeaturesSection = () => (
@@ -21,9 +24,9 @@ const FeaturesSection = () => (
       </motion.div>
 
       <div className="grid lg:grid-cols-[1fr_auto_1fr] gap-8 items-center">
-        {/* Left column — first 3 features */}
+        {/* Left column — first 4 features */}
         <div className="space-y-6">
-          {features.slice(0, 3).map(({ icon: Icon, title, desc }, i) => (
+          {features.slice(0, 4).map(({ icon: Icon, title, desc }, i) => (
             <motion.div key={title} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="rounded-2xl bg-card border border-border p-6 card-elevated">
               <div className="w-11 h-11 rounded-xl bg-accent flex items-center justify-center mb-4">
                 <Icon size={22} className="text-primary" />
@@ -49,9 +52,9 @@ const FeaturesSection = () => (
           />
         </motion.div>
 
-        {/* Right column — last 3 features */}
+        {/* Right column — remaining features */}
         <div className="space-y-6">
-          {features.slice(3).map(({ icon: Icon, title, desc }, i) => (
+          {features.slice(4).map(({ icon: Icon, title, desc }, i) => (
             <motion.div key={title} initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="rounded-2xl bg-card border border-border p-6 card-elevated">
               <div className="w-11 h-11 rounded-xl bg-accent flex items-center justify-center mb-4">
                 <Icon size={22} className="text-primary" />
@@ -63,7 +66,7 @@ const FeaturesSection = () => (
         </div>
       </div>
 
-      {/* Mobile: show phone image between feature cards */}
+      {/* Mobile: show phone image */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
