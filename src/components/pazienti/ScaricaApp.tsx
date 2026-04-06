@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Smartphone, Download } from "lucide-react";
+import { Download } from "lucide-react";
+import appScreenshot from "@/assets/app-smartphone.png";
 
 const ScaricaApp = () => (
   <section className="py-16 md:py-24 dark-section">
@@ -10,9 +11,11 @@ const ScaricaApp = () => (
         viewport={{ once: true }}
         className="flex justify-center"
       >
-        <div className="w-64 h-[480px] rounded-3xl bg-primary-foreground/5 border border-primary-foreground/10 flex items-center justify-center">
-          <Smartphone size={80} className="text-primary/40" />
-        </div>
+        <img
+          src={appScreenshot}
+          alt="App Welcomedicine su smartphone"
+          className="w-64 h-auto rounded-3xl shadow-2xl"
+        />
       </motion.div>
 
       <motion.div
