@@ -20,11 +20,10 @@ const features = [
 
 const FeatureCard = ({ icon: Icon, title, desc, color, bg, i }: { icon: any; title: string; desc: string; color: string; bg: string; i: number }) => (
   <motion.div
-    key={title}
     initial={{ opacity: 0, y: 30, scale: 0.95 }}
     whileInView={{ opacity: 1, y: 0, scale: 1 }}
     viewport={{ once: true }}
-    transition={{ delay: i * 0.07, duration: 0.5, ease: "easeOut" }}
+    transition={{ delay: i * 0.06, duration: 0.5, ease: "easeOut" }}
     className="rounded-2xl bg-card border border-border p-6 card-elevated"
   >
     <div className={`w-14 h-14 rounded-xl ${bg} flex items-center justify-center mb-4`}>
@@ -36,16 +35,19 @@ const FeatureCard = ({ icon: Icon, title, desc, color, bg, i }: { icon: any; tit
 );
 
 const FeaturesSection = () => (
-  <section id="funzioni" className="py-16 md:py-24 scroll-mt-20">
+  <section id="funzioni" className="py-20 md:py-32 section-alt scroll-mt-20 overflow-hidden">
     <div className="container max-w-6xl mx-auto px-4">
-      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
         <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-pill-bg text-pill-fg mb-4 uppercase tracking-wide">Le Funzionalità</span>
-        <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-3">Tutto ciò che ti serve, in un'unica piattaforma</h2>
-        <p className="text-muted-foreground max-w-2xl mx-auto">In ambulatorio o in mobilità, hai tutte le informazioni organizzate e a portata di mano in un unico strumento, sicuro e integrato.</p>
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground mb-4 leading-tight">
+          Tutto ciò che ti serve,{" "}
+          <span className="text-primary">in un'unica piattaforma</span>
+        </h2>
+        <p className="text-muted-foreground text-lg max-w-2xl mx-auto">In ambulatorio o in mobilità, hai tutte le informazioni organizzate e a portata di mano in un unico strumento, sicuro e integrato.</p>
       </motion.div>
 
       {/* Phone + first card */}
-      <div className="grid md:grid-cols-2 gap-8 items-center mb-10">
+      <div className="grid md:grid-cols-2 gap-8 items-center mb-12">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -53,7 +55,7 @@ const FeaturesSection = () => (
           transition={{ duration: 0.7, ease: "easeOut" }}
           className="flex justify-center"
         >
-          <img src={mobileApp} alt="App Welcomedicine — vista mobile" className="w-[260px] h-auto drop-shadow-2xl" />
+          <img src={mobileApp} alt="App Welcomedicine — vista mobile" className="w-[280px] h-auto drop-shadow-2xl" />
         </motion.div>
         <FeatureCard {...features[0]} i={0} />
       </div>

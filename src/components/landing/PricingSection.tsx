@@ -35,21 +35,22 @@ const plans = [
 ];
 
 const PricingSection = () => (
-  <section id="prezzi" className="py-16 md:py-24 scroll-mt-20">
+  <section id="prezzi" className="py-20 md:py-32 dark-section scroll-mt-20 overflow-hidden">
     <div className="container max-w-6xl mx-auto px-4">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-center mb-12"
+        className="text-center mb-14"
       >
-        <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-pill-bg text-pill-fg mb-4 uppercase tracking-wide">
+        <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-primary-foreground/10 text-primary-foreground/80 mb-4 uppercase tracking-wide">
           Piani e Prezzi
         </span>
-        <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-3">
-          Scegli il piano più adatto a te
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary-foreground mb-4 leading-tight">
+          Scegli il piano{" "}
+          <span className="text-primary">più adatto a te</span>
         </h2>
-        <p className="text-muted-foreground max-w-xl mx-auto">
+        <p className="text-primary-foreground/70 text-lg max-w-xl mx-auto">
           Inizia con la prova gratuita di 30 giorni: zero costi, zero rischi, disdici quando vuoi.
         </p>
       </motion.div>
@@ -59,10 +60,10 @@ const PricingSection = () => (
         {plans.map(({ name, price, unit, billing, period, savings, highlighted }, i) => (
           <motion.div
             key={name}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30, scale: 0.95 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ delay: i * 0.1 }}
+            transition={{ delay: i * 0.12, duration: 0.5 }}
             className={`relative rounded-2xl p-8 flex flex-col items-center text-center ${
               highlighted
                 ? "bg-card border-2 border-primary card-elevated"
@@ -74,11 +75,9 @@ const PricingSection = () => (
                 <Sparkles size={12} /> {savings}
               </span>
             )}
-            <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-4">
-              {name}
-            </p>
+            <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-4">{name}</p>
             <div className="flex items-baseline gap-1 mb-2">
-              <span className="text-4xl sm:text-5xl font-extrabold text-foreground">{price}</span>
+              <span className="text-5xl sm:text-6xl font-extrabold text-foreground">{price}</span>
               <span className="text-lg font-semibold text-muted-foreground">{unit}</span>
             </div>
             <p className="text-xs text-muted-foreground mb-1">{period}</p>
@@ -105,35 +104,31 @@ const PricingSection = () => (
         viewport={{ once: true }}
         className="max-w-3xl mx-auto"
       >
-        <h3 className="text-xl font-bold text-foreground text-center mb-8">
+        <h3 className="text-2xl font-extrabold text-primary-foreground text-center mb-8">
           Cosa comprende l'abbonamento?
         </h3>
         <div className="grid sm:grid-cols-2 gap-x-8 gap-y-4">
           {included.map((item) => (
             <div key={item} className="flex items-start gap-3">
-              <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
+              <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center shrink-0 mt-0.5">
                 <Check size={12} className="text-primary" />
               </div>
-              <span className="text-sm text-muted-foreground leading-relaxed">{item}</span>
+              <span className="text-sm text-primary-foreground/70 leading-relaxed">{item}</span>
             </div>
           ))}
         </div>
       </motion.div>
 
-      {/* Demo CTA */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         className="mt-12 text-center"
       >
-        <p className="text-muted-foreground text-sm mb-4">
+        <p className="text-primary-foreground/60 text-sm mb-4">
           Vuoi scoprire come Welcomedicine si adatta alla tua pratica clinica?
         </p>
-        <a
-          href="#"
-          className="inline-flex items-center gap-2 h-11 px-7 rounded-xl border-2 border-primary text-primary font-semibold text-sm hover:bg-primary/5 transition-colors"
-        >
+        <a href="#" className="inline-flex items-center gap-2 h-11 px-7 rounded-xl border-2 border-primary-foreground/30 text-primary-foreground font-semibold text-sm hover:border-primary-foreground/60 transition-colors">
           Prenota una demo
         </a>
       </motion.div>

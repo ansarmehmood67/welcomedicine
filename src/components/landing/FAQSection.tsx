@@ -14,19 +14,30 @@ const faqs = [
 ];
 
 const FAQSection = () => (
-  <section id="faq" className="py-16 md:py-24 section-alt scroll-mt-20">
+  <section id="faq" className="py-20 md:py-32 bg-background scroll-mt-20 overflow-hidden">
     <div className="container max-w-3xl mx-auto px-4">
-      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
         <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-pill-bg text-pill-fg mb-4 uppercase tracking-wide">FAQ</span>
-        <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-3">Domande frequenti</h2>
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground mb-4 leading-tight">
+          Domande{" "}
+          <span className="text-primary">frequenti</span>
+        </h2>
       </motion.div>
 
       <Accordion type="single" collapsible className="space-y-3">
         {faqs.map(({ q, a }, i) => (
-          <AccordionItem key={i} value={`faq-${i}`} className="rounded-xl border border-border bg-card px-5 data-[state=open]:card-elevated">
-            <AccordionTrigger className="text-left text-sm font-semibold text-foreground hover:no-underline py-4">{q}</AccordionTrigger>
-            <AccordionContent className="text-sm text-muted-foreground leading-relaxed pb-4">{a}</AccordionContent>
-          </AccordionItem>
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: i * 0.05 }}
+          >
+            <AccordionItem value={`faq-${i}`} className="rounded-xl border border-border bg-card px-5 data-[state=open]:card-elevated">
+              <AccordionTrigger className="text-left text-sm font-semibold text-foreground hover:no-underline py-4">{q}</AccordionTrigger>
+              <AccordionContent className="text-sm text-muted-foreground leading-relaxed pb-4">{a}</AccordionContent>
+            </AccordionItem>
+          </motion.div>
         ))}
       </Accordion>
     </div>
