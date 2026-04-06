@@ -4,22 +4,35 @@ import { useEffect, useRef } from "react";
 import logoSanRaffaele from "@/assets/logos/san-raffaele.png";
 import logoGSD from "@/assets/logos/gruppo-san-donato.png";
 import logoCDI from "@/assets/logos/cdi.png";
-import logoHumanitas from "@/assets/logos/humanitas.png";
 import logoICCS from "@/assets/logos/iccs.png";
 
-const hospitals = [
-  { name: "Ospedale San Raffaele", logo: logoSanRaffaele },
+const logoHospitals = [
+  { name: "IRCCS Ospedale San Raffaele", logo: logoSanRaffaele },
   { name: "Gruppo San Donato", logo: logoGSD },
   { name: "CDI - Centro Diagnostico Italiano", logo: logoCDI },
-  { name: "Humanitas", logo: logoHumanitas },
   { name: "Istituto Clinico Città Studi", logo: logoICCS },
 ];
 
+const networkPartners = [
+  "RAF First Clinic",
+  "San Carlo di Nancy",
+  "Tiberia Hospital",
+  "Maria Cecilia Hospital",
+  "Santa Maria Hospital",
+  "San Raffaele Roma",
+  "Casa della Salute",
+  "Polimedico",
+  "Campus Bio-Medico",
+  "Asti Clinic",
+  "Virtual Hospital",
+  "Itsalute",
+];
+
 const stats = [
-  { value: 100, prefix: "+", suffix: "", label: "Strutture Sanitarie", decimals: false },
-  { value: 250000, prefix: "+", suffix: "", label: "Pazienti gestiti", decimals: false },
-  { value: 900000, prefix: "+", suffix: "", label: "Prestazioni eseguite", decimals: false },
-  { value: 4500, prefix: "+", suffix: "", label: "Professionisti sanitari", decimals: false },
+  { value: 100, prefix: "+", suffix: "", label: "Strutture Sanitarie" },
+  { value: 250000, prefix: "+", suffix: "", label: "Pazienti gestiti" },
+  { value: 900000, prefix: "+", suffix: "", label: "Prestazioni eseguite" },
+  { value: 4500, prefix: "+", suffix: "", label: "Professionisti sanitari" },
 ];
 
 function formatNumber(n: number) {
@@ -76,33 +89,50 @@ const TrustBar = () => (
         ))}
       </motion.div>
 
-      {/* Infinite scrolling carousel */}
+      {/* Logo carousel */}
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ delay: 0.15 }}
-        className="relative overflow-hidden"
+        className="relative overflow-hidden mb-8"
       >
         <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
 
         <div className="flex animate-[scroll_20s_linear_infinite] hover:[animation-play-state:paused] w-max">
-          {[...hospitals, ...hospitals, ...hospitals].map(({ name, logo }, i) => (
+          {[...logoHospitals, ...logoHospitals, ...logoHospitals].map(({ name, logo }, i) => (
             <div
               key={`${name}-${i}`}
               className="flex items-center justify-center px-10 md:px-14 py-5 flex-shrink-0 hover:scale-105 transition-all duration-300"
               title={name}
             >
-              <img
-                src={logo}
-                alt={name}
-                loading="lazy"
-                className="h-20 md:h-28 w-auto object-contain"
-              />
+              <img src={logo} alt={name} loading="lazy" className="h-20 md:h-28 w-auto object-contain" />
             </div>
           ))}
         </div>
+      </motion.div>
+
+      {/* Network partners grid */}
+      <motion.div
+        initial={{ opacity: 0, y: 15 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.2 }}
+        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3"
+      >
+        {networkPartners.map((name, i) => (
+          <motion.div
+            key={name}
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.05 * i }}
+            className="flex items-center justify-center rounded-xl border border-border bg-card px-4 py-3 text-center hover:border-primary/30 hover:shadow-sm transition-all"
+          >
+            <span className="text-xs sm:text-sm font-semibold text-foreground">{name}</span>
+          </motion.div>
+        ))}
       </motion.div>
 
       <motion.p
