@@ -1,16 +1,16 @@
 import { motion } from "framer-motion";
 import { Search } from "lucide-react";
+import heroImage from "@/assets/pazienti-hero.jpg";
 
 const PazientiHero = () => (
   <section className="dark-section pt-28 pb-16 md:pt-40 md:pb-28 relative overflow-hidden">
     <div className="absolute inset-0 bg-gradient-to-br from-[hsl(216,43%,18%)] via-[hsl(210,60%,25%)] to-[hsl(216,43%,18%)] opacity-90" />
 
-    <div className="container max-w-6xl mx-auto px-4 relative z-10">
+    <div className="container max-w-6xl mx-auto px-4 relative z-10 grid md:grid-cols-2 gap-12 items-center">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
-        className="max-w-2xl"
       >
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.1] text-primary-foreground mb-6">
           Cerca, comunica e resta in contatto con gli Specialisti di{" "}
@@ -56,6 +56,20 @@ const PazientiHero = () => (
           <a href="https://app.welmed.it/welcomedicine/registration/patient" className="text-primary hover:underline font-medium">Registrati</a>
           {" "}per prenotare la tua visita online.
         </motion.p>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, x: 50, scale: 0.95 }}
+        animate={{ opacity: 1, x: 0, scale: 1 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="hidden md:block relative"
+      >
+        <img
+          src={heroImage}
+          alt="Paziente in videochiamata con medico"
+          className="w-full h-auto rounded-2xl shadow-2xl"
+        />
+        <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-primary-foreground/10" />
       </motion.div>
     </div>
   </section>

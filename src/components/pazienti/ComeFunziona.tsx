@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Search, MessageCircle, FileText, FolderOpen, HeartHandshake } from "lucide-react";
+import sectionImage from "@/assets/pazienti-comefunziona.jpg";
 
 const steps = [
   { icon: Search, title: "Cerca", description: "sulla Piattaforma un Professionista, una Specializzazione, una patologia o un sintomo.", color: "text-primary", bg: "bg-primary/10" },
@@ -12,17 +13,39 @@ const steps = [
 const ComeFunziona = () => (
   <section className="py-20 md:py-32 section-alt overflow-hidden">
     <div className="container max-w-6xl mx-auto px-4">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="text-center mb-14"
-      >
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground leading-tight">
-          Come{" "}
-          <span className="text-primary">funziona?</span>
-        </h2>
-      </motion.div>
+      {/* Header with image */}
+      <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+        <motion.div
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+        >
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground leading-tight">
+            Come{" "}
+            <span className="text-primary">funziona?</span>
+          </h2>
+          <p className="text-muted-foreground text-lg leading-relaxed mt-4">
+            In 5 semplici passi, dalla ricerca dello specialista al percorso di cura completo.
+          </p>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9, rotate: 2 }}
+          whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="relative"
+        >
+          <img
+            src={sectionImage}
+            alt="Paziente e medico consultano documenti digitali"
+            loading="lazy"
+            className="w-full h-auto rounded-2xl shadow-2xl"
+          />
+          <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-foreground/5" />
+        </motion.div>
+      </div>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
         {steps.map((step, i) => (
