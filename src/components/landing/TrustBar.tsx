@@ -5,27 +5,37 @@ import logoSanRaffaele from "@/assets/logos/san-raffaele.png";
 import logoGSD from "@/assets/logos/gruppo-san-donato.png";
 import logoCDI from "@/assets/logos/cdi.png";
 import logoICCS from "@/assets/logos/iccs.png";
+import logoSanRaffaeleRoma from "@/assets/logos/partners/san-raffaele-roma.png";
+import logoCampusBioMedico from "@/assets/logos/partners/campus-biomedico.png";
+import logoCasaDellaSalute from "@/assets/logos/partners/casa-della-salute.png";
+import logoGVM from "@/assets/logos/partners/gvm.png";
+import logoPolimedico from "@/assets/logos/partners/polimedico.png";
+import logoAstiClinic from "@/assets/logos/partners/asti-clinic.png";
+import logoVirtualHospital from "@/assets/logos/partners/virtual-hospital.png";
+import logoItsalute from "@/assets/logos/partners/itsalute.png";
 
-const logoHospitals = [
-  { name: "IRCCS Ospedale San Raffaele", logo: logoSanRaffaele },
-  { name: "Gruppo San Donato", logo: logoGSD },
-  { name: "CDI - Centro Diagnostico Italiano", logo: logoCDI },
-  { name: "Istituto Clinico Città Studi", logo: logoICCS },
+const hospitals = [
+  { name: "IRCCS Ospedale San Raffaele", logo: logoSanRaffaele, isLarge: true },
+  { name: "Gruppo San Donato", logo: logoGSD, isLarge: true },
+  { name: "CDI - Centro Diagnostico Italiano", logo: logoCDI, isLarge: true },
+  { name: "Istituto Clinico Città Studi", logo: logoICCS, isLarge: true },
+  { name: "San Raffaele Roma", logo: logoSanRaffaeleRoma, isLarge: false },
+  { name: "Campus Bio-Medico", logo: logoCampusBioMedico, isLarge: false },
+  { name: "Casa della Salute", logo: logoCasaDellaSalute, isLarge: false },
+  { name: "GVM Care & Research", logo: logoGVM, isLarge: false },
+  { name: "Polimedico", logo: logoPolimedico, isLarge: false },
+  { name: "Asti Clinic", logo: logoAstiClinic, isLarge: false },
+  { name: "Virtual Hospital", logo: logoVirtualHospital, isLarge: false },
+  { name: "Itsalute", logo: logoItsalute, isLarge: false },
 ];
 
-const networkPartners = [
+const textPartners = [
   "RAF First Clinic",
   "San Carlo di Nancy",
   "Tiberia Hospital",
   "Maria Cecilia Hospital",
   "Santa Maria Hospital",
-  "San Raffaele Roma",
-  "Casa della Salute",
-  "Polimedico",
-  "Campus Bio-Medico",
-  "Asti Clinic",
-  "Virtual Hospital",
-  "Itsalute",
+  "Welcare Melanoma",
 ];
 
 const stats = [
@@ -100,38 +110,42 @@ const TrustBar = () => (
         <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
 
-        <div className="flex animate-[scroll_20s_linear_infinite] hover:[animation-play-state:paused] w-max">
-          {[...logoHospitals, ...logoHospitals, ...logoHospitals].map(({ name, logo }, i) => (
+        <div className="flex animate-[scroll_30s_linear_infinite] hover:[animation-play-state:paused] w-max items-center">
+          {[...hospitals, ...hospitals, ...hospitals].map(({ name, logo, isLarge }, i) => (
             <div
               key={`${name}-${i}`}
-              className="flex items-center justify-center px-10 md:px-14 py-5 flex-shrink-0 hover:scale-105 transition-all duration-300"
+              className="flex flex-col items-center justify-center px-8 md:px-10 py-4 flex-shrink-0 hover:scale-105 transition-all duration-300"
               title={name}
             >
-              <img src={logo} alt={name} loading="lazy" className="h-20 md:h-28 w-auto object-contain" />
+              <img
+                src={logo}
+                alt={name}
+                loading="lazy"
+                className={`${isLarge ? "h-16 md:h-24" : "h-10 md:h-14"} w-auto object-contain`}
+              />
+              {!isLarge && (
+                <span className="text-[10px] text-muted-foreground mt-1.5 font-medium max-w-[100px] text-center leading-tight">{name}</span>
+              )}
             </div>
           ))}
         </div>
       </motion.div>
 
-      {/* Network partners grid */}
+      {/* Additional text partners */}
       <motion.div
         initial={{ opacity: 0, y: 15 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.2 }}
-        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3"
+        className="flex flex-wrap justify-center gap-3"
       >
-        {networkPartners.map((name, i) => (
-          <motion.div
+        {textPartners.map((name) => (
+          <span
             key={name}
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.05 * i }}
-            className="flex items-center justify-center rounded-xl border border-border bg-card px-4 py-3 text-center hover:border-primary/30 hover:shadow-sm transition-all"
+            className="px-4 py-2 rounded-full border border-border bg-card text-xs font-semibold text-muted-foreground hover:border-primary/30 hover:text-foreground transition-all"
           >
-            <span className="text-xs sm:text-sm font-semibold text-foreground">{name}</span>
-          </motion.div>
+            {name}
+          </span>
         ))}
       </motion.div>
 
