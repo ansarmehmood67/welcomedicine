@@ -68,7 +68,7 @@ function AnimatedCounter({ value, prefix, suffix }: { value: number; prefix: str
 }
 
 const TrustBar = () => (
-  <section className="py-14 md:py-20 bg-background border-b border-border">
+  <section className="py-14 md:py-20 dark-section">
     <div className="container max-w-6xl mx-auto px-4">
       <motion.div
         initial={{ opacity: 0, y: 15 }}
@@ -76,10 +76,10 @@ const TrustBar = () => (
         viewport={{ once: true }}
         className="text-center mb-10"
       >
-        <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-2">
+        <p className="text-xs font-semibold uppercase tracking-widest text-primary-foreground/60 mb-2">
           Ecosistema WellMed
         </p>
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-foreground">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-primary-foreground">
           La tecnologia già scelta dalle migliori strutture sanitarie d'Italia
         </h2>
       </motion.div>
@@ -97,7 +97,7 @@ const TrustBar = () => (
             <p className="text-2xl sm:text-3xl font-extrabold text-primary">
               <AnimatedCounter value={value} prefix={prefix} suffix={suffix} />
             </p>
-            <p className="text-xs sm:text-sm text-muted-foreground mt-1">{label}</p>
+            <p className="text-xs sm:text-sm text-primary-foreground/60 mt-1">{label}</p>
           </div>
         ))}
       </motion.div>
@@ -117,7 +117,7 @@ const TrustBar = () => (
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.03 }}
-            className="flex flex-col items-center justify-center rounded-xl border border-border bg-card p-4 hover:border-primary/30 hover:shadow-md transition-all aspect-square"
+            className="flex flex-col items-center justify-center rounded-xl border border-primary-foreground/10 bg-primary-foreground/5 p-4 hover:border-primary/40 hover:bg-primary-foreground/10 transition-all aspect-square"
             title={name}
           >
             <img
@@ -126,7 +126,7 @@ const TrustBar = () => (
               loading="lazy"
               className={`${large ? "h-12 md:h-16" : "h-8 md:h-10"} w-auto object-contain mb-2`}
             />
-            <span className="text-[10px] sm:text-xs text-muted-foreground font-medium text-center leading-tight line-clamp-2">
+            <span className="text-[10px] sm:text-xs text-primary-foreground/70 font-medium text-center leading-tight line-clamp-2">
               {name}
             </span>
           </motion.div>
@@ -138,7 +138,7 @@ const TrustBar = () => (
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ delay: 0.3 }}
-        className="text-center text-sm text-muted-foreground mt-8 max-w-lg mx-auto font-medium"
+        className="text-center text-sm text-primary-foreground/60 mt-8 max-w-lg mx-auto font-medium"
       >
         Pensato dai Medici. Per i Medici. Welcome Medicine porta la stessa tecnologia ospedaliera collaudata direttamente al professionista.
       </motion.p>
