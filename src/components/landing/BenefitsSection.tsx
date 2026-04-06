@@ -7,7 +7,7 @@ const benefits = [
   { icon: Banknote, title: "Valorizza il tuo tempo", desc: "Monetizza consulti telefonici, pareri specialistici e videochiamate. Il tuo tempo ha un valore." },
   { icon: Users, title: "Fidelizza i tuoi pazienti", desc: "Non perdere più pazienti per mancanza di comunicazione. Follow-up automatici e canale diretto dedicato." },
   { icon: LayoutDashboard, title: "Organizzazione superiore", desc: "Un'unica dashboard per messaggi, documenti, appuntamenti e videoconsulti. Tutto sotto controllo." },
-  { icon: Zap, title: "Rapidità con l'AI", desc: "Consultazione documentale e refertazione assistite dall'intelligenza artificiale. Meno tempo sui documenti, più tempo per i pazienti." },
+  { icon: Zap, title: "Rapidità con l'AI", desc: "L'AI estrae dati da documenti scannerizzati, compila referti e organizza esami automaticamente. Meno tempo sulla burocrazia, più tempo per i pazienti." },
   { icon: Lock, title: "Controllo totale sui tuoi dati", desc: "Proprietà di dati, referti e pazienti sempre nelle tue mani, indipendentemente dalle strutture in cui lavori." },
 ];
 
