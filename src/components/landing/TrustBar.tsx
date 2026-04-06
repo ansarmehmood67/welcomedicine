@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useTransform, animate, useInView } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 import logoSanRaffaele from "@/assets/logos/san-raffaele.png";
 import logoGSD from "@/assets/logos/gruppo-san-donato.png";
@@ -15,11 +16,30 @@ const hospitals = [
 ];
 
 const stats = [
-  { value: "+100", label: "Strutture Sanitarie", color: "text-blue-500" },
-  { value: "+250.000", label: "Pazienti gestiti", color: "text-emerald-500" },
-  { value: "+900.000", label: "Prestazioni eseguite", color: "text-violet-500" },
-  { value: "+4.500", label: "Professionisti sanitari", color: "text-amber-500" },
+  { value: 100, prefix: "+", suffix: "", label: "Strutture Sanitarie", decimals: false },
+  { value: 250000, prefix: "+", suffix: "", label: "Pazienti gestiti", decimals: false },
+  { value: 900000, prefix: "+", suffix: "", label: "Prestazioni eseguite", decimals: false },
+  { value: 4500, prefix: "+", suffix: "", label: "Professionisti sanitari", decimals: false },
 ];
+
+function formatNumber(n: number) {
+  return n.toLocaleString("it-IT");
+}
+
+function AnimatedCounter({ value, prefix, suffix }: { value: number; prefix: string; suffix: string }) {
+  const ref = useRef<HTMLSpanElement>(null);
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
+  const motionVal = useMotionValue(0);
+  const display = useTransform(motionVal, (v) => `${prefix}${formatNumber(Math.round(v))}${suffix}`);
+
+  useEffect(() => {
+    if (isInView) {
+      animate(motionVal, value, { duration: 2, ease: "easeOut" });
+    }
+  }, [isInView, motionVal, value]);
+
+  return <motion.span ref={ref}>{display}</motion.span>;
+}
 
 const TrustBar = () => (
   <section className="py-14 md:py-20 bg-background border-b border-border">
@@ -46,10 +66,12 @@ const TrustBar = () => (
         transition={{ delay: 0.1 }}
         className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12"
       >
-        {stats.map(({ value, label, color }) => (
+        {stats.map(({ value, prefix, suffix, label }) => (
           <div key={label} className="text-center">
-            <p className={`text-4xl sm:text-5xl md:text-6xl font-black ${color} tracking-tight`}>{value}</p>
-            <p className="text-sm sm:text-base text-muted-foreground mt-2 font-medium">{label}</p>
+            <p className="text-2xl sm:text-3xl font-extrabold text-primary">
+              <AnimatedCounter value={value} prefix={prefix} suffix={suffix} />
+            </p>
+            <p className="text-xs sm:text-sm text-muted-foreground mt-1">{label}</p>
           </div>
         ))}
       </motion.div>
@@ -62,7 +84,6 @@ const TrustBar = () => (
         transition={{ delay: 0.15 }}
         className="relative overflow-hidden"
       >
-        {/* Fade edges */}
         <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
 
