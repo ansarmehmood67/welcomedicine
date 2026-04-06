@@ -1,14 +1,14 @@
 import { motion } from "framer-motion";
-import { Shield, SplitSquareHorizontal, Banknote, LayoutDashboard, Users, Zap, Lock } from "lucide-react";
+import { ShieldCheck, Columns2, Wallet, Heart, LayoutGrid, BrainCircuit, KeyRound } from "lucide-react";
 
 const benefits = [
-  { icon: Shield, title: "Tutela medico-legale", desc: "Ogni comunicazione è tracciata, archiviata e conforme al GDPR. Proteggi te stesso e i tuoi pazienti." },
-  { icon: SplitSquareHorizontal, title: "Separazione professionale/privato", desc: "Mai più messaggi dei pazienti sul tuo telefono personale. Orari personalizzabili e canali dedicati." },
-  { icon: Banknote, title: "Valorizza il tuo tempo", desc: "Monetizza consulti telefonici, pareri specialistici e videochiamate. Il tuo tempo ha un valore." },
-  { icon: Users, title: "Fidelizza i tuoi pazienti", desc: "Non perdere più pazienti per mancanza di comunicazione. Follow-up automatici e canale diretto dedicato." },
-  { icon: LayoutDashboard, title: "Organizzazione superiore", desc: "Un'unica dashboard per messaggi, documenti, appuntamenti e videoconsulti. Tutto sotto controllo." },
-  { icon: Zap, title: "Rapidità con l'AI", desc: "L'AI estrae dati da documenti scannerizzati, compila referti e organizza esami automaticamente. Meno tempo sulla burocrazia, più tempo per i pazienti." },
-  { icon: Lock, title: "Controllo totale sui tuoi dati", desc: "Proprietà di dati, referti e pazienti sempre nelle tue mani, indipendentemente dalle strutture in cui lavori." },
+  { icon: ShieldCheck, title: "Tutela medico-legale", desc: "Ogni comunicazione è tracciata, archiviata e conforme al GDPR. Proteggi te stesso e i tuoi pazienti." },
+  { icon: Columns2, title: "Separazione professionale/privato", desc: "Mai più messaggi dei pazienti sul tuo telefono personale. Orari personalizzabili e canali dedicati." },
+  { icon: Wallet, title: "Valorizza il tuo tempo", desc: "Monetizza consulti telefonici, pareri specialistici e videochiamate. Il tuo tempo ha un valore." },
+  { icon: Heart, title: "Fidelizza i tuoi pazienti", desc: "Non perdere più pazienti per mancanza di comunicazione. Follow-up automatici e canale diretto dedicato." },
+  { icon: LayoutGrid, title: "Organizzazione superiore", desc: "Un'unica dashboard per messaggi, documenti, appuntamenti e videoconsulti. Tutto sotto controllo." },
+  { icon: BrainCircuit, title: "Rapidità con l'AI", desc: "L'AI estrae dati da documenti scannerizzati, compila referti e organizza esami automaticamente. Meno tempo sulla burocrazia, più tempo per i pazienti." },
+  { icon: KeyRound, title: "Controllo totale sui tuoi dati", desc: "Proprietà di dati, referti e pazienti sempre nelle tue mani, indipendentemente dalle strutture in cui lavori." },
 ];
 
 const BenefitsSection = () => (
@@ -24,7 +24,7 @@ const BenefitsSection = () => (
         {benefits.map(({ icon: Icon, title, desc }, i) => (
           <motion.div key={title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }} className="flex gap-4 p-6 rounded-2xl bg-card border border-border card-elevated">
             <div className="w-12 h-12 rounded-xl cta-gradient flex items-center justify-center shrink-0">
-              <Icon size={22} className="text-primary-foreground" />
+              <Icon size={22} className="text-primary-foreground" fill="currentColor" fillOpacity={0.3} strokeWidth={1.5} />
             </div>
             <div>
               <h3 className="font-bold text-foreground mb-1">{title}</h3>

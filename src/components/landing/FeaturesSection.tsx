@@ -35,7 +35,7 @@ const FeaturesSection = () => (
           {features.slice(0, half).map(({ icon: Icon, title, desc }, i) => (
             <motion.div key={title} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }} className="rounded-2xl bg-card border border-border p-6 card-elevated">
               <div className="w-11 h-11 rounded-xl bg-accent flex items-center justify-center mb-4">
-                <Icon size={22} className="text-primary" />
+                <Icon size={22} className="text-primary" fill="currentColor" fillOpacity={0.2} strokeWidth={2} />
               </div>
               <h3 className="font-bold text-foreground mb-2">{title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{desc}</p>
@@ -53,7 +53,7 @@ const FeaturesSection = () => (
           {features.slice(half).map(({ icon: Icon, title, desc }, i) => (
             <motion.div key={title} initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }} className="rounded-2xl bg-card border border-border p-6 card-elevated">
               <div className="w-11 h-11 rounded-xl bg-accent flex items-center justify-center mb-4">
-                <Icon size={22} className="text-primary" />
+                <Icon size={22} className="text-primary" fill="currentColor" fillOpacity={0.2} strokeWidth={2} />
               </div>
               <h3 className="font-bold text-foreground mb-2">{title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{desc}</p>
