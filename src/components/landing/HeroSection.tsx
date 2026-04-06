@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Shield, MessageSquare, Video, FileCheck } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/LP_Medico.png";
 
 const pills = [
@@ -29,9 +30,9 @@ const HeroSection = () => (
           <a href="#cta-finale" className="inline-flex items-center gap-2 h-12 px-7 rounded-xl cta-gradient text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity">
             Provalo gratuitamente <ArrowRight size={16} />
           </a>
-          <a href="#funzioni" className="inline-flex items-center gap-2 h-12 px-7 rounded-xl border-2 border-primary text-primary font-semibold text-sm hover:bg-primary/5 transition-colors">
-            Scopri le funzionalità
-          </a>
+          <Link to="/pazienti" className="inline-flex items-center gap-2 h-12 px-7 rounded-xl border-2 border-primary text-primary font-semibold text-sm hover:bg-primary/5 transition-colors">
+            Per i pazienti
+          </Link>
         </div>
 
         <div className="flex flex-wrap gap-2">
