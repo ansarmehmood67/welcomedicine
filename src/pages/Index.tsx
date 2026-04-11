@@ -17,13 +17,13 @@ const Index = () => (
   <>
     <Navbar />
     <HeroSection />
+    <BenefitsSection />
     <ValuePropositionSection />
     <TrustBar />
     <ProblemSection />
     <TestimonialsSection />
     <FeaturesSection />
     <WorkflowSection />
-    <BenefitsSection />
     <SavingsCalculator />
     <PricingSection />
     <FAQSection />
