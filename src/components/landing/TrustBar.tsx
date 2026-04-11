@@ -54,6 +54,14 @@ const secondaryStats = [
   { value: 500000, prefix: "+", suffix: "", label: "Reminder ai pazienti" },
 ];
 
+const tertiaryStats = [
+  { value: 10, prefix: "+", suffix: "", label: "Aziende farmaceutiche" },
+  { value: 15, prefix: "+", suffix: "", label: "Welfare" },
+  { value: 100000, prefix: "+", suffix: "", label: "Studi radiologici" },
+  { value: 350000, prefix: "+", suffix: "", label: "Consegna referti" },
+  { value: 35, prefix: "+", suffix: "", label: "Specialità attive" },
+];
+
 function formatNumber(n: number) {
   return n.toLocaleString("it-IT");
 }
@@ -74,21 +82,25 @@ function AnimatedCounter({ value, prefix, suffix }: { value: number; prefix: str
 }
 
 const TrustBar = () => (
-  <section className="py-20 md:py-32 dark-section overflow-hidden">
-    <div className="container max-w-6xl mx-auto px-4">
+  <section className="py-24 md:py-36 overflow-hidden relative" style={{ background: "linear-gradient(135deg, hsl(210 87% 15%) 0%, hsl(216 43% 12%) 50%, hsl(220 40% 18%) 100%)" }}>
+    <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle at 20% 50%, hsl(210 87% 63% / 0.15), transparent 50%), radial-gradient(circle at 80% 20%, hsl(210 87% 63% / 0.1), transparent 40%)" }} />
+    <div className="container max-w-6xl mx-auto px-4 relative z-10">
       <motion.div
         initial={{ opacity: 0, y: 15 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-center mb-14"
+        className="text-center mb-16"
       >
-        <p className="text-xs font-semibold uppercase tracking-widest text-primary-foreground/60 mb-2">
+        <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">
           Ecosistema Welmed
         </p>
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary-foreground leading-tight">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight">
           I numeri del nostro{" "}
           <span className="text-primary">ecosistema</span>
         </h2>
+        <p className="text-base sm:text-lg text-white/60 mt-4 max-w-2xl mx-auto">
+          Un network in crescita costante di strutture, professionisti e pazienti che ogni giorno scelgono Welmed per la gestione della salute.
+        </p>
       </motion.div>
 
       {/* Primary Stats */}
@@ -97,14 +109,14 @@ const TrustBar = () => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.1 }}
-        className="grid grid-cols-3 gap-8 mb-10"
+        className="grid grid-cols-3 gap-8 mb-12"
       >
         {primaryStats.map(({ value, prefix, suffix, label }) => (
           <div key={label} className="text-center">
-            <p className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary">
+            <p className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-primary">
               <AnimatedCounter value={value} prefix={prefix} suffix={suffix} />
             </p>
-            <p className="text-sm sm:text-base text-primary-foreground/70 mt-2 font-medium">{label}</p>
+            <p className="text-sm sm:text-base text-white/70 mt-2 font-medium">{label}</p>
           </div>
         ))}
       </motion.div>
@@ -115,14 +127,32 @@ const TrustBar = () => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.15 }}
-        className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-14"
+        className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10"
       >
         {secondaryStats.map(({ value, prefix, suffix, label }) => (
-          <div key={label} className="text-center rounded-xl border border-primary-foreground/10 bg-primary-foreground/5 py-4 px-3">
-            <p className="text-xl sm:text-2xl font-bold text-primary-foreground">
+          <div key={label} className="text-center rounded-xl border border-white/10 bg-white/5 py-5 px-3">
+            <p className="text-xl sm:text-2xl font-bold text-white">
               <AnimatedCounter value={value} prefix={prefix} suffix={suffix} />
             </p>
-            <p className="text-xs text-primary-foreground/50 mt-1">{label}</p>
+            <p className="text-xs text-white/50 mt-1">{label}</p>
+          </div>
+        ))}
+      </motion.div>
+
+      {/* Tertiary Stats */}
+      <motion.div
+        initial={{ opacity: 0, y: 15 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.2 }}
+        className="grid grid-cols-3 sm:grid-cols-5 gap-4 mb-14"
+      >
+        {tertiaryStats.map(({ value, prefix, suffix, label }) => (
+          <div key={label} className="text-center py-3 px-2">
+            <p className="text-lg sm:text-xl font-bold text-white/80">
+              <AnimatedCounter value={value} prefix={prefix} suffix={suffix} />
+            </p>
+            <p className="text-[10px] sm:text-xs text-white/40 mt-1">{label}</p>
           </div>
         ))}
       </motion.div>
@@ -142,7 +172,7 @@ const TrustBar = () => (
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.03 }}
-            className="flex flex-col items-center justify-center rounded-xl border border-primary-foreground/10 bg-primary-foreground/5 p-5 hover:border-primary/40 hover:bg-primary-foreground/10 transition-all aspect-square"
+            className="flex flex-col items-center justify-center rounded-xl border border-white/10 bg-white/5 p-5 hover:border-primary/40 hover:bg-white/10 transition-all aspect-square"
             title={name}
           >
             <img
@@ -151,7 +181,7 @@ const TrustBar = () => (
               loading="lazy"
               className={`${large ? "h-16 md:h-20" : "h-10 md:h-14"} w-auto object-contain mb-2`}
             />
-            <span className="text-[10px] sm:text-xs text-primary-foreground/70 font-medium text-center leading-tight line-clamp-2">
+            <span className="text-[10px] sm:text-xs text-white/70 font-medium text-center leading-tight line-clamp-2">
               {name}
             </span>
           </motion.div>
@@ -163,7 +193,7 @@ const TrustBar = () => (
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ delay: 0.3 }}
-        className="text-center text-sm text-primary-foreground/60 mt-10 max-w-lg mx-auto font-medium"
+        className="text-center text-sm text-white/50 mt-10 max-w-lg mx-auto font-medium"
       >
         Pensato dai Medici. Per i Medici. Welcome Medicine porta la stessa tecnologia ospedaliera collaudata direttamente al professionista.
       </motion.p>
