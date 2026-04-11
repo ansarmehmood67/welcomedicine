@@ -1,15 +1,17 @@
 import { motion } from "framer-motion";
-import { ShieldCheck, Columns2, Wallet, Heart, LayoutGrid, BrainCircuit, KeyRound } from "lucide-react";
+import { Briefcase, Heart } from "lucide-react";
 import sectionImage from "@/assets/section-benefits.jpg";
 
-const benefits = [
-  { icon: ShieldCheck, title: "Tutela medico-legale", desc: "Ogni comunicazione è tracciata, archiviata e conforme al GDPR. Proteggi te stesso e i tuoi pazienti." },
-  { icon: Columns2, title: "Separazione professionale/privato", desc: "Mai più messaggi dei pazienti sul tuo telefono personale. Orari personalizzabili e canali dedicati." },
-  { icon: Wallet, title: "Valorizza il tuo tempo", desc: "Monetizza consulti telefonici, pareri specialistici e videochiamate. Il tuo tempo ha un valore." },
-  { icon: Heart, title: "Fidelizza i tuoi pazienti", desc: "Non perdere più pazienti per mancanza di comunicazione. Follow-up automatici e canale diretto dedicato." },
-  { icon: LayoutGrid, title: "Organizzazione superiore", desc: "Un'unica dashboard per messaggi, documenti, appuntamenti e videoconsulti. Tutto sotto controllo." },
-  { icon: BrainCircuit, title: "Rapidità con l'AI", desc: "L'AI estrae dati da documenti scannerizzati, compila referti e organizza esami automaticamente." },
-  { icon: KeyRound, title: "Controllo totale sui tuoi dati", desc: "Proprietà di dati, referti e pazienti sempre nelle tue mani, indipendentemente dalle strutture in cui lavori." },
+const perTe = [
+  "Più ordine nella gestione quotidiana",
+  "Meno tempo perso in comunicazioni frammentate",
+  "Più controllo clinico ed economico sulla tua attività",
+];
+
+const perPazienti = [
+  "Più continuità nel percorso di cura",
+  "Più attenzione e risposte rapide dal proprio medico",
+  "Più qualità percepita dell'esperienza sanitaria",
 ];
 
 const BenefitsSection = () => (
@@ -23,27 +25,47 @@ const BenefitsSection = () => (
         <motion.div initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="order-1 lg:order-2">
           <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-primary-foreground/10 text-primary-foreground/80 mb-4 uppercase tracking-wide">Vantaggi</span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary-foreground mb-5 leading-tight">
-            Perché i professionisti scelgono{" "}
-            <span className="text-primary">Welcome Medicine</span>
+            Benefici concreti,{" "}
+            <span className="text-primary">per tutti</span>
           </h2>
           <p className="text-primary-foreground/70 text-lg leading-relaxed">
-            Entra nell'ecosistema WellMed e collabora con specialisti delle migliori strutture d'Italia.
+            Welcome Medicine migliora la vita professionale del medico e l'esperienza del paziente. Allo stesso tempo.
           </p>
         </motion.div>
       </div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {benefits.map(({ icon: Icon, title, desc }, i) => (
-          <motion.div key={title} initial={{ opacity: 0, y: 30, scale: 0.95 }} whileInView={{ opacity: 1, y: 0, scale: 1 }} viewport={{ once: true }} transition={{ delay: i * 0.08, duration: 0.5 }} className="flex gap-4 p-6 rounded-2xl bg-primary-foreground/5 border border-primary-foreground/10 hover:border-primary/40 hover:bg-primary-foreground/10 transition-all">
-            <div className="w-12 h-12 rounded-xl cta-gradient flex items-center justify-center shrink-0">
-              <Icon size={22} className="text-primary-foreground" fill="currentColor" fillOpacity={0.3} strokeWidth={1.5} />
+      <div className="grid md:grid-cols-2 gap-8">
+        {/* Per te */}
+        <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="rounded-2xl bg-primary-foreground/5 border border-primary-foreground/10 p-8 space-y-5">
+          <div className="flex items-center gap-3 mb-2">
+            <div className="w-10 h-10 rounded-xl cta-gradient flex items-center justify-center">
+              <Briefcase size={20} className="text-primary-foreground" />
             </div>
-            <div>
-              <h3 className="font-bold text-primary-foreground mb-1">{title}</h3>
-              <p className="text-sm text-primary-foreground/70 leading-relaxed">{desc}</p>
+            <h3 className="font-extrabold text-xl text-primary-foreground">Per te</h3>
+          </div>
+          {perTe.map((item, i) => (
+            <motion.div key={item} initial={{ opacity: 0, x: -15 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }} className="flex items-start gap-3 text-primary-foreground/80">
+              <span className="w-2 h-2 rounded-full bg-primary mt-2 shrink-0" />
+              <p className="text-base leading-relaxed">{item}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* Per i tuoi pazienti */}
+        <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.15 }} className="rounded-2xl bg-primary-foreground/5 border border-primary-foreground/10 p-8 space-y-5">
+          <div className="flex items-center gap-3 mb-2">
+            <div className="w-10 h-10 rounded-xl cta-gradient flex items-center justify-center">
+              <Heart size={20} className="text-primary-foreground" />
             </div>
-          </motion.div>
-        ))}
+            <h3 className="font-extrabold text-xl text-primary-foreground">Per i tuoi pazienti</h3>
+          </div>
+          {perPazienti.map((item, i) => (
+            <motion.div key={item} initial={{ opacity: 0, x: 15 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }} className="flex items-start gap-3 text-primary-foreground/80">
+              <span className="w-2 h-2 rounded-full bg-primary mt-2 shrink-0" />
+              <p className="text-base leading-relaxed">{item}</p>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
 
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mt-12">
