@@ -159,7 +159,7 @@ const TrustBar = () => (
           transition={{ delay: 0.1 }}
           className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5"
         >
-          {allPartners.map(({ name, logo, large, subtitle }, i) => (
+          {allPartners.map(({ name, logo, large }, i) => (
             <motion.div
               key={name}
               initial={{ opacity: 0, scale: 0.9 }}
@@ -178,11 +178,6 @@ const TrustBar = () => (
               <span className="text-[10px] sm:text-xs text-muted-foreground font-medium text-center leading-tight line-clamp-2">
                 {name}
               </span>
-              {subtitle && (
-                <span className="text-[9px] sm:text-[10px] text-muted-foreground/60 text-center leading-tight mt-0.5">
-                  {subtitle}
-                </span>
-              )}
             </motion.div>
           ))}
         </motion.div>
