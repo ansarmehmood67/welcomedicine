@@ -1,44 +1,17 @@
 import { motion, useMotionValue, useTransform, animate, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 
-import logoSanRaffaele from "@/assets/logos/san-raffaele.png";
-import logoGSD from "@/assets/logos/gruppo-san-donato.png";
-import logoCDI from "@/assets/logos/cdi.png";
-import logoICCS from "@/assets/logos/iccs.png";
-import logoSanRaffaeleRoma from "@/assets/logos/partners/san-raffaele-roma.png";
-import logoCampusBioMedico from "@/assets/logos/partners/campus-biomedico.png";
-import logoCasaDellaSalute from "@/assets/logos/partners/casa-della-salute.png";
-import logoGVM from "@/assets/logos/partners/gvm.png";
-import logoPolimedico from "@/assets/logos/partners/polimedico.png";
-import logoAstiClinic from "@/assets/logos/partners/asti-clinic.png";
-import logoVirtualHospital from "@/assets/logos/partners/virtual-hospital.png";
-import logoItsalute from "@/assets/logos/partners/itsalute.png";
-import logoRAF from "@/assets/logos/partners/raf-first-clinic.png";
-import logoSanCarloNancy from "@/assets/logos/partners/san-carlo-nancy.png";
-import logoTiberia from "@/assets/logos/partners/tiberia-hospital.png";
-import logoMariaCecilia from "@/assets/logos/partners/maria-cecilia.png";
-import logoSantaMaria from "@/assets/logos/partners/santa-maria.png";
-import logoWelcare from "@/assets/logos/partners/welcare-melanoma.png";
-
+// URL dei loghi forniti
 const allPartners = [
-  { name: "IRCCS Ospedale San Raffaele", logo: logoSanRaffaele, large: true },
-  { name: "Gruppo San Donato", logo: logoGSD, large: true },
-  { name: "CDI Centro Diagnostico", logo: logoCDI, large: true },
-  { name: "Istituto Clinico Città Studi", logo: logoICCS, large: true },
-  { name: "GVM Care & Research", logo: logoGVM, large: false },
-  { name: "San Raffaele Roma", logo: logoSanRaffaeleRoma, large: false },
-  { name: "Campus Bio-Medico", logo: logoCampusBioMedico, large: false },
-  { name: "Casa della Salute", logo: logoCasaDellaSalute, large: false },
-  { name: "Polimedico", logo: logoPolimedico, large: false },
-  { name: "Asti Clinic", logo: logoAstiClinic, large: false },
-  { name: "Virtual Hospital", logo: logoVirtualHospital, large: false },
-  { name: "Itsalute", logo: logoItsalute, large: false },
-  { name: "RAF First Clinic", logo: logoRAF, large: false },
-  { name: "San Carlo di Nancy", logo: logoSanCarloNancy, large: false },
-  { name: "Tiberia Hospital", logo: logoTiberia, large: false },
-  { name: "Maria Cecilia Hospital", logo: logoMariaCecilia, large: false },
-  { name: "Santa Maria Hospital", logo: logoSantaMaria, large: false },
-  { name: "Welcare Melanoma", logo: logoWelcare, large: false },
+  { name: "IRCCS Ospedale San Raffaele", logo: "https://wp-uploads.welmed.it/uploads/sites/5/2024/01/Osr.png", large: true },
+  { name: "Gruppo San Donato", logo: "https://media.licdn.com/dms/image/v2/C560BAQFLj9aZzXzm3A/company-logo_200_200/company-logo_200_200/0/1630642272943/grupposandonato_logo?e=2147483647&v=beta&t=l_9IUk4jgJqTxCtVfHytprNmSQZCSWEf5jRKW2PkRrA", large: true, subtitle: "gruppo san Donato" },
+  { name: "CDI Centro Diagnostico", logo: "https://wp-uploads.welmed.it/uploads/sites/10/2024/05/CDI_logo.svg", large: true },
+  { name: "Istituto Clinico Città Studi", logo: "https://ic-cittastudi.it/images/istituto-clinico-citta-studi-logo.svg?1", large: true },
+  { name: "GVM Care & Research", logo: "https://www.gvmnet.it/App_Themes/GVMNet/images/gruppovillamaria_logo.png", large: false },
+  { name: "San Raffaele Roma", logo: "https://wp-uploads.welmed.it/uploads/sites/11/2024/06/Logo_SRRoma.svg", large: false, subtitle: "San raffaele roma" },
+  { name: "Casa della Salute", logo: "https://cds.it/wp-content/uploads/2023/02/CDS_Logo.svg", large: false },
+  { name: "Polimedico", logo: "https://wp-uploads.welmed.it/uploads/sites/8/2024/05/Logo-Polimedico.svg", large: false },
+  { name: "Asti Clinic", logo: "https://www.asticlinic.it/wp-content/uploads/2022/11/logo_asti-clinic.png", large: false },
 ];
 
 const primaryStats = [
