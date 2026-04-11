@@ -8,18 +8,14 @@ const problems = [
   "Scambio referti via chiavetta USB o email non protetta",
   "Immagini DICOM inviate via WeTransfer o chiavetta USB",
   "Pazienti persi per mancanza di follow-up organizzato",
-  "Nessuna cronologia organizzata delle prestazioni",
   "Nessuna tracciabilità medico-legale delle comunicazioni",
 ];
 
 const solutions = [
-  "50% del tempo in meno nella gestione delle email",
-  "Canali professionali dedicati con orari personalizzabili",
-  "Scambio documentale sicuro, conforme GDPR, senza USB",
-  "DICOM Viewer integrato: visualizzi tutto in piattaforma",
-  "Fidelizzazione automatica: i tuoi pazienti restano tuoi",
-  "Cronologia completa di ogni prestazione per paziente",
-  "Ogni comunicazione tracciata e archiviata a norma di legge",
+  "Gestire i tuoi pazienti in un unico posto",
+  "Strutturare follow-up e percorsi di cura",
+  "Comunicare in modo tracciato e conforme GDPR",
+  "Usare l'AI per organizzare, riassumere e velocizzare",
 ];
 
 const ProblemSection = () => (
@@ -51,17 +47,30 @@ const ProblemSection = () => (
               <XCircle size={16} className="text-destructive/60 mt-0.5 shrink-0" /> {p}
             </motion.div>
           ))}
+          <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.4 }} className="pt-4 border-t border-destructive/10">
+            <p className="text-base font-bold text-destructive">
+              Risultato: perdi tempo, perdi controllo, perdi opportunità cliniche ed economiche.
+            </p>
+          </motion.div>
         </motion.div>
 
         <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.15 }} className="rounded-2xl bg-card border border-primary/20 p-8 space-y-4 card-elevated">
           <h3 className="font-extrabold text-xl text-foreground flex items-center gap-2">
-            <CheckCircle className="text-primary" size={24} /> Con Welcome Medicine
+            <CheckCircle className="text-primary" size={24} /> WelMed trasforma tutto questo
           </h3>
+          <p className="text-muted-foreground text-sm">
+            Un sistema organizzato per:
+          </p>
           {solutions.map((s, i) => (
             <motion.div key={s} initial={{ opacity: 0, x: 15 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.06 }} className="flex items-start gap-3 text-sm text-muted-foreground">
               <CheckCircle size={16} className="text-primary mt-0.5 shrink-0" /> {s}
             </motion.div>
           ))}
+          <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.3 }} className="pt-4 border-t border-primary/10">
+            <p className="text-base font-semibold text-primary italic">
+              Non è telemedicina. È continuità di cura organizzata.
+            </p>
+          </motion.div>
         </motion.div>
       </div>
 
