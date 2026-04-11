@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Briefcase, Heart } from "lucide-react";
+import { Briefcase, Heart, ArrowRight } from "lucide-react";
 import sectionImage from "@/assets/section-benefits.jpg";
 
 const perTe = [
@@ -19,7 +19,7 @@ const BenefitsSection = () => (
     <div className="container max-w-6xl mx-auto px-4">
       <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
         <motion.div initial={{ opacity: 0, scale: 0.9, rotate: -2 }} whileInView={{ opacity: 1, scale: 1, rotate: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: "easeOut" }} className="relative order-2 lg:order-1">
-          <img src={sectionImage} alt="Team medico in collaborazione digitale" loading="lazy" className="w-full h-auto rounded-2xl shadow-2xl" />
+          <img src={sectionImage} alt="Relazione medico-paziente digitale" loading="lazy" className="w-full h-auto rounded-2xl shadow-2xl" />
           <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-primary-foreground/10" />
         </motion.div>
         <motion.div initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="order-1 lg:order-2">
@@ -69,8 +69,8 @@ const BenefitsSection = () => (
       </div>
 
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mt-12">
-        <a href="#cta-finale" className="inline-flex items-center gap-2 h-12 px-8 rounded-xl border-2 border-primary-foreground/30 text-primary-foreground font-semibold text-sm hover:border-primary-foreground/60 transition-colors">
-          Prenota una demo →
+        <a href="#cta-finale" className="inline-flex items-center gap-2 h-12 px-8 rounded-xl cta-gradient text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity">
+          Prova gratis <ArrowRight size={16} />
         </a>
       </motion.div>
     </div>

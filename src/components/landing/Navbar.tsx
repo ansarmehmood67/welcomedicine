@@ -22,7 +22,7 @@ const Navbar = () => {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
         <div className="container max-w-6xl mx-auto flex items-center justify-between h-16 px-4">
           <Link to="/" className="flex items-center">
-            <img src={logo} alt="Welcomedicine" className="h-8" />
+            <img src={logo} alt="Welcome Medicine" className="h-8" />
           </Link>
 
           {/* Desktop */}
@@ -40,7 +40,7 @@ const Navbar = () => {
               Per i pazienti
             </Link>
             <a href="#cta-finale" className="inline-flex items-center justify-center h-9 px-5 rounded-lg cta-gradient text-primary-foreground text-sm font-semibold hover:opacity-90 transition-opacity">
-              Prova gratis 30 giorni
+              Prova gratis
             </a>
           </div>
 
@@ -64,7 +64,7 @@ const Navbar = () => {
                   Per i pazienti
                 </Link>
                 <a href="#cta-finale" onClick={() => setOpen(false)} className="inline-flex items-center justify-center h-10 rounded-lg cta-gradient text-primary-foreground text-sm font-semibold mt-2">
-                  Prova gratis 30 giorni
+                  Prova gratis
                 </a>
               </div>
             </motion.div>

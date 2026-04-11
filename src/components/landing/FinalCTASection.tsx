@@ -18,10 +18,10 @@ const FinalCTASection = () => (
       >
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground mb-5 leading-tight">
           Inizia oggi,{" "}
-          <span className="text-primary">è gratis per 30 giorni</span>
+          <span className="text-primary">prova gratis per 30 giorni</span>
         </h2>
         <p className="text-muted-foreground mb-4 max-w-xl mx-auto text-base sm:text-lg">
-          Unisciti ai migliori professionisti della salute che hanno già scelto Welcomedicine per la loro pratica clinica.
+          Unisciti ai migliori professionisti della salute che hanno già scelto Welcome Medicine per la loro pratica clinica.
         </p>
 
         {/* Urgency */}
@@ -57,13 +57,10 @@ const FinalCTASection = () => (
             whileTap={{ scale: 0.97 }}
             className="inline-flex items-center gap-2 h-13 px-8 rounded-xl cta-gradient text-primary-foreground font-semibold hover:opacity-90 transition-opacity"
           >
-            Prova gratis 30 giorni <ArrowRight size={16} />
+            Prova gratis <ArrowRight size={16} />
           </motion.a>
-          <a href="#" className="inline-flex items-center gap-2 h-13 px-8 rounded-xl border-2 border-primary text-primary font-semibold hover:bg-primary/5 transition-colors">
-            Prenota una demo
-          </a>
         </div>
-        <p className="text-muted-foreground/60 text-xs mt-6">Nessuna carta di credito • Cancella in un click • I tuoi dati restano tuoi</p>
+        <p className="text-muted-foreground/60 text-xs mt-6">Nessun addebito il primo mese • Disdetta tramite customer care • I tuoi dati restano tuoi</p>
       </motion.div>
     </div>
   </section>

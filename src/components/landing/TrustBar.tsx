@@ -74,10 +74,10 @@ const TrustBar = () => (
         initial={{ opacity: 0, y: 15 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-center mb-12"
+        className="text-center mb-14"
       >
         <p className="text-xs font-semibold uppercase tracking-widest text-primary-foreground/60 mb-2">
-          Ecosistema WellMed
+          Ecosistema Welmed
         </p>
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary-foreground leading-tight">
           La tecnologia già scelta dalle{" "}
@@ -91,7 +91,7 @@ const TrustBar = () => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.1 }}
-        className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12"
+        className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-14"
       >
         {stats.map(({ value, prefix, suffix, label }) => (
           <div key={label} className="text-center">
@@ -109,7 +109,7 @@ const TrustBar = () => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.15 }}
-        className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4"
+        className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-5"
       >
         {allPartners.map(({ name, logo, large }, i) => (
           <motion.div
@@ -118,14 +118,14 @@ const TrustBar = () => (
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.03 }}
-            className="flex flex-col items-center justify-center rounded-xl border border-primary-foreground/10 bg-primary-foreground/5 p-4 hover:border-primary/40 hover:bg-primary-foreground/10 transition-all aspect-square"
+            className="flex flex-col items-center justify-center rounded-xl border border-primary-foreground/10 bg-primary-foreground/5 p-5 hover:border-primary/40 hover:bg-primary-foreground/10 transition-all aspect-square"
             title={name}
           >
             <img
               src={logo}
               alt={name}
               loading="lazy"
-              className={`${large ? "h-12 md:h-16" : "h-8 md:h-10"} w-auto object-contain mb-2`}
+              className={`${large ? "h-16 md:h-20" : "h-10 md:h-14"} w-auto object-contain mb-2`}
             />
             <span className="text-[10px] sm:text-xs text-primary-foreground/70 font-medium text-center leading-tight line-clamp-2">
               {name}
@@ -139,7 +139,7 @@ const TrustBar = () => (
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ delay: 0.3 }}
-        className="text-center text-sm text-primary-foreground/60 mt-8 max-w-lg mx-auto font-medium"
+        className="text-center text-sm text-primary-foreground/60 mt-10 max-w-lg mx-auto font-medium"
       >
         Pensato dai Medici. Per i Medici. Welcome Medicine porta la stessa tecnologia ospedaliera collaudata direttamente al professionista.
       </motion.p>

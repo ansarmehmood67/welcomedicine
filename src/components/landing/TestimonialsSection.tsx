@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import { Star, Play, X, Quote } from "lucide-react";
 
 const videoTestimonials = [
-  { quote: "L'adozione di Welcomedicine ha migliorato la gestione dei controlli, della documentazione clinica e della relazione medico-paziente. Finalmente ho confini chiari tra attività professionale e tempo personale.", name: "Dr. Claudio Cusini", role: "Endocrinologo", initials: "CC", videoId: "2F6UM4lBwnc" },
+  { quote: "L'adozione di Welcome Medicine ha migliorato la gestione dei controlli, della documentazione clinica e della relazione medico-paziente. Finalmente ho confini chiari tra attività professionale e tempo personale.", name: "Dr. Claudio Cusini", role: "Endocrinologo", initials: "CC", videoId: "2F6UM4lBwnc" },
   { quote: "La piattaforma mi ha permesso di strutturare meglio il percorso terapeutico dei miei pazienti, migliorando la comunicazione e riducendo il carico organizzativo quotidiano.", name: "Dr. Stefano Romanò", role: "Psicologo Clinico", initials: "SR", videoId: "Btb1UiWtFPA" },
-  { quote: "Welcomedicine ha trasformato il modo in cui gestisco i follow-up urologici. I pazienti sono più coinvolti e io ho una visione completa e organizzata della loro storia clinica.", name: "Dott. Carmelo Morana", role: "Urologo", initials: "CM", videoId: "AqXS8FVX_t0" },
+  { quote: "Welcome Medicine ha trasformato il modo in cui gestisco i follow-up urologici. I pazienti sono più coinvolti e io ho una visione completa e organizzata della loro storia clinica.", name: "Dott. Carmelo Morana", role: "Urologo", initials: "CM", videoId: "AqXS8FVX_t0" },
   { quote: "La piattaforma ha migliorato la continuità di cura dei pazienti cronici, ridotto la frammentazione delle informazioni cliniche e alleggerito il carico invisibile del medico.", name: "Dott.ssa Daniela Agrimi", role: "Endocrinologa", initials: "DA", videoId: "kk6boeGyOvM" },
   { quote: "La telemedicina ci ha permesso di mantenere un contatto costante con i pazienti neurologici, garantendo continuità assistenziale e monitoraggio efficace anche a distanza.", name: "Prof.ssa Federica Alemanno", role: "Neuropsicologia — Osp. San Raffaele", initials: "FA", videoId: "ttQgYl1DP0E" },
   { quote: "La piattaforma digitale ha rivoluzionato il nostro approccio alla neurologia, permettendoci di seguire i pazienti in modo più efficiente e con una qualità di cura superiore.", name: "Prof. Massimo Filippi", role: "Neurologia — Osp. San Raffaele", initials: "MF", videoId: "3DmvOkGcY9s" },
@@ -83,8 +83,8 @@ const TestimonialsSection = () => {
           </div>
 
           <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-center mt-10 flex flex-col items-center gap-4">
-            <a href="#cta-finale" className="inline-flex items-center gap-2 h-12 px-8 rounded-xl border-2 border-primary text-primary font-semibold text-sm hover:bg-primary/5 transition-colors">
-              Prenota una demo →
+            <a href="#cta-finale" className="inline-flex items-center gap-2 h-12 px-8 rounded-xl cta-gradient text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity">
+              Prova gratis →
             </a>
             <a href="https://www.youtube.com/@welmed1329" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline">
               Vedi tutte le testimonianze dei medici →

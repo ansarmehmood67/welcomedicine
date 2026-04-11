@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { UserPlus, MessageSquareText, CalendarCheck, BrainCircuit, ArrowRight } from "lucide-react";
 
 const steps = [
-  { icon: UserPlus, title: "Aggiungi i tuoi pazienti", desc: "Importi o inserisci facilmente i pazienti nella piattaforma." },
+  { icon: UserPlus, title: "Aggiungi i tuoi pazienti", desc: "Inserisci i pazienti in piattaforma o richiedi il servizio gestito di importazione dati (add-on)." },
   { icon: MessageSquareText, title: "Gestisci la comunicazione", desc: "Messaggi strutturati, niente più caos tra WhatsApp ed email." },
   { icon: CalendarCheck, title: "Organizza i follow-up", desc: "Reminder automatici, controlli programmati, percorsi di cura." },
   { icon: BrainCircuit, title: "Usa l'AI", desc: "Riassunti, supporto clinico e organizzazione automatica." },
@@ -17,7 +17,7 @@ const WorkflowSection = () => (
           Quattro passi.{" "}
           <span className="text-primary">Zero complessità.</span>
         </h2>
-        <p className="text-primary-foreground/70 text-lg max-w-2xl mx-auto">Dalla registrazione alla gestione quotidiana, tutto è pensato per essere immediato.</p>
+        <p className="text-primary-foreground/70 text-lg max-w-2xl mx-auto">Dall'onboarding assistito alla gestione quotidiana, il nostro team ti accompagna in ogni fase.</p>
       </motion.div>
 
       <div className="relative">
@@ -38,7 +38,7 @@ const WorkflowSection = () => (
 
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mt-12">
         <a href="#cta-finale" className="inline-flex items-center gap-2 h-12 px-8 rounded-xl cta-gradient text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity">
-          Prova gratis 30 giorni <ArrowRight size={16} />
+          Prova gratis <ArrowRight size={16} />
         </a>
       </motion.div>
     </div>
