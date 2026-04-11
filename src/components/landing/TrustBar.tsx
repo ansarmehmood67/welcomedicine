@@ -8,7 +8,7 @@ const allPartners = [
   { name: "CDI Centro Diagnostico", logo: "https://wp-uploads.welmed.it/uploads/sites/10/2024/05/CDI_logo.svg", large: true },
   { name: "Istituto Clinico Città Studi", logo: "https://ic-cittastudi.it/images/istituto-clinico-citta-studi-logo.svg?1", large: true },
   { name: "GVM Care & Research", logo: "https://www.gvmnet.it/App_Themes/GVMNet/images/gruppovillamaria_logo.png", large: false },
-  { name: "San Raffaele Roma", logo: "https://wp-uploads.welmed.it/uploads/sites/11/2024/06/Logo_SRRoma.svg", large: false, subtitle: "San raffaele roma" },
+  { name: "San Raffaele Roma", logo: "https://wp-uploads.welmed.it/uploads/sites/11/2024/06/Logo_SRRoma.svg", large: false },
   { name: "Welmed", logo: "https://wp-uploads.welmed.it/uploads/sites/4/2024/09/Logo-Big.svg", large: true },
   { name: "Casa della Salute", logo: "https://cds.it/wp-content/uploads/2023/02/CDS_Logo.svg", large: false },
   { name: "Polimedico", logo: "https://wp-uploads.welmed.it/uploads/sites/8/2024/05/Logo-Polimedico.svg", large: false },
@@ -159,7 +159,7 @@ const TrustBar = () => (
           transition={{ delay: 0.1 }}
           className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5"
         >
-          {allPartners.map(({ name, logo, large, subtitle }, i) => (
+          {allPartners.map(({ name, logo, large }, i) => (
             <motion.div
               key={name}
               initial={{ opacity: 0, scale: 0.9 }}
@@ -178,11 +178,6 @@ const TrustBar = () => (
               <span className="text-[10px] sm:text-xs text-muted-foreground font-medium text-center leading-tight line-clamp-2">
                 {name}
               </span>
-              {subtitle && (
-                <span className="text-[9px] sm:text-[10px] text-muted-foreground/60 text-center leading-tight mt-0.5">
-                  {subtitle}
-                </span>
-              )}
             </motion.div>
           ))}
         </motion.div>
