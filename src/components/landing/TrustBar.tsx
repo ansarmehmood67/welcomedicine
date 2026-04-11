@@ -41,19 +41,17 @@ const allPartners = [
   { name: "Welcare Melanoma", logo: logoWelcare, large: false },
 ];
 
-const stats = [
+const primaryStats = [
   { value: 100, prefix: "+", suffix: "", label: "Strutture Sanitarie" },
-  { value: 10, prefix: "+", suffix: "", label: "Aziende farmaceutiche" },
-  { value: 15, prefix: "+", suffix: "", label: "Welfare" },
   { value: 3000, prefix: "+", suffix: "", label: "Professionisti sanitari" },
-  { value: 35, prefix: "+", suffix: "", label: "Specialità attive" },
   { value: 250000, prefix: "+", suffix: "", label: "Pazienti" },
+];
+
+const secondaryStats = [
   { value: 300000, prefix: "+", suffix: "", label: "Prestazioni eseguite" },
   { value: 5000, prefix: "+", suffix: "", label: "Accessi giornalieri" },
-  { value: 100000, prefix: "+", suffix: "", label: "Studi radiologici" },
   { value: 300000, prefix: "+", suffix: "", label: "Ricette e referti" },
   { value: 500000, prefix: "+", suffix: "", label: "Reminder ai pazienti" },
-  { value: 350000, prefix: "+", suffix: "", label: "Consegna referti" },
 ];
 
 function formatNumber(n: number) {
@@ -88,25 +86,43 @@ const TrustBar = () => (
           Ecosistema Welmed
         </p>
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary-foreground leading-tight">
-          La tecnologia già scelta dalle{" "}
-          <span className="text-primary">migliori strutture sanitarie</span> d'Italia
+          I numeri del nostro{" "}
+          <span className="text-primary">ecosistema</span>
         </h2>
       </motion.div>
 
-      {/* Stats */}
+      {/* Primary Stats */}
       <motion.div
         initial={{ opacity: 0, y: 15 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.1 }}
-        className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 mb-14"
+        className="grid grid-cols-3 gap-8 mb-10"
       >
-        {stats.map(({ value, prefix, suffix, label }) => (
+        {primaryStats.map(({ value, prefix, suffix, label }) => (
           <div key={label} className="text-center">
-            <p className="text-2xl sm:text-3xl font-extrabold text-primary">
+            <p className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary">
               <AnimatedCounter value={value} prefix={prefix} suffix={suffix} />
             </p>
-            <p className="text-xs sm:text-sm text-primary-foreground/60 mt-1">{label}</p>
+            <p className="text-sm sm:text-base text-primary-foreground/70 mt-2 font-medium">{label}</p>
+          </div>
+        ))}
+      </motion.div>
+
+      {/* Secondary Stats */}
+      <motion.div
+        initial={{ opacity: 0, y: 15 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.15 }}
+        className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-14"
+      >
+        {secondaryStats.map(({ value, prefix, suffix, label }) => (
+          <div key={label} className="text-center rounded-xl border border-primary-foreground/10 bg-primary-foreground/5 py-4 px-3">
+            <p className="text-xl sm:text-2xl font-bold text-primary-foreground">
+              <AnimatedCounter value={value} prefix={prefix} suffix={suffix} />
+            </p>
+            <p className="text-xs text-primary-foreground/50 mt-1">{label}</p>
           </div>
         ))}
       </motion.div>
