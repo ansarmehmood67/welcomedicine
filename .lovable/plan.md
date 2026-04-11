@@ -1,41 +1,118 @@
 
 
-## Piano: Aggiornamento copy con messaging delle reference
+## Piano: Correzioni di accuratezza, branding e conversione
 
-### Analisi
-Le reference mostrano un approccio copy superiore per la conversione:
-- Frasi brevi e d'impatto vs muri di testo
-- "Risultato: perdi tempo, perdi controllo, perdi opportunità" — agita il dolore in 3 parole
-- "Non è telemedicina. È continuità di cura organizzata." — posizionamento differenziante forte
-- Benefici divisi "Per te" / "Per i tuoi pazienti" — doppio angolo persuasivo
-- Workflow in 4 step minimal senza descrizioni verbose
+Il feedback contiene correzioni fattuali importanti e miglioramenti strategici. Ecco il piano organizzato per priorità.
 
-### Modifiche
+---
 
-#### 1. ProblemSection.tsx — Aggiungere il "Risultato" e il posizionamento
-- Dopo la lista problemi, aggiungere il blocco "Risultato: perdi tempo, perdi controllo, perdi opportunità cliniche ed economiche"
-- Nel box soluzione, sostituire il titolo con "Welmed trasforma tutto questo in un sistema organizzato" e aggiungere la tagline: "Non è telemedicina. È continuità di cura organizzata."
-- Semplificare i bullet soluzione con quelli della reference: gestire pazienti, strutturare follow-up, comunicare in modo tracciato, supporto AI
+### 1. Correzioni fattuali obbligatorie (accuratezza)
 
-#### 2. WorkflowSection.tsx — Semplificare i 4 step
-- Sostituire i workflowSteps con quelli della reference:
-  1. "Aggiungi i tuoi pazienti" — "Importi o inserisci facilmente i pazienti"
-  2. "Gestisci la comunicazione" — "Messaggi strutturati, niente più caos"
-  3. "Organizza i follow-up" — "Reminder, controlli, percorsi"
-  4. "Usa l'AI" — "Riassunti, supporto e organizzazione automatica"
-- Rimuovere la sezione onboarding (3 step) che è ridondante — tenere solo i 4 step operativi
+**HeroSection.tsx**
+- Rimuovere "Nessuna carta richiesta" → sostituire con "Carta richiesta, nessun addebito il primo mese"
+- Rimuovere "Setup in 2 minuti" → sostituire con "Onboarding assistito dal team"
 
-#### 3. BenefitsSection.tsx — Split "Per te" / "Per i tuoi pazienti"
-- Sostituire la griglia 7 card con due colonne clean:
-  - **Per te**: Più ordine, Meno tempo perso, Più controllo clinico
-  - **Per i tuoi pazienti**: Più continuità, Più attenzione, Più qualità percepita
-- Mantenere l'immagine e il titolo sezione, ma semplificare drasticamente il contenuto
+**FAQSection.tsx**
+- FAQ "Come funziona la prova gratuita?": correggere — carta richiesta ma nessun addebito per 30 giorni
+- FAQ "Posso cancellare quando voglio?": correggere — disdetta via customer care, dopo la prova vincolo 6 mesi
+- FAQ "Quanto tempo serve per configurare tutto?": rimuovere "in pochi click", sostituire con onboarding assistito e configurazione guidata dal team
+- Aggiungere FAQ su monetizzazione: "I ricavi restano al medico, trattenuta del 3% (bancaria + amministrativa), pagamenti online inclusi"
+
+**FinalCTASection.tsx**
+- "Nessuna carta di credito" → "Nessun addebito il primo mese"
+- "Cancella in un click" → "Disdetta tramite customer care"
+
+**PricingSection.tsx**
+- "Inizia con la prova gratuita di 30 giorni: zero costi, zero rischi, disdici quando vuoi" → correggere: carta richiesta, dopo prova vincolo 6 mesi
+- Rimuovere "Prenota una demo" → "Prova gratis"
+- Aggiungere info monetizzazione: ricavi al medico, 3% trattenuta, pagamenti online inclusi
+
+**WorkflowSection.tsx**
+- Step 1 "Importi o inserisci facilmente i pazienti" → chiarire che l'import dati è un servizio gestito (add-on), non self-service
+- Sottotitolo: rimuovere "tutto è pensato per essere immediato" → "dall'onboarding assistito alla gestione quotidiana"
+
+**FeaturesSection.tsx**
+- "Import repository pazienti — in pochi click" → "Servizio gestito di importazione dati (add-on)"
+- "DICOM Viewer" → specificare "immagini radiologiche non diagnostiche"
+- Rimuovere "Prenota una demo" se presente, unificare CTA a "Prova gratis"
+
+### 2. Naming e Brand Consistency (tutti i file)
+
+Ricerca e sostituzione globale:
+- "Welcomedicine" → "Welcome Medicine" (con spazio)
+- "WellMed" → "Welmed" (maiuscola solo la W)
+- "WelMed" → "Welmed"
+- Verificare coerenza in navbar, footer, hero, testimonials, trust bar
+
+### 3. Contatti (Footer.tsx)
+
+- Email: `giulia.arpinati@welmed.it` → `info@welmed.it`
+- Telefono: `+39 347 530 7064` → `02 82960009`
+- Rimuovere riferimenti personali
+
+### 4. CTA unificate
+
+Sostituire tutte le "Prenota una demo" con "Prova gratis" come CTA primaria in:
+- TestimonialsSection.tsx
+- BenefitsSection.tsx
+- FAQSection.tsx
+- PricingSection.tsx
+
+### 5. Posizionamento: Welmed = poliambulatorio autorizzato
+
+Rafforzare il pillar message in:
+- **HeroSection.tsx**: nel pill/badge → "Welmed — Poliambulatorio autorizzato"
+- **FeaturesSection.tsx**: il titolo "Siamo un poliambulatorio autorizzato" è già presente — bene
+- **ProblemSection.tsx**: nella soluzione, aggiungere "Come poliambulatorio autorizzato, Welmed garantisce..."
+
+### 6. Copy e messaggi chiave
+
+**ProblemSection.tsx**
+- Enfatizzare nella lista problemi: referti via USB, email non protette, nessuna compliance GDPR, informazioni disperse, rischio buchi nella storia clinica
+- Nella soluzione: informazioni centralizzate, compliance GDPR + tutela medico-legale, continuità clinica, gestione ordinata
+- Aggiungere messaggio chiave: "Mai più messaggi dei pazienti sui tuoi canali personali"
+
+**SavingsCalculator.tsx**
+- Slider pazienti: label già "a settimana" — OK
+- Verificare che non ci siano riferimenti a "100 pazienti" generici
+
+**HeroSection.tsx**
+- Sottotitolo: rendere più specifico e meno generico-SaaS
+- Aggiungere messaggio: centralizzazione comunicazioni medico-paziente (non medico-medico)
+
+### 7. Urgency banner (Navbar.tsx)
+
+- Cambiare "prima videovisita" (se presente) → "primo utilizzo con i pazienti"
+- Chiarire: onboarding assistito, configurazione guidata
+
+### 8. TrustBar.tsx
+
+- "Ecosistema WellMed" → "Ecosistema Welmed"
+- Loghi: aumentare dimensioni (`h-12 md:h-16` per i large → `h-16 md:h-20`)
+- Layout più arioso: aumentare gap nella griglia
+
+### 9. TestimonialsSection.tsx
+
+- Brand fix nelle quote: "Welcomedicine" → "Welcome Medicine"
+- Relazione medico-paziente (non medico-medico) nei testi
+
+---
 
 ### Dettaglio tecnico
 
-| File | Cosa cambia |
-|------|------------|
-| `ProblemSection.tsx` | Aggiunta blocco "Risultato" + riscrittura box soluzione con copy reference + tagline posizionamento |
-| `WorkflowSection.tsx` | 4 step semplificati dalla reference, rimosso blocco onboarding ridondante |
-| `BenefitsSection.tsx` | Da 7 card a 2 colonne "Per te" / "Per i tuoi pazienti" con bullet minimal |
+| File | Modifiche |
+|------|-----------|
+| `HeroSection.tsx` | Micro-copy corretto, badge "poliambulatorio autorizzato", copy specifico |
+| `FinalCTASection.tsx` | Rimuovere "nessuna carta", "cancella in un click", correggere garanzie |
+| `FAQSection.tsx` | Riscrittura 4 FAQ (prova, cancellazione, setup, monetizzazione) |
+| `PricingSection.tsx` | Correzione copy prova, info monetizzazione, CTA unificata |
+| `ProblemSection.tsx` | Copy allineato a referti/USB/GDPR, messaggio "mai più canali personali" |
+| `WorkflowSection.tsx` | Import = servizio gestito, onboarding assistito |
+| `FeaturesSection.tsx` | Import = add-on, DICOM = non diagnostiche, CTA unificata |
+| `BenefitsSection.tsx` | CTA → "Prova gratis" |
+| `TestimonialsSection.tsx` | Brand fix, CTA → "Prova gratis" |
+| `TrustBar.tsx` | "Welmed" fix, loghi più grandi, layout più arioso |
+| `SavingsCalculator.tsx` | Verifiche copy |
+| `Navbar.tsx` | Brand fix, urgency banner aggiornato |
+| `Footer.tsx` | Email e telefono aggiornati, brand fix |
 
