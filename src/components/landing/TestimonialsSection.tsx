@@ -68,14 +68,14 @@ const TestimonialsSection = () => {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {textTestimonials.map(({ quote, name, role, initials }, i) => (
-              <motion.div key={name} initial={{ opacity: 0, y: 25 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08, duration: 0.5 }} className="rounded-2xl bg-card border border-border p-5 card-elevated flex flex-col">
-                <Quote size={20} className="text-primary/30 mb-3" fill="currentColor" />
-                <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-1">"{quote}"</p>
+              <motion.div key={name} initial={{ opacity: 0, y: 25 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08, duration: 0.5 }} className="rounded-2xl border border-border p-5 card-elevated flex flex-col bg-secondary-foreground text-primary-foreground">
+                <Quote size={20} className="mb-3 text-primary-foreground" fill="currentColor" />
+                <p className="text-sm leading-relaxed mb-4 flex-1 text-primary-foreground">"{quote}"</p>
                 <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-full bg-accent flex items-center justify-center text-primary text-xs font-bold">{initials}</div>
+                  <div className="w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold text-destructive-foreground bg-primary">{initials}</div>
                   <div>
-                    <p className="text-sm font-semibold text-foreground">{name}</p>
-                    <p className="text-xs text-muted-foreground">{role}</p>
+                    <p className="text-sm font-semibold text-primary-foreground">{name}</p>
+                    <p className="text-xs text-primary-foreground">{role}</p>
                   </div>
                 </div>
               </motion.div>
