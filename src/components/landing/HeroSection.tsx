@@ -16,14 +16,14 @@ const HeroSection = () => (
       {/* Left */}
       <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
         <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-pill-bg text-pill-fg mb-5 tracking-wide uppercase">
-          A WelMed brand — Tecnologia ospedaliera per il professionista
+          Welmed — Poliambulatorio autorizzato
         </span>
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.1] text-foreground mb-6">
           Smetti di lavorare gratis{" "}
           <span className="text-primary">fuori dall'ambulatorio.</span>
         </h1>
         <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-8 max-w-lg">
-          Organizza, comunica e monetizza la tua attività clinica con la piattaforma già usata da +4.500 professionisti.
+          Mai più messaggi dei pazienti sui tuoi canali personali. Centralizza le comunicazioni medico-paziente in un'unica piattaforma sicura, già usata da +4.500 professionisti.
         </p>
 
         <div className="flex flex-wrap gap-3 mb-6">
@@ -33,7 +33,7 @@ const HeroSection = () => (
             whileTap={{ scale: 0.97 }}
             className="inline-flex items-center gap-2 h-13 px-8 rounded-xl cta-gradient text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity"
           >
-            Prova gratis 30 giorni <ArrowRight size={16} />
+            Prova gratis <ArrowRight size={16} />
           </motion.a>
           <Link to="/pazienti" className="inline-flex items-center gap-2 h-13 px-8 rounded-xl border-2 border-primary text-primary font-semibold text-sm hover:bg-primary/5 transition-colors">
             Per i pazienti
@@ -41,7 +41,7 @@ const HeroSection = () => (
         </div>
 
         <p className="text-xs text-muted-foreground/70 mb-6">
-          Nessuna carta richiesta • 4.500+ medici attivi • Setup in 2 minuti
+          Carta richiesta, nessun addebito il primo mese • 4.500+ medici attivi • Onboarding assistito dal team
         </p>
 
         <div className="flex flex-wrap gap-2">
@@ -68,7 +68,7 @@ const HeroSection = () => (
       >
         <img
           src={heroImage}
-          alt="Piattaforma Welcomedicine — vista desktop e mobile"
+          alt="Piattaforma Welcome Medicine — vista desktop e mobile"
           className="w-full h-auto rounded-2xl shadow-2xl"
         />
       </motion.div>

@@ -6,12 +6,13 @@ const included = [
   "Chat illimitate con Pazienti e Colleghi",
   "Videochiamate e chiamate VoIP illimitate",
   "Scambio documentale avanzato senza limiti",
-  "Prestazioni di Telemedicina a pagamento",
+  "Prestazioni di Telemedicina monetizzabili",
   "Repository Pazienti in cloud sicuro",
   "Firma digitale di referti e ricette",
   "Configurazione guidata del profilo",
   "Sito web professionale dedicato",
   "Assistenza tecnica sempre disponibile",
+  "Pagamenti online inclusi",
 ];
 
 const plans = [
@@ -29,7 +30,7 @@ const PricingSection = () => (
           <span className="text-primary">più adatto a te</span>
         </h2>
         <p className="text-primary-foreground/70 text-lg max-w-xl mx-auto">
-          Inizia con la prova gratuita di 30 giorni: zero costi, zero rischi, disdici quando vuoi.
+          Prova gratuita di 30 giorni. Carta richiesta, nessun addebito il primo mese. Dopo la prova, vincolo di 6 mesi.
         </p>
       </motion.div>
 
@@ -48,9 +49,10 @@ const PricingSection = () => (
             </div>
             <p className="text-xs text-muted-foreground mb-1">{period}</p>
             <p className="text-xs text-muted-foreground mb-6">{billing}</p>
-            <p className="text-xs font-medium text-primary mb-6">Prova gratuita di 30 giorni inclusa</p>
+            <p className="text-xs font-medium text-primary mb-4">Prova gratuita di 30 giorni inclusa</p>
+            <p className="text-[11px] text-muted-foreground/70 mb-6">I ricavi delle consulenze restano al medico — trattenuta del 3% (bancaria + amministrativa)</p>
             <a href="#cta-finale" className={`inline-flex items-center justify-center gap-2 w-full h-12 rounded-xl font-semibold text-sm transition-all ${highlighted ? "cta-gradient text-primary-foreground hover:opacity-90" : "border-2 border-primary text-primary hover:bg-primary/5"}`}>
-              Prova gratis 30 giorni <ArrowRight size={16} />
+              Prova gratis <ArrowRight size={16} />
             </a>
           </motion.div>
         ))}
@@ -73,13 +75,6 @@ const PricingSection = () => (
             </div>
           ))}
         </div>
-      </motion.div>
-
-      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mt-12 text-center">
-        <p className="text-primary-foreground/60 text-sm mb-4">Vuoi scoprire come Welcomedicine si adatta alla tua pratica clinica?</p>
-        <a href="#cta-finale" className="inline-flex items-center gap-2 h-11 px-7 rounded-xl border-2 border-primary-foreground/30 text-primary-foreground font-semibold text-sm hover:border-primary-foreground/60 transition-colors">
-          Prenota una demo
-        </a>
       </motion.div>
     </div>
   </section>

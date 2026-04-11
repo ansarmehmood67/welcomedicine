@@ -8,10 +8,10 @@ const Footer = () => (
         {/* Brand */}
         <div>
           <a href="#" className="flex items-center mb-4">
-            <img src={logo} alt="Welcomedicine" className="h-7" />
+            <img src={logo} alt="Welcome Medicine" className="h-7" />
           </a>
           <p className="text-sm text-primary-foreground/60 leading-relaxed">
-            La piattaforma professionale per la comunicazione medico-paziente, parte dell'ecosistema WellMed.
+            La piattaforma professionale per la comunicazione medico-paziente, parte dell'ecosistema Welmed.
           </p>
         </div>
 
@@ -27,11 +27,11 @@ const Footer = () => (
         {/* Contacts */}
         <div className="flex flex-col gap-2 text-sm">
           <h4 className="font-semibold text-primary-foreground mb-1">Contatti</h4>
-          <a href="mailto:giulia.arpinati@welmed.it" className="flex items-center gap-2 text-primary-foreground/60 hover:text-primary-foreground transition-colors">
-            <Mail size={14} /> giulia.arpinati@welmed.it
+          <a href="mailto:info@welmed.it" className="flex items-center gap-2 text-primary-foreground/60 hover:text-primary-foreground transition-colors">
+            <Mail size={14} /> info@welmed.it
           </a>
-          <a href="tel:+393475307064" className="flex items-center gap-2 text-primary-foreground/60 hover:text-primary-foreground transition-colors">
-            <Phone size={14} /> +39 347 530 7064
+          <a href="tel:+390282960009" className="flex items-center gap-2 text-primary-foreground/60 hover:text-primary-foreground transition-colors">
+            <Phone size={14} /> 02 82960009
           </a>
           <span className="flex items-center gap-2 text-primary-foreground/60">
             <MapPin size={14} /> Corso Indipendenza, 5 — Milano

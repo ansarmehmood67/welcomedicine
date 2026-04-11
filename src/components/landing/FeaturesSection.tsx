@@ -10,10 +10,10 @@ const features = [
   { icon: FileText, title: "Scambio documentale conforme", desc: "Emetti documenti firmati digitalmente e condividili in un click. Conservazione a norma di legge garantita.", color: "text-rose-500", bg: "bg-rose-500/10" },
   { icon: Stethoscope, title: "Referti e ricette digitali", desc: "Firma digitale di referti e ricette con archivio documentale sempre disponibile per tutte le tue visite.", color: "text-cyan-500", bg: "bg-cyan-500/10" },
   { icon: FolderHeart, title: "Fascicolo Clinico digitale", desc: "Cronologia completa di documenti, referti e note per ogni paziente in un'unica scheda. Il tuo repository clinico sempre aggiornato.", color: "text-pink-500", bg: "bg-pink-500/10" },
-  { icon: ScanSearch, title: "DICOM Viewer integrato", desc: "Visualizza immagini diagnostiche direttamente in piattaforma, senza USB o WeTransfer. Medical Device classe 2B certificato.", color: "text-indigo-500", bg: "bg-indigo-500/10" },
-  { icon: Smartphone, title: "App mobile dedicata", desc: "WelMed Pro per medici e Welcome Medicine per pazienti. Notifiche push, accesso ovunque, sincronizzazione in tempo reale.", color: "text-teal-500", bg: "bg-teal-500/10" },
+  { icon: ScanSearch, title: "DICOM Viewer integrato", desc: "Visualizza immagini radiologiche non diagnostiche direttamente in piattaforma, senza USB o WeTransfer. Medical Device classe 2B certificato.", color: "text-indigo-500", bg: "bg-indigo-500/10" },
+  { icon: Smartphone, title: "App mobile dedicata", desc: "Welmed Pro per medici e Welcome Medicine per pazienti. Notifiche push, accesso ovunque, sincronizzazione in tempo reale.", color: "text-teal-500", bg: "bg-teal-500/10" },
   { icon: UserCog, title: "Gestione segretaria", desc: "Delega risposte, gestione appuntamenti e smistamento richieste a un account segreteria dedicato.", color: "text-orange-500", bg: "bg-orange-500/10" },
-  { icon: DatabaseZap, title: "Import repository pazienti", desc: "Importa il tuo database pazienti esistente in pochi click. Nessun paziente perso nella transizione.", color: "text-lime-500", bg: "bg-lime-500/10" },
+  { icon: DatabaseZap, title: "Importazione dati pazienti", desc: "Servizio gestito di importazione del tuo database pazienti esistente (add-on). Nessun paziente perso nella transizione.", color: "text-lime-500", bg: "bg-lime-500/10" },
   { icon: Headphones, title: "Assistenza tecnica dedicata", desc: "Supporto telefonico per te e per i tuoi pazienti. Mai soli nell'utilizzo della piattaforma.", color: "text-sky-500", bg: "bg-sky-500/10" },
   { icon: Receipt, title: "Fatturazione automatica", desc: "Gestione automatica di bollo, invio alla Tessera Sanitaria e fatturazione elettronica. Zero burocrazia.", color: "text-fuchsia-500", bg: "bg-fuchsia-500/10" },
 ];
@@ -47,7 +47,7 @@ const FeaturesSection = () => (
 
       <div className="grid md:grid-cols-2 gap-8 items-center mb-12">
         <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7, ease: "easeOut" }} className="flex justify-center">
-          <img src={mobileApp} alt="App Welcomedicine — vista mobile" className="w-[280px] h-auto drop-shadow-2xl" />
+          <img src={mobileApp} alt="App Welcome Medicine — vista mobile" className="w-[280px] h-auto drop-shadow-2xl" />
         </motion.div>
         <FeatureCard {...features[0]} i={0} />
       </div>
@@ -60,7 +60,7 @@ const FeaturesSection = () => (
 
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mt-12">
         <a href="#cta-finale" className="inline-flex items-center gap-2 h-12 px-8 rounded-xl cta-gradient text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity">
-          Prova gratis 30 giorni <ArrowRight size={16} />
+          Prova gratis <ArrowRight size={16} />
         </a>
       </motion.div>
     </div>
