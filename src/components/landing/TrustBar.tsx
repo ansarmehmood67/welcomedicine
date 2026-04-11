@@ -82,123 +82,144 @@ function AnimatedCounter({ value, prefix, suffix }: { value: number; prefix: str
 }
 
 const TrustBar = () => (
-  <section className="py-24 md:py-36 overflow-hidden relative" style={{ background: "linear-gradient(135deg, hsl(210 87% 15%) 0%, hsl(216 43% 12%) 50%, hsl(220 40% 18%) 100%)" }}>
-    <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle at 20% 50%, hsl(210 87% 63% / 0.15), transparent 50%), radial-gradient(circle at 80% 20%, hsl(210 87% 63% / 0.1), transparent 40%)" }} />
-    <div className="container max-w-6xl mx-auto px-4 relative z-10">
-      <motion.div
-        initial={{ opacity: 0, y: 15 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="text-center mb-16"
-      >
-        <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">
-          Ecosistema Welmed
-        </p>
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight">
-          I numeri del nostro{" "}
-          <span className="text-primary">ecosistema</span>
-        </h2>
-        <p className="text-base sm:text-lg text-white/60 mt-4 max-w-2xl mx-auto">
-          Un network in crescita costante di strutture, professionisti e pazienti che ogni giorno scelgono Welmed per la gestione della salute.
-        </p>
-      </motion.div>
+  <>
+    {/* SEZIONE 1: Ecosistema — numeri */}
+    <section className="py-24 md:py-36 overflow-hidden relative" style={{ background: "linear-gradient(135deg, hsl(210 87% 15%) 0%, hsl(216 43% 12%) 50%, hsl(220 40% 18%) 100%)" }}>
+      <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle at 20% 50%, hsl(210 87% 63% / 0.15), transparent 50%), radial-gradient(circle at 80% 20%, hsl(210 87% 63% / 0.1), transparent 40%)" }} />
+      <div className="container max-w-6xl mx-auto px-4 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">
+            Ecosistema Welmed
+          </p>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight">
+            I numeri del nostro{" "}
+            <span className="text-primary">ecosistema</span>
+          </h2>
+          <p className="text-base sm:text-lg text-white/60 mt-4 max-w-2xl mx-auto">
+            Un network in crescita costante di strutture, professionisti e pazienti che ogni giorno scelgono Welmed per la gestione della salute.
+          </p>
+        </motion.div>
 
-      {/* Primary Stats */}
-      <motion.div
-        initial={{ opacity: 0, y: 15 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.1 }}
-        className="grid grid-cols-3 gap-8 mb-12"
-      >
-        {primaryStats.map(({ value, prefix, suffix, label }) => (
-          <div key={label} className="text-center">
-            <p className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-primary">
-              <AnimatedCounter value={value} prefix={prefix} suffix={suffix} />
-            </p>
-            <p className="text-sm sm:text-base text-white/70 mt-2 font-medium">{label}</p>
-          </div>
-        ))}
-      </motion.div>
+        {/* Primary Stats */}
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.1 }}
+          className="grid grid-cols-3 gap-8 mb-12"
+        >
+          {primaryStats.map(({ value, prefix, suffix, label }) => (
+            <div key={label} className="text-center">
+              <p className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-primary">
+                <AnimatedCounter value={value} prefix={prefix} suffix={suffix} />
+              </p>
+              <p className="text-sm sm:text-base text-white/70 mt-2 font-medium">{label}</p>
+            </div>
+          ))}
+        </motion.div>
 
-      {/* Secondary Stats */}
-      <motion.div
-        initial={{ opacity: 0, y: 15 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.15 }}
-        className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10"
-      >
-        {secondaryStats.map(({ value, prefix, suffix, label }) => (
-          <div key={label} className="text-center rounded-xl border border-white/10 bg-white/5 py-5 px-3">
-            <p className="text-xl sm:text-2xl font-bold text-white">
-              <AnimatedCounter value={value} prefix={prefix} suffix={suffix} />
-            </p>
-            <p className="text-xs text-white/50 mt-1">{label}</p>
-          </div>
-        ))}
-      </motion.div>
+        {/* Secondary Stats */}
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.15 }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10"
+        >
+          {secondaryStats.map(({ value, prefix, suffix, label }) => (
+            <div key={label} className="text-center rounded-xl border border-white/10 bg-white/5 py-5 px-3">
+              <p className="text-xl sm:text-2xl font-bold text-white">
+                <AnimatedCounter value={value} prefix={prefix} suffix={suffix} />
+              </p>
+              <p className="text-xs text-white/50 mt-1">{label}</p>
+            </div>
+          ))}
+        </motion.div>
 
-      {/* Tertiary Stats */}
-      <motion.div
-        initial={{ opacity: 0, y: 15 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.2 }}
-        className="grid grid-cols-3 sm:grid-cols-5 gap-4 mb-14"
-      >
-        {tertiaryStats.map(({ value, prefix, suffix, label }) => (
-          <div key={label} className="text-center py-3 px-2">
-            <p className="text-lg sm:text-xl font-bold text-white/80">
-              <AnimatedCounter value={value} prefix={prefix} suffix={suffix} />
-            </p>
-            <p className="text-[10px] sm:text-xs text-white/40 mt-1">{label}</p>
-          </div>
-        ))}
-      </motion.div>
+        {/* Tertiary Stats */}
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
+          className="grid grid-cols-3 sm:grid-cols-5 gap-4"
+        >
+          {tertiaryStats.map(({ value, prefix, suffix, label }) => (
+            <div key={label} className="text-center py-3 px-2">
+              <p className="text-lg sm:text-xl font-bold text-white/80">
+                <AnimatedCounter value={value} prefix={prefix} suffix={suffix} />
+              </p>
+              <p className="text-[10px] sm:text-xs text-white/40 mt-1">{label}</p>
+            </div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
 
-      {/* All logos in a static grid */}
-      <motion.div
-        initial={{ opacity: 0, y: 15 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.15 }}
-        className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-5"
-      >
-        {allPartners.map(({ name, logo, large }, i) => (
-          <motion.div
-            key={name}
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: i * 0.03 }}
-            className="flex flex-col items-center justify-center rounded-xl border border-white/10 bg-white/5 p-5 hover:border-primary/40 hover:bg-white/10 transition-all aspect-square"
-            title={name}
-          >
-            <img
-              src={logo}
-              alt={name}
-              loading="lazy"
-              className={`${large ? "h-16 md:h-20" : "h-10 md:h-14"} w-auto object-contain mb-2`}
-            />
-            <span className="text-[10px] sm:text-xs text-white/70 font-medium text-center leading-tight line-clamp-2">
-              {name}
-            </span>
-          </motion.div>
-        ))}
-      </motion.div>
+    {/* SEZIONE 2: Partner — loghi */}
+    <section className="py-20 md:py-28 overflow-hidden section-alt">
+      <div className="container max-w-6xl mx-auto px-4">
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-14"
+        >
+          <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-3">
+            Chi ci ha scelto
+          </p>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground leading-tight">
+            I nostri <span className="text-primary">partner</span>
+          </h2>
+        </motion.div>
 
-      <motion.p
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.3 }}
-        className="text-center text-sm text-white/50 mt-10 max-w-lg mx-auto font-medium"
-      >
-        Pensato dai Medici. Per i Medici. Welcome Medicine porta la stessa tecnologia ospedaliera collaudata direttamente al professionista.
-      </motion.p>
-    </div>
-  </section>
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.1 }}
+          className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-5"
+        >
+          {allPartners.map(({ name, logo, large }, i) => (
+            <motion.div
+              key={name}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.03 }}
+              className="flex flex-col items-center justify-center rounded-xl border border-border bg-card p-5 hover:border-primary/40 hover:shadow-md transition-all aspect-square"
+              title={name}
+            >
+              <img
+                src={logo}
+                alt={name}
+                loading="lazy"
+                className={`${large ? "h-16 md:h-20" : "h-10 md:h-14"} w-auto object-contain mb-2`}
+              />
+              <span className="text-[10px] sm:text-xs text-muted-foreground font-medium text-center leading-tight line-clamp-2">
+                {name}
+              </span>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3 }}
+          className="text-center text-sm text-muted-foreground mt-10 max-w-lg mx-auto font-medium"
+        >
+          Pensato dai Medici. Per i Medici. Welcome Medicine porta la stessa tecnologia ospedaliera collaudata direttamente al professionista.
+        </motion.p>
+      </div>
+    </section>
+  </>
 );
 
 export default TrustBar;
