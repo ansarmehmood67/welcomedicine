@@ -142,7 +142,7 @@ const TrustBar = () => (
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-14"
+          className="text-center mb-6"
         >
           <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-3">
             Chi ci ha scelto
@@ -152,12 +152,22 @@ const TrustBar = () => (
           </h2>
         </motion.div>
 
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.1 }}
+          className="text-center text-sm text-muted-foreground mb-14 max-w-lg mx-auto font-medium"
+        >
+          Pensato dai Medici. Per i Medici. Welcome Medicine porta la stessa tecnologia ospedaliera collaudata direttamente al professionista.
+        </motion.p>
+
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.1 }}
-          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5"
+          transition={{ delay: 0.2 }}
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8"
         >
           {allPartners.map(({ name, logo, large }, i) => (
             <motion.div
@@ -166,14 +176,14 @@ const TrustBar = () => (
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.03 }}
-              className="flex flex-col items-center justify-center rounded-xl border border-border bg-card p-5 hover:border-primary/40 hover:shadow-md transition-all aspect-square"
+              className="flex flex-col items-center justify-center p-4"
               title={name}
             >
               <img
                 src={logo}
                 alt={name}
                 loading="lazy"
-                className={`${large ? "h-14 md:h-16" : "h-10 md:h-12"} w-auto object-contain mb-2`}
+                className={`${large ? "h-16 md:h-20" : "h-12 md:h-16"} w-auto object-contain mb-3`}
               />
               <span className="text-[10px] sm:text-xs text-muted-foreground font-medium text-center leading-tight line-clamp-2">
                 {name}
@@ -181,16 +191,6 @@ const TrustBar = () => (
             </motion.div>
           ))}
         </motion.div>
-
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3 }}
-          className="text-center text-sm text-muted-foreground mt-10 max-w-lg mx-auto font-medium"
-        >
-          Pensato dai Medici. Per i Medici. Welcome Medicine porta la stessa tecnologia ospedaliera collaudata direttamente al professionista.
-        </motion.p>
       </div>
     </section>
   </>
