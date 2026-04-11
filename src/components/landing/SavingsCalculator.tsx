@@ -3,12 +3,17 @@ import { motion } from "framer-motion";
 import { ArrowRight, Clock, TrendingUp, Mail } from "lucide-react";
 
 const SavingsCalculator = () => {
-  const [emails, setEmails] = useState(80);
-  const [patients, setPatients] = useState(30);
+  const [emails, setEmails] = useState(22);
 
-  const timeSavedMinutesPerDay = Math.round(emails * 0.6);
-  const timeSavedHoursPerWeek = Math.round((timeSavedMinutesPerDay * 5) / 60);
-  const potentialRevenue = Math.round(patients * 4 * 15);
+  // From spreadsheet: 7 min per email, 50% time savings
+  const timeSavedMinutesPerDay = emails * 7 * 0.5;
+  const timeSavedHoursPerDay = timeSavedMinutesPerDay / 60;
+  const timeSavedFormatted = timeSavedHoursPerDay < 1
+    ? `${Math.round(timeSavedMinutesPerDay)} min`
+    : `${timeSavedHoursPerDay.toFixed(1)}h`;
+
+  // 1/5 of emails convert to consults at €40, 20 working days/month
+  const potentialRevenue = Math.round(emails * 20 * (1 / 5) * 40);
 
   return (
     <section className="py-20 md:py-32 section-alt overflow-hidden">
@@ -31,31 +36,23 @@ const SavingsCalculator = () => {
                 <label className="flex items-center gap-2 text-sm font-semibold text-foreground mb-3">
                   <Mail size={16} className="text-primary" /> Email ricevute al giorno
                 </label>
-                <input type="range" min={10} max={200} value={emails} onChange={(e) => setEmails(Number(e.target.value))} className="w-full accent-primary" />
-                <div className="flex justify-between text-xs text-muted-foreground mt-1">
-                  <span>10</span>
-                  <span className="text-sm font-bold text-primary">{emails}</span>
-                  <span>200</span>
-                </div>
-              </div>
-              <div>
-                <label className="flex items-center gap-2 text-sm font-semibold text-foreground mb-3">
-                  <TrendingUp size={16} className="text-primary" /> Pazienti a settimana
-                </label>
-                <input type="range" min={5} max={100} value={patients} onChange={(e) => setPatients(Number(e.target.value))} className="w-full accent-primary" />
+                <input type="range" min={5} max={60} value={emails} onChange={(e) => setEmails(Number(e.target.value))} className="w-full accent-primary" />
                 <div className="flex justify-between text-xs text-muted-foreground mt-1">
                   <span>5</span>
-                  <span className="text-sm font-bold text-primary">{patients}</span>
-                  <span>100</span>
+                  <span className="text-sm font-bold text-primary">{emails}</span>
+                  <span>60</span>
                 </div>
               </div>
+              <p className="text-xs text-muted-foreground italic">
+                Basato su: 7 min per email, 50% risparmio tempo, 1 email su 5 convertibile in consulto a €40.
+              </p>
             </div>
 
             <div className="flex flex-col justify-center gap-5">
               <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="flex items-center gap-4 p-4 rounded-xl bg-primary/5 border border-primary/10">
                 <Clock size={28} className="text-primary shrink-0" />
                 <div>
-                  <p className="text-2xl font-extrabold text-foreground">~{timeSavedHoursPerWeek}h<span className="text-base font-medium text-muted-foreground"> / settimana</span></p>
+                  <p className="text-2xl font-extrabold text-foreground">~{timeSavedFormatted}<span className="text-base font-medium text-muted-foreground"> / giorno</span></p>
                   <p className="text-xs text-muted-foreground">Tempo risparmiato sulla gestione email</p>
                 </div>
               </motion.div>
