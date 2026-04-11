@@ -156,9 +156,9 @@ const TrustBar = () => (
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-5"
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5"
         >
-          {allPartners.map(({ name, logo, large }, i) => (
+          {allPartners.map(({ name, logo, large, subtitle }, i) => (
             <motion.div
               key={name}
               initial={{ opacity: 0, scale: 0.9 }}
@@ -172,11 +172,16 @@ const TrustBar = () => (
                 src={logo}
                 alt={name}
                 loading="lazy"
-                className={`${large ? "h-16 md:h-20" : "h-10 md:h-14"} w-auto object-contain mb-2`}
+                className={`${large ? "h-14 md:h-16" : "h-10 md:h-12"} w-auto object-contain mb-2`}
               />
               <span className="text-[10px] sm:text-xs text-muted-foreground font-medium text-center leading-tight line-clamp-2">
                 {name}
               </span>
+              {subtitle && (
+                <span className="text-[9px] sm:text-[10px] text-muted-foreground/60 text-center leading-tight mt-0.5">
+                  {subtitle}
+                </span>
+              )}
             </motion.div>
           ))}
         </motion.div>
