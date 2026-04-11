@@ -74,7 +74,7 @@ const Navbar = () => {
 
       {/* Urgency banner */}
       <div className="fixed top-16 left-0 right-0 z-40 bg-primary text-primary-foreground text-center py-2 text-xs font-semibold tracking-wide">
-        🎯 Onboarding assistito gratuito — Posti limitati per aprile 2026
+        🎯 Onboarding assistito gratuito
       </div>
     </>
   );
