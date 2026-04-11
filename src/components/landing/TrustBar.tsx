@@ -43,9 +43,17 @@ const allPartners = [
 
 const stats = [
   { value: 100, prefix: "+", suffix: "", label: "Strutture Sanitarie" },
-  { value: 250000, prefix: "+", suffix: "", label: "Pazienti gestiti" },
-  { value: 900000, prefix: "+", suffix: "", label: "Prestazioni eseguite" },
-  { value: 4500, prefix: "+", suffix: "", label: "Professionisti sanitari" },
+  { value: 10, prefix: "+", suffix: "", label: "Aziende farmaceutiche" },
+  { value: 15, prefix: "+", suffix: "", label: "Welfare" },
+  { value: 3000, prefix: "+", suffix: "", label: "Professionisti sanitari" },
+  { value: 35, prefix: "+", suffix: "", label: "Specialità attive" },
+  { value: 250000, prefix: "+", suffix: "", label: "Pazienti" },
+  { value: 300000, prefix: "+", suffix: "", label: "Prestazioni eseguite" },
+  { value: 5000, prefix: "+", suffix: "", label: "Accessi giornalieri" },
+  { value: 100000, prefix: "+", suffix: "", label: "Studi radiologici" },
+  { value: 300000, prefix: "+", suffix: "", label: "Ricette e referti" },
+  { value: 500000, prefix: "+", suffix: "", label: "Reminder ai pazienti" },
+  { value: 350000, prefix: "+", suffix: "", label: "Consegna referti" },
 ];
 
 function formatNumber(n: number) {
@@ -91,7 +99,7 @@ const TrustBar = () => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.1 }}
-        className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-14"
+        className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 mb-14"
       >
         {stats.map(({ value, prefix, suffix, label }) => (
           <div key={label} className="text-center">
