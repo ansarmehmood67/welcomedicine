@@ -3,12 +3,17 @@ import { motion } from "framer-motion";
 import { ArrowRight, Clock, TrendingUp, Mail } from "lucide-react";
 
 const SavingsCalculator = () => {
-  const [emails, setEmails] = useState(80);
-  const [patients, setPatients] = useState(30);
+  const [emails, setEmails] = useState(22);
 
-  const timeSavedMinutesPerDay = Math.round(emails * 0.6);
-  const timeSavedHoursPerWeek = Math.round((timeSavedMinutesPerDay * 5) / 60);
-  const potentialRevenue = Math.round(patients * 4 * 15);
+  // From spreadsheet: 7 min per email, 50% time savings
+  const timeSavedMinutesPerDay = emails * 7 * 0.5;
+  const timeSavedHoursPerDay = timeSavedMinutesPerDay / 60;
+  const timeSavedFormatted = timeSavedHoursPerDay < 1
+    ? `${Math.round(timeSavedMinutesPerDay)} min`
+    : `${timeSavedHoursPerDay.toFixed(1)}h`;
+
+  // 1/5 of emails convert to consults at €40, 20 working days/month
+  const potentialRevenue = Math.round(emails * 20 * (1 / 5) * 40);
 
   return (
     <section className="py-20 md:py-32 section-alt overflow-hidden">
