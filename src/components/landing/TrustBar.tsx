@@ -58,7 +58,7 @@ function AnimatedCounter({ value, prefix, suffix }: { value: number; prefix: str
 const TrustBar = () => (
   <>
     {/* SEZIONE 1: Partner — loghi */}
-    <section className="py-20 overflow-hidden section-alt my-0 mt-0 md:py-0 bg-destructive-foreground">
+    <section className="py-20 overflow-hidden section-alt my-0 mt-0 md:py-0 bg-primary-foreground">
       <div className="container max-w-6xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 15 }}
