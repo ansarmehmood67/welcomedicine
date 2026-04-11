@@ -19,7 +19,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
+      <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-lg border-b border-border bg-secondary-foreground text-primary-foreground">
         <div className="container max-w-6xl mx-auto flex items-center justify-between h-16 px-4">
           <Link to="/" className="flex items-center">
             <img src={logo} alt="Welcome Medicine" className="h-8" />
@@ -29,7 +29,7 @@ const Navbar = () => {
           <div className="hidden md:flex items-center gap-6">
             {isHome &&
               navLinks.map((l) => (
-                <a key={l.href} href={l.href} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+                <a key={l.href} href={l.href} className="text-sm font-medium transition-colors text-primary-foreground">
                   {l.label}
                 </a>
               ))}
