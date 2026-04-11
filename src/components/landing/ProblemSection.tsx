@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { XCircle, CheckCircle, ArrowRight } from "lucide-react";
-import sectionImage from "@/assets/section-problem.jpg";
+import sectionImage from "@/assets/section-problem-patient.jpg";
 
 const problems = [
   "100+ email al giorno senza filtro né priorità",
@@ -32,7 +32,7 @@ const ProblemSection = () => (
           </p>
         </motion.div>
         <motion.div initial={{ opacity: 0, scale: 0.9, rotate: 2 }} whileInView={{ opacity: 1, scale: 1, rotate: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: "easeOut" }} className="relative">
-          <img src={sectionImage} alt="Medico che usa piattaforma digitale" loading="lazy" className="w-full h-auto rounded-2xl shadow-2xl" />
+          <img src={sectionImage} alt="Paziente che utilizza l'app per comunicare con il medico" loading="lazy" className="w-full h-auto rounded-2xl shadow-2xl" />
           <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-foreground/5" />
         </motion.div>
       </div>
