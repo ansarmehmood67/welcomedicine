@@ -83,6 +83,9 @@ const TrustBar = () => (
         className="text-center mb-14"
       >
         <p className="text-xs font-semibold uppercase tracking-widest text-primary-foreground/60 mb-2">
+          Ecosistema Welmed
+        </p>
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary-foreground leading-tight">
           I numeri del nostro{" "}
           <span className="text-primary">ecosistema</span>
         </h2>
