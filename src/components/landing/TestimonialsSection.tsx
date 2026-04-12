@@ -3,16 +3,16 @@ import { motion } from "framer-motion";
 import { Star, Play, X, Quote } from "lucide-react";
 
 const videoTestimonials = [
-  { quote: "L'adozione di Welcome Medicine ha migliorato la gestione dei controlli, della documentazione clinica e della relazione medico-paziente. Finalmente ho confini chiari tra attività professionale e tempo personale.", name: "Dr. Claudio Cusini", role: "Endocrinologo", initials: "CC", videoId: "2F6UM4lBwnc" },
+  { quote: "L'adozione di Welcomedicine ha migliorato la gestione dei controlli, della documentazione clinica e della relazione medico-paziente. Finalmente ho confini chiari tra attività professionale e tempo personale.", name: "Dr. Claudio Cusini", role: "Endocrinologo", initials: "CC", videoId: "2F6UM4lBwnc" },
   { quote: "La piattaforma mi ha permesso di strutturare meglio il percorso terapeutico dei miei pazienti, migliorando la comunicazione e riducendo il carico organizzativo quotidiano.", name: "Dr. Stefano Romanò", role: "Psicologo Clinico", initials: "SR", videoId: "Btb1UiWtFPA" },
-  { quote: "Welcome Medicine ha trasformato il modo in cui gestisco i follow-up urologici. I pazienti sono più coinvolti e io ho una visione completa e organizzata della loro storia clinica.", name: "Dott. Carmelo Morana", role: "Urologo", initials: "CM", videoId: "AqXS8FVX_t0" },
+  { quote: "Welcomedicine ha trasformato il modo in cui gestisco i follow-up urologici. I pazienti sono più coinvolti e io ho una visione completa e organizzata della loro storia clinica.", name: "Dott. Carmelo Morana", role: "Urologo", initials: "CM", videoId: "AqXS8FVX_t0" },
   { quote: "La conformità alle normative di privacy e la possibilità di avere l'intera storia clinica dei pazienti in un unico luogo hanno migliorato la continuità di cura e l'efficienza delle scelte terapeutiche.", name: "Dott.ssa Daniela Agrimi", role: "Endocrinologa", initials: "DA", videoId: "ZVlsDGFbkUc" },
   { quote: "La piattaforma ha permesso di organizzare i controlli in modo strutturato, ridurre il carico di lavoro invisibile e centralizzare tutto in un'unica cartella clinica informatizzata.", name: "Dr. Giovanni Rossini", role: "Endocrinologo", initials: "GR", videoId: "b4DHRYQPKts" },
   { quote: "La piattaforma digitale ha rivoluzionato il nostro approccio alla neurologia, permettendoci di seguire i pazienti in modo più efficiente e con una qualità di cura superiore.", name: "Prof. Massimo Filippi", role: "Neurologia — Osp. San Raffaele", initials: "MF", videoId: "3DmvOkGcY9s" },
 ];
 
 const textTestimonials = [
-  { quote: "Con Welcome Medicine ho finalmente separato la vita privata da quella professionale. I pazienti mi contattano nei canali giusti, negli orari giusti.", name: "Dr. Marco Bianchi", role: "Medico di base", initials: "MB" },
+  { quote: "Con Welcomedicine ho finalmente separato la vita privata da quella professionale. I pazienti mi contattano nei canali giusti, negli orari giusti.", name: "Dr. Marco Bianchi", role: "Medico di base", initials: "MB" },
   { quote: "Il fascicolo clinico digitale è una svolta. Ho tutto lo storico del paziente in un unico posto, accessibile in un click durante la visita.", name: "Dott.ssa Elena Rossi", role: "Dermatologa", initials: "ER" },
   { quote: "La fatturazione automatica mi ha fatto risparmiare ore ogni settimana. Bollo, Tessera Sanitaria, fattura elettronica: tutto gestito dalla piattaforma.", name: "Dr. Alessandro Conti", role: "Ortopedico", initials: "AC" },
   { quote: "I miei pazienti apprezzano tantissimo poter comunicare direttamente con me in modo sicuro, senza dover usare WhatsApp o email personali.", name: "Dott.ssa Giulia Ferretti", role: "Cardiologa", initials: "GF" },
@@ -32,7 +32,7 @@ const TestimonialsSection = () => {
               <span className="text-primary">professionisti</span>
             </h2>
             <p className="text-muted-foreground text-lg max-w-xl mx-auto">
-              Medici e specialisti di diverse discipline raccontano come Welcome Medicine ha trasformato la loro pratica quotidiana.
+              Medici e specialisti di diverse discipline raccontano come Welcomedicine ha trasformato la loro pratica quotidiana.
             </p>
           </motion.div>
 

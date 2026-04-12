@@ -25,7 +25,7 @@ const SavingsCalculator = () => {
             <span className="text-primary">puoi recuperare?</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-xl mx-auto">
-            Inserisci i tuoi dati per scoprire l'impatto di Welcome Medicine sulla tua pratica.
+            Inserisci i tuoi dati per scoprire l'impatto di Welcomedicine sulla tua pratica.
           </p>
         </motion.div>
 

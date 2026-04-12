@@ -41,7 +41,7 @@ const ProblemSection = () => (
       <div className="grid md:grid-cols-2 gap-8">
         <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="rounded-2xl bg-card border border-destructive/20 p-8 space-y-4">
           <h3 className="font-extrabold text-xl text-foreground flex items-center gap-2">
-            <XCircle className="text-destructive" size={24} /> Senza Welcome Medicine
+            <XCircle className="text-destructive" size={24} /> Senza Welcomedicine
           </h3>
           {problems.map((p, i) => (
             <motion.div key={p} initial={{ opacity: 0, x: -15 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.06 }} className="flex items-start gap-3 text-sm text-muted-foreground">

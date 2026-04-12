@@ -66,7 +66,7 @@ const HeroSection = () => (
       >
         <img
           src={heroImage}
-          alt="Piattaforma Welcome Medicine — vista desktop e mobile"
+          alt="Piattaforma Welcomedicine — vista desktop e mobile"
           className="w-full h-auto rounded-2xl shadow-2xl"
         />
       </motion.div>

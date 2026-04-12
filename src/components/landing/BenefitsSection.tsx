@@ -29,7 +29,7 @@ const BenefitsSection = () => (
             <span className="text-primary">per tutti</span>
           </h2>
           <p className="text-primary-foreground/70 text-lg leading-relaxed">
-            Welcome Medicine migliora la vita professionale del medico e l'esperienza del paziente. Allo stesso tempo.
+            Welcomedicine migliora la vita professionale del medico e l'esperienza del paziente. Allo stesso tempo.
           </p>
         </motion.div>
       </div>
