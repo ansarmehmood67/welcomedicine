@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Users, Building2, ShieldCheck } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const stats = [
   { icon: Users, value: "4.500+", label: "Medici attivi" },
@@ -51,14 +52,12 @@ const FinalCTASection = () => (
         </div>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <motion.a
-            href="#"
-            whileHover={{ scale: 1.04 }}
-            whileTap={{ scale: 0.97 }}
+          <Link
+            to="/abbonamento"
             className="inline-flex items-center gap-2 h-13 px-8 rounded-xl cta-gradient text-primary-foreground font-semibold hover:opacity-90 transition-opacity"
           >
             Prova gratis <ArrowRight size={16} />
-          </motion.a>
+          </Link>
         </div>
         <p className="text-muted-foreground/60 text-xs mt-6">Nessun addebito il primo mese • Disdetta tramite customer care • I tuoi dati restano tuoi</p>
       </motion.div>

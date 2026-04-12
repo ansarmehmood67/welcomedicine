@@ -39,9 +39,9 @@ const Navbar = () => {
             >
               Per i pazienti
             </Link>
-            <a href="#cta-finale" className="inline-flex items-center justify-center h-9 px-5 rounded-lg cta-gradient text-primary-foreground text-sm font-semibold hover:opacity-90 transition-opacity">
+            <Link to="/abbonamento" className="inline-flex items-center justify-center h-9 px-5 rounded-lg cta-gradient text-primary-foreground text-sm font-semibold hover:opacity-90 transition-opacity">
               Prova gratis
-            </a>
+            </Link>
           </div>
 
           {/* Mobile toggle */}
@@ -63,9 +63,9 @@ const Navbar = () => {
                 <Link to="/pazienti" onClick={() => setOpen(false)} className="text-sm font-semibold text-primary py-2">
                   Per i pazienti
                 </Link>
-                <a href="#cta-finale" onClick={() => setOpen(false)} className="inline-flex items-center justify-center h-10 rounded-lg cta-gradient text-primary-foreground text-sm font-semibold mt-2">
+                <Link to="/abbonamento" onClick={() => setOpen(false)} className="inline-flex items-center justify-center h-10 rounded-lg cta-gradient text-primary-foreground text-sm font-semibold mt-2">
                   Prova gratis
-                </a>
+                </Link>
               </div>
             </motion.div>
           )}
