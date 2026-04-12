@@ -11,6 +11,7 @@ import CustomerCareSection from "@/components/landing/CustomerCareSection";
 import SavingsCalculator from "@/components/landing/SavingsCalculator";
 import QuotesSection from "@/components/landing/QuotesSection";
 import PricingSection from "@/components/landing/PricingSection";
+import PricingDetailsSection from "@/components/landing/PricingDetailsSection";
 import FAQSection from "@/components/landing/FAQSection";
 import FinalCTASection from "@/components/landing/FinalCTASection";
 import Footer from "@/components/landing/Footer";
@@ -30,6 +31,7 @@ const Index = () => (
     <QuotesSection />
     <CustomerCareSection />
     <PricingSection />
+    <PricingDetailsSection />
     <FAQSection />
     <FinalCTASection />
     <Footer />
