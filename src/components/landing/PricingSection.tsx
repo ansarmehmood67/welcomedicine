@@ -77,7 +77,7 @@ const PricingSection = () => (
 
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-3xl mx-auto">
         <h3 className="text-2xl font-extrabold text-primary-foreground text-center mb-8">Cosa comprende l'abbonamento?</h3>
-        <div className="grid sm:grid-cols-2 gap-x-8 gap-y-4">
+        <div className="grid sm:grid-cols-2 gap-x-8 gap-y-4 text-sidebar bg-card-foreground">
           {included.map((item) => (
             <div key={item} className="flex items-start gap-3">
               <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center shrink-0 mt-0.5">
