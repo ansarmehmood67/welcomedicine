@@ -1,71 +1,11 @@
 
 
-## Analisi del messaggio attuale
+## Applicare Alternativa B alla Hero
 
-L'hero attuale presenta:
-- **H1**: "Smetti di lavorare gratis fuori dall'ambulatorio" — tono emotivo, accusa il paziente di sfruttamento
-- **Sottotitolo**: "Mai più messaggi dei pazienti sui tuoi canali personali" — focus negativo sul problema
+Modifiche in `src/components/landing/HeroSection.tsx`:
 
-Entrambi sono giudicati troppo "di pancia" e poco etici.
+1. **H1** → `Ogni consulenza sotto controllo,` + span primary `dalla prima chat al referto finale.`
+2. **Sottotitolo** → `Una piattaforma conforme GDPR che integra messaggistica, video e documenti. Usata da +4.500 medici per offrire un servizio più strutturato ai propri pazienti.`
 
----
-
-## Nuova direzione proposta
-
-**Core message**: Organizzazione → Efficienza → Capacità di gestire più pazienti con qualità
-
-**Tono**: Professionale, credibile, costruttivo
-
----
-
-## Implementazione
-
-### 1. Nuovo titolo principale (H1)
-
-```
-"Centralizza le consulenze mediche 
- in un flusso di lavoro strutturato."
-```
-
-Oppure alternativa:
-```
-"Gestisci ogni consulenza con 
- efficienza e tranquillità professionale."
-```
-
-### 2. Nuovo sottotitolo (p)
-
-```
-Un'unica piattaforma sicura per coordinare comunicazioni, 
-videoconsulti e documenti. Ora già utilizzata da +4.500 
-professionisti per ottimizzare il proprio workflow.
-```
-
-### 3. Badge sopra il titolo
-
-Mantenere: "Welmed — Poliambulatorio autorizzato" (già professionale)
-
-### 4. Pills (già appropriati)
-
-Mantenere: Chat illimitate, Videoconsulti, Scambio documenti, Conforme GDPR
-
----
-
-## Cambiamenti nel codice
-
-File: `src/components/landing/HeroSection.tsx`
-
-| Riga | Attuale | Nuovo |
-|------|---------|-------|
-| 22-23 | `Smetti di lavorare gratis fuori dall'ambulatorio.` | `Centralizza le consulenze mediche in un flusso di lavoro strutturato.` |
-| 25-27 | `Mai più messaggi... canali personali...` | `Un'unica piattaforma sicura per coordinare comunicazioni, videoconsulti e documenti. Ora già utilizzata da +4.500 professionisti per ottimizzare il proprio workflow.` |
-
----
-
-## Verifica coerenza
-
-- ✅ Elimina riferimenti emotivi ("lavorare gratis", "sfruttamento")
-- ✅ Focus su organizzazione e struttura
-- ✅ Beneficio concreto: efficienza → più pazienti gestibili
-- ✅ Mantiene credibilità con il riferimento ai 4.500+ professionisti
+Nessun altro file coinvolto.
 
