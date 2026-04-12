@@ -16,7 +16,7 @@ const perPazienti = [
 ];
 
 const BenefitsSection = () => (
-  <section id="vantaggi" className="py-20 md:py-32 bg-primary/5 scroll-mt-20 overflow-hidden">
+  <section id="vantaggi" className="py-20 md:py-32 bg-white scroll-mt-20 overflow-hidden">
     <div className="container max-w-6xl mx-auto px-4">
       <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
         <motion.div initial={{ opacity: 0, scale: 0.9, rotate: -2 }} whileInView={{ opacity: 1, scale: 1, rotate: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, ease: "easeOut" }} className="relative order-2 lg:order-1">
