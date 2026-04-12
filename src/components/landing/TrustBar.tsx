@@ -8,7 +8,7 @@ const allPartners = [
   { name: "CDI Centro Diagnostico", logo: "https://wp-uploads.welmed.it/uploads/sites/10/2024/05/CDI_logo.svg", large: true },
   { name: "Istituto Clinico Città Studi", logo: "https://ic-cittastudi.it/images/istituto-clinico-citta-studi-logo.svg?1", large: true },
   { name: "GVM Care & Research", logo: "https://www.gvmnet.it/App_Themes/GVMNet/images/gruppovillamaria_logo.png", large: false },
-  { name: "San Raffaele Roma", logo: "https://www.wel-care.it/car-t/img/logo.svg", large: false },
+  { name: "Welcare Linfomi e CAR-T", logo: "https://www.wel-care.it/car-t/img/logo.svg", large: false },
   { name: "Campus Bio-Medico", logo: "https://wp-uploads.welmed.it/uploads/sites/4/2024/09/Logo-Big.svg", large: true },
   { name: "Casa della Salute", logo: "https://cds.it/wp-content/uploads/2023/02/CDS_Logo.svg", large: false },
   { name: "Polimedico", logo: "https://wp-uploads.welmed.it/uploads/sites/8/2024/05/Logo-Polimedico.svg", large: false },
