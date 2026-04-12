@@ -86,7 +86,7 @@ const TestimonialsSection = () => {
             <a href="#cta-finale" className="inline-flex items-center gap-2 h-12 px-8 rounded-xl cta-gradient text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity">
               Prova gratis →
             </a>
-            <a href="https://www.youtube.com/@welmed1329" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline">
+            <a href="https://www.youtube.com/watch?v=pXG-xtz1rOQ&list=PLdA1IIBWLzBGMGKY6D1pVrlX9a6p5QBhm" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline">
               Vedi tutte le testimonianze dei medici →
             </a>
           </motion.div>
