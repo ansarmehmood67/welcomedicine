@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Star, Play, X, Quote } from "lucide-react";
+import { Star, Play, X } from "lucide-react";
 
 const videoTestimonials = [
   { quote: "L'adozione di Welcomedicine ha migliorato la gestione dei controlli, della documentazione clinica e della relazione medico-paziente. Finalmente ho confini chiari tra attività professionale e tempo personale.", name: "Dr. Claudio Cusini", role: "Endocrinologo", initials: "CC", videoId: "2F6UM4lBwnc" },
