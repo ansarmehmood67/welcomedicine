@@ -3,7 +3,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 const faqs = [
   { q: "Come funziona la prova gratuita?", a: "Puoi registrarti e accedere a tutte le funzionalità per 30 giorni. Avrai a disposizione una videocall gratuita con il nostro team di formazione e configurazione guidata del profilo. Carta di credito richiesta, nessun addebito, dopo 30 giorni potrai decidere cosa fare." },
-  { q: "I miei pazienti devono pagare per usare la piattaforma?", a: "No, l'accesso per i pazienti è completamente gratuito. Possono comunicare con te, ricevere documenti e partecipare ai videoconsulti senza alcun costo." },
+  { q: "I miei pazienti devono pagare per usare la piattaforma?", a: "No, l'accesso per i pazienti è completamente gratuito. Possono comunicare con te, ricevere documenti e caricare documenti nel fascicolo clinico personale senza alcun costo. Sarai tu a decidere se erogare consulenze e televisite a pagamento inserendo il tuo listino nelle impostazioni del profilo." },
   { q: "Quanto tempo serve per configurare tutto?", a: "L'onboarding è assistito dal nostro team, che ti guida passo dopo passo nella configurazione del profilo e nell'avvio dell'utilizzo con i tuoi pazienti." },
   { q: "Posso cancellare quando voglio?", a: "La disdetta avviene tramite il nostro customer care. Dopo il periodo di prova di 30 giorni, è previsto un vincolo di 6 mesi per garantire continuità nel servizio." },
   { q: "Welcomedicine è conforme al GDPR?", a: "Sì, la piattaforma è stata progettata sin dall'inizio per essere pienamente conforme al GDPR e alle normative sulla privacy in ambito sanitario. Tutti i dati sono crittografati e conservati su server europei." },
