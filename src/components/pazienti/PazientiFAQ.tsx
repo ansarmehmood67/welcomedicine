@@ -20,7 +20,7 @@ Usare la Piattaforma ti offre anche altri vantaggi perché:
   {
     q: "Cosa posso fare in Piattaforma?",
     a: `Con la Piattaforma puoi:
-• prendere visione dell'offerta sanitaria online di Welcomedicine
+• prendere visione dell'offerta sanitaria online di Welcome Medicine
 • cercare un Medico per nome, specializzazione, patologia, sintomo, parti del corpo
 • chattare e scambiare documentazione con il Medico
 • ricevere dal Medico pareri, referti e ricette attraverso Videovisite o Consulti scritti
