@@ -19,11 +19,11 @@ const HeroSection = () => (
           Welmed — Poliambulatorio autorizzato
         </span>
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.1] text-foreground mb-6">
-          Centralizza le consulenze mediche{" "}
-          <span className="text-primary">in un flusso di lavoro strutturato.</span>
+          Ogni consulenza sotto controllo,{" "}
+          <span className="text-primary">dalla prima chat al referto finale.</span>
         </h1>
         <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-8 max-w-lg">
-          Un'unica piattaforma sicura per coordinare comunicazioni, videoconsulti e documenti. Già utilizzata da +4.500 professionisti per ottimizzare il proprio workflow.
+          Una piattaforma conforme GDPR che integra messaggistica, video e documenti. Usata da +4.500 medici per offrire un servizio più strutturato ai propri pazienti.
         </p>
 
         <div className="flex flex-wrap gap-3 mb-6">
