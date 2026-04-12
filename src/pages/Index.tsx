@@ -9,6 +9,7 @@ import WorkflowSection from "@/components/landing/WorkflowSection";
 import BenefitsSection from "@/components/landing/BenefitsSection";
 import CustomerCareSection from "@/components/landing/CustomerCareSection";
 import SavingsCalculator from "@/components/landing/SavingsCalculator";
+import QuotesSection from "@/components/landing/QuotesSection";
 import PricingSection from "@/components/landing/PricingSection";
 import FAQSection from "@/components/landing/FAQSection";
 import FinalCTASection from "@/components/landing/FinalCTASection";
@@ -26,6 +27,7 @@ const Index = () => (
     <BenefitsSection />
     <WorkflowSection />
     <SavingsCalculator />
+    <QuotesSection />
     <CustomerCareSection />
     <PricingSection />
     <FAQSection />
