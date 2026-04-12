@@ -35,7 +35,7 @@ Usare la Piattaforma ti offre anche altri vantaggi perché:
   },
   {
     q: "Su quali dispositivi posso navigare la Piattaforma?",
-    a: "La Piattaforma è navigabile da qualsiasi dispositivo: computer, tablet e smartphone. Puoi accedere alla tua area riservata con le tue credenziali oppure scaricare l'App Welcomedicine per Android e iOS e accedere tramite credenziali o riconoscimento biometrico (impronta digitale e riconoscimento facciale).",
+    a: "La Piattaforma è navigabile da qualsiasi dispositivo: computer, tablet e smartphone. Puoi accedere alla tua area riservata con le tue credenziali oppure scaricare l'App Welcome Medicine per Android e iOS e accedere tramite credenziali o riconoscimento biometrico (impronta digitale e riconoscimento facciale).",
   },
 ];
 
