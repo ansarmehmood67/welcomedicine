@@ -53,21 +53,21 @@ const SavingsCalculator = () => {
               <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="flex items-center gap-4 p-4 rounded-xl bg-primary/5 border border-primary/10">
                 <Clock size={28} className="text-primary shrink-0" />
                 <div>
-                  <p className="text-4xl sm:text-5xl font-extrabold text-foreground">~{timeSavedFormatted}<span className="text-base font-medium text-muted-foreground"> / giorno</span></p>
+                  <p className="text-2xl font-extrabold text-foreground">~{timeSavedFormatted}<span className="text-base font-medium text-muted-foreground"> / giorno</span></p>
                   <p className="text-xs text-muted-foreground">Tempo risparmiato sulla gestione email</p>
                 </div>
               </motion.div>
               <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }} className="flex items-center gap-4 p-4 rounded-xl bg-primary/5 border border-primary/10">
                 <TrendingUp size={28} className="text-primary shrink-0" />
                 <div>
-                  <p className="text-4xl sm:text-5xl font-extrabold text-foreground">+€{potentialRevenue}<span className="text-base font-medium text-muted-foreground"> / mese</span></p>
+                  <p className="text-2xl font-extrabold text-foreground">+€{potentialRevenue}<span className="text-base font-medium text-muted-foreground"> / mese</span></p>
                   <p className="text-xs text-muted-foreground">Potenziale ricavo da consulti monetizzati</p>
                 </div>
               </motion.div>
               <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }} className="flex items-center gap-4 p-4 rounded-xl bg-primary/5 border border-primary/10">
                 <Wallet size={28} className="text-primary shrink-0" />
                 <div>
-                  <p className="text-4xl sm:text-5xl font-extrabold text-foreground">€{netRevenue}<span className="text-base font-medium text-muted-foreground"> netti / mese</span></p>
+                  <p className="text-2xl font-extrabold text-foreground">€{netRevenue}<span className="text-base font-medium text-muted-foreground"> netti / mese</span></p>
                   <p className="text-xs text-muted-foreground">Il 97% resta a te — trattenuta del 3% per spese bancarie e amministrative</p>
                 </div>
               </motion.div>
