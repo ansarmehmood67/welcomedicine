@@ -51,7 +51,7 @@ const PazientiHero = () => (
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-primary-foreground/90 text-lg sm:text-xl leading-relaxed mb-10 max-w-xl drop-shadow-sm font-medium"
         >
-          Cerca, comunica e resta in contatto con gli Specialisti di Welcomedicine.
+          Cerca, comunica e resta in contatto con gli Specialisti di Welcome Medicine.
           Prenota videoconsulti e visite online da computer o smartphone.
         </motion.p>
 

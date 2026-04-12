@@ -14,7 +14,7 @@ const ScaricaApp = () => (
       >
         <img
           src={appScreenshot}
-          alt="App Welcomedicine su smartphone"
+          alt="App Welcome Medicine su smartphone"
           className="w-64 h-auto rounded-3xl shadow-2xl"
           loading="lazy"
         />
@@ -28,7 +28,7 @@ const ScaricaApp = () => (
       >
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary-foreground mb-6 leading-tight">
           Scarica l'APP{" "}
-          <span className="text-primary">WELCOMEDICINE</span>
+          <span className="text-primary">WELCOME MEDICINE</span>
         </h2>
         <p className="text-primary-foreground/70 text-base sm:text-lg leading-relaxed mb-8">
           Non solo da computer, ma anche da smartphone: scarica l'App gratuita per i Pazienti, accedi o registrati e comincia subito a comunicare facilmente con i nostri Specialisti!
