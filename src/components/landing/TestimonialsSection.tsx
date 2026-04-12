@@ -11,13 +11,6 @@ const videoTestimonials = [
   { quote: "La piattaforma digitale ha rivoluzionato il nostro approccio alla neurologia, permettendoci di seguire i pazienti in modo più efficiente e con una qualità di cura superiore.", name: "Prof. Massimo Filippi", role: "Neurologia — Osp. San Raffaele", initials: "MF", videoId: "3DmvOkGcY9s" },
 ];
 
-const textTestimonials = [
-  { quote: "Con Welcomedicine ho finalmente separato la vita privata da quella professionale. I pazienti mi contattano nei canali giusti, negli orari giusti.", name: "Dr. Marco Bianchi", role: "Medico di base", initials: "MB" },
-  { quote: "Il fascicolo clinico digitale è una svolta. Ho tutto lo storico del paziente in un unico posto, accessibile in un click durante la visita.", name: "Dott.ssa Elena Rossi", role: "Dermatologa", initials: "ER" },
-  { quote: "La fatturazione automatica mi ha fatto risparmiare ore ogni settimana. Bollo, Tessera Sanitaria, fattura elettronica: tutto gestito dalla piattaforma.", name: "Dr. Alessandro Conti", role: "Ortopedico", initials: "AC" },
-  { quote: "I miei pazienti apprezzano tantissimo poter comunicare direttamente con me in modo sicuro, senza dover usare WhatsApp o email personali.", name: "Dott.ssa Giulia Ferretti", role: "Cardiologa", initials: "GF" },
-];
-
 const TestimonialsSection = () => {
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
 
@@ -60,22 +53,6 @@ const TestimonialsSection = () => {
                       <p className="text-sm font-semibold text-foreground">{name}</p>
                       <p className="text-xs text-muted-foreground">{role}</p>
                     </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {textTestimonials.map(({ quote, name, role, initials }, i) => (
-              <motion.div key={name} initial={{ opacity: 0, y: 25 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08, duration: 0.5 }} className="rounded-2xl border border-border p-5 card-elevated flex flex-col bg-secondary-foreground text-primary-foreground">
-                <Quote size={20} className="mb-3 text-primary-foreground" fill="currentColor" />
-                <p className="text-sm leading-relaxed mb-4 flex-1 text-primary-foreground">"{quote}"</p>
-                <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold text-destructive-foreground bg-primary">{initials}</div>
-                  <div>
-                    <p className="text-sm font-semibold text-primary-foreground">{name}</p>
-                    <p className="text-xs text-primary-foreground">{role}</p>
                   </div>
                 </div>
               </motion.div>
