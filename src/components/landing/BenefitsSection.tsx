@@ -25,8 +25,8 @@ const BenefitsSection = () => (
         <motion.div initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="order-1 lg:order-2">
           <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary mb-4 uppercase tracking-wide">Vantaggi</span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground mb-5 leading-tight">
-            Benefici concreti,{" "}
-            <span className="text-primary">per tutti</span>
+            Perchè i professionisti scelgono,<br />
+            <span className="text-primary">Welcome medicine</span>
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
             Welcomedicine migliora la vita professionale del medico e l'esperienza del paziente. Allo stesso tempo.
