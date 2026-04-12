@@ -64,6 +64,16 @@ const PricingSection = () => (
         📈 Già 237 medici hanno attivato la prova questo mese
       </p>
 
+      {/* Revenue callout */}
+      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-2xl mx-auto mb-12 rounded-2xl border border-primary/20 bg-primary/5 p-6 flex items-center gap-4">
+        <div className="w-12 h-12 rounded-xl cta-gradient flex items-center justify-center shrink-0">
+          <Wallet size={24} className="text-primary-foreground" />
+        </div>
+        <div>
+          <p className="text-lg font-extrabold text-primary-foreground">I tuoi ricavi restano tuoi.</p>
+          <p className="text-sm text-primary-foreground/70">Trattenuta solo del 3% per spese bancarie e gestione amministrativa. Il 97% di ogni consulto è tuo.</p>
+        </div>
+      </motion.div>
 
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-3xl mx-auto">
         <h3 className="text-2xl font-extrabold text-primary-foreground text-center mb-8">Cosa comprende l'abbonamento?</h3>
