@@ -1,5 +1,21 @@
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useTransform, animate, useInView } from "framer-motion";
+import { useEffect, useRef } from "react";
 import { Check, Wallet, Shield, Globe, Video, MessageSquare, FileText, Stethoscope, HardDrive, PenTool, UserCog, Headphones, CreditCard } from "lucide-react";
+
+function AnimatedCounter({ target, duration = 1.5 }: { target: number; duration?: number }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, (v) => Math.round(v));
+
+  useEffect(() => {
+    if (isInView) {
+      animate(count, target, { duration, ease: "easeOut" });
+    }
+  }, [isInView, target, duration, count]);
+
+  return <motion.span ref={ref}>{rounded}</motion.span>;
+}
 
 const included = [
   { label: "Accesso completo a tutte le funzionalità", icon: Shield },
