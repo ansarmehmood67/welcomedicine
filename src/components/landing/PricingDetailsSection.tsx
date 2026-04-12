@@ -18,7 +18,7 @@ const included = [
 const PricingDetailsSection = () => (
   <section className="py-20 md:py-28 overflow-hidden relative">
     <div className="absolute inset-0 bg-gradient-to-br from-accent via-background to-secondary" />
-    <div className="container max-w-6xl mx-auto px-4">
+    <div className="container max-w-6xl mx-auto px-4 relative z-10">
       {/* Revenue callout */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
