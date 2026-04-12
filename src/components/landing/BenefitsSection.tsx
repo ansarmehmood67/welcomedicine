@@ -29,7 +29,7 @@ const BenefitsSection = () => (
             <span className="text-primary">Welcome medicine</span>
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            Welcomedicine migliora la vita professionale del medico e l'esperienza del paziente. Allo stesso tempo.
+            Welcomedicine migliora la vita professionale del medico e l'esperienza del paziente. Allo stesso tempo. Entra nell'ecosistema Welmed e organizza il tuo Ambulatorio virtuale sempre a disposizione.
           </p>
         </motion.div>
       </div>
