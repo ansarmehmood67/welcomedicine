@@ -19,11 +19,11 @@ const HeroSection = () => (
           Welmed — Poliambulatorio autorizzato
         </span>
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.1] text-foreground mb-6">
-          Smetti di lavorare gratis{" "}
-          <span className="text-primary">fuori dall'ambulatorio.</span>
+          Centralizza le consulenze mediche{" "}
+          <span className="text-primary">in un flusso di lavoro strutturato.</span>
         </h1>
         <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-8 max-w-lg">
-          Mai più messaggi dei pazienti sui tuoi canali personali. Centralizza le comunicazioni medico-paziente in un'unica piattaforma sicura, già usata da +4.500 professionisti.
+          Un'unica piattaforma sicura per coordinare comunicazioni, videoconsulti e documenti. Già utilizzata da +4.500 professionisti per ottimizzare il proprio workflow.
         </p>
 
         <div className="flex flex-wrap gap-3 mb-6">
