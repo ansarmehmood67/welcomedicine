@@ -1,21 +1,71 @@
 
 
-## Piano: Sezione Value Proposition sotto la Hero
+## Analisi del messaggio attuale
 
-Creare un nuovo componente `ValuePropositionSection.tsx` da inserire tra `HeroSection` e `TrustBar` in `Index.tsx`.
+L'hero attuale presenta:
+- **H1**: "Smetti di lavorare gratis fuori dall'ambulatorio" — tono emotivo, accusa il paziente di sfruttamento
+- **Sottotitolo**: "Mai più messaggi dei pazienti sui tuoi canali personali" — focus negativo sul problema
 
-### Contenuto della sezione
+Entrambi sono giudicati troppo "di pancia" e poco etici.
 
-- Sfondo scuro (`dark-section`) per creare contrasto con la hero
-- Titolo breve ad alta conversione che riassume i benefici principali: comunicazione centralizzata, compliance GDPR, risparmio tempo, monetizzazione consulenze
-- 3-4 benefit pills/icone in riga
-- CTA "Scopri di più" che scrolla alla sezione funzionalità (`#funzionalita`)
-- Animazioni Framer Motion coerenti con il resto della pagina
+---
 
-### File coinvolti
+## Nuova direzione proposta
 
-| File | Modifica |
-|------|----------|
-| `src/components/landing/ValuePropositionSection.tsx` | Nuovo componente |
-| `src/pages/Index.tsx` | Import + inserimento tra HeroSection e TrustBar |
+**Core message**: Organizzazione → Efficienza → Capacità di gestire più pazienti con qualità
+
+**Tono**: Professionale, credibile, costruttivo
+
+---
+
+## Implementazione
+
+### 1. Nuovo titolo principale (H1)
+
+```
+"Centralizza le consulenze mediche 
+ in un flusso di lavoro strutturato."
+```
+
+Oppure alternativa:
+```
+"Gestisci ogni consulenza con 
+ efficienza e tranquillità professionale."
+```
+
+### 2. Nuovo sottotitolo (p)
+
+```
+Un'unica piattaforma sicura per coordinare comunicazioni, 
+videoconsulti e documenti. Ora già utilizzata da +4.500 
+professionisti per ottimizzare il proprio workflow.
+```
+
+### 3. Badge sopra il titolo
+
+Mantenere: "Welmed — Poliambulatorio autorizzato" (già professionale)
+
+### 4. Pills (già appropriati)
+
+Mantenere: Chat illimitate, Videoconsulti, Scambio documenti, Conforme GDPR
+
+---
+
+## Cambiamenti nel codice
+
+File: `src/components/landing/HeroSection.tsx`
+
+| Riga | Attuale | Nuovo |
+|------|---------|-------|
+| 22-23 | `Smetti di lavorare gratis fuori dall'ambulatorio.` | `Centralizza le consulenze mediche in un flusso di lavoro strutturato.` |
+| 25-27 | `Mai più messaggi... canali personali...` | `Un'unica piattaforma sicura per coordinare comunicazioni, videoconsulti e documenti. Ora già utilizzata da +4.500 professionisti per ottimizzare il proprio workflow.` |
+
+---
+
+## Verifica coerenza
+
+- ✅ Elimina riferimenti emotivi ("lavorare gratis", "sfruttamento")
+- ✅ Focus su organizzazione e struttura
+- ✅ Beneficio concreto: efficienza → più pazienti gestibili
+- ✅ Mantiene credibilità con il riferimento ai 4.500+ professionisti
 
