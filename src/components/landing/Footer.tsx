@@ -1,5 +1,5 @@
 import { Mail, Phone, MapPin, Globe } from "lucide-react";
-import logo from "@/assets/logo-welcomedicine.jpg";
+import logo from "@/assets/logo-welcomedicine-full.png";
 
 const Footer = () => (
   <footer className="dark-section py-10">
