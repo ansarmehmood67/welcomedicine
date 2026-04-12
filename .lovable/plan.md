@@ -1,22 +1,14 @@
 
 
-## Piano: Sezione Customer Care dedicata
+## Problema
 
-### Posizionamento
-Nuova sezione compatta posizionata tra **BenefitsSection** e **SavingsCalculator** nella pagina Index. Questo crea un flusso logico: vantaggi → supporto dedicato → calcola i tuoi ricavi.
+Nel Navbar, il bottone CTA mostra ancora "Prova gratis" con link a `/abbonamento`. Sulla pagina Pazienti, questo bottone dovrebbe mostrare "Scarica l'App" con link al download dell'app, coerentemente con tutte le altre CTA della pagina.
 
-### Design
-Una sezione snella (non full-size) con sfondo `dark-section` per contrasto visivo, strutturata come un banner orizzontale con:
-- Icona `Headphones` prominente a sinistra
-- Titolo: **"Un team dedicato, al tuo fianco"**
-- Testo: focus su numero dedicato, risposte immediate, supporto operativo per massimizzare l'efficacia dell'attività del medico. Nessun riferimento a "h24".
-- Sottotesto con 2-3 pill/tag: "Numero dedicato", "Risposte immediate", "Supporto anche ai tuoi pazienti"
+## Piano
 
-### File modificati
-- **Nuovo file**: `src/components/landing/CustomerCareSection.tsx`
-- **Modifica**: `src/pages/Index.tsx` — importare e inserire tra BenefitsSection e SavingsCalculator
-
-### Testo proposto
-> **Un team dedicato, al tuo fianco**
-> Un numero dedicato per ogni esigenza operativa. Risposte immediate per non interrompere il tuo flusso di lavoro e garantire la massima efficacia nella gestione dei pazienti. Il supporto si estende anche ai tuoi pazienti, per un'esperienza senza attriti.
+1. **Modificare il Navbar** (`src/components/landing/Navbar.tsx`):
+   - Quando l'utente si trova sulla pagina `/pazienti`, il bottone CTA principale cambia da "Prova gratis" (link a `/abbonamento`) a "Scarica l'App" (link a `https://app.welmed.it/welcomedicine/download-patient-app`, target `_blank`)
+   - Usare la variabile `location.pathname` già presente per distinguere il contesto
+   - Applicare lo stesso stile uniforme degli altri bottoni: `h-12 px-7 rounded-xl` con icona `Download`
+   - Aggiornare anche la versione mobile del menu nello stesso modo
 
