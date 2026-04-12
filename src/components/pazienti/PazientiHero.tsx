@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Search, ArrowRight } from "lucide-react";
+import { Search, ArrowRight, Download } from "lucide-react";
 import heroImage from "@/assets/pazienti-hero.jpg";
 
 const PazientiHero = () => (
@@ -79,16 +79,24 @@ const PazientiHero = () => (
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className="flex flex-col sm:flex-row sm:items-center gap-4 text-primary-foreground/70 text-sm"
+          className="flex flex-col sm:flex-row sm:items-center gap-4"
         >
-          <span>
+          <motion.a
+            href="https://app.welmed.it/welcomedicine/download-patient-app"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.04 }}
+            whileTap={{ scale: 0.97 }}
+            className="inline-flex items-center gap-2 h-13 px-8 rounded-xl cta-gradient text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity"
+          >
+            <Download size={18} /> Scarica l'App
+          </motion.a>
+          <span className="text-primary-foreground/70 text-sm">
             Oppure{" "}
             <a href="https://app.welmed.it/welcomedicine/login" className="text-primary hover:underline font-semibold">Accedi</a>
             {" "}o{" "}
             <a href="https://app.welmed.it/welcomedicine/registration/patient" className="text-primary hover:underline font-semibold">Registrati</a>
           </span>
-          <span className="hidden sm:inline text-primary-foreground/30">|</span>
-          <span>Gratuito • Nessuna carta richiesta</span>
         </motion.div>
       </div>
     </div>
