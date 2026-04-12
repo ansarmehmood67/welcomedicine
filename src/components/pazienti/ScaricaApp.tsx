@@ -39,7 +39,7 @@ const ScaricaApp = () => (
           rel="noopener noreferrer"
           whileHover={{ scale: 1.04 }}
           whileTap={{ scale: 0.97 }}
-          className="inline-flex items-center gap-2 h-13 px-8 rounded-xl cta-gradient text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity"
+          className="inline-flex items-center gap-2 h-12 px-7 rounded-xl cta-gradient text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity"
         >
           <Download size={18} /> Scarica l'App
         </motion.a>
