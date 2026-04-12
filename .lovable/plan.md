@@ -1,14 +1,28 @@
 
 
-## Problema
+## Riordino sezioni Landing Page
 
-Nel Navbar, il bottone CTA mostra ancora "Prova gratis" con link a `/abbonamento`. Sulla pagina Pazienti, questo bottone dovrebbe mostrare "Scarica l'App" con link al download dell'app, coerentemente con tutte le altre CTA della pagina.
+Nuovo ordine richiesto (rispetto all'attuale):
 
-## Piano
+| # | Sezione | Cambiamento |
+|---|---------|-------------|
+| 1 | Navbar | — |
+| 2 | HeroSection | — |
+| 3 | ValuePropositionSection | — |
+| 4 | TrustBar | — |
+| 5 | ProblemSection | — |
+| 6 | TestimonialsSection | — |
+| 7 | FeaturesSection | — |
+| 8 | **BenefitsSection** | ↑ spostata prima di Workflow |
+| 9 | **WorkflowSection** | ↓ spostata dopo Benefits |
+| 10 | **SavingsCalculator** | ↑ spostata prima di CustomerCare |
+| 11 | **CustomerCareSection** | ↓ spostata dopo SavingsCalculator |
+| 12 | PricingSection | — |
+| 13 | FAQSection | — |
+| 14 | FinalCTASection | — |
+| 15 | Footer | — |
 
-1. **Modificare il Navbar** (`src/components/landing/Navbar.tsx`):
-   - Quando l'utente si trova sulla pagina `/pazienti`, il bottone CTA principale cambia da "Prova gratis" (link a `/abbonamento`) a "Scarica l'App" (link a `https://app.welmed.it/welcomedicine/download-patient-app`, target `_blank`)
-   - Usare la variabile `location.pathname` già presente per distinguere il contesto
-   - Applicare lo stesso stile uniforme degli altri bottoni: `h-12 px-7 rounded-xl` con icona `Download`
-   - Aggiornare anche la versione mobile del menu nello stesso modo
+### Implementazione
+
+Modifica solo `src/pages/Index.tsx`: riordinare i componenti JSX secondo la sequenza indicata. Nessun altro file coinvolto.
 
