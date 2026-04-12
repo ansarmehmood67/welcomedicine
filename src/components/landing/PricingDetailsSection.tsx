@@ -53,7 +53,7 @@ const PricingDetailsSection = () => (
           Trattenuta solo del 3% per spese bancarie e gestione amministrativa. Il 97% di ogni consulto è tuo.
         </p>
         <div className="mt-6 inline-flex items-center gap-3 px-6 py-3 rounded-2xl bg-primary/5 border border-primary/15">
-          <span className="text-4xl font-extrabold text-primary">97%</span>
+          <span className="text-4xl font-extrabold text-primary"><AnimatedCounter target={97} />%</span>
           <span className="text-sm text-muted-foreground text-left leading-tight">dei ricavi delle tue<br />prestazioni è tuo</span>
         </div>
       </motion.div>
