@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
-import logo from "@/assets/logo-welcomedicine.jpg";
+const logo = "https://wp-uploads.welmed.it/uploads/sites/9/2024/05/Logo-Welcomedicine-png-trasparente.png";
 
 const navLinks = [
   { label: "Funzioni", href: "#funzioni" },
