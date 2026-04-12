@@ -54,7 +54,7 @@ const FinalCTASection = () => (
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
             to="/abbonamento"
-            className="inline-flex items-center gap-2 h-13 px-8 rounded-xl cta-gradient text-primary-foreground font-semibold hover:opacity-90 transition-opacity"
+            className="inline-flex items-center gap-2 h-12 px-8 rounded-xl cta-gradient text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity"
           >
             Prova gratis <ArrowRight size={16} />
           </Link>
