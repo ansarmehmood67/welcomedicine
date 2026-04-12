@@ -6,6 +6,7 @@ const perTe = [
   "Più ordine nella gestione quotidiana",
   "Meno tempo perso in comunicazioni frammentate",
   "Più controllo clinico ed economico sulla tua attività",
+  "I ricavi delle tue prestazioni restano a te, al netto del 3%",
 ];
 
 const perPazienti = [

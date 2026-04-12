@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Check, Sparkles } from "lucide-react";
+import { ArrowRight, Check, Sparkles, Wallet } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const included = [
@@ -51,7 +51,7 @@ const PricingSection = () => (
             <p className="text-xs text-muted-foreground mb-1">{period}</p>
             <p className="text-xs text-muted-foreground mb-6">{billing}</p>
             <p className="text-xs font-medium text-primary mb-4">Prova gratuita di 30 giorni inclusa</p>
-            <p className="text-[11px] text-muted-foreground/70 mb-6">I ricavi delle consulenze restano al medico — trattenuta del 3% (bancaria + amministrativa)</p>
+            <p className="text-[11px] text-muted-foreground/70 mb-6">Trattenuta del 3% per spese bancarie e amministrative</p>
             <Link to="/abbonamento" className={`inline-flex items-center justify-center gap-2 w-full h-12 rounded-xl font-semibold text-sm transition-all ${highlighted ? "cta-gradient text-primary-foreground hover:opacity-90" : "border-2 border-primary text-primary hover:bg-primary/5"}`}>
               Prova gratis <ArrowRight size={16} />
             </Link>
@@ -60,9 +60,20 @@ const PricingSection = () => (
       </div>
 
       {/* Social proof */}
-      <p className="text-center text-sm text-primary-foreground/50 mb-12">
+      <p className="text-center text-sm text-primary-foreground/50 mb-8">
         📈 Già 237 medici hanno attivato la prova questo mese
       </p>
+
+      {/* Revenue callout */}
+      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-2xl mx-auto mb-12 rounded-2xl border border-primary/20 bg-primary/5 p-6 flex items-center gap-4">
+        <div className="w-12 h-12 rounded-xl cta-gradient flex items-center justify-center shrink-0">
+          <Wallet size={24} className="text-primary-foreground" />
+        </div>
+        <div>
+          <p className="text-lg font-extrabold text-primary-foreground">I tuoi ricavi restano tuoi.</p>
+          <p className="text-sm text-primary-foreground/70">Trattenuta solo del 3% per spese bancarie e gestione amministrativa. Il 97% di ogni consulto è tuo.</p>
+        </div>
+      </motion.div>
 
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-3xl mx-auto">
         <h3 className="text-2xl font-extrabold text-primary-foreground text-center mb-8">Cosa comprende l'abbonamento?</h3>
