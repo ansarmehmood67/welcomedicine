@@ -27,7 +27,7 @@ const FinalCTASection = () => (
 
         {/* Urgency */}
         <p className="text-sm font-semibold text-primary mb-8">
-          🔥 Posti limitati per l'onboarding assistito di aprile
+          onboarding assistito con il nostro team
         </p>
 
         {/* Stats */}
