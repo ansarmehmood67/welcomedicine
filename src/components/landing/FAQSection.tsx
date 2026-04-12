@@ -4,7 +4,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 const faqs = [
   { q: "Come funziona la prova gratuita?", a: "Puoi registrarti e accedere a tutte le funzionalità per 30 giorni. Avrai a disposizione una videocall gratuita con il nostro team di formazione e configurazione guidata del profilo. Carta di credito richiesta, nessun addebito, dopo 30 giorni potrai decidere cosa fare." },
   { q: "I miei pazienti devono pagare per usare la piattaforma?", a: "No, l'accesso per i pazienti è completamente gratuito.\nPossono comunicare con te, ricevere documenti e caricare documenti nel fascicolo clinico personale senza alcun costo.\nSarai tu a decidere se erogare consulenze e televisite a pagamento inserendo il tuo listino nelle impostazioni del profilo." },
-  { q: "Quanto tempo serve per configurare tutto?", a: "L'onboarding è assistito dal nostro team, che ti guida passo dopo passo nella configurazione del profilo e nell'avvio dell'utilizzo con i tuoi pazienti." },
+  { q: "Quanto tempo serve per configurare tutto?", a: "2 minuti.\nLa registrazione è guidata, entro 24 ore configuriamo  il  tuo profilo e riceverai l’invito per una videocall di formazione e configurazione gratuita" },
   { q: "Posso cancellare quando voglio?", a: "La disdetta avviene tramite il nostro customer care. Dopo il periodo di prova di 30 giorni, è previsto un vincolo di 6 mesi per garantire continuità nel servizio." },
   { q: "Welcomedicine è conforme al GDPR?", a: "Sì, la piattaforma è stata progettata sin dall'inizio per essere pienamente conforme al GDPR e alle normative sulla privacy in ambito sanitario. Tutti i dati sono crittografati e conservati su server europei." },
   { q: "Come funziona la monetizzazione delle consulenze?", a: "Puoi impostare tariffe personalizzate per videoconsulti, pareri specialistici e consulenze telefoniche. I ricavi restano interamente al medico, con una trattenuta del 3% (bancaria + amministrativa). I pagamenti online sono inclusi nella piattaforma." },
@@ -31,7 +31,7 @@ const FAQSection = () => (
           <motion.div key={i} initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }}>
             <AccordionItem value={`faq-${i}`} className="rounded-xl border border-border bg-card px-5 data-[state=open]:card-elevated">
               <AccordionTrigger className="text-left text-sm font-semibold text-foreground hover:no-underline py-4">{q}</AccordionTrigger>
-              <AccordionContent className="text-sm text-muted-foreground leading-relaxed pb-4 whitespace-pre-wrap">{a}</AccordionContent>
+              <AccordionContent className="text-sm text-muted-foreground leading-relaxed pb-4 whitespace-pre-wrap font-extralight">{a}</AccordionContent>
             </AccordionItem>
           </motion.div>
         ))}
