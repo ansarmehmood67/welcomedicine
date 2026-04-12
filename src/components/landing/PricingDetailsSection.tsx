@@ -1,5 +1,21 @@
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useTransform, animate, useInView } from "framer-motion";
+import { useEffect, useRef } from "react";
 import { Check, Wallet, Shield, Globe, Video, MessageSquare, FileText, Stethoscope, HardDrive, PenTool, UserCog, Headphones, CreditCard } from "lucide-react";
+
+function AnimatedCounter({ target, duration = 1.5 }: { target: number; duration?: number }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, (v) => Math.round(v));
+
+  useEffect(() => {
+    if (isInView) {
+      animate(count, target, { duration, ease: "easeOut" });
+    }
+  }, [isInView, target, duration, count]);
+
+  return <motion.span ref={ref}>{rounded}</motion.span>;
+}
 
 const included = [
   { label: "Accesso completo a tutte le funzionalità", icon: Shield },
@@ -37,7 +53,7 @@ const PricingDetailsSection = () => (
           Trattenuta solo del 3% per spese bancarie e gestione amministrativa. Il 97% di ogni consulto è tuo.
         </p>
         <div className="mt-6 inline-flex items-center gap-3 px-6 py-3 rounded-2xl bg-primary/5 border border-primary/15">
-          <span className="text-4xl font-extrabold text-primary">97%</span>
+          <span className="text-4xl font-extrabold text-primary"><AnimatedCounter target={97} />%</span>
           <span className="text-sm text-muted-foreground text-left leading-tight">dei ricavi delle tue<br />prestazioni è tuo</span>
         </div>
       </motion.div>
