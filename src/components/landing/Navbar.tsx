@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Download } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 const logo = "https://wp-uploads.welmed.it/uploads/sites/9/2024/05/Logo-Welcomedicine-png-trasparente.png";
@@ -16,6 +16,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const location = useLocation();
   const isHome = location.pathname === "/";
+  const isPazienti = location.pathname === "/pazienti";
 
   return (
     <>
@@ -39,9 +40,15 @@ const Navbar = () => {
             >
               Per i pazienti
             </Link>
-            <Link to="/abbonamento" className="inline-flex items-center justify-center h-9 px-5 rounded-lg cta-gradient text-primary-foreground text-sm font-semibold hover:opacity-90 transition-opacity">
-              Prova gratis
-            </Link>
+            {isPazienti ? (
+              <a href="https://app.welmed.it/welcomedicine/download-patient-app" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 justify-center h-12 px-7 rounded-xl cta-gradient text-primary-foreground text-sm font-semibold hover:opacity-90 transition-opacity">
+                <Download size={18} /> Scarica l'App
+              </a>
+            ) : (
+              <Link to="/abbonamento" className="inline-flex items-center justify-center h-9 px-5 rounded-lg cta-gradient text-primary-foreground text-sm font-semibold hover:opacity-90 transition-opacity">
+                Prova gratis
+              </Link>
+            )}
           </div>
 
           {/* Mobile toggle */}
@@ -63,9 +70,15 @@ const Navbar = () => {
                 <Link to="/pazienti" onClick={() => setOpen(false)} className="text-sm font-semibold text-primary py-2">
                   Per i pazienti
                 </Link>
-                <Link to="/abbonamento" onClick={() => setOpen(false)} className="inline-flex items-center justify-center h-10 rounded-lg cta-gradient text-primary-foreground text-sm font-semibold mt-2">
-                  Prova gratis
-                </Link>
+                {isPazienti ? (
+                  <a href="https://app.welmed.it/welcomedicine/download-patient-app" target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)} className="inline-flex items-center gap-2 justify-center h-12 px-7 rounded-xl cta-gradient text-primary-foreground text-sm font-semibold mt-2 hover:opacity-90 transition-opacity">
+                    <Download size={18} /> Scarica l'App
+                  </a>
+                ) : (
+                  <Link to="/abbonamento" onClick={() => setOpen(false)} className="inline-flex items-center justify-center h-10 rounded-lg cta-gradient text-primary-foreground text-sm font-semibold mt-2">
+                    Prova gratis
+                  </Link>
+                )}
               </div>
             </motion.div>
           )}
