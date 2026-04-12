@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Search, MessageCircle, FileText, FolderOpen, HeartHandshake } from "lucide-react";
+import { Search, MessageCircle, FileText, FolderOpen, HeartHandshake, Download } from "lucide-react";
 import sectionImage from "@/assets/pazienti-comefunziona.jpg";
 
 const steps = [
@@ -65,6 +65,24 @@ const ComeFunziona = () => (
           </motion.div>
         ))}
       </div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="text-center mt-12"
+      >
+        <motion.a
+          href="https://app.welmed.it/welcomedicine/download-patient-app"
+          target="_blank"
+          rel="noopener noreferrer"
+          whileHover={{ scale: 1.04 }}
+          whileTap={{ scale: 0.97 }}
+          className="inline-flex items-center gap-2 h-13 px-8 rounded-xl cta-gradient text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity"
+        >
+          <Download size={18} /> Scarica l'App
+        </motion.a>
+      </motion.div>
     </div>
   </section>
 );

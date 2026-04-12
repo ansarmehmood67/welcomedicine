@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Download } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -81,6 +82,16 @@ const PazientiFAQ = () => (
         viewport={{ once: true }}
         className="flex flex-wrap gap-4 justify-center mt-10"
       >
+        <motion.a
+          href="https://app.welmed.it/welcomedicine/download-patient-app"
+          target="_blank"
+          rel="noopener noreferrer"
+          whileHover={{ scale: 1.04 }}
+          whileTap={{ scale: 0.97 }}
+          className="inline-flex items-center gap-2 h-12 px-7 rounded-xl cta-gradient text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity"
+        >
+          <Download size={18} /> Scarica l'App
+        </motion.a>
         <a
           href="https://www.welcomedicineonline.it/faq-pazienti"
           target="_blank"
@@ -88,14 +99,6 @@ const PazientiFAQ = () => (
           className="inline-flex items-center gap-2 h-12 px-7 rounded-xl border-2 border-primary text-primary font-semibold text-sm hover:bg-primary/5 transition-colors"
         >
           Continua a leggere &gt;
-        </a>
-        <a
-          href="https://www.welcomedicineonline.it/supporto"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 h-12 px-7 rounded-xl cta-gradient text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity"
-        >
-          Contattaci per supporto
         </a>
       </motion.div>
     </div>
