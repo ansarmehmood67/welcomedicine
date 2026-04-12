@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Check, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const included = [
   "Accesso completo a tutte le funzionalità",
@@ -51,9 +52,9 @@ const PricingSection = () => (
             <p className="text-xs text-muted-foreground mb-6">{billing}</p>
             <p className="text-xs font-medium text-primary mb-4">Prova gratuita di 30 giorni inclusa</p>
             <p className="text-[11px] text-muted-foreground/70 mb-6">I ricavi delle consulenze restano al medico — trattenuta del 3% (bancaria + amministrativa)</p>
-            <a href="#cta-finale" className={`inline-flex items-center justify-center gap-2 w-full h-12 rounded-xl font-semibold text-sm transition-all ${highlighted ? "cta-gradient text-primary-foreground hover:opacity-90" : "border-2 border-primary text-primary hover:bg-primary/5"}`}>
+            <Link to="/abbonamento" className={`inline-flex items-center justify-center gap-2 w-full h-12 rounded-xl font-semibold text-sm transition-all ${highlighted ? "cta-gradient text-primary-foreground hover:opacity-90" : "border-2 border-primary text-primary hover:bg-primary/5"}`}>
               Prova gratis <ArrowRight size={16} />
-            </a>
+            </Link>
           </motion.div>
         ))}
       </div>

@@ -27,14 +27,12 @@ const HeroSection = () => (
         </p>
 
         <div className="flex flex-wrap gap-3 mb-6">
-          <motion.a
-            href="#cta-finale"
-            whileHover={{ scale: 1.04 }}
-            whileTap={{ scale: 0.97 }}
+          <Link
+            to="/abbonamento"
             className="inline-flex items-center gap-2 h-13 px-8 rounded-xl cta-gradient text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity"
           >
             Prova gratis <ArrowRight size={16} />
-          </motion.a>
+          </Link>
           <Link to="/pazienti" className="inline-flex items-center gap-2 h-13 px-8 rounded-xl border-2 border-primary text-primary font-semibold text-sm hover:bg-primary/5 transition-colors">
             Per i pazienti
           </Link>
