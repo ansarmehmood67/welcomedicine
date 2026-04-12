@@ -81,7 +81,7 @@ const TrustBar = () => (
           transition={{ delay: 0.1 }}
           className="text-center text-sm text-muted-foreground mb-14 max-w-lg mx-auto font-medium"
         >
-          Pensato dai Medici. Per i Medici. Welcome Medicine porta la stessa tecnologia ospedaliera collaudata direttamente al professionista.
+          Pensato dai Medici. Per i Medici. Welcomedicine porta la stessa tecnologia ospedaliera collaudata direttamente al professionista.
         </motion.p>
 
         <motion.div

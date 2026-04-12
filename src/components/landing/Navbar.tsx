@@ -22,7 +22,7 @@ const Navbar = () => {
       <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-lg border-b border-border bg-secondary-foreground text-primary-foreground">
         <div className="container max-w-6xl mx-auto flex items-center justify-between h-16 px-4">
           <Link to="/" className="flex items-center">
-            <img src={logo} alt="Welcome Medicine" className="h-8" />
+            <img src={logo} alt="Welcomedicine" className="h-8" />
           </Link>
 
           {/* Desktop */}

@@ -22,7 +22,7 @@ const FinalCTASection = () => (
           <span className="text-primary">prova gratis per 30 giorni</span>
         </h2>
         <p className="text-muted-foreground mb-4 max-w-xl mx-auto text-base sm:text-lg">
-          Unisciti ai migliori professionisti della salute che hanno già scelto Welcome Medicine per la loro pratica clinica.
+          Unisciti ai migliori professionisti della salute che hanno già scelto Welcomedicine per la loro pratica clinica.
         </p>
 
         {/* Urgency */}

@@ -6,13 +6,13 @@ const faqs = [
   { q: "I miei pazienti devono pagare per usare la piattaforma?", a: "No, l'accesso per i pazienti è completamente gratuito. Possono comunicare con te, ricevere documenti e partecipare ai videoconsulti senza alcun costo." },
   { q: "Quanto tempo serve per configurare tutto?", a: "L'onboarding è assistito dal nostro team, che ti guida passo dopo passo nella configurazione del profilo e nell'avvio dell'utilizzo con i tuoi pazienti." },
   { q: "Posso cancellare quando voglio?", a: "La disdetta avviene tramite il nostro customer care. Dopo il periodo di prova di 30 giorni, è previsto un vincolo di 6 mesi per garantire continuità nel servizio." },
-  { q: "Welcome Medicine è conforme al GDPR?", a: "Sì, la piattaforma è stata progettata sin dall'inizio per essere pienamente conforme al GDPR e alle normative sulla privacy in ambito sanitario. Tutti i dati sono crittografati e conservati su server europei." },
+  { q: "Welcomedicine è conforme al GDPR?", a: "Sì, la piattaforma è stata progettata sin dall'inizio per essere pienamente conforme al GDPR e alle normative sulla privacy in ambito sanitario. Tutti i dati sono crittografati e conservati su server europei." },
   { q: "Come funziona la monetizzazione delle consulenze?", a: "Puoi impostare tariffe personalizzate per videoconsulti, pareri specialistici e consulenze telefoniche. I ricavi restano interamente al medico, con una trattenuta del 3% (bancaria + amministrativa). I pagamenti online sono inclusi nella piattaforma." },
   { q: "Come gestite la sicurezza dei dati clinici?", a: "Utilizziamo crittografia end-to-end, autenticazione a due fattori e backup automatici. I dati sono conservati su infrastruttura certificata ISO 27001 con datacenter in Europa." },
   { q: "Come funziona il Care Team?", a: "Più medici possono collaborare sullo stesso fascicolo clinico di un paziente. Ogni medico e paziente vede chi ha accesso al fascicolo, e il paziente viene sempre notificato quando un nuovo professionista viene aggiunto al team." },
   { q: "I medici possono avere una segretaria in piattaforma?", a: "Sì, è possibile creare un account segreteria dedicato che può gestire messaggi, appuntamenti e smistamento richieste per conto del medico, senza accesso ai dati clinici sensibili." },
-  { q: "La piattaforma funziona anche con le strutture ospedaliere?", a: "Sì, le piattaforme Welmed ospedaliere sono interoperabili con Welcome Medicine. I medici che lavorano sia in struttura che privatamente possono gestire tutto da un unico ecosistema integrato." },
-  { q: "Posso utilizzare Welcome Medicine anche dal cellulare?", a: "Assolutamente sì. Welcome Medicine è ottimizzata per tutti i dispositivi: desktop, tablet e smartphone. Puoi accedere dal browser o dall'app dedicata." },
+  { q: "La piattaforma funziona anche con le strutture ospedaliere?", a: "Sì, le piattaforme Welmed ospedaliere sono interoperabili con Welcomedicine. I medici che lavorano sia in struttura che privatamente possono gestire tutto da un unico ecosistema integrato." },
+  { q: "Posso utilizzare Welcomedicine anche dal cellulare?", a: "Assolutamente sì. Welcomedicine è ottimizzata per tutti i dispositivi: desktop, tablet e smartphone. Puoi accedere dal browser o dall'app dedicata." },
 ];
 
 const FAQSection = () => (

@@ -56,7 +56,7 @@ const Abbonamento = () => (
       <div className="container max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
           <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-pill-bg text-pill-fg mb-5 tracking-wide uppercase">
-            Abbonamento Welcome Medicine
+            Abbonamento Welcomedicine
           </span>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-[1.1] text-primary-foreground mb-6">
             Tutto incluso per{" "}
@@ -95,7 +95,7 @@ const Abbonamento = () => (
         >
           <img
             src={heroImage}
-            alt="Piattaforma Welcome Medicine — vista dell'app"
+            alt="Piattaforma Welcomedicine — vista dell'app"
             className="w-full h-auto rounded-2xl shadow-2xl"
           />
         </motion.div>

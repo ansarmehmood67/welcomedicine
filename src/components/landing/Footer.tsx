@@ -8,7 +8,7 @@ const Footer = () => (
         {/* Brand */}
         <div>
           <a href="#" className="flex items-center mb-4">
-            <img src={logo} alt="Welcome Medicine" className="h-7" />
+            <img src={logo} alt="Welcomedicine" className="h-7" />
           </a>
           <p className="text-sm text-primary-foreground/60 leading-relaxed">
             La piattaforma professionale per la comunicazione medico-paziente, parte dell'ecosistema Welmed.
@@ -43,7 +43,7 @@ const Footer = () => (
       </div>
 
       <div className="border-t border-primary-foreground/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-primary-foreground/50">
-        <p>© {new Date().getFullYear()} Welcome Medicine. Tutti i diritti riservati.</p>
+        <p>© {new Date().getFullYear()} Welcomedicine. Tutti i diritti riservati.</p>
         <div className="flex gap-6">
           <a href="#" className="hover:text-primary-foreground transition-colors">Privacy</a>
           <a href="#" className="hover:text-primary-foreground transition-colors">Termini</a>

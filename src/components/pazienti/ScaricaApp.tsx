@@ -14,7 +14,7 @@ const ScaricaApp = () => (
       >
         <img
           src={appScreenshot}
-          alt="App Welcome Medicine su smartphone"
+          alt="App Welcomedicine su smartphone"
           className="w-64 h-auto rounded-3xl shadow-2xl"
           loading="lazy"
         />
