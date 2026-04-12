@@ -8,7 +8,7 @@ const Footer = () => (
         {/* Brand */}
         <div>
           <a href="#" className="flex items-center mb-4">
-            <img src={logo} alt="Welcomedicine" className="h-7" />
+            <img src={logo} alt="Welcomedicine" className="h-21" />
           </a>
           <p className="text-sm text-primary-foreground/60 leading-relaxed">
             La piattaforma professionale per la comunicazione medico-paziente, parte dell'ecosistema Welmed.
