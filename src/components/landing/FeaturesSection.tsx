@@ -52,18 +52,18 @@ const FeaturesSection = () => (
       </motion.div>
 
       {/* Telefono + 2 card affiancate */}
-      <div className="grid md:grid-cols-3 gap-8 items-center mb-12">
+      {/* Griglia unica: 2 hero card + telefono al centro + 9 card */}
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <FeatureCard {...heroFeatures[0]} i={0} />
-        <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7, ease: "easeOut" }} className="flex justify-center">
+        {gridFeatures.slice(0, 3).map((f, i) => (
+          <FeatureCard key={f.title} {...f} i={i + 1} />
+        ))}
+        <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7, ease: "easeOut" }} className="flex justify-center items-center">
           <img src={mobileApp} alt="App Welcomedicine — vista mobile" className="w-[280px] h-auto drop-shadow-2xl" />
         </motion.div>
-        <FeatureCard {...heroFeatures[1]} i={1} />
-      </div>
-
-      {/* 9 card in griglia 3×3 */}
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {gridFeatures.slice(0, 9).map((f, i) => (
-          <FeatureCard key={f.title} {...f} i={i} />
+        <FeatureCard {...heroFeatures[1]} i={5} />
+        {gridFeatures.slice(3, 9).map((f, i) => (
+          <FeatureCard key={f.title} {...f} i={i + 6} />
         ))}
       </div>
 
