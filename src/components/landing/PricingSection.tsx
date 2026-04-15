@@ -1,6 +1,7 @@
-import { motion } from "framer-motion";
-import { ArrowRight, Check, Sparkles, Wallet } from "lucide-react";
+import { motion, useMotionValue, useTransform, animate, useInView } from "framer-motion";
+import { ArrowRight, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useEffect, useRef, useMemo } from "react";
 
 const included = [
   "Accesso completo a tutte le funzionalità",
