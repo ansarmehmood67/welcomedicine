@@ -3,20 +3,23 @@ import { XCircle, CheckCircle, ArrowRight } from "lucide-react";
 import sectionImage from "@/assets/section-problem.jpg";
 
 const problems = [
-  "100+ email a settimana senza filtro né priorità",
+  "100+ email al giorno senza filtro né priorità",
   "Pazienti che scrivono su WhatsApp a qualsiasi ora",
-  "Scambio referti via USB o email non protetta",
-  "Immagini radiologiche inviate via WeTransfer o chiavetta USB",
-  "Informazioni cliniche disperse tra canali diversi",
-  "Rischio di buchi nella storia clinica del paziente",
-  "Nessuna compliance GDPR né tracciabilità medico-legale",
+  "Scambio referti via chiavetta USB o email non protetta",
+  "Immagini DICOM inviate via WeTransfer o chiavetta USB",
+  "Pazienti persi per mancanza di follow-up organizzato",
+  "Nessuna cronologia organizzata delle prestazioni",
+  "Nessuna tracciabilità medico-legale delle comunicazioni",
 ];
 
 const solutions = [
-  "Informazioni centralizzate in un unico punto",
-  "Compliance GDPR e tutela medico-legale",
-  "Continuità clinica e follow-up strutturati",
-  "Gestione ordinata con supporto AI",
+  "50% del tempo in meno nella gestione delle email",
+  "Canali professionali dedicati con orari personalizzabili",
+  "Scambio documentale sicuro, conforme GDPR, senza USB",
+  "DICOM Viewer integrato: visualizzi tutto in piattaforma",
+  "Fidelizzazione automatica: i tuoi pazienti restano tuoi",
+  "Cronologia completa di ogni prestazione per paziente",
+  "Ogni comunicazione tracciata e archiviata a norma di legge",
 ];
 
 const ProblemSection = () => (
