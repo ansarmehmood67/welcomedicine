@@ -52,12 +52,14 @@ const FeaturesSection = () => (
       </motion.div>
 
       {/* Telefono + 2 card affiancate */}
-      <div className="grid md:grid-cols-3 gap-8 items-center mb-12">
+      <div className="grid md:grid-cols-2 gap-10 items-center mb-12">
         <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7, ease: "easeOut" }} className="flex justify-center">
-          <img src={mobileApp} alt="App Welcomedicine — vista mobile" className="w-[280px] h-auto drop-shadow-2xl" />
+          <img src={mobileApp} alt="App Welcomedicine — vista mobile" className="w-[420px] h-auto drop-shadow-2xl" />
         </motion.div>
-        <FeatureCard {...heroFeatures[0]} i={0} />
-        <FeatureCard {...heroFeatures[1]} i={1} />
+        <div className="flex flex-col gap-6">
+          <FeatureCard {...heroFeatures[0]} i={0} />
+          <FeatureCard {...heroFeatures[1]} i={1} />
+        </div>
       </div>
 
       {/* 9 card in griglia 3×3 */}
