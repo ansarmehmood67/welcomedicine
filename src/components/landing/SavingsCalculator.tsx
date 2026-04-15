@@ -64,13 +64,6 @@ const SavingsCalculator = () => {
                   <p className="text-xs text-muted-foreground">Potenziale ricavo da consulti monetizzati</p>
                 </div>
               </motion.div>
-              <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }} className="flex items-center gap-4 p-4 rounded-xl bg-primary/5 border border-primary/10">
-                <Wallet size={28} className="text-primary shrink-0" />
-                <div>
-                  <p className="text-2xl font-extrabold text-foreground">€{netRevenue}<span className="text-base font-medium text-muted-foreground"> netti / mese</span></p>
-                  <p className="text-xs text-muted-foreground">Il 97% resta a te — trattenuta del 3% per spese bancarie e amministrative</p>
-                </div>
-              </motion.div>
               <a href="#cta-finale" className="inline-flex items-center justify-center gap-2 h-12 rounded-xl cta-gradient text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity mt-2">
                 Prova gratis 30 giorni <ArrowRight size={16} />
               </a>
