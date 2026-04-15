@@ -58,17 +58,17 @@ const ProblemSection = () => (
           </motion.div>
         </motion.div>
 
-        <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.15 }} className="rounded-2xl bg-card border border-primary/20 p-8 space-y-4 card-elevated">
+        <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.15 }} className="rounded-2xl bg-card border border-success/20 p-8 space-y-4 card-elevated">
           <h3 className="font-extrabold text-xl text-foreground flex items-center gap-2">
-            <CheckCircle className="text-primary" size={24} /> Con Welcomedicine
+            <CheckCircle className="text-success" size={24} /> Con Welcomedicine
           </h3>
           {solutions.map((s, i) => (
             <motion.div key={s} initial={{ opacity: 0, x: 15 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.06 }} className="flex items-start gap-3 text-sm text-muted-foreground">
-              <CheckCircle size={16} className="text-primary mt-0.5 shrink-0" /> {s}
+              <CheckCircle size={16} className="text-success mt-0.5 shrink-0" /> {s}
             </motion.div>
           ))}
-          <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.3 }} className="pt-4 border-t border-primary/10">
-            <p className="text-base font-bold text-primary">
+          <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.3 }} className="pt-4 border-t border-success/10">
+            <p className="text-base font-bold text-success">
               Non è telemedicina. È continuità di cura organizzata.
             </p>
           </motion.div>
