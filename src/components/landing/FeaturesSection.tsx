@@ -1,22 +1,21 @@
 import { motion } from "framer-motion";
-import { Mail, MessageCircle, Video, FileText, Stethoscope, Users, DatabaseZap, Headphones, Receipt, FolderHeart, ScanSearch, Smartphone, UserCog, ArrowRight, CalendarCheck } from "lucide-react";
+import { Mail, MessageCircle, Video, FileText, Stethoscope, Users, DatabaseZap, Headphones, Receipt, FolderHeart, ScanSearch, Smartphone, UserCog, ArrowRight, ClipboardCheck, UsersRound, CalendarCheck } from "lucide-react";
 import mobileApp from "@/assets/Home-medico-New-2.png";
 
-// 2 card accanto al telefono
-const heroFeatures = [
+const features = [
+  // Riga 1: Comunicazione
   { icon: MessageCircle, title: "Chat, chiamate e video illimitate", desc: "Con un click dalla piattaforma, senza numero visibile e con gestione flessibile. Comunica con pazienti e colleghi in modo sicuro.", color: "text-blue-500", bg: "bg-blue-500/10" },
-  { icon: FileText, title: "Scambio documentale conforme", desc: "Emetti documenti firmati digitalmente e condividili in un click. Conservazione a norma di legge garantita.", color: "text-rose-500", bg: "bg-rose-500/10" },
-];
-
-// 9 card in griglia 3×3
-const gridFeatures = [
   { icon: Mail, title: "Email Organizer", desc: "Le email dei pazienti arrivano organizzate e storicizzate direttamente in piattaforma. Niente più caos nella casella di posta.", color: "text-violet-500", bg: "bg-violet-500/10" },
   { icon: Video, title: "Telemedicina e videoconsulti", desc: "Offri consulenze a distanza in modo sicuro e professionale. Fatturazione automatica e refertazione integrata.", color: "text-emerald-500", bg: "bg-emerald-500/10" },
+  // Riga 2: Clinica
+  { icon: FileText, title: "Scambio documentale conforme", desc: "Emetti documenti firmati digitalmente e condividili in un click. Conservazione a norma di legge garantita.", color: "text-rose-500", bg: "bg-rose-500/10" },
   { icon: Stethoscope, title: "Referti e ricette digitali", desc: "Firma digitale di referti e ricette con archivio documentale sempre disponibile per tutte le tue visite.", color: "text-cyan-500", bg: "bg-cyan-500/10" },
   { icon: FolderHeart, title: "Fascicolo Clinico digitale", desc: "Cronologia completa di documenti, referti e note per ogni paziente in un'unica scheda. Il tuo repository clinico sempre aggiornato.", color: "text-pink-500", bg: "bg-pink-500/10" },
+  // Riga 3: Strumenti digitali
   { icon: ScanSearch, title: "DICOM Viewer integrato", desc: "Visualizza immagini radiologiche direttamente in piattaforma, senza USB o WeTransfer. Medical Device classe 2B certificato.", color: "text-indigo-500", bg: "bg-indigo-500/10" },
   { icon: CalendarCheck, title: "Agenda e promemoria", desc: "Calendario prestazioni e promemoria automatici per esami e terapie. I tuoi pazienti non dimenticano più nulla.", color: "text-yellow-500", bg: "bg-yellow-500/10" },
   { icon: Smartphone, title: "App mobile dedicata", desc: "Welmed Pro per medici e Welcomedicine per pazienti. Notifiche push, accesso ovunque, sincronizzazione in tempo reale.", color: "text-teal-500", bg: "bg-teal-500/10" },
+  // Riga 4: Gestione e amministrazione
   { icon: UserCog, title: "Gestione segretaria", desc: "Delega risposte, gestione appuntamenti e smistamento richieste a un account segreteria dedicato.", color: "text-orange-500", bg: "bg-orange-500/10" },
   { icon: Users, title: "Collaborazione multidisciplinare", desc: "Lavora in team con i colleghi, senza limiti di formato o spazio. Condividi e scambia pazienti in un ambiente riservato.", color: "text-amber-500", bg: "bg-amber-500/10" },
   { icon: Receipt, title: "Fatturazione automatica", desc: "Gestione automatica di bollo, invio alla Tessera Sanitaria e fatturazione elettronica. Zero burocrazia.", color: "text-fuchsia-500", bg: "bg-fuchsia-500/10" },
@@ -51,20 +50,15 @@ const FeaturesSection = () => (
         <p className="text-muted-foreground text-lg max-w-2xl mx-auto">In ambulatorio o in mobilità, hai tutte le informazioni organizzate e a portata di mano in un unico strumento, sicuro e integrato.</p>
       </motion.div>
 
-      {/* Telefono + 2 card affiancate */}
-      <div className="grid md:grid-cols-2 gap-10 items-center mb-12">
+      <div className="grid md:grid-cols-2 gap-8 items-center mb-12">
         <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7, ease: "easeOut" }} className="flex justify-center">
-          <img src={mobileApp} alt="App Welcomedicine — vista mobile" className="w-[420px] h-auto drop-shadow-2xl" />
+          <img src={mobileApp} alt="App Welcomedicine — vista mobile" className="w-[280px] h-auto drop-shadow-2xl" />
         </motion.div>
-        <div className="flex flex-col gap-6">
-          <FeatureCard {...heroFeatures[0]} i={0} />
-          <FeatureCard {...heroFeatures[1]} i={1} />
-        </div>
+        <FeatureCard {...features[0]} i={0} />
       </div>
 
-      {/* 9 card in griglia 3×3 */}
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {gridFeatures.slice(0, 9).map((f, i) => (
+        {features.slice(1).map((f, i) => (
           <FeatureCard key={f.title} {...f} i={i} />
         ))}
       </div>
