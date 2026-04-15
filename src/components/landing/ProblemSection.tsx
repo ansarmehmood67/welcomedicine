@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { XCircle, CheckCircle, ArrowRight } from "lucide-react";
 import ChatMockup from "./ChatMockup";
+import patientImage from "@/assets/patient-phone.jpg";
 
 const problems = [
   "100+ email al giorno senza filtro né priorità",
@@ -35,8 +36,18 @@ const ProblemSection = () => (
             Ogni giorno perdi ore preziose in comunicazioni frammentate, non protette e non retribuite. Mai più messaggi dei pazienti sui tuoi canali personali.
           </p>
         </motion.div>
-        <motion.div initial={{ opacity: 0, scale: 0.9, rotate: 2 }} whileInView={{ opacity: 1, scale: 1, rotate: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: "easeOut" }} className="relative">
-          <ChatMockup />
+        <motion.div initial={{ opacity: 0, scale: 0.9, rotate: 2 }} whileInView={{ opacity: 1, scale: 1, rotate: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: "easeOut" }} className="relative max-w-md mx-auto">
+          <img src={patientImage} alt="Paziente che usa Welcomedicine sul telefono con dottore in videochiamata" loading="lazy" className="w-full h-auto rounded-2xl shadow-2xl" />
+          {/* Chat overlay positioned on the phone screen */}
+          <div className="absolute" style={{ top: '18%', left: '12%', width: '33%', height: '52%' }}>
+            <div className="w-full h-full overflow-hidden rounded-lg">
+              <div className="w-full h-full" style={{ transform: 'scale(0.42)', transformOrigin: 'top left' }}>
+                <div style={{ width: '238%' }}>
+                  <ChatMockup />
+                </div>
+              </div>
+            </div>
+          </div>
         </motion.div>
       </div>
 
