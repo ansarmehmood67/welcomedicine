@@ -56,7 +56,7 @@ const FeaturesSection = () => (
         <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7, ease: "easeOut" }} className="flex justify-center">
           <img src={mobileApp} alt="App Welcomedicine — vista mobile" className="w-[280px] h-auto drop-shadow-2xl" />
         </motion.div>
-        <FeatureCard {...features[0]} i={0} />
+        <FeatureCard {...heroFeature} i={0} />
       </div>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
