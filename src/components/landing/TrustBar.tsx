@@ -70,7 +70,7 @@ const TrustBar = () => (
             Chi ci ha scelto
           </p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground leading-tight">
-            La tecnologia già scelta <span className="text-primary"><br className="hidden sm:block" /> dalle migliori strutture sanitarie in Italia</span>
+            La tecnologia già scelta <span className="text-primary"><br />dalle migliori strutture sanitarie in Italia</span>
           </h2>
         </motion.div>
 
