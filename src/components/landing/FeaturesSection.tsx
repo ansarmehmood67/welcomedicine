@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
-import { Mail, MessageCircle, Video, FileText, Stethoscope, Users, DatabaseZap, Headphones, Receipt, FolderHeart, ScanSearch, Smartphone, UserCog, ArrowRight, ClipboardCheck, UsersRound, CalendarCheck } from "lucide-react";
+import { Mail, MessageCircle, Video, FileText, Stethoscope, Users, DatabaseZap, Headphones, Receipt, FolderHeart, ScanSearch, Smartphone, UserCog, ArrowRight, CalendarCheck } from "lucide-react";
 import mobileApp from "@/assets/Home-medico-New-2.png";
 
-// Card accanto al telefono
+// 2 card accanto al telefono
 const heroFeatures = [
   { icon: MessageCircle, title: "Chat, chiamate e video illimitate", desc: "Con un click dalla piattaforma, senza numero visibile e con gestione flessibile. Comunica con pazienti e colleghi in modo sicuro.", color: "text-blue-500", bg: "bg-blue-500/10" },
   { icon: FileText, title: "Scambio documentale conforme", desc: "Emetti documenti firmati digitalmente e condividili in un click. Conservazione a norma di legge garantita.", color: "text-rose-500", bg: "bg-rose-500/10" },
@@ -23,6 +23,50 @@ const gridFeatures = [
   { icon: DatabaseZap, title: "Importazione dati pazienti", desc: "Servizio gestito di importazione del tuo database pazienti esistente (add-on). Nessun paziente perso nella transizione.", color: "text-lime-500", bg: "bg-lime-500/10" },
   { icon: Headphones, title: "Assistenza tecnica dedicata", desc: "Supporto telefonico per te e per i tuoi pazienti. Mai soli nell'utilizzo della piattaforma.", color: "text-sky-500", bg: "bg-sky-500/10" },
 ];
+
+const FeatureCard = ({ icon: Icon, title, desc, color, bg, i }: { icon: any; title: string; desc: string; color: string; bg: string; i: number }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 30, scale: 0.95 }}
+    whileInView={{ opacity: 1, y: 0, scale: 1 }}
+    viewport={{ once: true }}
+    transition={{ delay: i * 0.06, duration: 0.5, ease: "easeOut" }}
+    className="rounded-2xl bg-card border border-border p-6 card-elevated"
+  >
+    <div className={`w-14 h-14 rounded-xl ${bg} flex items-center justify-center mb-4`}>
+      <Icon size={28} className={color} fill="currentColor" fillOpacity={0.2} strokeWidth={2} />
+    </div>
+    <h3 className="font-bold text-foreground mb-2">{title}</h3>
+    <p className="text-sm text-muted-foreground leading-relaxed">{desc}</p>
+  </motion.div>
+);
+
+const FeaturesSection = () => (
+  <section id="funzioni" className="py-20 md:py-32 section-alt scroll-mt-20 overflow-hidden">
+    <div className="container max-w-6xl mx-auto px-4">
+      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
+        <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-pill-bg text-pill-fg mb-4 uppercase tracking-wide">Le Funzionalità</span>
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground mb-4 leading-tight">
+          Siamo un <span className="text-primary">poliambulatorio autorizzato</span>
+        </h2>
+        <p className="text-muted-foreground text-lg max-w-2xl mx-auto">In ambulatorio o in mobilità, hai tutte le informazioni organizzate e a portata di mano in un unico strumento, sicuro e integrato.</p>
+      </motion.div>
+
+      {/* Telefono + 2 card affiancate */}
+      <div className="grid md:grid-cols-3 gap-8 items-center mb-12">
+        <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7, ease: "easeOut" }} className="flex justify-center">
+          <img src={mobileApp} alt="App Welcomedicine — vista mobile" className="w-[280px] h-auto drop-shadow-2xl" />
+        </motion.div>
+        <FeatureCard {...heroFeatures[0]} i={0} />
+        <FeatureCard {...heroFeatures[1]} i={1} />
+      </div>
+
+      {/* 9 card in griglia 3×3 */}
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {gridFeatures.slice(0, 9).map((f, i) => (
+          <FeatureCard key={f.title} {...f} i={i} />
+        ))}
+      </div>
+
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mt-12">
         <a href="#cta-finale" className="inline-flex items-center gap-2 h-12 px-8 rounded-xl cta-gradient text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity">
           Prova gratis <ArrowRight size={16} />
