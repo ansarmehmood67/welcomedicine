@@ -16,8 +16,6 @@ const features = [
   { icon: DatabaseZap, title: "Importazione dati pazienti", desc: "Servizio gestito di importazione del tuo database pazienti esistente (add-on). Nessun paziente perso nella transizione.", color: "text-lime-500", bg: "bg-lime-500/10" },
   { icon: Headphones, title: "Assistenza tecnica dedicata", desc: "Supporto telefonico per te e per i tuoi pazienti. Mai soli nell'utilizzo della piattaforma.", color: "text-sky-500", bg: "bg-sky-500/10" },
   { icon: Receipt, title: "Fatturazione automatica", desc: "Gestione automatica di bollo, invio alla Tessera Sanitaria e fatturazione elettronica. Zero burocrazia.", color: "text-fuchsia-500", bg: "bg-fuchsia-500/10" },
-  { icon: ClipboardCheck, title: "Follow-up digitale", desc: "Digitalizza i controlli post-visita e monitora i parametri dei pazienti nel tempo. Tutto tracciato e sempre accessibile.", color: "text-emerald-600", bg: "bg-emerald-600/10" },
-  { icon: UsersRound, title: "Second opinion", desc: "Richiedi o offri consulenze specialistiche, in modalità sincrona o asincrona, singolarmente o in team multidisciplinare.", color: "text-violet-600", bg: "bg-violet-600/10" },
   { icon: CalendarCheck, title: "Agenda e promemoria", desc: "Calendario prestazioni e promemoria automatici per esami e terapie. I tuoi pazienti non dimenticano più nulla.", color: "text-yellow-500", bg: "bg-yellow-500/10" },
 ];
 
