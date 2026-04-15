@@ -40,7 +40,7 @@ const ProblemSection = () => (
           {/* Background image */}
           <img src={patientImage} alt="Paziente sorridente che usa Welcomedicine sul telefono" loading="lazy" className="w-full h-auto rounded-2xl shadow-xl" />
           {/* Floating chat overlay */}
-          <div className="absolute -top-6 -right-4 sm:-top-8 sm:-right-6 w-[62%] z-10" style={{ filter: 'drop-shadow(0 12px 40px rgba(0,0,0,0.18))' }}>
+          <div className="absolute -top-10 -left-10 sm:-top-14 sm:-left-14 w-[62%] z-10" style={{ filter: 'drop-shadow(0 12px 40px rgba(0,0,0,0.18))' }}>
             <ChatMockup />
           </div>
         </motion.div>
