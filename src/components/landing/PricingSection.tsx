@@ -24,7 +24,7 @@ function MonthlyCounter() {
   }, [isInView, target, count]);
 
   return (
-    <p ref={ref} className="text-center text-sm text-primary-foreground/50">
+    <p ref={ref} className="text-center text-sm text-destructive-foreground">
       📈 Già <motion.span className="font-semibold">{display}</motion.span> medici hanno attivato la prova questo mese
     </p>
   );
