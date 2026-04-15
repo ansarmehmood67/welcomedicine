@@ -1,4 +1,4 @@
-import { Check, CheckCheck, Paperclip, Send, Wifi, Battery, Signal } from "lucide-react";
+import { Check, CheckCheck, Paperclip, ArrowUp, Wifi, Battery, Signal } from "lucide-react";
 
 const ChatMockup = () => {
   return (
