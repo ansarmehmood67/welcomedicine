@@ -77,7 +77,7 @@ const ChatMockup = () => {
             Scrivi un messaggio...
           </div>
           <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
-            <Send size={14} className="text-primary-foreground" />
+            <ArrowUp size={14} className="text-primary-foreground" />
           </div>
         </div>
       </div>
