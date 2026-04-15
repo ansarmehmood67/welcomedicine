@@ -1,6 +1,27 @@
 import { motion } from "framer-motion";
 import { Briefcase, Heart, ArrowRight } from "lucide-react";
-import sectionImage from "@/assets/section-benefits.jpg";
+
+const doctors = [
+  { name: "Dr. Claudio Cusini", videoId: "2F6UM4lBwnc" },
+  { name: "Dr. Stefano Romanò", videoId: "Btb1UiWtFPA" },
+  { name: "Dott. Carmelo Morana", videoId: "AqXS8FVX_t0" },
+  { name: "Dott.ssa Daniela Agrimi", videoId: "ZVlsDGFbkUc" },
+  { name: "Dr. Giovanni Rossini", videoId: "b4DHRYQPKts" },
+  { name: "Prof. Massimo Filippi", videoId: "3DmvOkGcY9s" },
+  { name: "Dr. Marco Bianchi", videoId: "pXG-xtz1rOQ" },
+  { name: "Dott.ssa Elena Rossi", videoId: "2F6UM4lBwnc" },
+  { name: "Dr. Alessandro Conti", videoId: "Btb1UiWtFPA" },
+];
+
+const containerVariants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.07 } },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.4, ease: "easeOut" } },
+};
 
 const perTe = [
   "Più ordine nella gestione quotidiana",
@@ -19,9 +40,26 @@ const BenefitsSection = () => (
   <section id="vantaggi" className="py-20 md:py-32 bg-white scroll-mt-20 overflow-hidden">
     <div className="container max-w-6xl mx-auto px-4">
       <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-        <motion.div initial={{ opacity: 0, scale: 0.9, rotate: -2 }} whileInView={{ opacity: 1, scale: 1, rotate: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, ease: "easeOut" }} className="relative order-2 lg:order-1">
-          <img src={sectionImage} alt="Relazione medico-paziente digitale" loading="lazy" className="w-full h-auto rounded-2xl shadow-2xl" />
-          <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-foreground/5" />
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-3 gap-4 order-2 lg:order-1 bg-white rounded-2xl p-6"
+        >
+          {doctors.map((doc) => (
+            <motion.div key={doc.name} variants={itemVariants} className="flex flex-col items-center">
+              <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-white border border-border overflow-hidden mb-2 shadow-sm">
+                <img
+                  src={`https://img.youtube.com/vi/${doc.videoId}/hqdefault.jpg`}
+                  alt={doc.name}
+                  className="w-full h-full object-cover rounded-full"
+                  loading="lazy"
+                />
+              </div>
+              <span className="text-[10px] md:text-xs font-semibold text-foreground text-center leading-tight">{doc.name}</span>
+            </motion.div>
+          ))}
         </motion.div>
         <motion.div initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="order-1 lg:order-2">
           <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary mb-4 uppercase tracking-wide">Vantaggi</span>
