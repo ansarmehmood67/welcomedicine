@@ -18,10 +18,10 @@ const ChatMockup = () => {
         {/* Chat header */}
         <div className="flex items-center gap-3 px-4 py-3 border-b border-border bg-primary/5">
           <div className="w-9 h-9 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-sm">
-            MR
+            FB
           </div>
           <div>
-            <p className="text-sm font-semibold text-foreground">Marco Rossi</p>
+            <p className="text-sm font-semibold text-foreground">Federica Bianchi</p>
             <p className="text-[11px] text-muted-foreground">Paziente</p>
           </div>
           <div className="ml-auto flex items-center gap-1">
