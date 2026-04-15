@@ -1,6 +1,34 @@
-import { motion } from "framer-motion";
-import { ArrowRight, Check, Sparkles, Wallet } from "lucide-react";
+import { motion, useMotionValue, useTransform, animate, useInView } from "framer-motion";
+import { ArrowRight, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useEffect, useRef, useMemo } from "react";
+
+function MonthlyCounter() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const count = useMotionValue(51);
+  const display = useTransform(count, (v) => Math.round(v));
+
+  const target = useMemo(() => {
+    const now = new Date();
+    const day = now.getDate();
+    const daysInMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();
+    const progress = day / daysInMonth;
+    return Math.round(51 + (321 - 51) * progress);
+  }, []);
+
+  useEffect(() => {
+    if (isInView) {
+      animate(count, target, { duration: 2, ease: "easeOut" });
+    }
+  }, [isInView, target, count]);
+
+  return (
+    <p ref={ref} className="text-center text-sm text-primary-foreground/50">
+      📈 Già <motion.span className="font-semibold">{display}</motion.span> medici hanno attivato la prova questo mese
+    </p>
+  );
+}
 
 const included = [
   "Accesso completo a tutte le funzionalità",
@@ -59,10 +87,7 @@ const PricingSection = () => (
         ))}
       </div>
 
-      {/* Social proof */}
-      <p className="text-center text-sm text-primary-foreground/50">
-        📈 Già 237 medici hanno attivato la prova questo mese
-      </p>
+      <MonthlyCounter />
     </div>
   </section>
 );
