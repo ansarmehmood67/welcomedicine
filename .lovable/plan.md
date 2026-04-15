@@ -1,46 +1,29 @@
 
 
-## Sostituzione immagine con mosaico di medici
+## Piano: Sostituire l'immagine statica con un mockup chat in italiano
 
-### Contesto
-L'elemento selezionato e la `<img>` nella BenefitsSection (riga 23) che attualmente mostra `section-benefits.jpg`. Va sostituita con un mosaico di volti di medici su sfondo bianco, con nome sotto ogni foto.
+### Problema
+La sezione "Il problema che risolviamo" usa un'immagine statica (`section-problem.jpg`) che mostra una chat su tablet con testo non in italiano. Essendo un file JPG, non e possibile modificarne il contenuto testuale.
 
-### Problema tecnico
-Non e possibile estrarre automaticamente i volti scontornati dai video YouTube. Le thumbnail YouTube (`https://img.youtube.com/vi/{ID}/hqdefault.jpg`) mostrano il medico ma con sfondo, e la rimozione automatica dello sfondo richiederebbe un servizio esterno non disponibile.
+### Soluzione
+Sostituire l'immagine statica con un componente HTML/CSS che simula una chat su tablet con messaggi in italiano, mantenendo lo stesso stile visivo del sito.
 
-### Approccio proposto
-Creare un componente **DoctorsMosaic** che sostituisce l'immagine singola con una griglia di card medici. Ogni card avra:
-- Thumbnail YouTube ritagliata circolarmente (CSS `rounded-full` + `object-cover`) per simulare l'effetto scontornato su sfondo bianco
-- Nome del medico sotto la foto
-- Sfondo bianco, layout pulito
+### Dettagli tecnici
 
-Dati gia disponibili nel progetto (da `TestimonialsSection` e `QuotesSection`): 10 medici con nome, ruolo e videoId/iniziali.
+1. **Creare un componente `ChatMockup.tsx`** in `src/components/landing/` che renderizza:
+   - Un frame a forma di tablet/dispositivo con bordi arrotondati e ombra
+   - Un header con nome paziente e avatar
+   - Bolle di chat con messaggi realistici in italiano (es. paziente chiede informazioni, medico risponde)
+   - Timestamp e indicatori di lettura
+   - Stile coerente con i colori del sito (primary, muted, card, border)
 
-### Modifiche
+2. **Aggiornare `ProblemSection.tsx`**:
+   - Rimuovere l'import dell'immagine statica `section-problem.jpg`
+   - Sostituire il tag `<img>` con il nuovo componente `<ChatMockup />`
+   - Mantenere le stesse animazioni framer-motion
 
-**1. `src/components/landing/BenefitsSection.tsx`**
-- Rimuovere import di `sectionImage`
-- Definire array di medici con `name` e `videoId` (riutilizzando i dati esistenti)
-- Sostituire il blocco `<img>` con una griglia 3x3 o 2x5 di card circolari su sfondo bianco:
-  ```
-  ┌──────────────────────────┐
-  │  (foto)  (foto)  (foto)  │
-  │  Nome 1  Nome 2  Nome 3  │
-  │                          │
-  │  (foto)  (foto)  (foto)  │
-  │  Nome 4  Nome 5  Nome 6  │
-  │                          │
-  │  (foto)  (foto)  (foto)  │
-  │  Nome 7  Nome 8  Nome 9  │
-  └──────────────────────────┘
-  ```
-- Foto circolari con bordo sottile, sfondo bianco, nome centrato sotto
-- Animazioni motion stagger come gia usato nel progetto
-
-**2. Nessun altro file modificato**
-
-### Note
-- Le thumbnail YouTube sono il miglior compromesso disponibile per ottenere i volti senza upload manuali
-- Il crop circolare su sfondo bianco crea un effetto visivo simile allo scontornamento
-- Se in futuro si volessero foto realmente scontornate, andranno caricate come asset statici in `src/assets/`
+### Contenuto chat di esempio
+- **Paziente**: "Buongiorno Dottore, le invio i risultati degli esami del sangue. Potrebbe darmi un parere?"
+- **Medico**: "Buongiorno, ho ricevuto tutto. I valori sono nella norma, ne parliamo al prossimo videoconsulto."
+- **Paziente**: "Perfetto, grazie mille!"
 
