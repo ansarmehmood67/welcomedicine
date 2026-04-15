@@ -65,7 +65,7 @@ const ProblemSection = () => (
             </motion.div>
           ))}
           <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.3 }} className="pt-4 border-t border-primary/10">
-            <p className="text-base font-semibold text-primary italic">
+            <p className="text-base font-semibold text-primary">
               Non è telemedicina. È continuità di cura organizzata.
             </p>
           </motion.div>
