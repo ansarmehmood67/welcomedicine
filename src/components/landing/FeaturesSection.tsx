@@ -51,7 +51,7 @@ const FeaturesSection = () => (
 
       <div className="grid md:grid-cols-2 gap-8 items-center mb-12">
         <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7, ease: "easeOut" }} className="flex justify-center">
-          <img src={mobileApp} alt="App Welcomedicine — vista paziente" className="w-[420px] h-auto drop-shadow-2xl" />
+          <img src={mobileApp} alt="App Welcomedicine — vista paziente" className="w-[520px] h-auto drop-shadow-2xl" />
         </motion.div>
         <div className="flex flex-col gap-6">
           {heroCards.map((f, i) => (
