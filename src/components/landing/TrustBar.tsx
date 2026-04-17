@@ -17,7 +17,7 @@ const allPartners = [
   { name: "Italsalute", logo: "https://wp-uploads.welmed.it/uploads/sites/14/2025/12/logo_itsalute.png", large: false },
   { name: "Asti Clinic", logo: "https://www.asticlinic.it/wp-content/uploads/2022/11/logo_asti-clinic.png", large: false },
   { name: "Polimedico", logo: "https://wp-uploads.welmed.it/uploads/sites/8/2024/05/Logo-Polimedico.svg", large: false },
-  { name: "Virtual Hospital", logo: "/placeholder.svg", large: false },
+  { name: "Virtual Hospital", logo: "https://www.virtualhosp.it/assets/images/svg/logo.svg", large: false },
   { name: "Welcare CAR-T", logo: "https://www.wel-care.it/car-t/img/logo.svg", large: false },
   { name: "Welcare Melanoma", logo: "/placeholder.svg", large: false },
 ];
