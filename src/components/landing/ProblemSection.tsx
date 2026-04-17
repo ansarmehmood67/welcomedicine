@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { XCircle, CheckCircle, ArrowRight } from "lucide-react";
-import ChatMockup from "./ChatMockup";
+import chatBianchiMaria from "@/assets/chat-bianchi-maria.jpg";
 import patientImage from "@/assets/patient-home.jpg";
 
 const problems = [
@@ -41,7 +41,7 @@ const ProblemSection = () => (
           <img src={patientImage} alt="Paziente sorridente che usa Welcomedicine sul telefono" loading="lazy" className="w-full h-auto rounded-2xl shadow-xl" />
           {/* Floating chat overlay */}
           <div className="absolute -top-10 -left-20 sm:-top-14 sm:-left-28 w-[62%] z-10" style={{ filter: 'drop-shadow(0 12px 40px rgba(0,0,0,0.18))' }}>
-            <ChatMockup />
+            <img src={chatBianchiMaria} alt="Chat con paziente Bianchi Maria su Welcomedicine" loading="lazy" className="w-full h-auto rounded-2xl" />
           </div>
         </motion.div>
       </div>
