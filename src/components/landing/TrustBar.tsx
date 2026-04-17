@@ -10,7 +10,7 @@ const allPartners = [
   { name: "IRCCS Ospedale San Raffaele", logo: "https://wp-uploads.welmed.it/uploads/sites/5/2024/01/Osr.png", large: true },
   { name: "CDI Centro Diagnostico", logo: "https://wp-uploads.welmed.it/uploads/sites/10/2024/05/CDI_logo.svg", large: true },
   { name: "Casa della Salute", logo: "https://cds.it/wp-content/uploads/2023/02/CDS_Logo.svg", large: false },
-  { name: "Ospedale San Carlo di Nancy", logo: "/placeholder.svg", large: false },
+  { name: "Ospedale San Carlo di Nancy", logo: "https://wp-uploads.welmed.it/uploads/sites/12/2024/09/Logo-Horizontal.svg", large: false },
   { name: "Tiberia Hospital", logo: "/placeholder.svg", large: false },
   { name: "Maria Cecilia Hospital", logo: "/placeholder.svg", large: false },
   { name: "Santa Maria Hospital", logo: "/placeholder.svg", large: false },
