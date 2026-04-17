@@ -18,7 +18,9 @@ const textTestimonials = [
   { quote: "Nell'ambito della mia specializzazione in cardiologia, dove abbiamo tanti nuovi farmaci che richiedono la valutazione di esami ematochimici per la prescrizione di piani terapeutici, con la piattaforma si risolve il problema quotidiano della trasmissione di innumerevoli e-mail per vedere questi esami.", name: "Dr. Roberto Spoladore", role: "Cardiologo", initials: "RS" },
 ];
 
-const QuotesSection = () => (
+const QuotesSection = () => {
+  const autoplay = useRef(Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: true }));
+  return (
   <section className="py-20 md:py-32 bg-background overflow-hidden">
     <div className="container max-w-6xl mx-auto px-4">
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
