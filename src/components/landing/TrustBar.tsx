@@ -90,9 +90,9 @@ const TrustBar = () => (
           className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8"
         >
           {allPartners.map(({ name, logo, large }, i) => {
-            const isSecondToLast = i === allPartners.length - 2;
-            // Centra gli ultimi due loghi sulle griglie a 5 e 3 colonne (riga finale di 2)
-            const offsetClass = isSecondToLast ? "lg:col-start-2 sm:col-start-1" : "";
+            const isThirdToLast = i === allPartners.length - 3;
+            // 18 loghi su griglia a 5 colonne: ultima riga ha 3 elementi → centrali (col 2,3,4)
+            const offsetClass = isThirdToLast ? "lg:col-start-2" : "";
             return (
               <motion.div
                 key={name}
