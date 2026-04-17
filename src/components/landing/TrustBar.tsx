@@ -98,27 +98,32 @@ const TrustBar = () => (
           transition={{ delay: 0.2 }}
           className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8"
         >
-          {allPartners.map(({ name, logo, large }, i) => (
-            <motion.div
-              key={name}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.03 }}
-              className="flex flex-col items-center justify-center p-4"
-              title={name}
-            >
-              <img
-                src={logo}
-                alt={name}
-                loading="lazy"
-                className={`${large ? "h-16 md:h-20" : "h-12 md:h-16"} w-auto object-contain mb-3`}
-              />
-              <span className="text-[10px] sm:text-xs text-muted-foreground font-medium text-center leading-tight line-clamp-2">
-                {name}
-              </span>
-            </motion.div>
-          ))}
+          {allPartners.map(({ name, logo, large }, i) => {
+            const isSecondToLast = i === allPartners.length - 2;
+            // Centra gli ultimi due loghi sulle griglie a 5 e 3 colonne (riga finale di 2)
+            const offsetClass = isSecondToLast ? "lg:col-start-2 sm:col-start-1" : "";
+            return (
+              <motion.div
+                key={name}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.03 }}
+                className={`flex flex-col items-center justify-center p-4 ${offsetClass}`}
+                title={name}
+              >
+                <img
+                  src={logo}
+                  alt={name}
+                  loading="lazy"
+                  className={`${large ? "h-16 md:h-20" : "h-12 md:h-16"} w-auto object-contain mb-3`}
+                />
+                <span className="text-[10px] sm:text-xs text-muted-foreground font-medium text-center leading-tight line-clamp-2">
+                  {name}
+                </span>
+              </motion.div>
+            );
+          })}
         </motion.div>
       </div>
     </section>
