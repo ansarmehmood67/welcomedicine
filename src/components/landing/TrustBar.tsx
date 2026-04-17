@@ -10,6 +10,7 @@ const allPartners = [
   { name: "IRCCS Ospedale San Raffaele", logo: "https://wp-uploads.welmed.it/uploads/sites/5/2024/01/Osr.png", large: true },
   { name: "CDI Centro Diagnostico", logo: "https://wp-uploads.welmed.it/uploads/sites/10/2024/05/CDI_logo.svg", large: true },
   { name: "Casa della Salute", logo: "https://cds.it/wp-content/uploads/2023/02/CDS_Logo.svg", large: false },
+  { name: "San Raffaele Roma", logo: "https://wp-uploads.welmed.it/uploads/sites/11/2024/06/Logo_SRRoma.svg", large: false },
   { name: "Ospedale San Carlo di Nancy", logo: "https://wp-uploads.welmed.it/uploads/sites/12/2024/09/Logo-Horizontal.svg", large: false },
   { name: "Tiberia Hospital", logo: "https://wp-uploads.welmed.it/uploads/sites/7/2024/04/tiberia.svg", large: false },
   { name: "Maria Cecilia Hospital", logo: "https://wp-uploads.welmed.it/uploads/sites/13/2024/10/Maria-Cecilia-Hospital.svg", large: false },
@@ -89,9 +90,9 @@ const TrustBar = () => (
           className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8"
         >
           {allPartners.map(({ name, logo, large }, i) => {
-            const isSecondToLast = i === allPartners.length - 2;
-            // Centra gli ultimi due loghi sulle griglie a 5 e 3 colonne (riga finale di 2)
-            const offsetClass = isSecondToLast ? "lg:col-start-2 sm:col-start-1" : "";
+            const isThirdToLast = i === allPartners.length - 3;
+            // 18 loghi su griglia a 5 colonne: ultima riga ha 3 elementi → centrali (col 2,3,4)
+            const offsetClass = isThirdToLast ? "lg:col-start-2" : "";
             return (
               <motion.div
                 key={name}
