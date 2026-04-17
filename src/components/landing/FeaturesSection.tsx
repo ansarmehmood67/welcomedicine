@@ -6,7 +6,7 @@ const features = [
   // Riga 1: Comunicazione
   { icon: MessageCircle, title: "Chat, chiamate e video illimitate", desc: "Con un click dalla piattaforma, senza numero visibile e con gestione flessibile. Comunica con pazienti e colleghi in modo sicuro.", color: "text-blue-500", bg: "bg-blue-500/10" },
   { icon: Mail, title: "Email Organizer", desc: "Le email dei pazienti arrivano organizzate e storicizzate direttamente in piattaforma. Niente più caos nella casella di posta.", color: "text-violet-500", bg: "bg-violet-500/10" },
-  { icon: Video, title: "Telemedicina e videoconsulti", desc: "Offri consulenze a distanza in modo sicuro e professionale. Fatturazione automatica e refertazione integrata.", color: "text-emerald-500", bg: "bg-emerald-500/10" },
+  { icon: Video, title: "Telemedicina e videoconsulti", desc: "Offri consulenza a distanza in modo sicuro e professionale: agenda appuntamenti, refertazione, pagamenti online e fatturazione ai pazienti integrati.", color: "text-emerald-500", bg: "bg-emerald-500/10" },
   // Riga 2: Clinica
   { icon: FileText, title: "Scambio documentale conforme", desc: "Emetti documenti firmati digitalmente e condividili in un click. Conservazione a norma di legge garantita.", color: "text-rose-500", bg: "bg-rose-500/10" },
   { icon: Stethoscope, title: "Referti e ricette digitali", desc: "Firma digitale di referti e ricette con archivio documentale sempre disponibile per tutte le tue visite.", color: "text-cyan-500", bg: "bg-cyan-500/10" },
