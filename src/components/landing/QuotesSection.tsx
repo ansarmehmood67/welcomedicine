@@ -22,7 +22,7 @@ const QuotesSection = () => (
         </p>
       </motion.div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
         {textTestimonials.map(({ quote, name, role, initials }, i) => (
           <motion.div key={name} initial={{ opacity: 0, y: 25 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08, duration: 0.5 }} className="rounded-2xl border border-border p-5 card-elevated flex flex-col bg-secondary-foreground text-primary-foreground">
             <Quote size={20} className="mb-3 text-primary-foreground" fill="currentColor" />
