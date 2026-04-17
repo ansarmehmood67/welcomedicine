@@ -33,7 +33,13 @@ const QuotesSection = () => {
         </p>
       </motion.div>
 
-      <Carousel opts={{ align: "start", loop: true }} className="px-4 sm:px-12">
+      <Carousel
+        opts={{ align: "start", loop: true }}
+        plugins={[autoplay.current]}
+        onMouseEnter={() => autoplay.current.stop()}
+        onMouseLeave={() => autoplay.current.play()}
+        className="px-4 sm:px-12"
+      >
         <CarouselContent className="-ml-5">
           {textTestimonials.map(({ quote, name, role, initials }, i) => (
             <CarouselItem key={name} className="pl-5 sm:basis-1/2 lg:basis-1/3">
