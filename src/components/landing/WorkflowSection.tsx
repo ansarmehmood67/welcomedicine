@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
-import { UserPlus, MessageSquareText, CalendarCheck, BrainCircuit, ArrowRight } from "lucide-react";
+import { UserPlus, PenTool, Send, Network, ArrowRight } from "lucide-react";
 
 const steps = [
   { icon: UserPlus, title: "Aggiungi i tuoi pazienti", desc: "Inserisci i pazienti in piattaforma o richiedi il servizio gestito di importazione dati (add-on)." },
-  { icon: MessageSquareText, title: "Gestisci la comunicazione", desc: "Messaggi strutturati, niente più caos tra WhatsApp ed email." },
-  { icon: CalendarCheck, title: "Organizza i follow-up", desc: "Reminder automatici, controlli programmati, percorsi di cura." },
-  { icon: BrainCircuit, title: "Usa l'AI", desc: "Riassunti, supporto clinico e organizzazione automatica." },
+  { icon: PenTool, title: "Visita e refertazione", desc: "Il medico visita il paziente e referta digitalmente in piattaforma con firma elettronica." },
+  { icon: Send, title: "Consegna e follow-up", desc: "Il paziente riceve il referto firmato e può scrivere al medico per il follow-up direttamente dalla piattaforma." },
+  { icon: Network, title: "Smistamento intelligente", desc: "L'assistente di piattaforma smista le richieste: segreteria, chat gratuita o prestazione a pagamento." },
 ];
 
 const WorkflowSection = () => (
