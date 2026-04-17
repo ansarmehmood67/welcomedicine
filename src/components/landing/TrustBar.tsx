@@ -11,7 +11,7 @@ const allPartners = [
   { name: "CDI Centro Diagnostico", logo: "https://wp-uploads.welmed.it/uploads/sites/10/2024/05/CDI_logo.svg", large: true },
   { name: "Casa della Salute", logo: "https://cds.it/wp-content/uploads/2023/02/CDS_Logo.svg", large: false },
   { name: "Ospedale San Carlo di Nancy", logo: "https://wp-uploads.welmed.it/uploads/sites/12/2024/09/Logo-Horizontal.svg", large: false },
-  { name: "Tiberia Hospital", logo: "/placeholder.svg", large: false },
+  { name: "Tiberia Hospital", logo: "https://wp-uploads.welmed.it/uploads/sites/7/2024/04/tiberia.svg", large: false },
   { name: "Maria Cecilia Hospital", logo: "/placeholder.svg", large: false },
   { name: "Santa Maria Hospital", logo: "/placeholder.svg", large: false },
   { name: "Italsalute", logo: "/placeholder.svg", large: false },
