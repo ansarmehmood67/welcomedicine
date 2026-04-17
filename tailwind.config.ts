@@ -94,11 +94,16 @@ export default {
           "97%": { transform: "rotate(-2deg)" },
           "98%": { transform: "rotate(1deg)" },
         },
+        float: {
+          "0%, 100%": { transform: "translateY(0px) rotate(-1deg)" },
+          "50%": { transform: "translateY(-12px) rotate(1deg)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         wiggle: "wiggle 3.5s ease-in-out infinite",
+        float: "float 5s ease-in-out infinite",
       },
     },
   },
