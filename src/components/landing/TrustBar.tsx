@@ -19,7 +19,7 @@ const allPartners = [
   { name: "Polimedico", logo: "https://wp-uploads.welmed.it/uploads/sites/8/2024/05/Logo-Polimedico.svg", large: false },
   { name: "Virtual Hospital", logo: "https://www.virtualhosp.it/assets/images/svg/logo.svg", large: false },
   { name: "Welcare CAR-T", logo: "https://www.wel-care.it/car-t/img/logo.svg", large: false },
-  { name: "Welcare Melanoma", logo: "/placeholder.svg", large: false },
+  { name: "Welcare Melanoma", logo: "https://www.wel-care.it/melanoma/img/logo.svg", large: false },
 ];
 
 const primaryStats = [
