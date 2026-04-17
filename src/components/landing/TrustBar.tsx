@@ -13,7 +13,7 @@ const allPartners = [
   { name: "Ospedale San Carlo di Nancy", logo: "https://wp-uploads.welmed.it/uploads/sites/12/2024/09/Logo-Horizontal.svg", large: false },
   { name: "Tiberia Hospital", logo: "https://wp-uploads.welmed.it/uploads/sites/7/2024/04/tiberia.svg", large: false },
   { name: "Maria Cecilia Hospital", logo: "https://wp-uploads.welmed.it/uploads/sites/13/2024/10/Maria-Cecilia-Hospital.svg", large: false },
-  { name: "Santa Maria Hospital", logo: "/placeholder.svg", large: false },
+  { name: "Santa Maria Hospital", logo: "https://wp-uploads.welmed.it/uploads/sites/15/2026/02/Progetto-senza-titolo-2.svg", large: false },
   { name: "Italsalute", logo: "/placeholder.svg", large: false },
   { name: "Asti Clinic", logo: "https://www.asticlinic.it/wp-content/uploads/2022/11/logo_asti-clinic.png", large: false },
   { name: "Polimedico", logo: "https://wp-uploads.welmed.it/uploads/sites/8/2024/05/Logo-Polimedico.svg", large: false },
