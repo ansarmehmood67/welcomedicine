@@ -23,24 +23,14 @@ const allPartners = [
 ];
 
 const primaryStats = [
-  { value: 100, prefix: "+", suffix: "", label: "Strutture Sanitarie" },
-  { value: 3000, prefix: "+", suffix: "", label: "Professionisti sanitari" },
-  { value: 250000, prefix: "+", suffix: "", label: "Pazienti" },
+  { value: 4500, prefix: "+", suffix: "", label: "Professionisti" },
+  { value: 100, prefix: "+", suffix: "", label: "Strutture" },
+  { value: 1, prefix: "+", suffix: "MM", label: "Prestazioni sanitarie" },
 ];
 
 const secondaryStats = [
-  { value: 300000, prefix: "+", suffix: "", label: "Prestazioni eseguite" },
+  { value: 35, prefix: "+", suffix: "", label: "Specialità" },
   { value: 5000, prefix: "+", suffix: "", label: "Accessi giornalieri" },
-  { value: 300000, prefix: "+", suffix: "", label: "Ricette e referti" },
-  { value: 500000, prefix: "+", suffix: "", label: "Reminder ai pazienti" },
-];
-
-const tertiaryStats = [
-  { value: 10, prefix: "+", suffix: "", label: "Aziende farmaceutiche" },
-  { value: 15, prefix: "+", suffix: "", label: "Welfare" },
-  { value: 100000, prefix: "+", suffix: "", label: "Studi radiologici" },
-  { value: 350000, prefix: "+", suffix: "", label: "Consegna referti" },
-  { value: 35, prefix: "+", suffix: "", label: "Specialità attive" },
 ];
 
 function formatNumber(n: number) {
