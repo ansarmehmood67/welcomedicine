@@ -68,6 +68,7 @@ const QuotesSection = () => {
       </Carousel>
     </div>
   </section>
-);
+  );
+};
 
 export default QuotesSection;
