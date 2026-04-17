@@ -164,7 +164,7 @@ const TrustBar = () => (
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.15 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10"
+          className="grid grid-cols-2 gap-6 mb-10 max-w-2xl mx-auto"
         >
           {secondaryStats.map(({ value, prefix, suffix, label }) => (
             <div key={label} className="text-center rounded-xl border border-white/10 bg-white/5 py-5 px-3">
