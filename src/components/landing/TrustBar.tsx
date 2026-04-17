@@ -176,23 +176,6 @@ const TrustBar = () => (
           ))}
         </motion.div>
 
-        {/* Tertiary Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2 }}
-          className="grid grid-cols-3 sm:grid-cols-5 gap-4"
-        >
-          {tertiaryStats.map(({ value, prefix, suffix, label }) => (
-            <div key={label} className="text-center py-3 px-2">
-              <p className="text-lg sm:text-xl font-bold text-white/80">
-                <AnimatedCounter value={value} prefix={prefix} suffix={suffix} />
-              </p>
-              <p className="text-[10px] sm:text-xs text-white/40 mt-1">{label}</p>
-            </div>
-          ))}
-        </motion.div>
       </div>
     </section>
   </>
