@@ -23,24 +23,14 @@ const allPartners = [
 ];
 
 const primaryStats = [
-  { value: 100, prefix: "+", suffix: "", label: "Strutture Sanitarie" },
-  { value: 3000, prefix: "+", suffix: "", label: "Professionisti sanitari" },
-  { value: 250000, prefix: "+", suffix: "", label: "Pazienti" },
+  { value: 4500, prefix: "+", suffix: "", label: "Professionisti" },
+  { value: 100, prefix: "+", suffix: "", label: "Strutture" },
+  { value: 1, prefix: "+", suffix: "MM", label: "Prestazioni sanitarie" },
 ];
 
 const secondaryStats = [
-  { value: 300000, prefix: "+", suffix: "", label: "Prestazioni eseguite" },
+  { value: 35, prefix: "+", suffix: "", label: "Specialità" },
   { value: 5000, prefix: "+", suffix: "", label: "Accessi giornalieri" },
-  { value: 300000, prefix: "+", suffix: "", label: "Ricette e referti" },
-  { value: 500000, prefix: "+", suffix: "", label: "Reminder ai pazienti" },
-];
-
-const tertiaryStats = [
-  { value: 10, prefix: "+", suffix: "", label: "Aziende farmaceutiche" },
-  { value: 15, prefix: "+", suffix: "", label: "Welfare" },
-  { value: 100000, prefix: "+", suffix: "", label: "Studi radiologici" },
-  { value: 350000, prefix: "+", suffix: "", label: "Consegna referti" },
-  { value: 35, prefix: "+", suffix: "", label: "Specialità attive" },
 ];
 
 function formatNumber(n: number) {
@@ -174,7 +164,7 @@ const TrustBar = () => (
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.15 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10"
+          className="grid grid-cols-2 gap-6 mb-10 max-w-2xl mx-auto"
         >
           {secondaryStats.map(({ value, prefix, suffix, label }) => (
             <div key={label} className="text-center rounded-xl border border-white/10 bg-white/5 py-5 px-3">
@@ -186,23 +176,6 @@ const TrustBar = () => (
           ))}
         </motion.div>
 
-        {/* Tertiary Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2 }}
-          className="grid grid-cols-3 sm:grid-cols-5 gap-4"
-        >
-          {tertiaryStats.map(({ value, prefix, suffix, label }) => (
-            <div key={label} className="text-center py-3 px-2">
-              <p className="text-lg sm:text-xl font-bold text-white/80">
-                <AnimatedCounter value={value} prefix={prefix} suffix={suffix} />
-              </p>
-              <p className="text-[10px] sm:text-xs text-white/40 mt-1">{label}</p>
-            </div>
-          ))}
-        </motion.div>
       </div>
     </section>
   </>
