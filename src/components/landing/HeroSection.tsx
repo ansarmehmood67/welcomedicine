@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Shield, MessageSquare, Video, FileCheck } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/hero-new.jpg";
+import heroImage from "@/assets/LP_Medico.png";
 
 const pills = [
   { icon: MessageSquare, label: "Chat illimitate" },
