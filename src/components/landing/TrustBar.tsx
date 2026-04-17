@@ -74,7 +74,7 @@ const TrustBar = () => (
           className="text-center mb-6"
         >
           <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-3">
-            Chi ci ha scelto
+            Ecosistema Welmed
           </p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground leading-tight">
             La tecnologia già scelta <span className="text-primary"><br />dalle migliori strutture sanitarie in Italia</span>
