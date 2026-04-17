@@ -2,10 +2,11 @@ import { motion } from "framer-motion";
 import { Quote } from "lucide-react";
 
 const textTestimonials = [
-  { quote: "Con Welcomedicine ho finalmente separato la vita privata da quella professionale. I pazienti mi contattano nei canali giusti, negli orari giusti.", name: "Dr. Marco Bianchi", role: "Medico di base", initials: "MB" },
-  { quote: "Il fascicolo clinico digitale è una svolta. Ho tutto lo storico del paziente in un unico posto, accessibile in un click durante la visita.", name: "Dott.ssa Elena Rossi", role: "Dermatologa", initials: "ER" },
-  { quote: "La fatturazione automatica mi ha fatto risparmiare ore ogni settimana. Bollo, Tessera Sanitaria, fattura elettronica: tutto gestito dalla piattaforma.", name: "Dr. Alessandro Conti", role: "Ortopedico", initials: "AC" },
-  { quote: "I miei pazienti apprezzano tantissimo poter comunicare direttamente con me in modo sicuro, senza dover usare WhatsApp o email personali.", name: "Dott.ssa Giulia Ferretti", role: "Cardiologa", initials: "GF" },
+  { quote: "La gestione della continuità tra le visite in piattaforma mi ha fatto sentire una professionista, in quanto le microattività, prima stancanti, sono alleviate dalla possibilità di avere un unico ambiente organizzato per visite, refertazione, consulti e aggiornamenti.", name: "Dr.ssa Daniela Agrimi", role: "Endocrinologa", initials: "DA" },
+  { quote: "Ora risparmio il 50% di tempo nella gestione della comunicazione.", name: "Dr. Carmelo Morana", role: "Urologo", initials: "CM" },
+  { quote: "La piattaforma è perfetta per visionare TAC e Risonanze Magnetiche senza invio di CD o spostare il paziente, con il viewer incluso che è medical device IIb.", name: "Dr.ssa Giovanna Piragine", role: "Radiologa Senologa", initials: "GP" },
+  { quote: "La piattaforma semplifica l'inquadramento dei pazienti, la comunicazione e la refertazione ed è meno invasiva del mio tempo personale riaperto a una chiamata o a un WhatsApp.", name: "Dr. Gionata Fiorino", role: "Gastroenterologo", initials: "GF" },
+  { quote: "Nell'ambito della mia specializzazione in cardiologia, dove abbiamo tanti nuovi farmaci che richiedono la valutazione di esami ematochimici per la prescrizione di piani terapeutici, con la piattaforma si risolve il problema quotidiano della trasmissione di innumerevoli e-mail per vedere questi esami.", name: "Dr. Roberto Spoladore", role: "Cardiologo", initials: "RS" },
 ];
 
 const QuotesSection = () => (
