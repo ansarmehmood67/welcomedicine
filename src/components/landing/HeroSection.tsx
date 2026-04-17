@@ -19,7 +19,7 @@ const HeroSection = () => (
           A Welmed brand — Tecnologia ospedaliera per il professionista
         </span>
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.1] text-foreground mb-6">
-          Smetti di lavorare su WhatsApp{" "}
+          Smetti di lavorare su <span style={{ color: "#25D366" }}>WhatsApp</span>{" "}
           <span className="text-primary">fuori dall'ambulatorio.</span>
         </h1>
         <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-8 max-w-lg">
