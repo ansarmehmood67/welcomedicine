@@ -62,12 +62,12 @@ const HeroSection = () => (
         initial={{ opacity: 0, x: 50, scale: 0.95 }}
         animate={{ opacity: 1, x: 0, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="hidden md:block"
+        className="hidden md:block relative"
       >
         <img
           src={heroImage}
           alt="Piattaforma Welcomedicine — vista desktop e mobile"
-          className="w-full h-auto rounded-2xl shadow-2xl"
+          className="w-[125%] max-w-none h-auto -mr-[25%] drop-shadow-2xl"
         />
       </motion.div>
     </div>
