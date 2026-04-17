@@ -3,7 +3,7 @@ import { useEffect, useRef } from "react";
 
 // URL dei loghi forniti — ordine richiesto
 const allPartners = [
-  { name: "Ospedale San Raffaele", logo: "https://wp-uploads.welmed.it/uploads/sites/5/2024/01/Osr.png", large: true },
+  { name: "Ospedale San Raffaele", logo: "https://upload.wikimedia.org/wikipedia/commons/d/d4/Logo_HSR.png", large: true },
   { name: "Gruppo San Donato (GSD)", logo: "https://media.licdn.com/dms/image/v2/C560BAQFLj9aZzXzm3A/company-logo_200_200/company-logo_200_200/0/1630642272943/grupposandonato_logo?e=2147483647&v=beta&t=l_9IUk4jgJqTxCtVfHytprNmSQZCSWEf5jRKW2PkRrA", large: true },
   { name: "GVM Care & Research", logo: "https://www.gvmnet.it/App_Themes/GVMNet/images/gruppovillamaria_logo.png", large: false },
   { name: "Campus Bio-Medico", logo: "https://wp-uploads.welmed.it/uploads/sites/4/2024/09/Logo-Big.svg", large: true },
