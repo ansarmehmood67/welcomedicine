@@ -4,7 +4,7 @@ import chatBianchiMaria from "@/assets/chat-bianchi-maria.jpg";
 import patientImage from "@/assets/patient-home.jpg";
 
 const problems = [
-  "100+ email al giorno senza filtro né priorità",
+  "100+ email alla settimana senza filtro né priorità",
   "Pazienti che scrivono su WhatsApp a qualsiasi ora",
   "Scambio referti via chiavetta USB o email non protetta",
   "Immagini DICOM inviate via WeTransfer o chiavetta USB",
