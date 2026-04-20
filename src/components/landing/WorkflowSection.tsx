@@ -15,7 +15,7 @@ const WorkflowSection = () => (
         <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-primary-foreground/10 text-primary-foreground/80 mb-4 uppercase tracking-wide">Workflow</span>
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary-foreground mb-4 leading-tight">
           Come funziona{" "}
-          <span className="text-primary inline-block animate-fade-in hover-scale">in pratica</span>
+          <span className="text-shimmer inline-block">in pratica</span>
         </h2>
         <p className="text-lg max-w-2xl mx-auto text-primary-foreground font-semibold">Il flusso quotidiano: dalla visita al Follow up.<br />Tutto in un unica piattaforma.</p>
       </motion.div>
