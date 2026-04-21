@@ -34,7 +34,8 @@ const TreSempliciPassiSection = () => (
           Inizia in <span className="text-primary">tre semplici passi</span>
         </h2>
         <p className="text-primary-foreground/70 text-lg max-w-2xl mx-auto">
-          Dalla registrazione alla comunicazione con i pazienti tutto è pensato per essere personalizzabile e intuitivo.
+          Dalla registrazione alla comunicazione con i pazienti.<br />
+          Tutto è pensato per essere personalizzabile e intuitivo.
         </p>
       </motion.div>
 
