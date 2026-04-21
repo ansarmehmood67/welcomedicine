@@ -1,5 +1,6 @@
 import { motion, useMotionValue, useTransform, animate, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
+import logoPuntiRaf from "@/assets/logo-punti-raf.svg";
 
 // URL dei loghi forniti — ordine richiesto
 const allPartners = [
