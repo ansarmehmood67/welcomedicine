@@ -47,9 +47,9 @@ const TreSempliciPassiSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.15, duration: 0.5 }}
-            className="rounded-2xl bg-primary-foreground/5 border border-primary-foreground/10 p-8 lg:p-10 backdrop-blur-sm hover:bg-primary-foreground/[0.07] transition-colors"
+            className="group rounded-2xl bg-primary-foreground/5 border border-primary-foreground/10 p-8 lg:p-10 backdrop-blur-sm hover:bg-primary-foreground/[0.07] hover:-translate-y-2 hover:border-primary/40 transition-all duration-300"
           >
-            <div className="w-14 h-14 rounded-2xl cta-gradient flex items-center justify-center mb-6 shadow-lg mx-auto">
+            <div className="w-14 h-14 rounded-2xl cta-gradient flex items-center justify-center mb-6 shadow-lg mx-auto transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">
               <span className="text-primary-foreground font-extrabold text-xl">{s.n}</span>
             </div>
             <h3 className="font-extrabold text-primary-foreground text-xl mb-3">{s.title}</h3>
