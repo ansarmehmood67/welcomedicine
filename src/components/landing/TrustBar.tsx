@@ -1,5 +1,6 @@
 import { motion, useMotionValue, useTransform, animate, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
+import logoPuntiRaf from "@/assets/logo-punti-raf.svg";
 
 // URL dei loghi forniti — ordine richiesto
 const allPartners = [
@@ -8,6 +9,7 @@ const allPartners = [
   { name: "GVM Care & Research", logo: "https://www.gvmnet.it/App_Themes/GVMNet/images/gruppovillamaria_logo.png", large: false },
   { name: "Campus Bio-Medico", logo: "https://wp-uploads.welmed.it/uploads/sites/4/2024/09/Logo-Big.svg", large: true },
   { name: "CDI Centro Diagnostico", logo: "https://wp-uploads.welmed.it/uploads/sites/10/2024/05/CDI_logo.svg", large: true },
+  { name: "Punti R.A.F.", logo: logoPuntiRaf, large: false },
   { name: "Casa della Salute", logo: "https://cds.it/wp-content/uploads/2023/02/CDS_Logo.svg", large: false },
   { name: "Gruppo San Raffaele Roma", logo: "https://wp-uploads.welmed.it/uploads/sites/11/2024/06/Logo_SRRoma.svg", large: false },
   { name: "Ospedale San Carlo di Nancy", logo: "https://wp-uploads.welmed.it/uploads/sites/12/2024/09/Logo-Horizontal.svg", large: false },
