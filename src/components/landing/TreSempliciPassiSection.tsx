@@ -38,7 +38,7 @@ const TreSempliciPassiSection = () => (
         </p>
       </motion.div>
 
-      <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+      <div className="grid md:grid-cols-3 gap-6 lg:gap-8 text-center">
         {steps.map((s, i) => (
           <motion.div
             key={s.n}
@@ -48,7 +48,7 @@ const TreSempliciPassiSection = () => (
             transition={{ delay: i * 0.15, duration: 0.5 }}
             className="rounded-2xl bg-primary-foreground/5 border border-primary-foreground/10 p-8 lg:p-10 backdrop-blur-sm hover:bg-primary-foreground/[0.07] transition-colors"
           >
-            <div className="w-14 h-14 rounded-2xl cta-gradient flex items-center justify-center mb-6 shadow-lg">
+            <div className="w-14 h-14 rounded-2xl cta-gradient flex items-center justify-center mb-6 shadow-lg mx-auto">
               <span className="text-primary-foreground font-extrabold text-xl">{s.n}</span>
             </div>
             <h3 className="font-extrabold text-primary-foreground text-xl mb-3">{s.title}</h3>
