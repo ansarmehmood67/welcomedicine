@@ -9,6 +9,12 @@ const videoTestimonials = [
   { quote: "La conformità alle normative di privacy e la possibilità di avere l'intera storia clinica dei pazienti in un unico luogo hanno migliorato la continuità di cura e l'efficienza delle scelte terapeutiche.", name: "Dott.ssa Daniela Agrimi", role: "Endocrinologa", initials: "DA", videoId: "ZVlsDGFbkUc" },
   { quote: "La piattaforma ha permesso di organizzare i controlli in modo strutturato, ridurre il carico di lavoro invisibile e centralizzare tutto in un'unica cartella clinica informatizzata.", name: "Dr. Giovanni Rossini", role: "Endocrinologo", initials: "GR", videoId: "b4DHRYQPKts" },
   { quote: "La piattaforma digitale ha rivoluzionato il nostro approccio alla neurologia, permettendoci di seguire i pazienti in modo più efficiente e con una qualità di cura superiore.", name: "Prof. Massimo Filippi", role: "Neurologia — Osp. San Raffaele", initials: "MF", videoId: "3DmvOkGcY9s" },
+  { quote: "Welcomedicine mi permette di seguire i pazienti con continuità, mantenendo una relazione professionale strutturata e tempi di lavoro più sostenibili.", name: "Testimonianza medico", role: "Specialista", initials: "TM", videoId: "YHmim9pJ6X4" },
+  { quote: "Grazie alla piattaforma posso centralizzare tutta la documentazione clinica e dedicare più tempo alla qualità della cura.", name: "Testimonianza medico", role: "Specialista", initials: "TM", videoId: "uRdEmAi6jzQ" },
+  { quote: "Welcomedicine ha semplificato la gestione quotidiana dello studio, migliorando l'organizzazione e la comunicazione con i pazienti.", name: "Testimonianza medico", role: "Specialista", initials: "TM", videoId: "pUxVRwPii_s" },
+  { quote: "Avere uno strumento digitale dedicato ai professionisti sanitari fa la differenza nella continuità di cura e nella relazione con il paziente.", name: "Testimonianza medico", role: "Specialista", initials: "TM", videoId: "7h5p7rnTYes" },
+  { quote: "Con Welcomedicine il percorso clinico dei pazienti è tracciato in modo chiaro e accessibile in qualsiasi momento.", name: "Testimonianza medico", role: "Specialista", initials: "TM", videoId: "i-vNbllcS5E" },
+  { quote: "La piattaforma mi consente di lavorare in modo più strutturato, con maggiore efficienza e una migliore esperienza per il paziente.", name: "Testimonianza medico", role: "Specialista", initials: "TM", videoId: "vKgg-Va0ujE" },
 ];
 
 const TestimonialsSection = () => {
