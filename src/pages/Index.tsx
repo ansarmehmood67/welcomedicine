@@ -4,6 +4,7 @@ import ValuePropositionSection from "@/components/landing/ValuePropositionSectio
 import TrustBar from "@/components/landing/TrustBar";
 import ProblemSection from "@/components/landing/ProblemSection";
 import TestimonialsSection from "@/components/landing/TestimonialsSection";
+import TreSempliciPassiSection from "@/components/landing/TreSempliciPassiSection";
 import FeaturesSection from "@/components/landing/FeaturesSection";
 import WorkflowSection from "@/components/landing/WorkflowSection";
 import BenefitsSection from "@/components/landing/BenefitsSection";
@@ -24,6 +25,7 @@ const Index = () => (
     <TrustBar />
     <ProblemSection />
     <TestimonialsSection />
+    <TreSempliciPassiSection />
     <FeaturesSection />
     <BenefitsSection />
     <WorkflowSection />
