@@ -4,7 +4,7 @@ const steps = [
   {
     n: 1,
     title: "Registrati in 2 minuti",
-    desc: "Crea il tuo profilo professionale verificato. Nessuna carta di credito richiesta.",
+    desc: "Noi pensiamo a creare il tuo profilo e a personalizzarlo con te in una call di onboarding gratuita.",
   },
   {
     n: 2,
