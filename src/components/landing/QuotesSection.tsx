@@ -18,6 +18,7 @@ const textTestimonials = [
   { quote: "La piattaforma è perfetta per visionare TAC e Risonanze Magnetiche senza invio di CD o spostare il paziente, con il viewer incluso che è medical device IIb.", name: "Dr.ssa Giovanna Piragine", role: "Radiologa Senologa", initials: "GP" },
   { quote: "La piattaforma semplifica l'inquadramento dei pazienti, la comunicazione e la refertazione ed è meno invasiva del mio tempo personale riaperto a una chiamata o a un WhatsApp.", name: "Dr. Gionata Fiorino", role: "Gastroenterologo", initials: "GF" },
   { quote: "Nell'ambito della mia specializzazione in cardiologia, dove abbiamo tanti nuovi farmaci che richiedono la valutazione di esami ematochimici per la prescrizione di piani terapeutici, con la piattaforma si risolve il problema quotidiano della trasmissione di innumerevoli e-mail per vedere questi esami.", name: "Dr. Roberto Spoladore", role: "Cardiologo", initials: "RS" },
+  { quote: "Avere sempre uno storico, una traccia di quello che è stato comunicato in senso bidirezionale, avere sempre dei dati certi e un ancoraggio alla situazione clinica è molto importante per non creare confusione a livello della mia interpretazione. Perché purtroppo nel tempo i pazienti si accavallano e le informazioni si possono anche, diciamo, confondere, facendo delle sovrapposizioni improprie.", name: "Dr. Luigi Cerri", role: "Endocrinologo", initials: "LC" },
 ];
 
 const QuotesSection = () => {
