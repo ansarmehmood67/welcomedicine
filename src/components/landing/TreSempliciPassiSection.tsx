@@ -31,7 +31,7 @@ const TreSempliciPassiSection = () => (
           Come funziona
         </span>
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary-foreground mb-4 leading-tight">
-          Inizia in <span className="text-primary">tre semplici passi</span>
+          Inizia in <span className="text-shimmer">tre semplici passi</span>
         </h2>
         <p className="text-primary-foreground/70 text-lg max-w-2xl mx-auto">
           Dalla registrazione alla comunicazione con i pazienti.<br />
