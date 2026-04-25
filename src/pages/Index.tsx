@@ -8,6 +8,7 @@ import TreSempliciPassiSection from "@/components/landing/TreSempliciPassiSectio
 import FeaturesSection from "@/components/landing/FeaturesSection";
 import WorkflowSection from "@/components/landing/WorkflowSection";
 import BenefitsSection from "@/components/landing/BenefitsSection";
+import AppWelmedProSection from "@/components/landing/AppWelmedProSection";
 import CustomerCareSection from "@/components/landing/CustomerCareSection";
 import SavingsCalculator from "@/components/landing/SavingsCalculator";
 import QuotesSection from "@/components/landing/QuotesSection";
@@ -28,6 +29,7 @@ const Index = () => (
     <TreSempliciPassiSection />
     <FeaturesSection />
     <BenefitsSection />
+    <AppWelmedProSection />
     <WorkflowSection />
     <SavingsCalculator />
     <QuotesSection />
