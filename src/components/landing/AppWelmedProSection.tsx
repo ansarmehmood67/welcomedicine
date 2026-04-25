@@ -8,6 +8,9 @@ import {
   BellRing,
   Apple,
   Smartphone,
+  RefreshCw,
+  Fingerprint,
+  KeyRound,
 } from "lucide-react";
 import devicesImage from "@/assets/app-welmed-pro-devices.png";
 
@@ -41,6 +44,21 @@ const features = [
     icon: BellRing,
     title: "Notifiche push e promemoria",
     desc: "Ricevi aggiornamenti in tempo reale e imposta promemoria per non perdere nessuna attività.",
+  },
+  {
+    icon: RefreshCw,
+    title: "Integrata con la Piattaforma",
+    desc: "App e Piattaforma dialogano e si sincronizzano: massima potenzialità quando le usi insieme.",
+  },
+  {
+    icon: Fingerprint,
+    title: "Firma biometrica integrata",
+    desc: "Firma ed emetti ricette e referti con impronta o riconoscimento facciale, senza app esterne.",
+  },
+  {
+    icon: KeyRound,
+    title: "Codice PIN alternativo",
+    desc: "Preferisci non usare il biometrico o il device non lo supporta? Imposta un PIN personale per la firma.",
   },
 ];
 
