@@ -1,7 +1,7 @@
 const logo = "https://wp-uploads.welmed.it/uploads/sites/9/2024/05/Logo-Welcomedicine-png-trasparente.png";
 
 const Footer = () => (
-  <footer style={{ backgroundColor: "#D6EEF8" }} className="py-10">
+  <footer style={{ backgroundColor: "#D6EEF8" }} className="py-20">
     <div className="container max-w-6xl mx-auto px-4">
       <div className="grid md:grid-cols-3 gap-16 items-start">
         {/* Brand */}
