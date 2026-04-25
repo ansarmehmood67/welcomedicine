@@ -76,9 +76,6 @@ const TestimonialsSection = () => {
               Guarda tutte le testimonianze su YouTube
               <span className="transition-transform group-hover:translate-x-1">→</span>
             </a>
-            <a href="https://www.welcomedicineonline.it/product/abbonamento-welcomedicine" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline">
-              Prova gratis →
-            </a>
           </motion.div>
         </div>
       </section>
