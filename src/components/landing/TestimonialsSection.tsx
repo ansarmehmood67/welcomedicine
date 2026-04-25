@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Star, Play, X } from "lucide-react";
+import { Star, Play, X, Youtube } from "lucide-react";
 
 const videoTestimonials = [
   { quote: "Non riuscivo a distinguere le e-mail cliniche dalle comunicazioni quotidiane, e spesso non riuscivo a rispondere a tutti i pazienti.", name: "Dott. Carmelo Morana", role: "Urologia", initials: "CM", videoId: "AqXS8FVX_t0" },
@@ -63,11 +63,18 @@ const TestimonialsSection = () => {
           </div>
 
           <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-center mt-10 flex flex-col items-center gap-4">
-            <a href="https://www.welcomedicineonline.it/product/abbonamento-welcomedicine" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 h-12 px-8 rounded-xl cta-gradient text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity">
-              Prova gratis →
+            <a
+              href="https://www.youtube.com/@welmed1329/videos"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-3 h-14 px-7 rounded-xl bg-[#FF0000] text-white font-bold text-base hover:bg-[#cc0000] transition-colors shadow-lg hover:shadow-xl"
+            >
+              <Youtube size={26} fill="currentColor" strokeWidth={1.5} />
+              Guarda tutte le testimonianze su YouTube
+              <span className="transition-transform group-hover:translate-x-1">→</span>
             </a>
-            <a href="https://www.youtube.com/watch?v=pXG-xtz1rOQ&list=PLdA1IIBWLzBGMGKY6D1pVrlX9a6p5QBhm" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline">
-              Vedi tutte le testimonianze dei medici →
+            <a href="https://www.welcomedicineonline.it/product/abbonamento-welcomedicine" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline">
+              Prova gratis →
             </a>
           </motion.div>
         </div>
