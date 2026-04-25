@@ -2,15 +2,15 @@ import { motion } from "framer-motion";
 import { Briefcase, Heart, ArrowRight } from "lucide-react";
 
 const doctors = [
-  { name: "Dr. Claudio Cusini", videoId: "2F6UM4lBwnc" },
-  { name: "Dr. Stefano Romanò", videoId: "Btb1UiWtFPA" },
   { name: "Dott. Carmelo Morana", videoId: "AqXS8FVX_t0" },
-  { name: "Dott.ssa Daniela Agrimi", videoId: "ZVlsDGFbkUc" },
+  { name: "Dr. Claudio Cusini", videoId: "2F6UM4lBwnc" },
+  { name: "Dr. Alberto Frazin", videoId: "7h5p7rnTYes" },
+  { name: "Dr. Stefano Romanò", videoId: "Btb1UiWtFPA" },
   { name: "Dr. Giovanni Rossini", videoId: "b4DHRYQPKts" },
-  { name: "Prof. Massimo Filippi", videoId: "3DmvOkGcY9s" },
-  { name: "Dr. Marco Bianchi", videoId: "pXG-xtz1rOQ" },
-  { name: "Dott.ssa Elena Rossi", videoId: "2F6UM4lBwnc" },
-  { name: "Dr. Alessandro Conti", videoId: "Btb1UiWtFPA" },
+  { name: "Dr. Gionata Fiorino", videoId: "kdHIkzkhTxk" },
+  { name: "Dr.ssa Daniela Agrimi", videoId: "kk6boeGyOvM" },
+  { name: "Dr.ssa Chiara Boschetto", videoId: "vKgg-Va0ujE" },
+  { name: "Dr. Piero Picozzi", videoId: "pUxVRwPii_s" },
 ];
 
 const containerVariants = {
