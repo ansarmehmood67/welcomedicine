@@ -33,9 +33,6 @@ const HeroSection = () => (
           >
             Prova gratis <ArrowRight size={16} />
           </Link>
-          <Link to="/pazienti" className="inline-flex items-center gap-2 h-12 px-7 rounded-xl border-2 border-primary text-primary font-semibold text-sm hover:bg-primary/5 transition-colors">
-            Per i pazienti
-          </Link>
         </div>
 
         <p className="text-xs text-muted-foreground/70 mb-6">
