@@ -88,29 +88,9 @@ const AppWelmedProSection = () => (
             App mobile · Gratuita
           </span>
 
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className="text-3xl sm:text-4xl lg:text-[2.75rem] font-extrabold text-foreground mb-4 leading-[1.15]"
-          >
-            <motion.span
-              initial={{ backgroundSize: "0% 100%" }}
-              whileInView={{ backgroundSize: "100% 100%" }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-              style={{
-                backgroundImage: "linear-gradient(transparent 70%, hsl(var(--primary) / 0.18) 70%)",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "left center",
-              }}
-              className="text-primary inline-block"
-            >
-              WelMed Pro
-            </motion.span>
-            : tutti i canali con i tuoi Pazienti in un'unica App
-          </motion.h2>
+          <h2 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-extrabold text-foreground mb-4 leading-[1.15]">
+            <span className="text-primary">WelMed Pro</span>: tutti i canali con i tuoi Pazienti in un'unica App
+          </h2>
           <p className="text-muted-foreground text-base lg:text-lg leading-relaxed mb-8 max-w-xl">
             App e Piattaforma dialogano e si sincronizzano in tempo reale: insieme esprimono il massimo della loro potenzialità, sempre con te su iPhone e Android.
           </p>
