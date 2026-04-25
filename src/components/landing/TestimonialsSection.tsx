@@ -49,7 +49,7 @@ const TestimonialsSection = () => {
                       <Star key={j} size={14} className="fill-primary text-primary" />
                     ))}
                   </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-1 line-clamp-3">"{quote}"</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-1">"{quote}"</p>
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full cta-gradient flex items-center justify-center text-primary-foreground text-xs font-bold">{initials}</div>
                     <div>
