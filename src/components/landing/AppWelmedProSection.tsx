@@ -66,13 +66,13 @@ const AppWelmedProSection = () => (
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="relative order-2 lg:order-1 lg:col-span-6 lg:-ml-12 xl:-ml-20"
+          className="relative order-2 lg:order-1 lg:col-span-5"
         >
           <img
             src={devicesImage}
             alt="WelMed Pro su tablet, laptop e smartphone"
             loading="lazy"
-            className="w-full h-auto drop-shadow-2xl lg:scale-125 xl:scale-[1.35] origin-center"
+            className="w-full h-auto drop-shadow-2xl"
           />
         </motion.div>
 
@@ -82,7 +82,7 @@ const AppWelmedProSection = () => (
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="order-1 lg:order-2 lg:col-span-6"
+          className="order-1 lg:order-2 lg:col-span-7"
         >
           <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-pill-bg text-pill-fg uppercase tracking-wide mb-4">
             App mobile · Gratuita
