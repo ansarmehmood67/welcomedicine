@@ -1,27 +1,47 @@
 import { motion } from "framer-motion";
-import { Bell, RefreshCw, Fingerprint, KeyRound, Apple, Smartphone } from "lucide-react";
+import {
+  MessageSquare,
+  PhoneCall,
+  Video,
+  FileText,
+  FolderHeart,
+  BellRing,
+  Apple,
+  Smartphone,
+  Star,
+} from "lucide-react";
 import devicesImage from "@/assets/app-welmed-pro-devices.png";
 
 const features = [
   {
-    icon: Bell,
-    title: "Notifiche push in tempo reale",
-    desc: "Aggiornamenti di Pazienti e Colleghi con anteprima del mittente e del messaggio.",
+    icon: MessageSquare,
+    title: "Chat con Pazienti e Colleghi",
+    desc: "Sostituisci email e WhatsApp con una chat professionale. Discuti casi clinici con i Colleghi da remoto.",
   },
   {
-    icon: RefreshCw,
-    title: "Integrata e sincronizzata",
-    desc: "App e Piattaforma dialogano tra loro: massima potenzialità se usate in maniera combinata.",
+    icon: PhoneCall,
+    title: "Chiamate senza numero visibile",
+    desc: "Telefona ai tuoi Pazienti direttamente dall'App, mantenendo privato il tuo numero personale.",
   },
   {
-    icon: Fingerprint,
-    title: "Firma biometrica",
-    desc: "Firma ricette e referti con impronta o riconoscimento facciale, senza app esterne.",
+    icon: Video,
+    title: "Videoconsulti integrati",
+    desc: "Effettua videochiamate con i Pazienti per consulti a distanza, in modo semplice e sicuro.",
   },
   {
-    icon: KeyRound,
-    title: "Codice PIN alternativo",
-    desc: "Imposta un PIN personale se preferisci o se il device non supporta il biometrico.",
+    icon: FileText,
+    title: "Referti, ricette e documenti",
+    desc: "Emetti referti e ricette, scambia documentazione clinica senza limiti di formato — incluse immagini radiologiche.",
+  },
+  {
+    icon: FolderHeart,
+    title: "Storico Pazienti sempre con te",
+    desc: "Accedi in qualsiasi momento al fascicolo completo dei tuoi Pazienti, ovunque ti trovi.",
+  },
+  {
+    icon: BellRing,
+    title: "Notifiche push e promemoria",
+    desc: "Ricevi aggiornamenti in tempo reale e imposta promemoria per non perdere nessuna attività.",
   },
 ];
 
@@ -39,7 +59,7 @@ const AppWelmedProSection = () => (
         >
           <img
             src={devicesImage}
-            alt="App Welmed Pro su tablet, laptop e smartphone"
+            alt="WelMed Pro su tablet, laptop e smartphone"
             loading="lazy"
             className="w-full h-auto drop-shadow-2xl"
           />
@@ -53,33 +73,40 @@ const AppWelmedProSection = () => (
           transition={{ duration: 0.5 }}
           className="order-1 lg:order-2 lg:col-span-7"
         >
-          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-pill-bg text-pill-fg mb-4 uppercase tracking-wide">
-            App mobile
-          </span>
+          <div className="flex flex-wrap items-center gap-2 mb-4">
+            <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-pill-bg text-pill-fg uppercase tracking-wide">
+              App mobile · Gratuita
+            </span>
+            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-background border border-border text-foreground">
+              <Star size={12} className="text-amber-500" fill="currentColor" />
+              4,4 su App Store
+            </span>
+          </div>
+
           <h2 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-extrabold text-foreground mb-4 leading-[1.15]">
-            L'App <span className="text-primary">Welmed Pro</span> per i Professionisti Sanitari
+            <span className="text-primary">WelMed Pro</span>: tutti i canali con i tuoi Pazienti in un'unica App
           </h2>
           <p className="text-muted-foreground text-base lg:text-lg leading-relaxed mb-8 max-w-xl">
-            Disponibile per Android e iOS, ti aiuta a tenere sempre sott'occhio le attività della Piattaforma e a lavorare in mobilità.
+            Progettata da Medici per Medici. Chat, chiamate, videoconsulti, referti e fascicolo clinico sempre con te — su iPhone e Android.
           </p>
 
           {/* Compact feature list */}
-          <ul className="space-y-4 mb-8">
+          <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-4 mb-8">
             {features.map(({ icon: Icon, title, desc }, i) => (
               <motion.li
                 key={title}
                 initial={{ opacity: 0, x: -16 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.07, duration: 0.35 }}
-                className="flex items-start gap-4 group"
+                transition={{ delay: i * 0.06, duration: 0.35 }}
+                className="flex items-start gap-3 group"
               >
-                <div className="shrink-0 w-11 h-11 rounded-full border border-border bg-background flex items-center justify-center transition-colors group-hover:border-primary group-hover:bg-primary/5">
-                  <Icon size={20} className="text-foreground group-hover:text-primary transition-colors" strokeWidth={1.75} />
+                <div className="shrink-0 w-10 h-10 rounded-full border border-border bg-background flex items-center justify-center transition-colors group-hover:border-primary group-hover:bg-primary/5">
+                  <Icon size={18} className="text-foreground group-hover:text-primary transition-colors" strokeWidth={1.75} />
                 </div>
                 <div className="pt-0.5">
-                  <h3 className="font-semibold text-foreground text-[15px] leading-snug mb-0.5">{title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{desc}</p>
+                  <h3 className="font-semibold text-foreground text-[14px] leading-snug mb-0.5">{title}</h3>
+                  <p className="text-[13px] text-muted-foreground leading-relaxed">{desc}</p>
                 </div>
               </motion.li>
             ))}
@@ -88,13 +115,13 @@ const AppWelmedProSection = () => (
           {/* Store badges */}
           <div className="flex flex-wrap gap-3">
             <motion.a
-              href="https://apps.apple.com/it/app/welmed-pro/id1530821702"
+              href="https://apps.apple.com/it/app/welmed-pro/id1635162198"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.97 }}
               className="inline-flex items-center gap-3 h-12 px-4 rounded-xl bg-foreground text-background hover:opacity-90 transition-opacity"
-              aria-label="Scarica Welmed Pro su App Store"
+              aria-label="Scarica WelMed Pro su App Store"
             >
               <Apple size={22} strokeWidth={1.5} fill="currentColor" />
               <span className="flex flex-col items-start leading-tight">
@@ -109,7 +136,7 @@ const AppWelmedProSection = () => (
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.97 }}
               className="inline-flex items-center gap-3 h-12 px-4 rounded-xl cta-gradient text-primary-foreground hover:opacity-90 transition-opacity"
-              aria-label="Scarica Welmed Pro su Google Play"
+              aria-label="Scarica WelMed Pro su Google Play"
             >
               <Smartphone size={22} strokeWidth={1.5} />
               <span className="flex flex-col items-start leading-tight">
