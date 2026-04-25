@@ -1,29 +1,26 @@
+## Sezione "App Welmed Pro" — Implementazione
 
+### 1. Asset
+- Copia `user-uploads://image-9.png` → `src/assets/app-welmed-pro-devices.png` (mockup multi-device)
 
-## Piano: Sostituire l'immagine statica con un mockup chat in italiano
+### 2. Nuovo componente `src/components/landing/AppWelmedProSection.tsx`
+- Layout 2 colonne: immagine multi-device a sinistra, contenuto a destra (stack su mobile)
+- Sfondo `section-alt` per stacco visivo
+- Animazioni framer-motion coerenti con altre sezioni
 
-### Problema
-La sezione "Il problema che risolviamo" usa un'immagine statica (`section-problem.jpg`) che mostra una chat su tablet con testo non in italiano. Essendo un file JPG, non e possibile modificarne il contenuto testuale.
+**Header:**
+- Pill: "APP MOBILE"
+- Titolo: *"L'App **Welmed Pro** per i Professionisti Sanitari"*
+- Sottotitolo: *"Disponibile per Android e iOS, ti aiuta a tenere sempre sott'occhio tutte le attività della Piattaforma e a lavorare in mobilità."*
 
-### Soluzione
-Sostituire l'immagine statica con un componente HTML/CSS che simula una chat su tablet con messaggi in italiano, mantenendo lo stesso stile visivo del sito.
+**4 feature card** (icona + titolo + descrizione, stile `card-elevated`):
+- 🔔 **Notifiche push in tempo reale** — Aggiornamenti di Pazienti e Colleghi con anteprima mittente e messaggio
+- 🔄 **Integrata e sincronizzata** — App e Piattaforma dialogano tra loro per il massimo della potenzialità
+- 👆 **Firma biometrica** — Firma ed emetti ricette e referti tramite impronta digitale o riconoscimento facciale, senza app esterne
+- 🔒 **Codice PIN alternativo** — Imposta un PIN personale se preferisci o se il cellulare non supporta il biometrico
 
-### Dettagli tecnici
+**CTA**: pulsante "Scarica Welmed Pro" (link placeholder verso area download)
 
-1. **Creare un componente `ChatMockup.tsx`** in `src/components/landing/` che renderizza:
-   - Un frame a forma di tablet/dispositivo con bordi arrotondati e ombra
-   - Un header con nome paziente e avatar
-   - Bolle di chat con messaggi realistici in italiano (es. paziente chiede informazioni, medico risponde)
-   - Timestamp e indicatori di lettura
-   - Stile coerente con i colori del sito (primary, muted, card, border)
-
-2. **Aggiornare `ProblemSection.tsx`**:
-   - Rimuovere l'import dell'immagine statica `section-problem.jpg`
-   - Sostituire il tag `<img>` con il nuovo componente `<ChatMockup />`
-   - Mantenere le stesse animazioni framer-motion
-
-### Contenuto chat di esempio
-- **Paziente**: "Buongiorno Dottore, le invio i risultati degli esami del sangue. Potrebbe darmi un parere?"
-- **Medico**: "Buongiorno, ho ricevuto tutto. I valori sono nella norma, ne parliamo al prossimo videoconsulto."
-- **Paziente**: "Perfetto, grazie mille!"
-
+### 3. Modifica `src/pages/Index.tsx`
+- Import `AppWelmedProSection`
+- Inserimento tra `BenefitsSection` e `WorkflowSection`
