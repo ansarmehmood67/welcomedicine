@@ -8,7 +8,6 @@ import {
   BellRing,
   Apple,
   Smartphone,
-  Star,
 } from "lucide-react";
 import devicesImage from "@/assets/app-welmed-pro-devices.png";
 
