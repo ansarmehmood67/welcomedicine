@@ -52,12 +52,14 @@ const FinalCTASection = () => (
         </div>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Link
-            to="/abbonamento"
+          <a
+            href="https://www.welcomedicineonline.it/product/abbonamento-welcomedicine"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 h-12 px-8 rounded-xl cta-gradient text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity"
           >
             Prova gratis <ArrowRight size={16} />
-          </Link>
+          </a>
         </div>
         <p className="text-muted-foreground/60 text-xs mt-6">Nessun addebito il primo mese • Disdetta tramite customer care • I tuoi dati restano tuoi</p>
       </motion.div>

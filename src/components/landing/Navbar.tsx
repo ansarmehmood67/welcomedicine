@@ -45,9 +45,9 @@ const Navbar = () => {
                 <Download size={18} /> Scarica l'App
               </a>
             ) : (
-              <Link to="/abbonamento" className="inline-flex items-center justify-center h-9 px-5 rounded-lg cta-gradient text-primary-foreground text-sm font-semibold hover:opacity-90 transition-opacity">
+              <a href="https://www.welcomedicineonline.it/product/abbonamento-welcomedicine" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center h-9 px-5 rounded-lg cta-gradient text-primary-foreground text-sm font-semibold hover:opacity-90 transition-opacity">
                 Prova gratis
-              </Link>
+              </a>
             )}
           </div>
 
@@ -75,9 +75,9 @@ const Navbar = () => {
                     <Download size={18} /> Scarica l'App
                   </a>
                 ) : (
-                  <Link to="/abbonamento" onClick={() => setOpen(false)} className="inline-flex items-center justify-center h-10 rounded-lg cta-gradient text-primary-foreground text-sm font-semibold mt-2">
+                  <a href="https://www.welcomedicineonline.it/product/abbonamento-welcomedicine" target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)} className="inline-flex items-center justify-center h-10 rounded-lg cta-gradient text-primary-foreground text-sm font-semibold mt-2">
                     Prova gratis
-                  </Link>
+                  </a>
                 )}
               </div>
             </motion.div>
