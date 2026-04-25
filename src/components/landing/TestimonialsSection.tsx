@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Star, Play, X } from "lucide-react";
-import { Youtube } from "lucide-react";
 
 
 const videoTestimonials = [
@@ -71,7 +70,9 @@ const TestimonialsSection = () => {
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-3 h-14 px-7 rounded-xl bg-[#FF0000] text-white font-bold text-base hover:bg-[#cc0000] transition-colors shadow-lg hover:shadow-xl"
             >
-              <Youtube size={26} fill="currentColor" strokeWidth={1.5} />
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true">
+                <path d="M23.498 6.186a2.997 2.997 0 0 0-2.112-2.12C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.386.566A2.997 2.997 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a2.997 2.997 0 0 0 2.112 2.12C4.495 20.5 12 20.5 12 20.5s7.505 0 9.386-.566a2.997 2.997 0 0 0 2.112-2.12C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.546 15.568V8.432L15.818 12l-6.272 3.568z"/>
+              </svg>
               Guarda tutte le testimonianze su YouTube
               <span className="transition-transform group-hover:translate-x-1">→</span>
             </a>
