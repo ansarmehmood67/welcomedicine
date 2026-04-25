@@ -64,7 +64,7 @@ const SavingsCalculator = () => {
                   <p className="text-xs text-muted-foreground">Potenziale ricavo da consulti monetizzati</p>
                 </div>
               </motion.div>
-              <a href="#cta-finale" className="inline-flex items-center justify-center gap-2 h-12 rounded-xl cta-gradient text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity mt-2">
+              <a href="https://www.welcomedicineonline.it/product/abbonamento-welcomedicine" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 h-12 rounded-xl cta-gradient text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity mt-2">
                 Prova gratis 30 giorni <ArrowRight size={16} />
               </a>
             </div>
