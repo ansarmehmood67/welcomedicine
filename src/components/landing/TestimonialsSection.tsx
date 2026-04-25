@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Star, Play, X, Youtube } from "lucide-react";
 
+
 const videoTestimonials = [
   { quote: "Non riuscivo a distinguere le e-mail cliniche dalle comunicazioni quotidiane, e spesso non riuscivo a rispondere a tutti i pazienti.", name: "Dott. Carmelo Morana", role: "Urologia", initials: "CM", videoId: "AqXS8FVX_t0" },
   { quote: "Avere tutti i documenti e le comunicazioni in una unica cartella su Welcomedicine è un significativo risparmio di tempo rispetto a dover ricercare le informazioni tra le e-mail o le chat di WhatsApp.", name: "Dr. Claudio Cusini", role: "Endocrinologia", initials: "CC", videoId: "2F6UM4lBwnc" },
