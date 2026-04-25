@@ -80,9 +80,9 @@ const PricingSection = () => (
             <p className="text-xs text-muted-foreground mb-6">{billing}</p>
             <p className="text-xs font-medium text-primary mb-4">Prova gratuita di 30 giorni inclusa</p>
             <p className="text-[11px] text-muted-foreground/70 mb-6">Trattenuta del 3% per spese bancarie e amministrative</p>
-            <Link to="/abbonamento" className={`inline-flex items-center justify-center gap-2 w-full h-12 rounded-xl font-semibold text-sm transition-all ${highlighted ? "cta-gradient text-primary-foreground hover:opacity-90" : "border-2 border-primary text-primary hover:bg-primary/5"}`}>
+            <a href="https://www.welcomedicineonline.it/product/abbonamento-welcomedicine" target="_blank" rel="noopener noreferrer" className={`inline-flex items-center justify-center gap-2 w-full h-12 rounded-xl font-semibold text-sm transition-all ${highlighted ? "cta-gradient text-primary-foreground hover:opacity-90" : "border-2 border-primary text-primary hover:bg-primary/5"}`}>
               Prova gratis <ArrowRight size={16} />
-            </Link>
+            </a>
           </motion.div>
         ))}
       </div>
