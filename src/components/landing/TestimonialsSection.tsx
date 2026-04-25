@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Star, Play, X } from "lucide-react";
 
+
 const videoTestimonials = [
   { quote: "Non riuscivo a distinguere le e-mail cliniche dalle comunicazioni quotidiane, e spesso non riuscivo a rispondere a tutti i pazienti.", name: "Dott. Carmelo Morana", role: "Urologia", initials: "CM", videoId: "AqXS8FVX_t0" },
   { quote: "Avere tutti i documenti e le comunicazioni in una unica cartella su Welcomedicine è un significativo risparmio di tempo rispetto a dover ricercare le informazioni tra le e-mail o le chat di WhatsApp.", name: "Dr. Claudio Cusini", role: "Endocrinologia", initials: "CC", videoId: "2F6UM4lBwnc" },
@@ -63,11 +64,20 @@ const TestimonialsSection = () => {
           </div>
 
           <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-center mt-10 flex flex-col items-center gap-4">
-            <a href="https://www.welcomedicineonline.it/product/abbonamento-welcomedicine" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 h-12 px-8 rounded-xl cta-gradient text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity">
-              Prova gratis →
+            <a
+              href="https://www.youtube.com/@welmed1329/videos"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-3 h-14 px-7 rounded-xl bg-[#FF0000] text-white font-bold text-base hover:bg-[#cc0000] transition-colors shadow-lg hover:shadow-xl"
+            >
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true">
+                <path d="M23.498 6.186a2.997 2.997 0 0 0-2.112-2.12C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.386.566A2.997 2.997 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a2.997 2.997 0 0 0 2.112 2.12C4.495 20.5 12 20.5 12 20.5s7.505 0 9.386-.566a2.997 2.997 0 0 0 2.112-2.12C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.546 15.568V8.432L15.818 12l-6.272 3.568z"/>
+              </svg>
+              Guarda tutte le testimonianze su YouTube
+              <span className="transition-transform group-hover:translate-x-1">→</span>
             </a>
-            <a href="https://www.youtube.com/watch?v=pXG-xtz1rOQ&list=PLdA1IIBWLzBGMGKY6D1pVrlX9a6p5QBhm" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline">
-              Vedi tutte le testimonianze dei medici →
+            <a href="https://www.welcomedicineonline.it/product/abbonamento-welcomedicine" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline">
+              Prova gratis →
             </a>
           </motion.div>
         </div>
