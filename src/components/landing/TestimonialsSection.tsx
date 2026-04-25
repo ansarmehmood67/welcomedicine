@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Star, Play, X, Youtube } from "lucide-react";
+import { Star, Play, X } from "lucide-react";
+import { Youtube } from "lucide-react";
 
 
 const videoTestimonials = [
