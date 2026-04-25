@@ -40,7 +40,7 @@ const ProblemSection = () => (
           {/* Background image */}
           <img src={patientImage} alt="Paziente sorridente che usa Welcomedicine sul telefono" loading="lazy" className="w-full h-auto rounded-2xl shadow-xl" />
           {/* Floating chat overlay */}
-          <div className="absolute -top-10 -left-20 sm:-top-14 sm:-left-28 w-[43%] z-10 animate-float" style={{ filter: 'drop-shadow(0 12px 40px rgba(0,0,0,0.18))' }}>
+          <div className="absolute top-4 left-2 sm:-top-14 sm:-left-28 w-[38%] z-10 animate-float" style={{ filter: 'drop-shadow(0 12px 40px rgba(0,0,0,0.18))' }}>
             <img src={chatBianchiMaria} alt="Chat con paziente Bianchi Maria su Welcomedicine" loading="lazy" className="w-full h-auto rounded-2xl" />
           </div>
         </motion.div>
