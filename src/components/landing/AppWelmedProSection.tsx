@@ -8,7 +8,6 @@ import {
   BellRing,
   Apple,
   Smartphone,
-  RefreshCw,
   Fingerprint,
   KeyRound,
 } from "lucide-react";
@@ -44,11 +43,6 @@ const features = [
     icon: BellRing,
     title: "Notifiche push e promemoria",
     desc: "Ricevi aggiornamenti in tempo reale e imposta promemoria per non perdere nessuna attività.",
-  },
-  {
-    icon: RefreshCw,
-    title: "Integrata con la Piattaforma",
-    desc: "App e Piattaforma dialogano e si sincronizzano: massima potenzialità quando le usi insieme.",
   },
   {
     icon: Fingerprint,
