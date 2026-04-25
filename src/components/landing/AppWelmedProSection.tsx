@@ -73,15 +73,9 @@ const AppWelmedProSection = () => (
           transition={{ duration: 0.5 }}
           className="order-1 lg:order-2 lg:col-span-7"
         >
-          <div className="flex flex-wrap items-center gap-2 mb-4">
-            <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-pill-bg text-pill-fg uppercase tracking-wide">
-              App mobile · Gratuita
-            </span>
-            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-background border border-border text-foreground">
-              <Star size={12} className="text-amber-500" fill="currentColor" />
-              4,4 su App Store
-            </span>
-          </div>
+          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-pill-bg text-pill-fg uppercase tracking-wide mb-4">
+            App mobile · Gratuita
+          </span>
 
           <h2 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-extrabold text-foreground mb-4 leading-[1.15]">
             <span className="text-primary">WelMed Pro</span>: tutti i canali con i tuoi Pazienti in un'unica App
