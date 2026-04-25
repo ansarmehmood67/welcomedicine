@@ -135,7 +135,7 @@ const AppWelmedProSection = () => (
               </span>
             </motion.a>
             <motion.a
-              href="https://play.google.com/store/apps/details?id=it.welmed.welmedpro"
+              href="https://play.google.com/store/apps/details?id=it.welmed.welmedpro&_gl=1*1rfycy*_up*MQ..&gclid=CjwKCAjwzLHPBhBTEiwABaLsStiwkHM2rl4M4CYoYQimNjo9xt4yPiol1l_AtygEZMEwj2UqsVRSghoCvosQAvD_BwE&utm_source=emea_Med"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.04 }}
