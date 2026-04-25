@@ -17,6 +17,7 @@ import PricingDetailsSection from "@/components/landing/PricingDetailsSection";
 import FAQSection from "@/components/landing/FAQSection";
 import FinalCTASection from "@/components/landing/FinalCTASection";
 import Footer from "@/components/landing/Footer";
+import ScrollToTop from "@/components/landing/ScrollToTop";
 
 const Index = () => (
   <>
@@ -39,6 +40,7 @@ const Index = () => (
     <FAQSection />
     <FinalCTASection />
     <Footer />
+    <ScrollToTop />
   </>
 );
 

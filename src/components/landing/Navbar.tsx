@@ -13,7 +13,7 @@ const navLinks = [
 ];
 
 const ctaStyle: React.CSSProperties = {
-  backgroundColor: "#00AEEF",
+  backgroundColor: "#4BA3F2",
   color: "#ffffff",
   fontWeight: 700,
   borderRadius: "3px",
@@ -51,7 +51,10 @@ const Navbar = () => {
                 <a
                   key={l.href}
                   href={l.href}
-                  className="text-xs font-semibold uppercase tracking-wide underline underline-offset-2 text-primary hover:text-[#0090C5] transition-colors"
+                  className="text-xs font-semibold uppercase tracking-wide underline underline-offset-2 transition-colors"
+                  style={{ color: "#00AEEF" }}
+                  onMouseEnter={e => (e.currentTarget.style.color = "#0090C5")}
+                  onMouseLeave={e => (e.currentTarget.style.color = "#00AEEF")}
                 >
                   {l.label}
                 </a>
@@ -95,7 +98,10 @@ const Navbar = () => {
                       key={l.href}
                       href={l.href}
                       onClick={() => setOpen(false)}
-                      className="text-xs font-semibold uppercase tracking-wide underline underline-offset-2 py-2 text-primary hover:text-[#0090C5] transition-colors"
+                      className="text-xs font-semibold uppercase tracking-wide underline underline-offset-2 py-2 transition-colors"
+                      style={{ color: "#00AEEF" }}
+                      onMouseEnter={e => (e.currentTarget.style.color = "#0090C5")}
+                      onMouseLeave={e => (e.currentTarget.style.color = "#00AEEF")}
                     >
                       {l.label}
                     </a>
