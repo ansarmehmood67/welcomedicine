@@ -46,11 +46,6 @@ const features = [
     desc: "Ricevi aggiornamenti in tempo reale e imposta promemoria per non perdere nessuna attività.",
   },
   {
-    icon: RefreshCw,
-    title: "Integrata con la Piattaforma",
-    desc: "App e Piattaforma dialogano e si sincronizzano: massima potenzialità quando le usi insieme.",
-  },
-  {
     icon: Fingerprint,
     title: "Firma biometrica integrata",
     desc: "Firma ed emetti ricette e referti con impronta o riconoscimento facciale, senza app esterne.",
