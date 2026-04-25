@@ -92,7 +92,7 @@ const AppWelmedProSection = () => (
             <span className="text-primary">WelMed Pro</span>: tutti i canali con i tuoi Pazienti in un'unica App
           </h2>
           <p className="text-muted-foreground text-base lg:text-lg leading-relaxed mb-8 max-w-xl">
-            Progettata da Medici per Medici. Chat, chiamate, videoconsulti, referti e fascicolo clinico sempre con te — su iPhone e Android.
+            App e Piattaforma dialogano e si sincronizzano in tempo reale: insieme esprimono il massimo della loro potenzialità, sempre con te su iPhone e Android.
           </p>
 
           {/* Compact feature list */}
