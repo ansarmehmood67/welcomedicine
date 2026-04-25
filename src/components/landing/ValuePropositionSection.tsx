@@ -26,7 +26,7 @@ const ValuePropositionSection = () => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.1 }}
-        className="text-primary-foreground/70 text-base sm:text-lg mb-10 max-w-2xl mx-auto"
+        className="text-primary-foreground/80 text-base sm:text-lg mb-10 max-w-2xl mx-auto"
       >
         Proteggi la tua professione, risparmia ore ogni settimana e trasforma ogni interazione con il paziente in valore.
       </motion.p>

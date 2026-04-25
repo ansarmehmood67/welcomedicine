@@ -12,10 +12,10 @@ const WorkflowSection = () => (
   <section id="come-funziona" className="py-20 md:py-32 dark-section scroll-mt-20 overflow-hidden">
     <div className="container max-w-5xl mx-auto px-4">
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
-        <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-primary-foreground/10 text-primary-foreground/80 mb-4 uppercase tracking-wide">Workflow</span>
+        <span className="inline-block px-3 py-1 rounded-full text-sm font-semibold bg-primary-foreground/15 text-primary-foreground mb-4 uppercase tracking-wide">Workflow</span>
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary-foreground mb-4 leading-tight">
           Come funziona{" "}
-          <span className="text-shimmer inline-block">in pratica</span>
+          <span className="text-primary">in pratica</span>
         </h2>
         <p className="text-lg max-w-2xl mx-auto text-primary-foreground font-semibold">Il flusso quotidiano: dalla visita al Follow up.<br />Tutto in un unica piattaforma.</p>
       </motion.div>
@@ -30,7 +30,7 @@ const WorkflowSection = () => (
               </div>
               <span className="text-xs font-bold text-primary mb-1">Step {i + 1}</span>
               <h3 className="font-extrabold text-primary-foreground mb-2 text-lg">{title}</h3>
-              <p className="text-sm text-primary-foreground/70 leading-relaxed">{desc}</p>
+              <p className="text-base text-primary-foreground/80 leading-relaxed">{desc}</p>
             </motion.div>
           ))}
         </div>

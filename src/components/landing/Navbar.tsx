@@ -1,16 +1,33 @@
 import { useState } from "react";
-import { Menu, X, Download } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
+
 const logo = "https://wp-uploads.welmed.it/uploads/sites/9/2024/05/Logo-Welcomedicine-png-trasparente.png";
 
 const navLinks = [
-  { label: "Funzioni", href: "#funzioni" },
-  { label: "Vantaggi", href: "#vantaggi" },
-  { label: "Come funziona", href: "#come-funziona" },
-  { label: "Testimonianze", href: "#testimonianze" },
-  { label: "Piani e Prezzi", href: "#prezzi" },
+  { label: "PATIENTS", href: "https://www.welcomedicineonline.it/" },
+  { label: "PLANS AND PRICING", href: "https://www.welcomedicineonline.it/piani-e-prezzi" },
+  { label: "SUPPORT", href: "https://www.welcomedicineonline.it/supporto" },
+  { label: "LOG IN", href: "https://app.welmed.it/welcomedicine/login" },
 ];
+
+const ctaStyle: React.CSSProperties = {
+  backgroundColor: "#00AEEF",
+  color: "#ffffff",
+  fontWeight: 700,
+  borderRadius: "3px",
+  padding: "9px 20px",
+  fontSize: "12px",
+  textAlign: "center",
+  lineHeight: "1.3",
+  display: "inline-flex",
+  alignItems: "center",
+  justifyContent: "center",
+  whiteSpace: "normal",
+  maxWidth: "120px",
+  letterSpacing: "0.02em",
+};
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -20,35 +37,45 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-lg border-b border-border bg-secondary-foreground text-primary-foreground">
-        <div className="container max-w-6xl mx-auto flex items-center justify-between h-16 px-4">
+      <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-white">
+        <div className="container max-w-6xl mx-auto flex items-center justify-between h-24 py-4 px-4">
+          {/* Logo */}
           <Link to="/" className="flex items-center">
-            <img src={logo} alt="Welcomedicine" className="h-8" />
+            <img src={logo} alt="Welcomedicine" className="h-[72px]" />
           </Link>
 
-          {/* Desktop */}
+          {/* Desktop nav */}
           <div className="hidden md:flex items-center gap-6">
             {isHome &&
               navLinks.map((l) => (
-                <a key={l.href} href={l.href} className="text-sm font-medium transition-colors text-primary-foreground">
+                <a
+                  key={l.href}
+                  href={l.href}
+                  className="text-xs font-semibold uppercase tracking-wide underline underline-offset-2 text-primary hover:text-[#0090C5] transition-colors"
+                >
                   {l.label}
                 </a>
               ))}
-            <Link
-              to="/pazienti"
-              className="inline-flex items-center justify-center h-9 px-5 rounded-lg border-2 border-primary text-primary text-sm font-semibold hover:bg-primary/5 transition-colors"
+          </div>
+
+          {/* CTA buttons */}
+          <div className="hidden md:flex items-center gap-2">
+            <a
+              href="https://www.welcomedicineonline.it/product/abbonamento-welcomedicine"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={ctaStyle}
             >
-              Per i pazienti
-            </Link>
-            {isPazienti ? (
-              <a href="https://app.welmed.it/welcomedicine/download-patient-app" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 justify-center h-12 px-7 rounded-xl cta-gradient text-primary-foreground text-sm font-semibold hover:opacity-90 transition-opacity">
-                <Download size={18} /> Scarica l'App
-              </a>
-            ) : (
-              <a href="https://www.welcomedicineonline.it/product/abbonamento-welcomedicine" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center h-9 px-5 rounded-lg cta-gradient text-primary-foreground text-sm font-semibold hover:opacity-90 transition-opacity">
-                Prova gratis
-              </a>
-            )}
+              FREE TRIAL 30 DAYS
+            </a>
+            <a
+              href="https://calendly.com/welmeditalia/formazione-telemedicina/?month=2025-10"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={ctaStyle}
+            >
+              BOOK A DEMO
+            </a>
           </div>
 
           {/* Mobile toggle */}
@@ -57,38 +84,47 @@ const Navbar = () => {
           </button>
         </div>
 
+        {/* Mobile menu */}
         <AnimatePresence>
           {open && (
             <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="md:hidden overflow-hidden bg-background border-b border-border">
               <div className="flex flex-col gap-3 p-4">
                 {isHome &&
                   navLinks.map((l) => (
-                    <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="text-sm font-medium text-muted-foreground hover:text-foreground py-2">
+                    <a
+                      key={l.href}
+                      href={l.href}
+                      onClick={() => setOpen(false)}
+                      className="text-xs font-semibold uppercase tracking-wide underline underline-offset-2 py-2 text-primary hover:text-[#0090C5] transition-colors"
+                    >
                       {l.label}
                     </a>
                   ))}
-                <Link to="/pazienti" onClick={() => setOpen(false)} className="text-sm font-semibold text-primary py-2">
-                  Per i pazienti
-                </Link>
-                {isPazienti ? (
-                  <a href="https://app.welmed.it/welcomedicine/download-patient-app" target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)} className="inline-flex items-center gap-2 justify-center h-12 px-7 rounded-xl cta-gradient text-primary-foreground text-sm font-semibold mt-2 hover:opacity-90 transition-opacity">
-                    <Download size={18} /> Scarica l'App
-                  </a>
-                ) : (
-                  <a href="https://www.welcomedicineonline.it/product/abbonamento-welcomedicine" target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)} className="inline-flex items-center justify-center h-10 rounded-lg cta-gradient text-primary-foreground text-sm font-semibold mt-2">
-                    Prova gratis
-                  </a>
-                )}
+                <a
+                  href="https://www.welcomedicineonline.it/product/abbonamento-welcomedicine"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setOpen(false)}
+                  style={{ ...ctaStyle, maxWidth: "100%" }}
+                  className="mt-2"
+                >
+                  FREE TRIAL 30 DAYS
+                </a>
+                <a
+                  href="https://calendly.com/welmeditalia/formazione-telemedicina/?month=2025-10"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setOpen(false)}
+                  style={{ ...ctaStyle, maxWidth: "100%" }}
+                >
+                  BOOK A DEMO
+                </a>
               </div>
             </motion.div>
           )}
         </AnimatePresence>
       </nav>
 
-      {/* Urgency banner */}
-      <div className="fixed top-16 left-0 right-0 z-40 bg-primary text-primary-foreground text-center py-2 text-xs font-semibold tracking-wide">
-        🎯 Onboarding assistito gratuito
-      </div>
     </>
   );
 };

@@ -23,7 +23,7 @@ const TestimonialsSection = () => {
       <section id="testimonianze" className="py-20 md:py-32 bg-background scroll-mt-20 overflow-hidden">
         <div className="container max-w-6xl mx-auto px-4">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
-            <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-pill-bg text-pill-fg mb-4 uppercase tracking-wide">I medici dicono di noi</span>
+            <span className="inline-block px-3 py-1 rounded-full text-sm font-semibold bg-pill-bg text-pill-fg mb-4 uppercase tracking-wide">I medici dicono di noi</span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground mb-4 leading-tight">
               Cosa dicono i{" "}
               <span className="text-primary">professionisti</span>
@@ -50,7 +50,7 @@ const TestimonialsSection = () => {
                       <Star key={j} size={14} className="fill-primary text-primary" />
                     ))}
                   </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-1">"{quote}"</p>
+                  <p className="text-base text-muted-foreground leading-relaxed mb-4 flex-1">"{quote}"</p>
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full cta-gradient flex items-center justify-center text-primary-foreground text-xs font-bold">{initials}</div>
                     <div>

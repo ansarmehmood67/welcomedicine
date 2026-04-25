@@ -53,12 +53,12 @@ const PricingSection = () => (
   <section id="prezzi" className="py-20 md:py-32 dark-section scroll-mt-20 overflow-hidden">
     <div className="container max-w-6xl mx-auto px-4">
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
-        <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-primary-foreground/10 text-primary-foreground/80 mb-4 uppercase tracking-wide">Piani e Prezzi</span>
+        <span className="inline-block px-3 py-1 rounded-full text-sm font-semibold bg-primary-foreground/15 text-primary-foreground mb-4 uppercase tracking-wide">Piani e Prezzi</span>
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary-foreground mb-4 leading-tight">
           Scegli il piano{" "}
           <span className="text-primary">più adatto a te</span>
         </h2>
-        <p className="text-primary-foreground/70 text-lg max-w-xl mx-auto">
+        <p className="text-primary-foreground/80 text-lg max-w-xl mx-auto">
           Prova gratuita di 30 giorni. Carta richiesta, nessun addebito il primo mese. Dopo la prova, vincolo di 6 mesi.
         </p>
       </motion.div>

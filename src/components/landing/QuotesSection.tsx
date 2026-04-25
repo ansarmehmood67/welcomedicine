@@ -46,7 +46,7 @@ const QuotesSection = () => {
     <section className="py-20 md:py-32 bg-background overflow-hidden">
       <div className="container max-w-6xl mx-auto px-4">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
-          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-pill-bg text-pill-fg mb-4 uppercase tracking-wide">La voce dei medici</span>
+          <span className="inline-block px-3 py-1 rounded-full text-sm font-semibold bg-pill-bg text-pill-fg mb-4 uppercase tracking-wide">La voce dei medici</span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground mb-4 leading-tight">
             Risultati <span className="text-primary">concreti</span>
           </h2>
@@ -74,7 +74,7 @@ const QuotesSection = () => {
                   className="rounded-2xl border border-border p-5 card-elevated flex flex-col bg-secondary-foreground text-primary-foreground h-full"
                 >
                   <Quote size={20} className="mb-3 text-primary-foreground" fill="currentColor" />
-                  <p className="text-sm leading-relaxed mb-4 flex-1 text-primary-foreground">"{quote}"</p>
+                  <p className="text-base leading-relaxed mb-4 flex-1 text-primary-foreground">"{quote}"</p>
                   <div className="flex items-center gap-3">
                     <div className="w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold text-destructive-foreground bg-primary">{initials}</div>
                     <div>

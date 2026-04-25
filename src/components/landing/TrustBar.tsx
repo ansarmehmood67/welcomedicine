@@ -1,11 +1,12 @@
 import { motion, useMotionValue, useTransform, animate, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 import logoPuntiRaf from "@/assets/logo-punti-raf.svg";
+import logoSanDonato from "@/assets/logos/partners/san-donato-group.png";
 
 // URL dei loghi forniti — ordine richiesto
 const allPartners = [
   { name: "IRCCS Ospedale San Raffaele", logo: "https://wp-uploads.welmed.it/uploads/sites/5/2024/01/Osr.png", large: true },
-  { name: "Gruppo San Donato (GSD)", logo: "https://media.licdn.com/dms/image/v2/C560BAQFLj9aZzXzm3A/company-logo_200_200/company-logo_200_200/0/1630642272943/grupposandonato_logo?e=2147483647&v=beta&t=l_9IUk4jgJqTxCtVfHytprNmSQZCSWEf5jRKW2PkRrA", large: true },
+  { name: "Gruppo San Donato (GSD)", logo: logoSanDonato, large: true },
   { name: "GVM Care & Research", logo: "https://www.gvmnet.it/App_Themes/GVMNet/images/gruppovillamaria_logo.png", large: false },
   { name: "Campus Bio-Medico", logo: "https://wp-uploads.welmed.it/uploads/sites/4/2024/09/Logo-Big.svg", large: true },
   { name: "CDI Centro Diagnostico", logo: "https://wp-uploads.welmed.it/uploads/sites/10/2024/05/CDI_logo.svg", large: true },
@@ -65,7 +66,7 @@ const TrustBar = () => (
           viewport={{ once: true }}
           className="text-center mb-6"
         >
-          <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-3">
+          <p className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-3">
             Ecosistema Welmed
           </p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground leading-tight">
@@ -78,7 +79,7 @@ const TrustBar = () => (
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="text-center text-sm text-muted-foreground mb-14 max-w-lg mx-auto font-medium"
+          className="text-center text-base text-muted-foreground mb-14 max-w-lg mx-auto font-medium"
         >
           Pensato dai Medici. Per i Medici. Welcomedicine porta la stessa tecnologia ospedaliera collaudata direttamente al professionista.
         </motion.p>
@@ -130,14 +131,14 @@ const TrustBar = () => (
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">
+          <p className="text-sm font-semibold uppercase tracking-widest text-primary mb-3">
             Ecosistema Welmed
           </p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight">
             I numeri del nostro{" "}
             <span className="text-primary">ecosistema</span>
           </h2>
-          <p className="text-base sm:text-lg text-white/60 mt-4 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-white/75 mt-4 max-w-2xl mx-auto">
             Un network in crescita costante di strutture, professionisti e pazienti che ogni giorno scelgono Welmed per la gestione della salute.
           </p>
         </motion.div>

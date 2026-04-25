@@ -42,7 +42,7 @@ const CustomerCareSection = () => (
           transition={{ duration: 0.6, delay: 0.15 }}
           className="space-y-6"
         >
-          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-pill-bg text-pill-fg uppercase tracking-wide">
+          <span className="inline-block px-3 py-1 rounded-full text-sm font-semibold bg-pill-bg text-pill-fg uppercase tracking-wide">
             customer care dedicato
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground leading-tight">

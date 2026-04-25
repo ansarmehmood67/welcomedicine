@@ -27,13 +27,13 @@ const TreSempliciPassiSection = () => (
         viewport={{ once: true }}
         className="text-center mb-14"
       >
-        <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold bg-primary-foreground/10 text-primary-foreground/80 mb-5 uppercase tracking-wide">
+        <span className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold bg-primary-foreground/15 text-primary-foreground mb-5 uppercase tracking-wide">
           Come funziona
         </span>
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary-foreground mb-4 leading-tight">
-          Inizia in <span className="text-shimmer">tre semplici passi</span>
+          Inizia in <span className="text-primary">tre semplici passi</span>
         </h2>
-        <p className="text-primary-foreground/70 text-lg max-w-2xl mx-auto">
+        <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto">
           Dalla registrazione alla comunicazione con i pazienti.<br />
           Tutto è pensato per essere personalizzabile e intuitivo.
         </p>
@@ -53,7 +53,7 @@ const TreSempliciPassiSection = () => (
               <span className="text-primary-foreground font-extrabold text-xl">{s.n}</span>
             </div>
             <h3 className="font-extrabold text-primary-foreground text-xl mb-3">{s.title}</h3>
-            <p className="text-primary-foreground/70 leading-relaxed">{s.desc}</p>
+            <p className="text-base text-primary-foreground/80 leading-relaxed">{s.desc}</p>
           </motion.div>
         ))}
       </div>

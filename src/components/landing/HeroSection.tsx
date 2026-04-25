@@ -15,7 +15,7 @@ const HeroSection = () => (
     <div className="container max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
       {/* Left */}
       <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-        <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-pill-bg text-pill-fg mb-5 tracking-wide uppercase">
+        <span className="inline-block px-3 py-1 rounded-full text-[11px] font-semibold bg-pill-bg text-pill-fg mb-5 tracking-wide uppercase whitespace-nowrap">
           A Welmed brand — Tecnologia ospedaliera per il professionista
         </span>
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.1] text-foreground mb-6">

@@ -66,13 +66,13 @@ const AppWelmedProSection = () => (
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="relative order-2 lg:order-1 lg:col-span-5"
+          className="relative order-2 lg:order-1 lg:col-span-5 lg:-ml-10"
         >
           <img
             src={devicesImage}
             alt="WelMed Pro su tablet, laptop e smartphone"
             loading="lazy"
-            className="w-full h-auto drop-shadow-2xl"
+            className="w-full h-auto drop-shadow-2xl scale-110 origin-left"
           />
         </motion.div>
 
@@ -84,7 +84,7 @@ const AppWelmedProSection = () => (
           transition={{ duration: 0.5 }}
           className="order-1 lg:order-2 lg:col-span-7"
         >
-          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-pill-bg text-pill-fg uppercase tracking-wide mb-4">
+          <span className="inline-block px-3 py-1 rounded-full text-sm font-semibold bg-pill-bg text-pill-fg uppercase tracking-wide mb-4">
             App mobile · Gratuita
           </span>
 
@@ -110,8 +110,8 @@ const AppWelmedProSection = () => (
                   <Icon size={18} className="text-foreground group-hover:text-primary transition-colors" strokeWidth={1.75} />
                 </div>
                 <div className="pt-0.5">
-                  <h3 className="font-semibold text-foreground text-[14px] leading-snug mb-0.5">{title}</h3>
-                  <p className="text-[13px] text-muted-foreground leading-relaxed">{desc}</p>
+                  <h3 className="font-semibold text-foreground text-[15px] leading-snug mb-0.5">{title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{desc}</p>
                 </div>
               </motion.li>
             ))}

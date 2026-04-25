@@ -34,8 +34,8 @@ const FeatureCard = ({ icon: Icon, title, desc, color, bg, i }: { icon: any; tit
     <div className={`w-14 h-14 rounded-xl ${bg} flex items-center justify-center mb-4`}>
       <Icon size={28} className={color} fill="currentColor" fillOpacity={0.2} strokeWidth={2} />
     </div>
-    <h3 className="font-bold text-foreground mb-2">{title}</h3>
-    <p className="text-sm text-muted-foreground leading-relaxed">{desc}</p>
+    <h3 className="font-bold text-foreground text-lg mb-2">{title}</h3>
+    <p className="text-base text-muted-foreground leading-relaxed">{desc}</p>
   </motion.div>
 );
 
@@ -43,7 +43,7 @@ const FeaturesSection = () => (
   <section id="funzioni" className="py-20 md:py-32 section-alt scroll-mt-20 overflow-hidden">
     <div className="container max-w-6xl mx-auto px-4">
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
-        <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-pill-bg text-pill-fg mb-4 uppercase tracking-wide">Le Funzionalità</span>
+        <span className="inline-block px-3 py-1 rounded-full text-sm font-semibold bg-pill-bg text-pill-fg mb-4 uppercase tracking-wide">Le Funzionalità</span>
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground mb-4 leading-tight">
           Siamo un <span className="text-primary">poliambulatorio autorizzato</span>
         </h2>
