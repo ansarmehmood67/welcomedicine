@@ -63,7 +63,7 @@ const TestimonialsSection = () => {
             ))}
           </div>
 
-          <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-center mt-10 flex flex-col items-center gap-4">
+          <motion.div initial={{ opacity: 0, y: 30, scale: 0.9 }} whileInView={{ opacity: 1, y: 0, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.6, ease: "easeOut" }} className="text-center mt-10 flex flex-col items-center gap-4">
             <a
               href="https://www.youtube.com/@welmed1329/videos"
               target="_blank"
