@@ -8,7 +8,6 @@ import {
   BellRing,
   Apple,
   Smartphone,
-  RefreshCw,
   Fingerprint,
   KeyRound,
 } from "lucide-react";
