@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Bell, RefreshCw, Fingerprint, KeyRound, Download } from "lucide-react";
+import { Bell, RefreshCw, Fingerprint, KeyRound, Apple, Smartphone } from "lucide-react";
 import devicesImage from "@/assets/app-welmed-pro-devices.png";
 
 const features = [
@@ -90,14 +90,38 @@ const AppWelmedProSection = () => (
             ))}
           </div>
 
-          <motion.a
-            href="#cta-finale"
-            whileHover={{ scale: 1.04 }}
-            whileTap={{ scale: 0.97 }}
-            className="inline-flex items-center gap-2 h-12 px-7 rounded-xl cta-gradient text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity"
-          >
-            <Download size={18} /> Scarica Welmed Pro
-          </motion.a>
+          <div className="flex flex-wrap gap-3">
+            <motion.a
+              href="https://apps.apple.com/it/app/welmed-pro/id1530821702"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.04 }}
+              whileTap={{ scale: 0.97 }}
+              className="inline-flex items-center gap-3 h-14 px-5 rounded-xl bg-foreground text-background hover:opacity-90 transition-opacity"
+              aria-label="Scarica Welmed Pro su App Store"
+            >
+              <Apple size={26} strokeWidth={1.5} fill="currentColor" />
+              <span className="flex flex-col items-start leading-tight">
+                <span className="text-[10px] uppercase tracking-wide opacity-80">Scarica su</span>
+                <span className="text-base font-bold">App Store</span>
+              </span>
+            </motion.a>
+            <motion.a
+              href="https://play.google.com/store/apps/details?id=it.welmed.welmedpro"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.04 }}
+              whileTap={{ scale: 0.97 }}
+              className="inline-flex items-center gap-3 h-14 px-5 rounded-xl cta-gradient text-primary-foreground hover:opacity-90 transition-opacity"
+              aria-label="Scarica Welmed Pro su Google Play"
+            >
+              <Smartphone size={26} strokeWidth={1.5} />
+              <span className="flex flex-col items-start leading-tight">
+                <span className="text-[10px] uppercase tracking-wide opacity-90">Disponibile su</span>
+                <span className="text-base font-bold">Google Play</span>
+              </span>
+            </motion.a>
+          </div>
         </motion.div>
       </div>
     </div>
