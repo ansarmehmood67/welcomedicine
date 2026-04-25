@@ -27,12 +27,14 @@ const HeroSection = () => (
         </p>
 
         <div className="flex flex-wrap gap-3 mb-6">
-          <Link
-            to="/abbonamento"
+          <a
+            href="https://www.welcomedicineonline.it/product/abbonamento-welcomedicine"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 h-12 px-7 rounded-xl cta-gradient text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity"
           >
             Prova gratis <ArrowRight size={16} />
-          </Link>
+          </a>
         </div>
 
         <p className="text-xs text-muted-foreground/70 mb-6">
