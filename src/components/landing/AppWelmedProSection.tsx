@@ -84,16 +84,18 @@ const AppWelmedProSection = () => (
           transition={{ duration: 0.5 }}
           className="order-1 lg:order-2 lg:col-span-7"
         >
-          <span className="inline-block px-3 py-1 rounded-full text-sm font-semibold bg-pill-bg text-pill-fg uppercase tracking-wide mb-4">
-            App mobile · Gratuita
-          </span>
+          <div className="text-center lg:text-left">
+            <span className="inline-block px-3 py-1 rounded-full text-sm font-semibold bg-pill-bg text-pill-fg uppercase tracking-wide mb-4">
+              App mobile · Gratuita
+            </span>
 
-          <h2 className="text-4xl sm:text-5xl lg:text-[2.75rem] font-extrabold text-foreground mb-4 leading-[1.15]">
-            <span className="text-primary">WelMed Pro</span>: tutti i canali con i tuoi Pazienti in un'unica App
-          </h2>
-          <p className="text-muted-foreground text-base lg:text-lg leading-relaxed mb-8 max-w-xl">
-            App e Piattaforma dialogano e si sincronizzano in tempo reale: insieme esprimono il massimo della loro potenzialità, sempre con te su iPhone e Android.
-          </p>
+            <h2 className="text-4xl sm:text-5xl lg:text-[2.75rem] font-extrabold text-foreground mb-4 leading-[1.15]">
+              <span className="text-primary">WelMed Pro</span>: tutti i canali con i tuoi Pazienti in un'unica App
+            </h2>
+            <p className="text-muted-foreground text-base lg:text-lg leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0">
+              App e Piattaforma dialogano e si sincronizzano in tempo reale: insieme esprimono il massimo della loro potenzialità, sempre con te su iPhone e Android.
+            </p>
+          </div>
 
           {/* Compact feature list */}
           <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-4 mb-8">
@@ -118,7 +120,7 @@ const AppWelmedProSection = () => (
           </ul>
 
           {/* Store badges */}
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
             <motion.a
               href="https://apps.apple.com/it/app/welmed-pro/id1635162198"
               target="_blank"

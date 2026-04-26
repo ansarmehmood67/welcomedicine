@@ -40,7 +40,7 @@ const CustomerCareSection = () => (
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.15 }}
-          className="space-y-6"
+          className="space-y-6 text-center lg:text-left"
         >
           <span className="inline-block px-3 py-1 rounded-full text-sm font-semibold bg-pill-bg text-pill-fg uppercase tracking-wide">
             customer care dedicato
@@ -49,14 +49,14 @@ const CustomerCareSection = () => (
             Un team dedicato,{" "}
             <span className="text-primary">al tuo fianco</span>
           </h2>
-          <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-xl">
+          <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0">
             Un numero dedicato per ogni esigenza operativa. Risposte immediate
             per non interrompere il tuo flusso di lavoro e garantire la massima
             efficacia nella gestione dei pazienti. Il supporto si estende anche
             ai tuoi pazienti, per un'esperienza senza attriti.
           </p>
 
-          <div className="flex flex-wrap gap-3 pt-2">
+          <div className="flex flex-wrap gap-3 pt-2 justify-center lg:justify-start">
             {pills.map(({ label, icon: Icon }) => (
               <span
                 key={label}

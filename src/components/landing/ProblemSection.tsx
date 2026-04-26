@@ -27,12 +27,12 @@ const ProblemSection = () => (
   <section className="py-20 md:py-32 section-alt overflow-hidden">
     <div className="container max-w-6xl mx-auto px-4">
       <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-        <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
+        <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="text-center lg:text-left">
           <h2 className="text-4xl sm:text-5xl lg:text-5xl font-extrabold text-foreground mb-5 leading-tight">
             Il problema che{" "}
             <span className="text-primary">risolviamo</span>
           </h2>
-          <p className="text-muted-foreground text-lg leading-relaxed max-w-lg">
+          <p className="text-muted-foreground text-lg leading-relaxed max-w-lg mx-auto lg:mx-0">
             Ogni giorno perdi ore preziose in comunicazioni frammentate, non protette e non retribuite. Mai più messaggi dei pazienti sui tuoi canali personali.
           </p>
         </motion.div>
