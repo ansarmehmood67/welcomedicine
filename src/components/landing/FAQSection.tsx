@@ -19,7 +19,7 @@ const FAQSection = () => (
     <div className="container max-w-3xl mx-auto px-4">
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
         <span className="inline-block px-3 py-1 rounded-full text-sm font-semibold bg-pill-bg text-pill-fg mb-4 uppercase tracking-wide">FAQ</span>
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground mb-4 leading-tight">
+        <h2 className="text-4xl sm:text-5xl lg:text-5xl font-extrabold text-foreground mb-4 leading-tight">
           Domande{" "}
           <span className="text-primary">frequenti</span>
         </h2>

@@ -45,7 +45,7 @@ const CustomerCareSection = () => (
           <span className="inline-block px-3 py-1 rounded-full text-sm font-semibold bg-pill-bg text-pill-fg uppercase tracking-wide">
             customer care dedicato
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground leading-tight">
+          <h2 className="text-4xl sm:text-5xl lg:text-5xl font-extrabold text-foreground leading-tight">
             Un team dedicato,{" "}
             <span className="text-primary">al tuo fianco</span>
           </h2>

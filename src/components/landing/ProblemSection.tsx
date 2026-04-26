@@ -28,7 +28,7 @@ const ProblemSection = () => (
     <div className="container max-w-6xl mx-auto px-4">
       <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
         <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground mb-5 leading-tight">
+          <h2 className="text-4xl sm:text-5xl lg:text-5xl font-extrabold text-foreground mb-5 leading-tight">
             Il problema che{" "}
             <span className="text-primary">risolviamo</span>
           </h2>
