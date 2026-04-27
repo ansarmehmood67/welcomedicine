@@ -6,10 +6,10 @@ import { Link, useLocation } from "react-router-dom";
 const logo = "https://wp-uploads.welmed.it/uploads/sites/9/2024/05/Logo-Welcomedicine-png-trasparente.png";
 
 const navLinks = [
-  { label: "PATIENTS", href: "https://www.welcomedicineonline.it/" },
-  { label: "PLANS AND PRICING", href: "https://www.welcomedicineonline.it/piani-e-prezzi" },
-  { label: "SUPPORT", href: "https://www.welcomedicineonline.it/supporto" },
-  { label: "LOG IN", href: "https://app.welmed.it/welcomedicine/login" },
+  { label: "PAZIENTI", href: "https://www.welcomedicineonline.it/" },
+  { label: "PIANI E PREZZI", href: "https://www.welcomedicineonline.it/piani-e-prezzi" },
+  { label: "SUPPORTO", href: "https://www.welcomedicineonline.it/supporto" },
+  { label: "ACCEDI", href: "https://app.welmed.it/welcomedicine/login" },
 ];
 
 const ctaStyle: React.CSSProperties = {
@@ -69,7 +69,7 @@ const Navbar = () => {
               rel="noopener noreferrer"
               style={ctaStyle}
             >
-              FREE TRIAL 30 DAYS
+              PROVA GRATIS 30 GIORNI
             </a>
             <a
               href="https://calendly.com/welmeditalia/formazione-telemedicina/?month=2025-10"
@@ -77,7 +77,7 @@ const Navbar = () => {
               rel="noopener noreferrer"
               style={ctaStyle}
             >
-              BOOK A DEMO
+              PRENOTA UNA DEMO
             </a>
           </div>
 
@@ -114,7 +114,7 @@ const Navbar = () => {
                   style={{ ...ctaStyle, maxWidth: "100%" }}
                   className="mt-2"
                 >
-                  FREE TRIAL 30 DAYS
+                  PROVA GRATIS 30 GIORNI
                 </a>
                 <a
                   href="https://calendly.com/welmeditalia/formazione-telemedicina/?month=2025-10"
@@ -123,7 +123,7 @@ const Navbar = () => {
                   onClick={() => setOpen(false)}
                   style={{ ...ctaStyle, maxWidth: "100%" }}
                 >
-                  BOOK A DEMO
+                  PRENOTA UNA DEMO
                 </a>
               </div>
             </motion.div>
