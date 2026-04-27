@@ -23,7 +23,7 @@ const HeroSection = () => (
           <span className="text-primary">fuori dall'ambulatorio.</span>
         </h1>
         <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-8 max-w-lg mx-auto lg:mx-0">
-          Una piattaforma conforme GDPR che integra messaggistica, video e documenti. Usata da +4.500 medici per offrire un servizio più strutturato ai propri pazienti.
+          Una piattaforma <span className="font-semibold">conforme GDPR</span> che integra <span className="font-semibold">messaggistica, video e documenti</span>. Usata da <span className="font-semibold">+4.500 medici</span> per offrire un <span className="font-semibold">servizio più strutturato</span> ai propri pazienti.
         </p>
 
   <div className="flex flex-wrap gap-3 mb-6 justify-center lg:justify-start">
@@ -61,12 +61,13 @@ const HeroSection = () => (
         initial={{ opacity: 0, x: 50, scale: 0.95 }}
         animate={{ opacity: 1, x: 0, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="hidden md:block relative"
+        className="relative"
       >
         <img
           src={heroImage}
           alt="Piattaforma Welcomedicine — vista desktop e mobile"
-          className="w-[125%] max-w-none h-auto -mr-[25%] drop-shadow-2xl"
+          loading="lazy"
+          className="w-full max-w-md mx-auto h-auto drop-shadow-2xl md:w-[125%] md:max-w-none md:-mr-[25%]"
         />
       </motion.div>
     </div>
