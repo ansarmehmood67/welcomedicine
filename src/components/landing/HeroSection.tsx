@@ -12,7 +12,7 @@ const pills = [
 
 const HeroSection = () => (
   <section className="hero-gradient pt-28 pb-12 md:pt-48 md:pb-28 overflow-hidden w-full max-w-full">
-    <div className="container max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+  <div className="container max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-6 md:gap-12 items-center">
       {/* Left */}
       <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="text-center lg:text-left min-w-0">
         <span className="inline-block px-3 py-1 rounded-full text-[11px] font-semibold bg-pill-bg text-pill-fg mb-5 tracking-wide uppercase">
@@ -37,11 +37,12 @@ const HeroSection = () => (
           </a>
         </div>
 
-        <p className="text-xs text-muted-foreground/70 mb-6">
+        <p className="text-xs text-muted-foreground/90 md:text-muted-foreground/70 mt-8 md:mt-0 mb-2 md:mb-6">
           Carta richiesta, nessun addebito il primo mese • 4.500+ medici attivi • Onboarding assistito dal team
         </p>
 
-        <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
+        {/* Desktop/tablet pills: keep as-is (hidden on mobile) */}
+        <div className="hidden md:flex flex-wrap gap-2 justify-center lg:justify-start">
           {pills.map(({ icon: Icon, label }, i) => (
             <motion.span
               key={label}
@@ -67,9 +68,11 @@ const HeroSection = () => (
           src={heroImage}
           alt="Piattaforma Welcomedicine — vista desktop e mobile"
           loading="lazy"
-          className="w-full max-w-md mx-auto h-auto drop-shadow-2xl md:w-[125%] md:max-w-none md:-mr-[25%]"
+          className="w-full max-w-xl mx-auto h-auto drop-shadow-2xl md:w-[125%] md:max-w-none md:-mr-[25%]"
         />
       </motion.div>
+
+      
     </div>
   </section>
 );
