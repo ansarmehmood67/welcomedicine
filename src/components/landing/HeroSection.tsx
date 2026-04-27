@@ -11,11 +11,11 @@ const pills = [
 ];
 
 const HeroSection = () => (
-  <section className="hero-gradient pt-32 pb-12 md:pt-48 md:pb-28 overflow-hidden">
+  <section className="hero-gradient pt-32 pb-12 md:pt-48 md:pb-28 overflow-hidden w-full max-w-full">
     <div className="container max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
       {/* Left */}
-      <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="text-center lg:text-left">
-        <span className="inline-block px-3 py-1 rounded-full text-[11px] font-semibold bg-pill-bg text-pill-fg mb-5 tracking-wide uppercase whitespace-nowrap">
+      <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="text-center lg:text-left min-w-0">
+        <span className="inline-block px-3 py-1 rounded-full text-[11px] font-semibold bg-pill-bg text-pill-fg mb-5 tracking-wide uppercase">
           A Welmed brand — Tecnologia ospedaliera per il professionista
         </span>
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.1] text-foreground mb-6">
