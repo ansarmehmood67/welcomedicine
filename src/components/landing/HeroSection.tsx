@@ -14,7 +14,7 @@ const HeroSection = () => (
   <section className="hero-gradient pt-32 pb-12 md:pt-48 md:pb-28 overflow-hidden">
     <div className="container max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
       {/* Left */}
-      <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
+      <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="text-center lg:text-left">
         <span className="inline-block px-3 py-1 rounded-full text-[11px] font-semibold bg-pill-bg text-pill-fg mb-5 tracking-wide uppercase whitespace-nowrap">
           A Welmed brand — Tecnologia ospedaliera per il professionista
         </span>
@@ -22,11 +22,11 @@ const HeroSection = () => (
           Smetti di lavorare su <span style={{ color: "#25D366" }} className="inline-block animate-wiggle origin-bottom">WhatsApp</span>{" "}
           <span className="text-primary">fuori dall'ambulatorio.</span>
         </h1>
-        <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-8 max-w-lg">
+        <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-8 max-w-lg mx-auto lg:mx-0">
           Una piattaforma conforme GDPR che integra messaggistica, video e documenti. Usata da +4.500 medici per offrire un servizio più strutturato ai propri pazienti.
         </p>
 
-        <div className="flex flex-wrap gap-3 mb-6">
+        <div className="flex flex-wrap gap-3 mb-6 justify-center lg:justify-start">
           <a
             href="https://www.welcomedicineonline.it/product/abbonamento-welcomedicine"
             target="_blank"
@@ -41,7 +41,7 @@ const HeroSection = () => (
           Carta richiesta, nessun addebito il primo mese • 4.500+ medici attivi • Onboarding assistito dal team
         </p>
 
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
           {pills.map(({ icon: Icon, label }, i) => (
             <motion.span
               key={label}
