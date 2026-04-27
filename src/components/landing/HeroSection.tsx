@@ -11,14 +11,14 @@ const pills = [
 ];
 
 const HeroSection = () => (
-  <section className="hero-gradient pt-32 pb-12 md:pt-48 md:pb-28 overflow-hidden w-full max-w-full">
+  <section className="hero-gradient pt-28 pb-12 md:pt-48 md:pb-28 overflow-hidden w-full max-w-full">
     <div className="container max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
       {/* Left */}
       <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="text-center lg:text-left min-w-0">
         <span className="inline-block px-3 py-1 rounded-full text-[11px] font-semibold bg-pill-bg text-pill-fg mb-5 tracking-wide uppercase">
           A Welmed brand — Tecnologia ospedaliera per il professionista
         </span>
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.1] text-foreground mb-6">
+        <h1 className="text-5xl sm:text-5xl lg:text-6xl font-extrabold leading-tight sm:leading-[1.1] text-foreground mb-6">
           Smetti di lavorare su <span style={{ color: "#25D366" }} className="inline-block animate-wiggle origin-bottom">WhatsApp</span>{" "}
           <span className="text-primary">fuori dall'ambulatorio.</span>
         </h1>
@@ -26,12 +26,12 @@ const HeroSection = () => (
           Una piattaforma conforme GDPR che integra messaggistica, video e documenti. Usata da +4.500 medici per offrire un servizio più strutturato ai propri pazienti.
         </p>
 
-        <div className="flex flex-wrap gap-3 mb-6 justify-center lg:justify-start">
+  <div className="flex flex-wrap gap-3 mb-6 justify-center lg:justify-start">
           <a
             href="https://www.welcomedicineonline.it/product/abbonamento-welcomedicine"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 h-12 px-7 rounded-xl cta-gradient text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity"
+            className="inline-flex items-center gap-2 h-14 px-8 rounded-xl cta-gradient text-primary-foreground font-bold text-base hover:opacity-90 transition-opacity sm:h-12 sm:px-7 sm:font-semibold sm:text-sm"
           >
             Prova gratis <ArrowRight size={16} />
           </a>

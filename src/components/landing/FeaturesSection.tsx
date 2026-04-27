@@ -44,7 +44,7 @@ const FeaturesSection = () => (
     <div className="container max-w-6xl mx-auto px-4">
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
         <span className="inline-block px-3 py-1 rounded-full text-sm font-semibold bg-pill-bg text-pill-fg mb-4 uppercase tracking-wide">Le Funzionalità</span>
-        <h2 className="text-4xl sm:text-5xl lg:text-5xl font-extrabold text-foreground mb-4 leading-tight">
+  <h2 className="text-5xl sm:text-5xl lg:text-5xl font-black sm:font-extrabold text-foreground mb-4 leading-tight">
           Siamo un <span className="text-primary">poliambulatorio autorizzato</span>
         </h2>
         <p className="text-muted-foreground text-lg max-w-2xl mx-auto">In ambulatorio o in mobilità, hai tutte le informazioni organizzate e a portata di mano in un unico strumento, sicuro e integrato.</p>

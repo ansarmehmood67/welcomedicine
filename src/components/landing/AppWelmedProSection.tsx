@@ -89,7 +89,7 @@ const AppWelmedProSection = () => (
               App mobile · Gratuita
             </span>
 
-            <h2 className="text-4xl sm:text-5xl lg:text-[2.75rem] font-extrabold text-foreground mb-4 leading-[1.15]">
+            <h2 className="text-5xl sm:text-5xl lg:text-[2.75rem] font-black sm:font-extrabold text-foreground mb-4 leading-[1.15]">
               <span className="text-primary">WelMed Pro</span>: tutti i canali con i tuoi Pazienti in un'unica App
             </h2>
             <p className="text-muted-foreground text-base lg:text-lg leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0">

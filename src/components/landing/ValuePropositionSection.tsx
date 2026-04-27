@@ -15,7 +15,7 @@ const ValuePropositionSection = () => (
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-3xl sm:text-4xl lg:text-4xl font-extrabold text-primary-foreground mb-4 leading-tight"
+  className="text-5xl sm:text-5xl lg:text-5xl font-extrabold text-primary-foreground mb-4 leading-tight"
       >
         Un unico strumento per gestire pazienti,{" "}
         <span className="text-primary">consulenze e documenti.</span>

@@ -47,7 +47,7 @@ const QuotesSection = () => {
       <div className="container max-w-6xl mx-auto px-4">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
           <span className="inline-block px-3 py-1 rounded-full text-sm font-semibold bg-pill-bg text-pill-fg mb-4 uppercase tracking-wide">La voce dei medici</span>
-          <h2 className="text-4xl sm:text-5xl lg:text-5xl font-extrabold text-foreground mb-4 leading-tight">
+          <h2 className="text-5xl sm:text-5xl lg:text-5xl font-black sm:font-extrabold text-foreground mb-4 leading-tight">
             Risultati <span className="text-primary">concreti</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-xl mx-auto">

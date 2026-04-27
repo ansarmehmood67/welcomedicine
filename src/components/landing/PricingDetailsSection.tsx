@@ -46,7 +46,7 @@ const PricingDetailsSection = () => (
         <div className="w-16 h-16 rounded-2xl cta-gradient flex items-center justify-center mx-auto mb-6">
           <Wallet size={28} className="text-primary-foreground" />
         </div>
-        <h2 className="text-4xl sm:text-5xl lg:text-5xl font-extrabold text-foreground mb-4 leading-tight">
+  <h2 className="text-5xl sm:text-5xl lg:text-5xl font-black sm:font-extrabold text-foreground mb-4 leading-tight">
           I ricavi restano <span className="text-primary">tuoi</span>
         </h2>
         <p className="text-muted-foreground text-lg max-w-xl mx-auto leading-relaxed">

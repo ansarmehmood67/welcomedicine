@@ -69,7 +69,7 @@ const TrustBar = () => (
           <p className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-3">
             Ecosistema Welmed
           </p>
-          <h2 className="text-4xl sm:text-5xl lg:text-5xl font-extrabold text-foreground leading-tight">
+          <h2 className="text-5xl sm:text-5xl lg:text-5xl font-black sm:font-extrabold text-foreground leading-tight">
             La tecnologia già scelta <span className="text-primary"><br />dalle migliori strutture sanitarie in Italia</span>
           </h2>
         </motion.div>
@@ -134,7 +134,7 @@ const TrustBar = () => (
           <p className="text-sm font-semibold uppercase tracking-widest text-primary mb-3">
             Ecosistema Welmed
           </p>
-          <h2 className="text-4xl sm:text-5xl lg:text-5xl font-extrabold text-white leading-tight">
+          <h2 className="text-5xl sm:text-5xl lg:text-5xl font-black sm:font-extrabold text-white leading-tight">
             I numeri del nostro{" "}
             <span className="text-primary">ecosistema</span>
           </h2>

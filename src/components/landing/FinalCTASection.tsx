@@ -17,7 +17,7 @@ const FinalCTASection = () => (
         viewport={{ once: true }}
         transition={{ duration: 0.7 }}
       >
-        <h2 className="text-4xl sm:text-5xl lg:text-5xl font-extrabold text-foreground mb-5 leading-tight">
+  <h2 className="text-5xl sm:text-5xl lg:text-5xl font-black sm:font-extrabold text-foreground mb-5 leading-tight">
           Inizia oggi,{" "}
           <span className="text-primary">prova gratis per 30 giorni</span>
         </h2>

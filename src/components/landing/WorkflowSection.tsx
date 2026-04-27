@@ -13,7 +13,7 @@ const WorkflowSection = () => (
     <div className="container max-w-5xl mx-auto px-4">
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
         <span className="inline-block px-3 py-1 rounded-full text-sm font-semibold bg-primary-foreground/15 text-primary-foreground mb-4 uppercase tracking-wide">Workflow</span>
-        <h2 className="text-4xl sm:text-5xl lg:text-5xl font-extrabold text-primary-foreground mb-4 leading-tight">
+  <h2 className="text-5xl sm:text-5xl lg:text-5xl font-black sm:font-extrabold text-primary-foreground mb-4 leading-tight">
           Come funziona{" "}
           <span className="text-primary">in pratica</span>
         </h2>

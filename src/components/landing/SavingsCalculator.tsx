@@ -21,7 +21,7 @@ const SavingsCalculator = () => {
       <div className="container max-w-5xl mx-auto px-4">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
           <span className="inline-block px-3 py-1 rounded-full text-sm font-semibold bg-pill-bg text-pill-fg mb-4 uppercase tracking-wide">Calcola il risparmio</span>
-          <h2 className="text-4xl sm:text-5xl lg:text-5xl font-extrabold text-foreground mb-4 leading-tight">
+          <h2 className="text-5xl sm:text-5xl lg:text-5xl font-black sm:font-extrabold text-foreground mb-4 leading-tight">
             Quanto tempo e denaro{" "}
             <span className="text-primary">puoi recuperare?</span>
           </h2>
