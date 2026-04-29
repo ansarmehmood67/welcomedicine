@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Navbar from "@/components/landing/Navbar";
 import HeroSection from "@/components/landing/HeroSection";
 import ValuePropositionSection from "@/components/landing/ValuePropositionSection";
@@ -19,29 +20,42 @@ import FinalCTASection from "@/components/landing/FinalCTASection";
 import Footer from "@/components/landing/Footer";
 import ScrollToTop from "@/components/landing/ScrollToTop";
 
-const Index = () => (
-  <>
-    <Navbar />
-    <HeroSection />
-    <ValuePropositionSection />
-    <TrustBar />
-    <ProblemSection />
-    <TestimonialsSection />
-    <TreSempliciPassiSection />
-    <FeaturesSection />
-    <BenefitsSection />
-    <AppWelmedProSection />
-    <WorkflowSection />
-    <SavingsCalculator />
-    <QuotesSection />
-    <CustomerCareSection />
-    <PricingSection />
-    <PricingDetailsSection />
-    <FAQSection />
-    <FinalCTASection />
-    <Footer />
-    <ScrollToTop />
-  </>
-);
+const Index = () => {
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (!hash) return;
+    // Delay scroll to allow framer-motion initial renders to settle
+    const id = hash.slice(1);
+    const timer = setTimeout(() => {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 600);
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <>
+      <Navbar />
+      <HeroSection />
+      <ValuePropositionSection />
+      <TrustBar />
+      <ProblemSection />
+      <TestimonialsSection />
+      <TreSempliciPassiSection />
+      <FeaturesSection />
+      <BenefitsSection />
+      <AppWelmedProSection />
+      <WorkflowSection />
+      <SavingsCalculator />
+      <QuotesSection />
+      <CustomerCareSection />
+      <PricingSection />
+      <PricingDetailsSection />
+      <FAQSection />
+      <FinalCTASection />
+      <Footer />
+      <ScrollToTop />
+    </>
+  );
+};
 
 export default Index;

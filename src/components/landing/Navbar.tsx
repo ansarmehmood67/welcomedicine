@@ -7,7 +7,7 @@ const logo = "https://wp-uploads.welmed.it/uploads/sites/9/2024/05/Logo-Welcomed
 
 const navLinks = [
   { label: "PAZIENTI", href: "https://www.welcomedicineonline.it/" },
-  { label: "PIANI E PREZZI", href: "https://www.welcomedicineonline.it/piani-e-prezzi" },
+  { label: "PIANI E PREZZI", href: "#prezzi" },
   { label: "SUPPORTO", href: "https://www.welcomedicineonline.it/supporto" },
   { label: "ACCEDI", href: "https://app.welmed.it/welcomedicine/login" },
 ];
