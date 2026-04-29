@@ -65,7 +65,7 @@ const BenefitsSection = () => (
           <span className="inline-block px-3 py-1 rounded-full text-sm font-semibold bg-primary/10 text-primary mb-4 uppercase tracking-wide">Vantaggi</span>
           <h2 className="text-5xl sm:text-5xl lg:text-5xl font-black sm:font-extrabold text-foreground mb-5 leading-tight">
             Perchè i professionisti scelgono,<br />
-            <span className="text-primary">Welcome medicine</span>
+            <span className="text-primary">Welcomedicine</span>
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
             Welcomedicine migliora la vita professionale del medico e l'esperienza del paziente. Allo stesso tempo. Entra nell'ecosistema Welmed e organizza il tuo Ambulatorio virtuale sempre a disposizione.
